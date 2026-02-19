@@ -66,8 +66,17 @@ export const useMiniRoomStickers = (
     }
   }, []);
 
+  // const addMinime = useCallback(async (minime: MinimeOption) => {
+  //   const sticker = makeSticker("minime", minime.url);
+  //   setStickers((prev) => [...prev, sticker]);
+  //   const success = await addMiniRoomSticker(sticker, adminPasswordRef.current);
+  //   if (!success) {
+  //     setStickers((prev) => prev.filter((s) => s.id !== sticker.id));
+  //   }
+  // }, []);
   const addMinime = useCallback(async (minime: MinimeOption) => {
-    const sticker = makeSticker("minime", minime.url);
+    // url 대신 id 저장
+    const sticker = makeSticker("minime", minime.id);
     setStickers((prev) => [...prev, sticker]);
     const success = await addMiniRoomSticker(sticker, adminPasswordRef.current);
     if (!success) {

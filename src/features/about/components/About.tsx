@@ -6,6 +6,7 @@ import {
   EDUCATIONS,
   AWARDS,
 } from "../constants";
+import profileImage from "@/assets/beomseok.jpg";
 
 export const About = () => {
   return (
@@ -15,7 +16,7 @@ export const About = () => {
         <div className="flex items-start gap-6">
           <div className="w-32 h-32 bg-linear-to-b from-blog-light to-blog-gradient-end rounded-full border-4 border-white shadow-md flex items-center justify-center overflow-hidden">
             <img
-              src="src/assets/beomseok.jpg"
+              src={profileImage}
               className="w-full h-full object-cover"
               alt="profileImage"
             />

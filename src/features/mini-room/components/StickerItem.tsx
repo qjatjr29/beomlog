@@ -1,3 +1,4 @@
+import { MINIME_OPTIONS } from "../constants";
 import { StickerItemProps } from "../types";
 
 export const StickerItem = ({
@@ -40,7 +41,10 @@ export const StickerItem = ({
             className={`select-none transition-opacity ${isDragging ? "opacity-60" : ""}`}
           >
             <img
-              src={sticker.content}
+              src={
+                MINIME_OPTIONS.find((m) => m.id === sticker.content)?.url ??
+                sticker.content
+              }
               alt="미니미"
               className="w-24 h-28 min-w-24 object-contain object-bottom drop-shadow-lg"
               draggable={false}
