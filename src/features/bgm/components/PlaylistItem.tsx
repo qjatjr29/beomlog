@@ -1,6 +1,7 @@
 import { GripVertical, Pencil, Trash2 } from "lucide-react";
 import { BGMTrack } from "../types";
 import { useBGM } from "@/contexts/BGMContext";
+import { Equalizer } from "./Equalizer";
 
 interface PlaylistItemProps {
   track: BGMTrack;
@@ -16,14 +17,6 @@ interface PlaylistItemProps {
   dragOverIndex: number | null;
   setDragOverIndex: (index: number | null) => void;
 }
-
-const Equalizer = () => (
-  <span className="flex items-end gap-0.5 w-3 h-3 shrink-0">
-    <span className="w-0.5 bg-blog-primary rounded-sm animate-eq1" />
-    <span className="w-0.5 bg-blog-primary rounded-sm animate-eq2" />
-    <span className="w-0.5 bg-blog-primary rounded-sm animate-eq3" />
-  </span>
-);
 
 export const PlaylistItem = ({
   track,

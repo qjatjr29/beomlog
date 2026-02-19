@@ -1,5 +1,13 @@
 import { useState, useRef, useEffect } from "react";
-import { Music, Play, Pause, Plus, SkipBack, SkipForward } from "lucide-react";
+import {
+  Music,
+  Play,
+  Pause,
+  Plus,
+  SkipBack,
+  SkipForward,
+  BookAudio,
+} from "lucide-react";
 import { motion } from "framer-motion";
 import {
   addBGMTrack,
@@ -16,6 +24,7 @@ import { BgmForm } from "./BgmForm";
 import { BGMPlayerProps } from "../types";
 import { AlertModal } from "@/shared/components/AlertModal";
 import { DeleteConfirmModal } from "@/shared/components/DeleteConfirmModal";
+import { Equalizer } from "./Equalizer";
 
 const extractVideoId = (url: string): string | null => {
   const match = url.match(
@@ -181,7 +190,19 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
     <div className="relative">
       {/* 트리거 바 */}
       <div ref={triggerRef} className="flex items-center gap-1 w-full">
-        <Music className="w-3 h-3 text-gray-600 shrink-0" />
+        <button
+          onClick={handleTogglePanel}
+          className="shrink-0 w-3 h-3 flex items-center justify-center"
+        >
+          {isPlaying ? (
+            <Equalizer />
+          ) : playlist.length > 0 ? (
+            <BookAudio className="w-3 h-3 text-blog-primary" />
+          ) : (
+            <Music className="w-3 h-3 text-gray-400" />
+          )}
+        </button>
+
         <button
           onClick={handleTogglePanel}
           className="flex-1 min-w-0 flex items-center justify-center overflow-hidden"
@@ -192,7 +213,6 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
             className="text-xs text-gray-600 hover:text-blog-primary transition-colors w-full"
           />
         </button>
-
         <div className="flex items-center gap-0.5 shrink-0">
           <button
             onClick={goToPrev}
