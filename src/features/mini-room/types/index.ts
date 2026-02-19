@@ -11,6 +11,8 @@ export interface Sticker {
 
 export type StickerType = "emoji" | "text" | "minime" | "badge" | "speech";
 
+export type PickerType = StickerType | "theme" | null;
+
 export type TextStyle = "default" | "cloud" | "talk";
 
 export interface TechBadge {

@@ -31,9 +31,15 @@ export const useMiniRoomStickers = (
   });
 
   const stickersRef = useRef<Sticker[]>([]);
+  const adminPasswordRef = useRef(adminPassword);
+
   useEffect(() => {
     stickersRef.current = stickers;
   }, [stickers]);
+
+  useEffect(() => {
+    adminPasswordRef.current = adminPassword;
+  }, [adminPassword]);
 
   useEffect(() => {
     getMiniRoomStickers().then(setStickers);
@@ -54,8 +60,7 @@ export const useMiniRoomStickers = (
   const addEmoji = useCallback(async (emoji: string) => {
     const sticker = makeSticker("emoji", emoji);
     setStickers((prev) => [...prev, sticker]);
-
-    const success = await addMiniRoomSticker(sticker, adminPassword);
+    const success = await addMiniRoomSticker(sticker, adminPasswordRef.current);
     if (!success) {
       setStickers((prev) => prev.filter((s) => s.id !== sticker.id));
     }
@@ -64,8 +69,7 @@ export const useMiniRoomStickers = (
   const addMinime = useCallback(async (minime: MinimeOption) => {
     const sticker = makeSticker("minime", minime.url);
     setStickers((prev) => [...prev, sticker]);
-
-    const success = await addMiniRoomSticker(sticker, adminPassword);
+    const success = await addMiniRoomSticker(sticker, adminPasswordRef.current);
     if (!success) {
       setStickers((prev) => prev.filter((s) => s.id !== sticker.id));
     }
@@ -74,8 +78,7 @@ export const useMiniRoomStickers = (
   const addBadge = useCallback(async (badge: TechBadge) => {
     const sticker = makeSticker("badge", JSON.stringify(badge));
     setStickers((prev) => [...prev, sticker]);
-
-    const success = await addMiniRoomSticker(sticker, adminPassword);
+    const success = await addMiniRoomSticker(sticker, adminPasswordRef.current);
     if (!success) {
       setStickers((prev) => prev.filter((s) => s.id !== sticker.id));
     }
@@ -86,8 +89,10 @@ export const useMiniRoomStickers = (
       if (!text.trim()) return;
       const sticker: Sticker = { ...makeSticker("text", text), textStyle };
       setStickers((prev) => [...prev, sticker]);
-
-      const success = await addMiniRoomSticker(sticker, adminPassword);
+      const success = await addMiniRoomSticker(
+        sticker,
+        adminPasswordRef.current,
+      );
       if (!success) {
         setStickers((prev) => prev.filter((s) => s.id !== sticker.id));
       }
@@ -97,7 +102,7 @@ export const useMiniRoomStickers = (
 
   const removeSticker = useCallback(async (id: string) => {
     setStickers((prev) => prev.filter((s) => s.id !== id));
-    await deleteMiniRoomSticker(id, adminPassword);
+    await deleteMiniRoomSticker(id, adminPasswordRef.current);
   }, []);
 
   const startDragging = useCallback(
@@ -224,13 +229,13 @@ export const useMiniRoomStickers = (
 
   const onMouseUp = useCallback(() => {
     if (draggingId && isOverTrash) {
-      deleteMiniRoomSticker(draggingId, adminPassword);
+      deleteMiniRoomSticker(draggingId, adminPasswordRef.current);
       setStickers((prev) => prev.filter((s) => s.id !== draggingId));
     } else if (draggingId || resizingId || rotatingId) {
       const id = draggingId ?? resizingId ?? rotatingId;
       const sticker = stickersRef.current.find((s) => s.id === id);
       if (sticker) {
-        updateMiniRoomSticker(sticker, adminPassword);
+        updateMiniRoomSticker(sticker, adminPasswordRef.current);
       }
     }
 

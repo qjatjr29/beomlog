@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import { TextStyle } from "../types";
+import { PickerType, TextStyle } from "../types";
 import { useMiniRoomStickers } from "../hooks/useMiniRoomStickers";
 import { useMiniRoomTheme } from "../hooks/useMiniRoomTheme";
 import { AdminControls } from "./AdminControls";
@@ -30,12 +30,12 @@ export const MiniRoom = () => {
 
   const { currentTheme, changeTheme } = useMiniRoomTheme();
 
-  const [showEmojiPicker, setShowEmojiPicker] = useState(false);
-  const [showMinimiPicker, setShowMinimiPicker] = useState(false);
-  const [showTextInput, setShowTextInput] = useState(false);
-  const [showThemePicker, setShowThemePicker] = useState(false);
-  const [showBadgePicker, setShowBadgePicker] = useState(false);
   const [textInput, setTextInput] = useState("");
+  const [openPicker, setOpenPicker] = useState<PickerType>(null);
+
+  const togglePicker = (picker: Exclude<PickerType, null>) => {
+    setOpenPicker((prev) => (prev === picker ? null : picker));
+  };
 
   const handleAddText = (textStyle: TextStyle) => {
     addText(textInput, textStyle);
@@ -57,17 +57,17 @@ export const MiniRoom = () => {
     <div className="mb-6">
       {isAdminMode && (
         <AdminControls
-          showEmojiPicker={showEmojiPicker}
-          showMinimiPicker={showMinimiPicker}
-          showTextInput={showTextInput}
-          showThemePicker={showThemePicker}
-          showBadgePicker={showBadgePicker}
+          showEmojiPicker={openPicker === "emoji"}
+          showMinimiPicker={openPicker === "minime"}
+          showTextInput={openPicker === "text"}
+          showThemePicker={openPicker === "theme"}
+          showBadgePicker={openPicker === "badge"}
           textInput={textInput}
-          onToggleEmojiPicker={() => setShowEmojiPicker(!showEmojiPicker)}
-          onToggleMinimiPicker={() => setShowMinimiPicker(!showMinimiPicker)}
-          onToggleTextInput={() => setShowTextInput(!showTextInput)}
-          onToggleThemePicker={() => setShowThemePicker(!showThemePicker)}
-          onToggleBadgePicker={() => setShowBadgePicker(!showBadgePicker)}
+          onToggleEmojiPicker={() => togglePicker("emoji")}
+          onToggleMinimiPicker={() => togglePicker("minime")}
+          onToggleTextInput={() => togglePicker("text")}
+          onToggleThemePicker={() => togglePicker("theme")}
+          onToggleBadgePicker={() => togglePicker("badge")}
           onTextInputChange={setTextInput}
           onAddEmoji={addEmoji}
           onAddMinime={addMinime}
