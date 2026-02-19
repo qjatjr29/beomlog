@@ -9,6 +9,7 @@ export const ImageBlock = ({ src, alt, width, height }: ImageBlockProps) => {
         width={width}
         height={height}
         className="max-w-full md:max-w-2xl w-auto h-auto rounded-lg border border-gray-200 shadow-sm"
+        style={{ maxWidth: "min(650px, 100%)", maxHeight: "450px" }}
         loading="lazy"
         onError={(e) => {
           e.currentTarget.src =
