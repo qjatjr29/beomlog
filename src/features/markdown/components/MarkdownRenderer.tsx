@@ -1,0 +1,303 @@
+import { JSX } from "react";
+import { MarkdownRendererProps } from "../types";
+import {
+  CodeBlock,
+  ToggleBlock,
+  BookmarkBlock,
+  InlineLink,
+  ImageBlock,
+  BlockquoteBlock,
+  TableBlock,
+} from "./blocks";
+import {
+  parseCodeBlock,
+  parseBlockquote,
+  parseTable,
+  parseToggle,
+  parseBookmark,
+  parseHtmlImage,
+  parseMarkdownImage,
+  parseHeader,
+  parseUnorderedList,
+  parseOrderedList,
+  parseInlineLink,
+  parseParagraph,
+  parseHorizontalRule,
+  parseEmptyLine,
+} from "./parsers";
+
+export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
+  const parseMarkdown = (text: string) => {
+    const lines = text.split("\n");
+    const result: JSX.Element[] = [];
+
+    // States
+    const state = {
+      inCodeBlock: false,
+      codeBlockContent: [] as string[],
+      codeBlockLang: "",
+      inBlockquote: false,
+      blockquoteLines: [] as string[],
+      inTable: false,
+      tableLines: [] as string[],
+      inDetails: false,
+      detailsStack: 0,
+      detailsContent: [] as string[],
+      detailsSummary: "",
+      inBookmark: false,
+      bookmarkLines: [] as string[],
+      inUnorderedList: false,
+      unorderedListItems: [] as JSX.Element[],
+      inOrderedList: false,
+      orderedListItems: [] as JSX.Element[],
+    };
+
+    const closeLists = (currentIndex: number) => {
+      if (state.inUnorderedList) {
+        result.push(
+          <ul
+            key={`ul-wrapper-${currentIndex}-${result.length}`}
+            className="my-4"
+          >
+            {state.unorderedListItems}
+          </ul>,
+        );
+        state.unorderedListItems = [];
+        state.inUnorderedList = false;
+      }
+      if (state.inOrderedList) {
+        result.push(
+          <ol
+            key={`ol-wrapper-${currentIndex}-${result.length}`}
+            className="my-4"
+          >
+            {state.orderedListItems}
+          </ol>,
+        );
+        state.orderedListItems = [];
+        state.inOrderedList = false;
+      }
+    };
+
+    lines.forEach((line, index) => {
+      // 1. Code Block
+      const codeResult = parseCodeBlock(
+        line,
+        {
+          inCodeBlock: state.inCodeBlock,
+          codeBlockContent: state.codeBlockContent,
+          codeBlockLang: state.codeBlockLang,
+        },
+        index,
+        CodeBlock,
+      );
+
+      if (codeResult.shouldReturn) {
+        if (codeResult.element) {
+          closeLists(index);
+          result.push(codeResult.element);
+        }
+        state.inCodeBlock = codeResult.newState.inCodeBlock;
+        state.codeBlockContent = codeResult.newState.codeBlockContent;
+        state.codeBlockLang = codeResult.newState.codeBlockLang;
+        return;
+      }
+
+      // 2. Blockquote
+      const blockquoteResult = parseBlockquote(
+        line,
+        {
+          inBlockquote: state.inBlockquote,
+          blockquoteLines: state.blockquoteLines,
+        },
+        index,
+        BlockquoteBlock,
+      );
+
+      if (blockquoteResult.shouldReturn || blockquoteResult.element) {
+        if (blockquoteResult.element) {
+          closeLists(index);
+          result.push(blockquoteResult.element);
+        }
+        state.inBlockquote = blockquoteResult.newState.inBlockquote;
+        state.blockquoteLines = blockquoteResult.newState.blockquoteLines;
+        if (blockquoteResult.shouldReturn) return;
+      }
+
+      // 3. Table
+      const tableResult = parseTable(
+        line,
+        {
+          inTable: state.inTable,
+          tableLines: state.tableLines,
+        },
+        index,
+        TableBlock,
+      );
+
+      if (tableResult.shouldReturn || tableResult.element) {
+        if (tableResult.element) {
+          closeLists(index);
+          result.push(tableResult.element);
+        }
+        state.inTable = tableResult.newState.inTable;
+        state.tableLines = tableResult.newState.tableLines;
+        if (tableResult.shouldReturn) return;
+      }
+
+      // 4. Toggle
+      const toggleResult = parseToggle(
+        line,
+        {
+          inDetails: state.inDetails,
+          detailsStack: state.detailsStack,
+          detailsContent: state.detailsContent,
+          detailsSummary: state.detailsSummary,
+        },
+        index,
+        ToggleBlock,
+      );
+
+      if (toggleResult.shouldReturn) {
+        if (toggleResult.element) {
+          closeLists(index);
+          result.push(toggleResult.element);
+        }
+        state.inDetails = toggleResult.newState.inDetails;
+        state.detailsStack = toggleResult.newState.detailsStack;
+        state.detailsContent = toggleResult.newState.detailsContent;
+        state.detailsSummary = toggleResult.newState.detailsSummary;
+        return;
+      }
+
+      // 5. Bookmark
+      const bookmarkResult = parseBookmark(
+        line,
+        {
+          inBookmark: state.inBookmark,
+          bookmarkLines: state.bookmarkLines,
+        },
+        index,
+        BookmarkBlock,
+      );
+
+      if (bookmarkResult.shouldReturn) {
+        if (bookmarkResult.element) {
+          closeLists(index);
+          result.push(bookmarkResult.element);
+        }
+        state.inBookmark = bookmarkResult.newState.inBookmark;
+        state.bookmarkLines = bookmarkResult.newState.bookmarkLines;
+        return;
+      }
+
+      // 6. Images
+      const htmlImg = parseHtmlImage(line, index, ImageBlock);
+      if (htmlImg) {
+        closeLists(index);
+        result.push(htmlImg);
+        return;
+      }
+
+      const mdImg = parseMarkdownImage(line, index, ImageBlock);
+      if (mdImg) {
+        closeLists(index);
+        result.push(mdImg);
+        return;
+      }
+
+      // 7. Horizontal Rule
+      const hr = parseHorizontalRule(line, index);
+      if (hr) {
+        closeLists(index);
+        result.push(hr);
+        return;
+      }
+
+      // 8. Headers
+      const header = parseHeader(line, index);
+      if (header) {
+        closeLists(index);
+        result.push(header);
+        return;
+      }
+
+      // 9. Lists
+      const ulItem = parseUnorderedList(line, index);
+      if (ulItem) {
+        if (state.inOrderedList) {
+          result.push(
+            <ol key={`ol-close-${index}-${result.length}`} className="my-4">
+              {state.orderedListItems}
+            </ol>,
+          );
+          state.orderedListItems = [];
+          state.inOrderedList = false;
+        }
+        state.inUnorderedList = true;
+        state.unorderedListItems.push(ulItem);
+        return;
+      }
+
+      const olItem = parseOrderedList(line, index);
+      if (olItem) {
+        if (state.inUnorderedList) {
+          result.push(
+            <ul key={`ul-close-${index}-${result.length}`} className="my-4">
+              {state.unorderedListItems}
+            </ul>,
+          );
+          state.unorderedListItems = [];
+          state.inUnorderedList = false;
+        }
+        state.inOrderedList = true;
+        state.orderedListItems.push(olItem);
+        return;
+      }
+
+      // 10. Empty line
+      const emptyLine = parseEmptyLine(line, index);
+      if (emptyLine) {
+        closeLists(index);
+        result.push(emptyLine);
+        return;
+      }
+
+      // 11. Inline Link
+      const inlineLink = parseInlineLink(line, index, InlineLink);
+      if (inlineLink) {
+        closeLists(index);
+        result.push(inlineLink);
+        return;
+      }
+
+      // 12. Paragraph
+      closeLists(index);
+      result.push(parseParagraph(line, index));
+    });
+
+    // Cleanup
+    if (state.inUnorderedList && state.unorderedListItems.length > 0) {
+      result.push(
+        <ul key="ul-end" className="my-4">
+          {state.unorderedListItems}
+        </ul>,
+      );
+    }
+    if (state.inOrderedList && state.orderedListItems.length > 0) {
+      result.push(
+        <ol key="ol-end" className="my-4">
+          {state.orderedListItems}
+        </ol>,
+      );
+    }
+
+    return result;
+  };
+
+  return (
+    <div className="markdown-content max-w-none wrap-break-word text-gray-700">
+      {parseMarkdown(content)}
+    </div>
+  );
+};
