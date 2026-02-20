@@ -13,6 +13,7 @@ import { loadAllPosts } from "@/features/posts/data";
 export interface PostsContextType {
   posts: Post[];
   viewCounts: Record<string, number>;
+  commentCounts: Record<string, number>;
   getPostById: (id: string) => Post | undefined;
   getPostsByCategory: (category: string) => Post[];
   getCategoryCount: (category: string) => number;
@@ -31,31 +32,48 @@ const PostsContext = createContext<PostsContextType | undefined>(undefined);
 
 export const PostsProvider = ({ children }: { children: ReactNode }) => {
   const posts = useMemo(() => loadAllPosts(), []);
-
   const [viewCounts, setViewCounts] = useState<Record<string, number>>({});
+  const [commentCounts, setCommentCounts] = useState<Record<string, number>>(
+    {},
+  );
 
   useEffect(() => {
     if (posts.length === 0) return;
-
     const postIds = posts.map((p) => p.id);
 
-    supabase
-      .from("post_views")
-      .select("post_id, views")
-      .in("post_id", postIds)
-      .then(({ data }) => {
-        if (!data) return;
-        const counts = Object.fromEntries(
-          data.map((row) => [row.post_id, row.views]),
+    // viewCounts, commentCounts 동시 fetch
+    Promise.all([
+      supabase
+        .from("post_views")
+        .select("post_id, views")
+        .in("post_id", postIds),
+      supabase.from("comments").select("post_id").in("post_id", postIds),
+    ]).then(([viewsRes, commentsRes]) => {
+      if (viewsRes.data) {
+        setViewCounts(
+          Object.fromEntries(
+            viewsRes.data.map((row) => [row.post_id, row.views]),
+          ),
         );
-        setViewCounts(counts);
-      });
+      }
+      if (commentsRes.data) {
+        const counts = commentsRes.data.reduce(
+          (acc, row) => {
+            acc[row.post_id] = (acc[row.post_id] ?? 0) + 1;
+            return acc;
+          },
+          {} as Record<string, number>,
+        );
+        setCommentCounts(counts);
+      }
+    });
   }, [posts]);
 
   const value = useMemo<PostsContextType>(
     () => ({
       posts,
       viewCounts,
+      commentCounts,
       getPostById: (id: string) => posts.find((p) => p.id === id),
       getPostsByCategory: (category: string) =>
         posts.filter((p) => p.category === category),
@@ -68,7 +86,6 @@ export const PostsProvider = ({ children }: { children: ReactNode }) => {
           count: posts.filter((p) => p.category === name).length,
         }));
       },
-
       getCategoryStats: (category: string) => {
         const categoryPosts = posts.filter((p) => p.category === category);
         return {
@@ -97,7 +114,7 @@ export const PostsProvider = ({ children }: { children: ReactNode }) => {
         return { prevPost, nextPost };
       },
     }),
-    [posts, viewCounts],
+    [posts, viewCounts, commentCounts],
   );
 
   return (

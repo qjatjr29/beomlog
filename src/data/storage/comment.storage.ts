@@ -68,3 +68,13 @@ export const deleteComment = async (
 
   return { success: true };
 };
+
+export const getGuestbookCount = async (): Promise<number> => {
+  const { count, error } = await supabase
+    .from("comments")
+    .select("*", { count: "exact", head: true })
+    .eq("post_id", "guestbook");
+
+  if (error) return 0;
+  return count ?? 0;
+};

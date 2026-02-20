@@ -46,6 +46,7 @@ export interface Category {
 export interface PostCardProps {
   post: Post;
   viewCount: number;
+  commentCount?: number;
   selectedTag: string | null;
 }
 
