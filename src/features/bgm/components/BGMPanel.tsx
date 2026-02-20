@@ -2,7 +2,7 @@ import { createPortal } from "react-dom";
 import { Plus } from "lucide-react";
 import { VolumeController } from "./VolumeController";
 import { PlaylistItem } from "./PlaylistItem";
-import { BgmForm } from "./BGMForm";
+import { BgmForm } from "./BGMTempForm";
 import { BGMTrack } from "../types";
 
 interface BGMPanelProps {

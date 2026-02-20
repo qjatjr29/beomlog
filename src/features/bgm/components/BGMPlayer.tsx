@@ -15,7 +15,7 @@ import { extractVideoId } from "../utils";
 import { MarqueeText } from "./MarqueeText";
 import { PlaylistItem } from "./PlaylistItem";
 import { VolumeController } from "./VolumeController";
-import { BgmForm } from "./BGMForm";
+import { BgmForm } from "./BGMTempForm";
 import { Equalizer } from "./Equalizer";
 import { AlertModal } from "@/shared/components/AlertModal";
 import { DeleteConfirmModal } from "@/shared/components/DeleteConfirmModal";
