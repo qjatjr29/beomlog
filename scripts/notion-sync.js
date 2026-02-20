@@ -137,6 +137,24 @@ function escapeYaml(text) {
 let numberedListCounter = 0;
 let lastBlockType = null;
 
+function extractExcerptFromContent(content, maxLength = 100) {
+  const plainText = content
+    .replace(/```[\s\S]*?```/g, "") // 코드블록 제거
+    .replace(/!\[.*?\]\(.*?\)/g, "") // 이미지 제거
+    .replace(/<[^>]+>/g, "") // HTML 태그 제거
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1") // 링크 → 텍스트만
+    .replace(/#{1,6}\s/g, "") // 헤더 마크 제거
+    .replace(/[*_~`>]/g, "") // 강조/인용 마크 제거
+    .replace(/^\s*[-*+]\s/gm, "") // 리스트 마크 제거
+    .replace(/^\s*\d+\.\s/gm, "") // 번호 리스트 마크 제거
+    .replace(/\n+/g, " ") // 개행 → 공백
+    .trim();
+
+  return plainText.length > maxLength
+    ? plainText.substring(0, maxLength) + "..."
+    : plainText;
+}
+
 async function blockToMarkdown(block, depth = 0) {
   const type = block.type;
 
@@ -494,7 +512,7 @@ async function syncNotionPosts() {
           const date =
             properties.Date?.date?.start ||
             new Date().toISOString().split("T")[0];
-          const excerpt = getPlainText(properties.Excerpt?.rich_text) || title;
+          const excerpt = getPlainText(properties.Excerpt?.rich_text) || "";
           const categorySlug = slugify(category);
 
           postsMetadata.push({
@@ -615,11 +633,12 @@ async function processPost(page) {
   const tags = properties.Tags?.multi_select?.map((tag) => tag.name) || [];
   const date =
     properties.Date?.date?.start || new Date().toISOString().split("T")[0];
-  const excerpt = getPlainText(properties.Excerpt?.rich_text) || title;
-
-  console.log(`📝 처리 중: ${category}/${slug}`);
 
   const content = await getPageContent(page.id);
+  const rawExcerpt = getPlainText(properties.Excerpt?.rich_text);
+  const excerpt = rawExcerpt || extractExcerptFromContent(content);
+
+  console.log(`📝 처리 중: ${category}/${slug}`);
 
   const frontMatter = `---
 id: "${id}"
