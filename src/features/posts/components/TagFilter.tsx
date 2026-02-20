@@ -1,3 +1,5 @@
+import { useState } from "react";
+
 interface TagFilterProps {
   tags: string[];
   selectedTag: string | null;
@@ -5,36 +7,56 @@ interface TagFilterProps {
   onClear: () => void;
 }
 
+const MAX_VISIBLE = 8;
+
 export const TagFilter = ({
   tags,
   selectedTag,
   onTagClick,
   onClear,
 }: TagFilterProps) => {
+  const [isExpanded, setIsExpanded] = useState(false);
+
   if (tags.length === 0) return null;
 
+  const visibleTags = isExpanded ? tags : tags.slice(0, MAX_VISIBLE);
+  const hasMore = tags.length > MAX_VISIBLE;
+
   return (
-    <div className="mb-6 p-4 bg-blog-lighter border border-blog-border rounded">
-      <div className="flex items-center gap-2 flex-wrap">
-        {tags.map((tag) => (
+    <div className="mb-4">
+      <div className="flex flex-wrap gap-1.5 items-center">
+        <button
+          onClick={onClear}
+          className={`text-[10px] px-2 py-0.5 rounded border transition-colors ${
+            selectedTag === null
+              ? "bg-blog-primary border-blog-primary text-white"
+              : "bg-white border-blog-border-light text-gray-500 hover:border-blog-primary hover:text-blog-primary"
+          }`}
+        >
+          전체
+        </button>
+
+        {visibleTags.map((tag) => (
           <button
             key={tag}
             onClick={() => onTagClick(tag)}
-            className={`text-xs px-3 py-1.5 rounded transition-all border ${
+            className={`text-[10px] px-2 py-0.5 rounded border transition-colors ${
               selectedTag === tag
-                ? "bg-blog-primary text-white border-blog-primary"
-                : "bg-white text-gray-700 border-gray-300 hover:border-blog-border hover:bg-blog-light"
+                ? "bg-blog-primary border-blog-primary text-white"
+                : "bg-white border-blog-border-light text-gray-500 hover:border-blog-primary hover:text-blog-primary"
             }`}
           >
             #{tag}
           </button>
         ))}
-        {selectedTag && (
+
+        {/* 더보기/접기 버튼 */}
+        {hasMore && (
           <button
-            onClick={onClear}
-            className="text-xs px-3 py-1.5 rounded bg-gray-200 text-gray-700 hover:bg-gray-300 transition-colors"
+            onClick={() => setIsExpanded((prev) => !prev)}
+            className="text-[10px] px-2 py-0.5 rounded border border-dashed border-blog-border text-blog-primary hover:bg-blog-light transition-colors"
           >
-            ✕ 전체보기
+            {isExpanded ? "접기 ↑" : `+${tags.length - MAX_VISIBLE}개 더보기`}
           </button>
         )}
       </div>

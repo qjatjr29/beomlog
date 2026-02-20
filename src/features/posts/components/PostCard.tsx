@@ -1,47 +1,72 @@
 import { Link } from "react-router";
-import { Calendar, Eye } from "lucide-react";
+import { Calendar, Eye, MessageSquare } from "lucide-react";
 import { PostCardProps } from "../types";
+import { getPostExcerpt } from "../utils/preview";
 
-export const PostCard = ({ post, viewCount, selectedTag }: PostCardProps) => (
-  <Link
-    to={`/post/${post.id}`}
-    className="block bg-linear-to-r from-blog-lightest to-white rounded border border-gray-200 p-5 hover:border-blog-border hover:shadow-md transition-all group"
-  >
-    <div className="flex justify-between items-start mb-2">
-      <h3 className="text-m text-gray-800 flex-1 group-hover:text-blog-primary transition-colors">
-        {post.title}
-      </h3>
-      <span className="px-2 py-1 bg-blog-light border border-blog-border rounded text-xs text-gray-700 ml-4 whitespace-nowrap">
-        {post.category}
-      </span>
-    </div>
-
-    <div className="flex items-center gap-4 text-xs text-gray-500 mb-2">
-      <span className="flex items-center gap-1">
-        <Calendar className="w-3 h-3" />
-        {post.createdAt}
-      </span>
-      <span className="flex items-center gap-1">
-        <Eye className="w-3 h-3" />
-        {viewCount}
-      </span>
-    </div>
-
-    {post.tags.length > 0 && (
-      <div className="flex items-center gap-2 flex-wrap">
-        {post.tags.map((tag) => (
-          <span
-            key={tag}
-            className={`text-xs px-2 py-1 rounded ${
-              selectedTag === tag
-                ? "bg-blog-primary text-white"
-                : "bg-gray-200 text-gray-600"
-            }`}
-          >
-            #{tag}
+export const PostCard = ({
+  post,
+  viewCount,
+  commentCount,
+  selectedTag,
+}: PostCardProps) => {
+  const excerpt = getPostExcerpt(post, 120);
+  return (
+    <Link
+      to={`/post/${post.id}`}
+      className="block rounded overflow-hidden border border-blog-border hover:shadow-md transition-all group"
+    >
+      {/* 제목 바 */}
+      <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover px-3 py-1.5 flex items-center justify-between">
+        <h3 className="text-white text-xs font-bold truncate group-hover:text-white/80 transition-colors">
+          {post.title}
+        </h3>
+        <div className="flex items-center gap-2 text-white/70 text-[10px] shrink-0 ml-2">
+          <span className="px-1.5 py-0.5 bg-white/20 rounded text-[9px]">
+            {post.category}
           </span>
-        ))}
+          <span className="flex items-center gap-0.5">
+            <Calendar className="w-2.5 h-2.5" />
+            {post.createdAt}
+          </span>
+        </div>
       </div>
-    )}
-  </Link>
-);
+
+      {/* 본문 */}
+      <div className="p-3 bg-white">
+        {excerpt && (
+          <p className="text-xs text-gray-600 leading-relaxed mb-3 line-clamp-2">
+            {excerpt}
+          </p>
+        )}
+
+        {post.tags.length > 0 && (
+          <div className="flex flex-wrap gap-1 mb-3">
+            {post.tags.map((tag) => (
+              <span
+                key={tag}
+                className={`text-[10px] px-1.5 py-0.5 rounded ${
+                  selectedTag === tag
+                    ? "bg-blog-primary text-white"
+                    : "bg-blog-lighter text-gray-500"
+                }`}
+              >
+                #{tag}
+              </span>
+            ))}
+          </div>
+        )}
+
+        <div className="flex items-center gap-3 text-[10px] text-gray-400 pt-2 border-t border-blog-border-light">
+          <span className="flex items-center gap-0.5">
+            <Eye className="w-3 h-3" />
+            {viewCount}
+          </span>
+          <span className="flex items-center gap-0.5">
+            <MessageSquare className="w-3 h-3" />
+            {commentCount ?? 0}
+          </span>
+        </div>
+      </div>
+    </Link>
+  );
+};
