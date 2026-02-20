@@ -6,9 +6,9 @@ import { POSTS_PER_PAGE } from "@/shared/constants";
 import { Pagination } from "@/shared/components/Pagination";
 import { usePagination } from "@/shared/hooks/usePagination";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
-import { PostCard } from "@/features/posts/components/PostCard";
 import { getComments } from "@/data/storage";
 import { motion } from "framer-motion";
+import { HomePostCard } from "@/features/posts/components/HomePostCard";
 
 export const Home = () => {
   const {
@@ -126,7 +126,7 @@ export const Home = () => {
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: i * 0.06 }}
           >
-            <PostCard
+            <HomePostCard
               post={post}
               viewCount={viewCounts[post.id] ?? 0}
               commentCount={commentCounts[post.id] ?? 0}
