@@ -90,7 +90,7 @@ export const MiniRoom = () => {
       <div className="flex justify-center">
         <div
           ref={canvasRef}
-          className="relative w-full max-w-[800px] overflow-hidden rounded-lg border-2 border-blog-border shadow-inner aspect-video touch-none bg-gray-50"
+          className="relative w-full max-w-200 overflow-hidden rounded-lg border-2 border-blog-border shadow-inner aspect-video touch-none bg-gray-50"
           onMouseMove={isAdminMode ? onMouseMove : undefined}
           onMouseUp={isAdminMode ? onMouseUp : undefined}
           onMouseLeave={isAdminMode ? onMouseUp : undefined}

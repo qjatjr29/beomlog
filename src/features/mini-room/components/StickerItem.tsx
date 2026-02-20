@@ -58,7 +58,7 @@ export const StickerItem = ({
               sticker.content
             }
             alt="미니미"
-            className="w-14 h-18 sm:w-24 sm:h-28 min-w-[3.5rem] sm:min-w-24 object-contain object-bottom drop-shadow-lg"
+            className="w-14 h-18 sm:w-24 sm:h-28 min-w-14 sm:min-w-24 object-contain object-bottom drop-shadow-lg"
             draggable={false}
           />
         ) : sticker.type === "badge" ? (
@@ -99,7 +99,7 @@ export const StickerItem = ({
                 onRotateStart(e);
               }}
               onTouchStart={handleTouchStart(onRotateStart)}
-              className="absolute -top-4 -right-4 w-6 h-6 sm:w-5 sm:h-5 bg-blue-500 rounded-full cursor-crosshair z-30 shadow-md flex items-center justify-center border-1 border-white hover:bg-blue-600 transition-colors"
+              className="absolute -top-4 -right-4 w-6 h-6 sm:w-5 sm:h-5 bg-blue-500 rounded-full cursor-crosshair z-30 shadow-md flex items-center justify-center border border-white hover:bg-blue-600 transition-colors"
             >
               <RotateCw className="w-3 h-3 text-white" />
             </div>
@@ -109,7 +109,7 @@ export const StickerItem = ({
                 onResizeStart(e);
               }}
               onTouchStart={handleTouchStart(onResizeStart)}
-              className="absolute -bottom-4 -right-4 w-6 h-6 sm:w-5 sm:h-5 bg-green-500 rounded-full cursor-se-resize z-30 shadow-md flex items-center justify-center border-1 border-white"
+              className="absolute -bottom-4 -right-4 w-6 h-6 sm:w-5 sm:h-5 bg-green-500 rounded-full cursor-se-resize z-30 shadow-md flex items-center justify-center border border-white"
               title="드래그해서 크기 조절"
             >
               <MoveDiagonal2 className="w-3 h-3 text-white" />

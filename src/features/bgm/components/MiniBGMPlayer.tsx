@@ -25,11 +25,11 @@ export const MiniPlayer = () => {
   return (
     <div className="flex items-center gap-1.5 text-[10px]">
       {/* 이퀄라이저 */}
-      <div className="flex gap-[2px] items-end h-3 shrink-0">
+      <div className="flex gap-0.5 items-end h-3 shrink-0">
         {eqBars.map((bar, i) => (
           <motion.div
             key={i}
-            className="w-[2px] bg-white rounded-sm"
+            className="w-0.5 bg-white rounded-sm"
             style={{ height: 3 }}
             animate={isPlaying ? { height: bar.heights } : { height: 3 }}
             transition={
