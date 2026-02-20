@@ -7,7 +7,6 @@ import { incrementVisitor } from "@/data/storage";
 import { VisitorStats } from "@/shared/types";
 import { useAdmin } from "@/contexts/AdminContext";
 import { PasswordModal } from "@/features/mini-room/components";
-import { IntroduceCard } from "./IntroduceCard";
 import { ProfileCard } from "./ProfileCard";
 import { MiniPlayer } from "@/features/bgm/components/MiniBGMPlayer";
 
@@ -30,11 +29,8 @@ export const Layout = ({ children }: LayoutProps) => {
   }, []);
 
   const handleAdminClick = () => {
-    if (isAdminMode) {
-      logout();
-    } else {
-      setShowPasswordModal(true);
-    }
+    if (isAdminMode) logout();
+    else setShowPasswordModal(true);
   };
 
   const handlePasswordSubmit = async (e: React.FormEvent) => {
@@ -53,41 +49,31 @@ export const Layout = ({ children }: LayoutProps) => {
     <div className="min-h-screen bg-blog-bg relative overflow-hidden">
       <div
         className="absolute inset-0 opacity-30"
-        style={{
-          backgroundImage: "radial-gradient(circle, #000 1px, transparent 1px)",
-          backgroundSize: "20px 20px",
-        }}
+        style={{ backgroundSize: "20px 20px" }}
       />
 
-      <div className="relative container mx-auto px-4 py-6 max-w-350">
-        {/* 헤더 */}
-        <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover border rounded-lg px-4 py-2 mb-4 flex items-center justify-between">
-          <Link to="/">
-            <div className="flex items-center gap-2">
-              <div className="w-6 h-6 bg-white rounded-sm flex items-center justify-center text-blog-primary text-xs">
-                B
-              </div>
-              <span className="text-white text-sm">Beomsic 미니홈피</span>
-            </div>
-          </Link>
-
-          <div className="flex items-center gap-4">
-            <div className="flex items-center gap-2">
-              <MiniPlayer />
-              {/* 방문자 통계 */}
-              <div className="text-white text-xs whitespace-nowrap">
-                TODAY <span className="font-bold">{visitorStats.today}</span> |
-                TOTAL <span className="font-bold">{visitorStats.total}</span>
-              </div>
-            </div>
-
-            {/* 관리자 버튼 */}
+      <div className="relative container mx-auto px-4 py-4 max-w-6xl">
+        {/* 상단 바 */}
+        <div className="flex items-center justify-between mb-2 px-1">
+          <div className="text-xs font-bold tracking-wide">
+            <span className="text-blog-primary">TODAY </span>
+            <span className="text-blog-primary font-bold">
+              {visitorStats.today}
+            </span>
+            <span className="text-gray-400 mx-1">|</span>
+            <span className="text-gray-500">TOTAL </span>
+            <span className="text-gray-500 font-bold">
+              {visitorStats.total}
+            </span>
+          </div>
+          {/* 관리자 버튼 */}
+          <div className="flex items-center gap-2">
             <button
               onClick={handleAdminClick}
               className={`p-1.5 rounded transition-all ${
                 isAdminMode
                   ? "bg-yellow-400 text-yellow-900 hover:bg-yellow-300"
-                  : "bg-white/20 text-white hover:bg-white/30"
+                  : "bg-white/20 text-gray-600 hover:bg-white/40 border border-gray-300"
               }`}
               title={isAdminMode ? "관리자 모드 종료" : "관리자 모드"}
             >
@@ -100,65 +86,109 @@ export const Layout = ({ children }: LayoutProps) => {
           </div>
         </div>
 
-        <PasswordModal
-          show={showPasswordModal}
-          passwordInput={passwordInput}
-          passwordError={passwordError}
-          onPasswordChange={(value) => {
-            setPasswordInput(value);
-            setPasswordError("");
-          }}
-          onSubmit={handlePasswordSubmit}
-          onClose={() => {
-            setShowPasswordModal(false);
-            setPasswordInput("");
-            setPasswordError("");
-          }}
-        />
+        {/* 타이틀 바 */}
+        <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover border border-blog-primary-hover rounded-t-md px-4 py-2 flex items-center justify-between">
+          <Link to="/" className="text-white font-bold text-sm tracking-wide">
+            Beomsic님의 미니홈피
+          </Link>
+          <MiniPlayer />
+        </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-[260px_1fr] gap-2">
-          <aside className="space-y-2 hidden lg:block">
+        {/* 메인 프레임 */}
+        <div className="border-x border-b border-blog-border bg-white rounded-b-md flex min-h-150">
+          <div
+            className="w-57.5 border-r border-blog-border-light p-3 shrink-0 hidden lg:block bg-blog-lightest"
+            style={{ position: "relative", zIndex: 10, overflow: "visible" }}
+          >
             <ProfileCard
               isAdminMode={isAdminMode}
               visitorStats={visitorStats}
             />
-            <IntroduceCard isAdminMode={isAdminMode} />
-          </aside>
-          <main className="space-y-2">
-            <div className="bg-white border-2 border-blog-border rounded-lg shadow-md overflow-hidden">
-              <div className="flex border-b border-gray-200">
-                {NAVIGATION_TABS.map((tab) => {
-                  const Icon = tab.icon;
-                  const currentPath = decodeURIComponent(location.pathname);
-                  const isActive =
-                    tab.path === "/"
-                      ? currentPath === "/"
-                      : currentPath.startsWith(tab.path);
-                  return (
-                    <Link
-                      key={tab.path}
-                      to={tab.path}
-                      className={`flex-1 px-4 py-3 text-sm flex items-center justify-center gap-2 transition-colors relative ${
-                        isActive
-                          ? "bg-white text-blog-primary-hover border-b-2 border-blog-primary-hover -mb-0.5"
-                          : "bg-gray-50 text-gray-600 hover:bg-gray-100"
-                      }`}
-                    >
-                      <Icon className="w-4 h-4" />
-                      <span>{tab.name}</span>
-                    </Link>
-                  );
-                })}
-              </div>
-              <div className="p-8 min-h-150 bg-white">{children}</div>
+          </div>
+
+          {/* 메인 콘텐츠 */}
+          <div className="flex-1 min-w-0">
+            <div className="p-5 min-h-125">{children}</div>
+          </div>
+
+          {/* 오른쪽 세로 탭 네비게이션 */}
+          <div className="w-18 mt-1 shrink-0 hidden md:flex flex-col border-l border-blog-border-light">
+            <div className="bg-blog-primary text-white text-[9px] text-center py-1.5 font-bold border-b border-blog-primary-hover">
+              MENU
             </div>
-          </main>
+            {NAVIGATION_TABS.map((tab) => {
+              const currentPath = decodeURIComponent(location.pathname);
+              const isActive =
+                tab.path === "/"
+                  ? currentPath === "/"
+                  : tab.path.startsWith("/#")
+                    ? false
+                    : currentPath.startsWith(tab.path);
+
+              return (
+                <Link
+                  key={tab.path}
+                  to={tab.path}
+                  className={`relative py-3 px-1 text-[11px] text-center font-bold transition-all border-b border-blog-border-light ${
+                    isActive
+                      ? "bg-blog-primary text-white"
+                      : "bg-blog-lightest text-blog-primary hover:bg-blog-light"
+                  }`}
+                >
+                  {isActive && (
+                    <div className="absolute left-0 top-0 bottom-0 w-1 bg-blog-primary-hover" />
+                  )}
+                  {tab.name}
+                </Link>
+              );
+            })}
+          </div>
         </div>
 
-        <div className="mt-4 text-center text-xs text-gray-600">
-          <p>© Beomsic's Blog</p>
+        <div className="mt-3 text-center text-[10px] text-gray-500">
+          <p>© Beomsic's Mini Hompy</p>
+        </div>
+
+        {/* 모바일 하단 네비게이션 */}
+        <div className="fixed bottom-0 left-0 right-0 md:hidden bg-white border-t border-blog-border-light flex z-50">
+          {NAVIGATION_TABS.filter((t) => !t.path.includes("#")).map((tab) => {
+            const Icon = tab.icon;
+            const currentPath = decodeURIComponent(location.pathname);
+            const isActive =
+              tab.path === "/"
+                ? currentPath === "/"
+                : currentPath.startsWith(tab.path);
+            return (
+              <Link
+                key={tab.path}
+                to={tab.path}
+                className={`flex-1 py-2 flex flex-col items-center gap-0.5 text-[10px] ${
+                  isActive ? "text-blog-primary font-bold" : "text-gray-500"
+                }`}
+              >
+                {Icon && <Icon className="w-4 h-4" />}
+                {tab.name}
+              </Link>
+            );
+          })}
         </div>
       </div>
+
+      <PasswordModal
+        show={showPasswordModal}
+        passwordInput={passwordInput}
+        passwordError={passwordError}
+        onPasswordChange={(value) => {
+          setPasswordInput(value);
+          setPasswordError("");
+        }}
+        onSubmit={handlePasswordSubmit}
+        onClose={() => {
+          setShowPasswordModal(false);
+          setPasswordInput("");
+          setPasswordError("");
+        }}
+      />
     </div>
   );
 };

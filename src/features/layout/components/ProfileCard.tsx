@@ -4,6 +4,8 @@ import { VisitorStats } from "@/shared/types";
 import { getStatusText, setStatusText } from "@/data/storage/setting.storage";
 import minimiImage from "@/assets/minimiImage.jpeg";
 import { useAdmin } from "@/contexts/AdminContext";
+import { SOCIAL_LINKS } from "../constants/social";
+import { BGMPlayer } from "@/features/bgm/components/BGMPlayer";
 
 export const ProfileCard = ({
   isAdminMode,
@@ -30,86 +32,107 @@ export const ProfileCard = ({
   };
 
   return (
-    <div className="bg-white border-2 border-blog-border rounded-lg shadow-md overflow-hidden">
-      <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover px-3 py-2">
-        <span className="text-white text-sm">Profile</span>
+    <div className="space-y-3">
+      {/* 미니미 이미지 */}
+      <div className="w-full aspect-square bg-linear-to-b from-blog-light to-blog-gradient-end border border-blog-border-lighter rounded-sm flex items-center justify-center overflow-hidden">
+        <img
+          src={minimiImage}
+          alt="미니미"
+          className="w-24 h-24 object-cover rounded-full drop-shadow-md"
+        />
       </div>
-      <div className="p-4 bg-linear-to-b from-white to-gray-50">
-        {/* 프로필 이미지 */}
-        <div className="relative mb-4">
-          <div className="w-full h-40 bg-linear-to-b from-blog-light to-blog-gradient-end rounded border-2 border-blog-border-lighter flex items-center justify-center overflow-hidden">
-            <img
-              src={minimiImage}
-              alt="미니미"
-              className="w-32 h-32 object-cover rounded-full"
+
+      {/* TODAY IS */}
+      <div className="p-1.5 bg-[hsl(40,80%,95%)] border border-[hsl(40,70%,70%)] rounded-sm text-[10px]">
+        <span className="font-bold ">TODAY IS..</span>
+        {isAdminMode && isEditingStatus ? (
+          <div className="flex items-center gap-1 mt-1">
+            <input
+              type="text"
+              value={tempStatus}
+              onChange={(e) => setTempStatus(e.target.value)}
+              className="flex-1 border border-blog-border rounded px-1.5 py-0.5 text-[10px] outline-none focus:border-blog-primary bg-white"
+              autoFocus
+              onKeyDown={(e) => {
+                if (e.key === "Enter") handleSaveStatus();
+                if (e.key === "Escape") setIsEditingStatus(false);
+              }}
             />
+            <button
+              onClick={handleSaveStatus}
+              className="p-0.5 text-blog-primary hover:text-blog-primary-hover"
+            >
+              <Check className="w-3 h-3" />
+            </button>
+            <button
+              onClick={() => setIsEditingStatus(false)}
+              className="p-0.5 text-gray-400 hover:text-gray-600"
+            >
+              <X className="w-3 h-3" />
+            </button>
           </div>
-        </div>
-
-        {/* 상태 메시지 */}
-        <div className="mb-3 p-2 bg-blog-lightest border border-blog-border-light rounded text-xs">
-          <div className="text-gray-500 mb-1">TODAY IS...</div>
-          {isAdminMode && isEditingStatus ? (
-            <div className="flex items-center gap-1">
-              <input
-                type="text"
-                value={tempStatus}
-                onChange={(e) => setTempStatus(e.target.value)}
-                className="flex-1 border border-blog-border rounded px-1.5 py-0.5 text-xs outline-none focus:border-blog-primary"
-                autoFocus
-                onKeyDown={(e) => {
-                  if (e.key === "Enter") handleSaveStatus();
-                  if (e.key === "Escape") setIsEditingStatus(false);
+        ) : (
+          <div className="flex items-center justify-between mt-0.5">
+            <span className="text-gray-700"> {statusText}</span>
+            {isAdminMode && (
+              <button
+                onClick={() => {
+                  setTempStatus(statusText);
+                  setIsEditingStatus(true);
                 }}
-              />
-              <button
-                onClick={handleSaveStatus}
-                className="p-0.5 text-blog-primary hover:text-blog-primary-hover transition-colors"
-                title="저장"
+                className="text-[9px] px-1 py-0.5 bg-blog-light border border-blog-border rounded text-blog-primary hover:bg-blog-gradient-end transition-colors ml-1 shrink-0"
               >
-                <Check className="w-3.5 h-3.5" />
+                수정
               </button>
-              <button
-                onClick={() => setIsEditingStatus(false)}
-                className="p-0.5 text-gray-400 hover:text-gray-600 transition-colors"
-                title="취소"
-              >
-                <X className="w-3.5 h-3.5" />
-              </button>
-            </div>
-          ) : (
-            <div className="flex items-center justify-between">
-              <span className="text-gray-700">{statusText}</span>
-              {isAdminMode && (
-                <button
-                  onClick={() => {
-                    setTempStatus(statusText);
-                    setIsEditingStatus(true);
-                  }}
-                  className="text-xs px-1.5 py-0.5 bg-blog-light border border-blog-border rounded text-blog-primary hover:bg-blog-gradient-end transition-colors ml-2 shrink-0"
-                >
-                  수정
-                </button>
-              )}
-            </div>
-          )}
-        </div>
+            )}
+          </div>
+        )}
+      </div>
 
-        {/* 방문자 수 */}
-        <div className="grid grid-cols-2 gap-2 text-xs">
-          <div className="bg-blog-lighter border border-blog-border-light rounded p-2 text-center">
-            <div className="text-gray-500">TODAY</div>
-            <div className="text-blog-primary text-base">
-              {visitorStats.today}
-            </div>
-          </div>
-          <div className="bg-blog-lighter border border-blog-border-light rounded p-2 text-center">
-            <div className="text-gray-500">TOTAL</div>
-            <div className="text-blog-primary text-base">
-              {visitorStats.total}
-            </div>
+      {/* 이름 & 소개 */}
+      <div className="px-0.5">
+        <div className="font-bold text-sm text-gray-800 mb-1">범석</div>
+        <div className="text-[10px] text-gray-500">🧑🏻‍💻 Backend Developer</div>
+      </div>
+
+      {/* 방문자 수 */}
+      <div className="grid grid-cols-2 gap-1 text-[10px]">
+        <div className="bg-blog-lighter border border-blog-border-light rounded-sm p-1.5 text-center">
+          <div className="text-gray-500 mb-0.5">TODAY</div>
+          <div className="text-blog-primary font-bold">
+            {visitorStats.today}
           </div>
         </div>
+        <div className="bg-blog-lighter border border-blog-border-light rounded-sm p-1.5 text-center">
+          <div className="text-gray-500 mb-0.5">TOTAL</div>
+          <div className="text-blog-primary font-bold">
+            {visitorStats.total}
+          </div>
+        </div>
+      </div>
+
+      <BGMPlayer isAdminMode={isAdminMode} />
+      <div className="border-t border-blog-border-light"></div>
+
+      {/* 소셜 링크 */}
+      <div className="flex items-center justify-around">
+        {SOCIAL_LINKS.map((link) => {
+          const Icon = link.icon;
+          return (
+            <a
+              key={link.id}
+              href={link.href}
+              target={link.id !== "email" ? "_blank" : undefined}
+              rel={link.id !== "email" ? "noopener noreferrer" : undefined}
+              className="p-1.5 hover:bg-blog-light rounded-full transition-colors"
+              title={link.label}
+            >
+              <Icon
+                className={`w-3.5 h-3.5 text-gray-500 transition-colors ${link.hoverColor}`}
+              />
+            </a>
+          );
+        })}
       </div>
     </div>
   );
