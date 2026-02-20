@@ -89,7 +89,7 @@ export const Layout = ({ children }: LayoutProps) => {
         {/* 타이틀 바 */}
         <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover border border-blog-primary-hover rounded-t-md px-4 py-2 flex items-center justify-between">
           <Link to="/" className="text-white font-bold text-sm tracking-wide">
-            Beomsic님의 미니홈피
+            Beomsic 미니홈피
           </Link>
           <MiniPlayer />
         </div>
