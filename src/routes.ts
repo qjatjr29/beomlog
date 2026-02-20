@@ -15,7 +15,7 @@ export const router = createBrowserRouter([
       { path: "posts/:category", Component: PostList },
       { path: "post/:id", Component: PostDetail },
       { path: "guestbook", Component: Guestbook },
-      { path: "about", Component: About },
+      { path: "profile", Component: About },
       { path: "*", Component: NotFound },
     ],
   },

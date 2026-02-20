@@ -4,6 +4,7 @@ import { CATEGORIES, CATEGORY_ICONS } from "@/shared/constants";
 
 export const NAVIGATION_TABS: Tab[] = [
   { name: "홈", path: "/", icon: Home },
+  { name: "프로필", path: "/profile", icon: User },
   {
     name: "개발",
     path: `/posts/${CATEGORIES.DEV_LOG}`,
@@ -15,5 +16,4 @@ export const NAVIGATION_TABS: Tab[] = [
     icon: CATEGORY_ICONS[CATEGORIES.DAILY],
   },
   { name: "방명록", path: "/guestbook", icon: MessageSquare },
-  { name: "About", path: "/about", icon: User },
 ];
