@@ -29,7 +29,6 @@ export const MiniRoom = () => {
   } = useMiniRoomStickers(canvasRef as React.RefObject<HTMLDivElement>);
 
   const { currentTheme, changeTheme } = useMiniRoomTheme();
-
   const [textInput, setTextInput] = useState("");
   const [openPicker, setOpenPicker] = useState<PickerType>(null);
 
@@ -42,13 +41,23 @@ export const MiniRoom = () => {
     setTextInput("");
   };
 
+  // 터치 좌표 보정 유틸리티
+  const handleTouchMove = (e: React.TouchEvent) => {
+    if (!isAdminMode || !draggingId) return;
+    if (e.cancelable) e.preventDefault(); // 스크롤 방지
+
+    const touch = e.touches[0];
+    const syntheticEvent = {
+      clientX: touch.clientX,
+      clientY: touch.clientY,
+    } as React.MouseEvent;
+    onMouseMove(syntheticEvent);
+  };
+
   if (!currentTheme) {
     return (
       <div className="mb-6">
-        <div
-          className="w-full rounded-lg bg-gray-100 animate-pulse"
-          style={{ maxWidth: "800px", height: "450px" }}
-        />
+        <div className="w-full rounded-lg bg-gray-100 animate-pulse aspect-video" />
       </div>
     );
   }
@@ -81,17 +90,17 @@ export const MiniRoom = () => {
       <div className="flex justify-center">
         <div
           ref={canvasRef}
-          className="relative rounded-lg overflow-hidden w-full"
-          style={{ maxWidth: "800px", height: "450px", aspectRatio: "16/9" }}
+          className="relative w-full max-w-[800px] overflow-hidden rounded-lg border-2 border-blog-border shadow-inner aspect-video touch-none bg-gray-50"
           onMouseMove={isAdminMode ? onMouseMove : undefined}
           onMouseUp={isAdminMode ? onMouseUp : undefined}
           onMouseLeave={isAdminMode ? onMouseUp : undefined}
+          onTouchMove={handleTouchMove}
+          onTouchEnd={onMouseUp}
           onClick={(e) => {
-            if (e.target === e.currentTarget) {
-              setSelectedId(null);
-            }
+            if (e.target === e.currentTarget) setSelectedId(null);
           }}
         >
+          {/* 배경 로직 */}
           {currentTheme.bgImage ? (
             <img
               src={currentTheme.bgImage}
@@ -108,26 +117,8 @@ export const MiniRoom = () => {
                 style={{
                   backgroundImage: currentTheme.pattern,
                   backgroundSize: "20px 20px",
-                  width: "100%",
-                  height: "100%",
                 }}
               />
-            </div>
-          )}
-
-          {stickers.length === 0 && (
-            <div className="absolute inset-0 flex items-center justify-center text-sm z-10">
-              <span
-                className={
-                  currentTheme.bgImage
-                    ? "text-white/70 drop-shadow"
-                    : "text-gray-400"
-                }
-              >
-                {isAdminMode
-                  ? "미니미와 스티커로 꾸며보세요! ✨"
-                  : "Beomsic의 미니룸 🧑🏻‍💻"}
-              </span>
             </div>
           )}
 
@@ -139,7 +130,6 @@ export const MiniRoom = () => {
               isDragging={draggingId === sticker.id}
               isSelected={selectedId === sticker.id}
               onMouseDown={(e) => {
-                e.stopPropagation();
                 setSelectedId(sticker.id);
                 startDragging(e, sticker);
               }}
@@ -147,17 +137,17 @@ export const MiniRoom = () => {
               onRotateStart={(e) => startRotating(e, sticker)}
             />
           ))}
+
+          {/* 휴지통 */}
           {isAdminMode && draggingId && (
             <div
-              className={`absolute bottom-5 left-1/2 -translate-x-1/2 z-30 w-14 h-14 rounded-full flex items-center justify-center transition-all shadow-xl ${
+              className={`absolute bottom-4 left-1/2 -translate-x-1/2 z-30 w-12 h-12 sm:w-14 sm:h-14 rounded-full flex items-center justify-center transition-all shadow-xl ${
                 isOverTrash
                   ? "bg-red-500 scale-125"
-                  : "bg-black/50 backdrop-blur-md border border-white/20"
+                  : "bg-black/40 backdrop-blur-md border border-white/20"
               }`}
             >
-              <Trash2
-                className={`w-5 h-5 ${isOverTrash ? "text-white" : "text-white/70"}`}
-              />
+              <Trash2 className="w-5 h-5 sm:w-6 sm:h-6 text-white" />
             </div>
           )}
         </div>
