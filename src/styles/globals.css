@@ -108,8 +108,43 @@
   --sidebar-ring: oklch(0.708 0 0);
 }
 
-/* 다크모드 비활성화 - 추후 다크모드 지원 시 이 블록에 blog 변수 오버라이드 */
-/* .dark { } */
+.dark {
+  color-scheme: dark;
+
+  --background: #1a1a2e;
+  --foreground: #e0e0e0;
+  --card: #222240;
+  --card-foreground: #e0e0e0;
+  --popover: #222240;
+  --popover-foreground: #e0e0e0;
+  --primary: #e0e0e0;
+  --primary-foreground: #1a1a2e;
+  --secondary: #2a2a45;
+  --secondary-foreground: #e0e0e0;
+  --muted: #2a2a45;
+  --muted-foreground: #9999aa;
+  --accent: #2a2a45;
+  --accent-foreground: #e0e0e0;
+  --destructive: #d4183d;
+  --destructive-foreground: #ffffff;
+  --border: rgba(255, 255, 255, 0.12);
+  --input: transparent;
+  --input-background: #2a2a45;
+  --switch-background: #444460;
+  --ring: #6688bb;
+
+  /* blog 계열 다크모드 오버라이드 */
+  --color-blog-primary: #7aaad4;
+  --color-blog-primary-hover: #6999c3;
+  --color-blog-border: #445577;
+  --color-blog-bg: #16162b;
+  --color-blog-light: #222240;
+  --color-blog-lighter: #1e1e38;
+  --color-blog-lightest: #1c1c34;
+  --color-blog-gradient-end: #1e1e38;
+  --color-blog-border-light: #333355;
+  --color-blog-border-lighter: #445577;
+}
 
 @custom-variant dark (&:is(.dark *));
 
@@ -161,6 +196,9 @@
 
   body {
     @apply bg-blog-bg text-foreground;
+    transition:
+      background-color 0.3s,
+      color 0.3s;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
   }
