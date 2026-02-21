@@ -12,13 +12,14 @@ export const PasswordModal = ({
   onClose,
 }: PasswordModalProps) => {
   const [showPassword, setShowPassword] = useState(false);
-
   if (!show) return null;
 
   return (
     <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-      <div className="bg-white rounded-lg p-6 max-w-sm w-full mx-4 border-2 border-blog-border">
-        <h3 className="text-lg mb-4 text-gray-800">관리자 인증</h3>
+      <div className="bg-white dark:bg-gray-800 rounded-lg p-6 max-w-sm w-full mx-4 border-2 border-blog-border dark:border-gray-600">
+        <h3 className="text-lg mb-4 text-gray-800 dark:text-gray-100">
+          관리자 인증
+        </h3>
         <form onSubmit={onSubmit}>
           <div className="relative mb-2">
             <Input
@@ -32,7 +33,7 @@ export const PasswordModal = ({
             <button
               type="button"
               onClick={() => setShowPassword((p) => !p)}
-              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition-colors"
+              className="absolute right-2.5 top-1/2 -translate-y-1/2 text-gray-400 dark:text-gray-500 hover:text-gray-600 dark:hover:text-gray-300 transition-colors"
             >
               {showPassword ? (
                 <EyeOff className="w-4 h-4" />

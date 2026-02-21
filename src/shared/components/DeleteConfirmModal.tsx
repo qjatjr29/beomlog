@@ -30,13 +30,15 @@ export const DeleteConfirmModal = ({
           initial={{ scale: 0.9, opacity: 0 }}
           animate={{ scale: 1, opacity: 1 }}
           exit={{ scale: 0.9, opacity: 0 }}
-          className="bg-white rounded-2xl p-6 w-full max-w-xs shadow-2xl"
+          className="bg-white dark:bg-gray-800 rounded-2xl p-6 w-full max-w-xs shadow-2xl"
           onClick={(e) => e.stopPropagation()}
         >
-          <h3 className="text-gray-800 font-bold mb-1">삭제하시겠습니까?</h3>
+          <h3 className="text-gray-800 dark:text-gray-100 font-bold mb-1">
+            삭제하시겠습니까?
+          </h3>
           {!isAdminMode ? (
             <>
-              <p className="text-xs text-gray-500 mb-3">
+              <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
                 비밀번호를 입력해 주세요.
               </p>
               <Input
@@ -50,14 +52,14 @@ export const DeleteConfirmModal = ({
               />
             </>
           ) : (
-            <p className="text-xs text-gray-500 mb-4">
+            <p className="text-xs text-gray-500 dark:text-gray-400 mb-4">
               관리자 권한으로 삭제합니다.
             </p>
           )}
           <div className="flex gap-2">
             <Button
               onClick={onClose}
-              className="flex-1 bg-gray-400 text-white h-10"
+              className="flex-1 bg-gray-400 dark:bg-gray-600 text-white h-10"
             >
               취소
             </Button>

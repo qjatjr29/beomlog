@@ -2,13 +2,12 @@ import { InlineLinkProps } from "../../types";
 
 export const InlineLink = ({ url, domain }: InlineLinkProps) => {
   const favicon = `https://www.google.com/s2/favicons?domain=${domain}&sz=32`;
-
   return (
     <a
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="inline-flex items-center gap-1.5 px-2.5 py-1 my-2 bg-blue-50 hover:bg-blue-100 border border-blue-200 rounded-md text-sm text-blue-700 hover:text-blue-800 transition-colors no-underline font-medium"
+      className="inline-flex items-center gap-1.5 px-2.5 py-1 my-2 bg-blue-50 dark:bg-blue-900/30 hover:bg-blue-100 dark:hover:bg-blue-900/50 border border-blue-200 dark:border-blue-800 rounded-md text-sm text-blue-700 dark:text-blue-300 hover:text-blue-800 dark:hover:text-blue-200 transition-colors no-underline font-medium"
       style={{ boxShadow: "0 1px 2px rgba(0, 0, 0, 0.05)" }}
     >
       <img

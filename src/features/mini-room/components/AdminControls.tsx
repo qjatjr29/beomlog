@@ -33,66 +33,58 @@ export const AdminControls = ({
   const [textStyle, setTextStyle] = useState<TextStyle>("default");
 
   return (
-    <div className="mb-3 p-3 bg-[#fff9e6] border-2 border-[#ffd700] rounded">
-      {/* 어드민 컨트롤 헤더 - 노란 테마는 블로그 브랜드와 별개이므로 유지 */}
+    <div className="mb-3 p-3 bg-[#fff9e6] dark:bg-[#3a3000] border-2 border-[#ffd700] dark:border-[#a08000] rounded">
       <div className="flex items-center gap-2 mb-2">
-        <Sparkles className="w-4 h-4 text-yellow-600" />
-        <span className="text-xs text-yellow-800">미니룸 꾸미기</span>
+        <Sparkles className="w-4 h-4 text-yellow-600 dark:text-yellow-400" />
+        <span className="text-xs text-yellow-800 dark:text-yellow-300">
+          미니룸 꾸미기
+        </span>
       </div>
 
       <div className="flex flex-wrap gap-2 mb-3">
-        <Button
-          onClick={onToggleMinimiPicker}
-          size="sm"
-          variant="outline"
-          className="text-xs h-8"
-        >
-          👤 미니미
-        </Button>
-        <Button
-          onClick={onToggleEmojiPicker}
-          size="sm"
-          variant="outline"
-          className="text-xs h-8"
-        >
-          🎨 이모지
-        </Button>
-        <Button
-          onClick={onToggleBadgePicker}
-          size="sm"
-          variant="outline"
-          className="text-xs h-8"
-        >
-          🏷️ 기술 배지
-        </Button>
+        {[
+          { label: "👤 미니미", handler: onToggleMinimiPicker },
+          { label: "🎨 이모지", handler: onToggleEmojiPicker },
+          { label: "🏷️ 기술 배지", handler: onToggleBadgePicker },
+        ].map(({ label, handler }) => (
+          <Button
+            key={label}
+            onClick={handler}
+            size="sm"
+            variant="outline"
+            className="text-xs h-8 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
+          >
+            {label}
+          </Button>
+        ))}
         <Button
           onClick={onToggleTextInput}
           size="sm"
           variant="outline"
-          className="text-xs h-8"
+          className="text-xs h-8 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
         >
-          <Type className="w-3 h-3 mr-1" />
-          텍스트
+          <Type className="w-3 h-3 mr-1" /> 텍스트
         </Button>
         <Button
           onClick={onToggleThemePicker}
           size="sm"
           variant="outline"
-          className="text-xs h-8"
+          className="text-xs h-8 dark:border-gray-600 dark:text-gray-200 dark:hover:bg-gray-700"
         >
-          <Palette className="w-3 h-3 mr-1" />
-          테마
+          <Palette className="w-3 h-3 mr-1" /> 테마
         </Button>
       </div>
 
       {/* Minime Picker */}
       {showMinimiPicker && (
-        <div className="p-3 bg-white border-2 border-blog-border rounded mb-2">
+        <div className="p-3 bg-white dark:bg-gray-800 border-2 border-blog-border dark:border-gray-600 rounded mb-2">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-800">미니미 선택</span>
+            <span className="text-xs text-gray-800 dark:text-gray-200">
+              미니미 선택
+            </span>
             <button
               onClick={onToggleMinimiPicker}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
             >
               <X className="w-4 h-4" />
             </button>
@@ -105,7 +97,7 @@ export const AdminControls = ({
                   onAddMinime(minime);
                   onToggleMinimiPicker();
                 }}
-                className="flex flex-col items-center p-2 hover:bg-gray-100 rounded transition-colors border border-gray-200"
+                className="flex flex-col items-center p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors border border-gray-200 dark:border-gray-600"
               >
                 <div className="w-12 h-14 flex items-end justify-center">
                   <img
@@ -115,7 +107,7 @@ export const AdminControls = ({
                     draggable={false}
                   />
                 </div>
-                <p className="text-[10px] text-gray-600 mt-1 text-center leading-tight">
+                <p className="text-[10px] text-gray-600 dark:text-gray-400 mt-1 text-center leading-tight">
                   {minime.name}
                 </p>
               </button>
@@ -126,12 +118,14 @@ export const AdminControls = ({
 
       {/* Emoji Picker */}
       {showEmojiPicker && (
-        <div className="p-3 bg-white border-2 border-blog-border rounded mb-2">
+        <div className="p-3 bg-white dark:bg-gray-800 border-2 border-blog-border dark:border-gray-600 rounded mb-2">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-700">이모지 선택</span>
+            <span className="text-xs text-gray-700 dark:text-gray-200">
+              이모지 선택
+            </span>
             <button
               onClick={onToggleEmojiPicker}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
             >
               <X className="w-4 h-4" />
             </button>
@@ -144,7 +138,7 @@ export const AdminControls = ({
                   onAddEmoji(emoji);
                   onToggleEmojiPicker();
                 }}
-                className="text-2xl p-2 hover:bg-gray-100 rounded transition-colors"
+                className="text-2xl p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors"
               >
                 {emoji}
               </button>
@@ -155,10 +149,15 @@ export const AdminControls = ({
 
       {/* Badge Picker */}
       {showBadgePicker && (
-        <div className="p-3 bg-white border-2 border-blog-border rounded mb-2">
+        <div className="p-3 bg-white dark:bg-gray-800 border-2 border-blog-border dark:border-gray-600 rounded mb-2">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-700">기술 배지 선택</span>
-            <button onClick={onToggleBadgePicker}>
+            <span className="text-xs text-gray-700 dark:text-gray-200">
+              기술 배지 선택
+            </span>
+            <button
+              onClick={onToggleBadgePicker}
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
+            >
               <X className="w-4 h-4" />
             </button>
           </div>
@@ -187,12 +186,14 @@ export const AdminControls = ({
 
       {/* Text Input */}
       {showTextInput && (
-        <div className="p-3 bg-white border-2 border-blog-border rounded mb-2">
+        <div className="p-3 bg-white dark:bg-gray-800 border-2 border-blog-border dark:border-gray-600 rounded mb-2">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-700">텍스트 추가</span>
+            <span className="text-xs text-gray-700 dark:text-gray-200">
+              텍스트 추가
+            </span>
             <button
               onClick={onToggleTextInput}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
             >
               <X className="w-4 h-4" />
             </button>
@@ -204,8 +205,8 @@ export const AdminControls = ({
                 onClick={() => setTextStyle(style)}
                 className={`flex-1 py-1.5 text-xs rounded border-2 transition-colors ${
                   textStyle === style
-                    ? "border-blog-primary bg-blog-light text-blog-primary"
-                    : "border-gray-200 text-gray-600 hover:border-blog-border"
+                    ? "border-blog-primary bg-blog-light dark:bg-gray-700 text-blog-primary"
+                    : "border-gray-200 dark:border-gray-600 text-gray-600 dark:text-gray-300 hover:border-blog-border"
                 }`}
               >
                 {label}
@@ -218,7 +219,7 @@ export const AdminControls = ({
               value={textInput}
               onChange={(e) => onTextInputChange(e.target.value)}
               placeholder="텍스트를 입력하세요..."
-              className="flex-1 text-sm h-9"
+              className="flex-1 text-sm h-9 dark:bg-gray-700 dark:border-gray-500 dark:text-gray-200"
               onKeyPress={(e) => {
                 if (e.key === "Enter") {
                   onAddText(textStyle);
@@ -242,12 +243,14 @@ export const AdminControls = ({
 
       {/* Theme Picker */}
       {showThemePicker && (
-        <div className="p-3 bg-white border-2 border-blog-border rounded">
+        <div className="p-3 bg-white dark:bg-gray-800 border-2 border-blog-border dark:border-gray-600 rounded">
           <div className="flex items-center justify-between mb-2">
-            <span className="text-xs text-gray-700">테마 선택:</span>
+            <span className="text-xs text-gray-700 dark:text-gray-200">
+              테마 선택:
+            </span>
             <button
               onClick={onToggleThemePicker}
-              className="text-gray-500 hover:text-gray-700"
+              className="text-gray-500 dark:text-gray-400 hover:text-gray-700 dark:hover:text-gray-200"
             >
               <X className="w-4 h-4" />
             </button>
@@ -260,10 +263,10 @@ export const AdminControls = ({
                   onChangeTheme(theme.id);
                   onToggleThemePicker();
                 }}
-                className={`p-2 hover:bg-gray-100 rounded transition-colors border-2 ${
+                className={`p-2 hover:bg-gray-100 dark:hover:bg-gray-700 rounded transition-colors border-2 ${
                   theme.id === currentTheme.id
                     ? "border-blog-primary ring-2 ring-blog-primary"
-                    : "border-gray-200"
+                    : "border-gray-200 dark:border-gray-600"
                 }`}
               >
                 {theme.bgImage ? (
@@ -283,7 +286,7 @@ export const AdminControls = ({
                     }}
                   />
                 )}
-                <p className="text-xs text-gray-600 mt-1 text-center">
+                <p className="text-xs text-gray-600 dark:text-gray-400 mt-1 text-center">
                   {theme.name}
                 </p>
               </button>

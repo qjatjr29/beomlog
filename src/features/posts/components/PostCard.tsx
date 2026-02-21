@@ -1,7 +1,6 @@
 import { Link } from "react-router";
 import { Calendar, Eye, MessageSquare } from "lucide-react";
 import { PostCardProps } from "../types";
-import { getPostExcerpt } from "../utils/preview";
 
 export const PostCard = ({
   post,
@@ -9,11 +8,10 @@ export const PostCard = ({
   commentCount,
   selectedTag,
 }: PostCardProps) => {
-  const excerpt = getPostExcerpt(post, 120);
   return (
     <Link
       to={`/post/${post.id}`}
-      className="block rounded overflow-hidden border border-blog-border hover:shadow-md transition-all group"
+      className="block rounded overflow-hidden border border-blog-border dark:border-gray-700 hover:shadow-md transition-all group"
     >
       {/* 제목 바 */}
       <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover px-3 py-1.5 flex items-center justify-between">
@@ -32,13 +30,12 @@ export const PostCard = ({
       </div>
 
       {/* 본문 */}
-      <div className="p-3 bg-white">
-        {excerpt && (
-          <p className="text-xs text-gray-600 leading-relaxed mb-3 line-clamp-2">
-            {excerpt}
+      <div className="p-3 bg-white dark:bg-gray-800">
+        {post.excerpt && (
+          <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-3 line-clamp-2">
+            {post.excerpt}
           </p>
         )}
-
         {post.tags.length > 0 && (
           <div className="flex flex-wrap gap-1 mb-3">
             {post.tags.map((tag) => (
@@ -47,7 +44,7 @@ export const PostCard = ({
                 className={`text-[10px] px-1.5 py-0.5 rounded ${
                   selectedTag === tag
                     ? "bg-blog-primary text-white"
-                    : "bg-blog-lighter text-gray-500"
+                    : "bg-blog-lighter dark:bg-gray-700 text-gray-500 dark:text-gray-400"
                 }`}
               >
                 #{tag}
@@ -55,8 +52,7 @@ export const PostCard = ({
             ))}
           </div>
         )}
-
-        <div className="flex items-center gap-3 text-[10px] text-gray-400 pt-2 border-t border-blog-border-light">
+        <div className="flex items-center gap-3 text-[10px] text-gray-400 dark:text-gray-500 pt-2 border-t border-blog-border-light dark:border-gray-700">
           <span className="flex items-center gap-0.5">
             <Eye className="w-3 h-3" />
             {viewCount}

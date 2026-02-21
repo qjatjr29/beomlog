@@ -17,23 +17,24 @@ export const Button = ({
   size = "default",
   ...props
 }: ButtonProps) => {
-  const baseStyles =
+  const base =
     "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-all disabled:pointer-events-none disabled:opacity-50 outline-none focus-visible:ring-2 focus-visible:ring-offset-2";
 
-  const variantStyles = {
+  const variants = {
     default:
       "bg-blog-primary text-white hover:bg-blog-primary-hover focus-visible:ring-blog-primary",
     destructive:
       "bg-red-500 text-white hover:bg-red-600 focus-visible:ring-red-500",
     outline:
-      "border border-gray-300 bg-white text-gray-700 hover:bg-gray-50 focus-visible:ring-gray-400",
+      "border border-gray-300 dark:border-gray-600 bg-white dark:bg-gray-800 text-gray-700 dark:text-gray-200 hover:bg-gray-50 dark:hover:bg-gray-700 focus-visible:ring-gray-400",
     secondary:
-      "bg-gray-100 text-gray-900 hover:bg-gray-200 focus-visible:ring-gray-400",
-    ghost: "hover:bg-gray-100 text-gray-700 focus-visible:ring-gray-400",
+      "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-gray-100 hover:bg-gray-200 dark:hover:bg-gray-600 focus-visible:ring-gray-400",
+    ghost:
+      "hover:bg-gray-100 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-200 focus-visible:ring-gray-400",
     link: "text-blog-primary underline-offset-4 hover:underline",
   };
 
-  const sizeStyles = {
+  const sizes = {
     default: "h-9 px-4 py-2",
     sm: "h-8 rounded-md px-3 text-xs",
     lg: "h-10 rounded-md px-6",
@@ -42,7 +43,7 @@ export const Button = ({
 
   return (
     <button
-      className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
+      className={`${base} ${variants[variant]} ${sizes[size]} ${className}`}
       {...props}
     />
   );

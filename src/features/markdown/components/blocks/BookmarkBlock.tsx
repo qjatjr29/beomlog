@@ -9,7 +9,7 @@ export const BookmarkBlock = ({ url, title }: BookmarkBlockProps) => {
       href={url}
       target="_blank"
       rel="noopener noreferrer"
-      className="block my-3 px-3 py-2 border border-gray-300 rounded-lg hover:border-blog-primary hover:shadow-md transition-all bg-white no-underline"
+      className="block my-3 px-3 py-2 border border-gray-300 dark:border-gray-600 rounded-lg hover:border-blog-primary hover:shadow-md transition-all bg-white dark:bg-gray-800 no-underline"
     >
       <div className="flex items-center gap-3">
         <img
@@ -21,13 +21,15 @@ export const BookmarkBlock = ({ url, title }: BookmarkBlockProps) => {
           }}
         />
         <div className="flex-1 min-w-0">
-          <div className="font-medium text-gray-900 text-sm truncate mb-0.5">
+          <div className="font-medium text-gray-900 dark:text-gray-100 text-sm truncate mb-0.5">
             {title}
           </div>
-          <div className="text-xs text-gray-500 truncate">{domain}</div>
+          <div className="text-xs text-gray-500 dark:text-gray-400 truncate">
+            {domain}
+          </div>
         </div>
         <svg
-          className="w-5 h-5 text-gray-400 shrink-0"
+          className="w-5 h-5 text-gray-400 dark:text-gray-500 shrink-0"
           fill="none"
           stroke="currentColor"
           viewBox="0 0 24 24"

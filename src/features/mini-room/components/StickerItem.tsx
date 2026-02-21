@@ -14,7 +14,6 @@ export const StickerItem = ({
   const scale = sticker.scale ?? 1;
   const rotation = sticker.rotation ?? 0;
 
-  // 터치 이벤트를 마우스 핸들러에 연결
   const handleTouchStart =
     (handler: (e: React.MouseEvent) => void) => (e: React.TouchEvent) => {
       if (!isAdminMode) return;
@@ -81,7 +80,11 @@ export const StickerItem = ({
         ) : sticker.type === "text" ? (
           <div
             className={`
-            text-[10px] sm:text-sm px-2 py-1 sm:px-3 sm:py-2 bg-white/90 backdrop-blur-sm border border-blog-border shadow-md rounded-sm whitespace-nowrap
+            text-[10px] sm:text-sm px-2 py-1 sm:px-3 sm:py-2
+            bg-white/90 dark:bg-gray-800/90
+            backdrop-blur-sm border border-blog-border dark:border-gray-600
+            shadow-md rounded-sm whitespace-nowrap
+            text-gray-800 dark:text-gray-200
             ${sticker.textStyle === "talk" ? "rounded-bl-none" : sticker.textStyle === "cloud" ? "rounded-[50%]" : ""}
             ${isDragging ? "opacity-60" : ""}
           `}
@@ -90,7 +93,6 @@ export const StickerItem = ({
           </div>
         ) : null}
 
-        {/* 관리자 핸들 */}
         {isAdminMode && isSelected && (
           <>
             <div

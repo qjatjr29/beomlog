@@ -98,14 +98,15 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
 
   if (isLoading)
     return (
-      <div className="flex items-center gap-2 text-xs text-gray-400">
-        <Music className="w-3 h-3 animate-pulse" /> <span>Loading...</span>
+      <div className="flex items-center gap-2 text-xs text-gray-400 dark:text-gray-500">
+        <Music className="w-3 h-3 animate-pulse" />
+        <span>Loading...</span>
       </div>
     );
 
   return (
     <div className="relative">
-      {/* --- Trigger Bar --- */}
+      {/* 트리거 바 */}
       <div ref={triggerRef} className="flex items-center gap-1 w-full">
         <button onClick={handleTogglePanel} className="shrink-0 w-3 h-3">
           {isPlaying ? (
@@ -121,20 +122,20 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
           <MarqueeText
             text={playlist[currentIndex]?.title ?? "BGM 없음"}
             animate={isPlaying}
-            className="text-xs text-gray-600 hover:text-blog-primary transition-colors w-full"
+            className="text-xs text-gray-600 dark:text-gray-400 hover:text-blog-primary transition-colors w-full"
           />
         </button>
         <div className="flex items-center gap-0.5 shrink-0">
           <button
             onClick={goToPrev}
-            className="p-1 text-gray-400 hover:text-blog-primary disabled:opacity-30"
+            className="p-1 text-gray-400 dark:text-gray-500 hover:text-blog-primary disabled:opacity-30"
             disabled={playlist.length <= 1}
           >
             <SkipBack className="w-3 h-3" />
           </button>
           <button
             onClick={togglePlay}
-            className="p-1 text-gray-500 hover:text-blog-primary"
+            className="p-1 text-gray-500 dark:text-gray-400 hover:text-blog-primary"
             disabled={!isReady || !playlist[currentIndex]}
           >
             {isPlaying ? (
@@ -145,7 +146,7 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
           </button>
           <button
             onClick={goToNext}
-            className="p-1 text-gray-400 hover:text-blog-primary"
+            className="p-1 text-gray-400 dark:text-gray-500 hover:text-blog-primary"
             disabled={playlist.length <= 1}
           >
             <SkipForward className="w-3 h-3" />
@@ -153,23 +154,23 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
         </div>
       </div>
 
-      {/* --- Playlist Panel --- */}
+      {/* 플레이리스트 패널 (portal) */}
       {isOpen &&
         createPortal(
           <div
             ref={panelRef}
             style={panelStyle}
-            className="p-3 bg-white border-2 border-blog-border rounded shadow-xl max-h-[60vh] overflow-y-auto custom-scrollbar"
+            className="p-3 bg-white dark:bg-gray-800 border-2 border-blog-border dark:border-gray-600 rounded shadow-xl max-h-[60vh] overflow-y-auto custom-scrollbar"
           >
             <VolumeController volume={volume} setVolume={setVolume} />
-            <div className="mb-3 border-t border-gray-100 pt-3">
+            <div className="mb-3 border-t border-gray-100 dark:border-gray-700 pt-3">
               <div className="flex items-center justify-between mb-2 px-1">
                 <div className="flex items-center gap-1.5">
                   <div className="w-1 h-3 bg-blog-primary rounded-full" />
                   <span className="text-[11px] font-bold text-blog-primary">
                     PLAYLIST
                   </span>
-                  <span className="text-[10px] bg-blog-light text-blog-primary px-1.5 py-0.5 rounded-full font-bold">
+                  <span className="text-[10px] bg-blog-light dark:bg-gray-700 text-blog-primary px-1.5 py-0.5 rounded-full font-bold">
                     {playlist.length}
                   </span>
                 </div>
@@ -227,7 +228,7 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
               </div>
             </div>
             {isAdminMode && (
-              <div className="border-t border-gray-100 pt-2">
+              <div className="border-t border-gray-100 dark:border-gray-700 pt-2">
                 {showAddForm ? (
                   <BgmForm
                     submitLabel="추가"
@@ -241,7 +242,7 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
                 ) : (
                   <button
                     onClick={() => setShowAddForm(true)}
-                    className="flex items-center gap-1.5 text-xs text-gray-500 hover:text-blog-primary py-1 px-1"
+                    className="flex items-center gap-1.5 text-xs text-gray-500 dark:text-gray-400 hover:text-blog-primary py-1 px-1"
                   >
                     <Plus className="w-3 h-3" /> BGM 추가
                   </button>
@@ -252,7 +253,6 @@ export const BGMPlayer = ({ isAdminMode = false }: BGMPlayerProps) => {
           document.body,
         )}
 
-      {/* --- Modals --- */}
       <DeleteConfirmModal
         isOpen={deleteModal.isOpen}
         isAdminMode={true}

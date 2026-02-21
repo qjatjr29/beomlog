@@ -42,11 +42,7 @@ export const CommentSection = ({
     resetPage();
   }, [postId]);
 
-  const loadItems = async () => {
-    const loaded = await getComments(postId);
-    setItems(loaded);
-  };
-
+  const loadItems = async () => setItems(await getComments(postId));
   const showError = (message: string) =>
     setErrorModal({ isOpen: true, message });
 
@@ -68,7 +64,6 @@ export const CommentSection = ({
       createdAt: new Date().toISOString(),
       isAdmin: isAdminMode,
     };
-
     if (!(await saveComment(newItem))) {
       showError("저장에 실패했습니다.");
     } else {
@@ -101,9 +96,9 @@ export const CommentSection = ({
 
   return (
     <div className={iconType === "comment" ? "mt-12" : ""}>
-      {/* Header */}
-      <div className="flex items-center justify-between mb-6 pb-3 border-b-2 border-dotted border-gray-300">
-        <h2 className="text-lg flex items-center gap-2 font-bold">
+      {/* 헤더 */}
+      <div className="flex items-center justify-between mb-6 pb-3 border-b-2 border-dotted border-gray-300 dark:border-gray-600">
+        <h2 className="text-lg flex items-center gap-2 font-bold text-gray-800 dark:text-gray-100">
           <CommentIcon className="w-5 h-5 text-blog-primary" />
           {title} <span className="text-blog-primary">({items.length})</span>
         </h2>
@@ -111,7 +106,7 @@ export const CommentSection = ({
           onClick={() => setIsFormOpen(!isFormOpen)}
           className={`flex items-center gap-1.5 px-3 py-1.5 rounded-full text-xs font-bold transition-all ${
             isFormOpen
-              ? "bg-gray-200 text-gray-600"
+              ? "bg-gray-200 dark:bg-gray-700 text-gray-600 dark:text-gray-300"
               : "bg-blog-primary text-white shadow-sm hover:bg-blog-primary-hover"
           }`}
         >
@@ -140,7 +135,7 @@ export const CommentSection = ({
 
       <div className="space-y-3 min-h-25">
         {items.length === 0 ? (
-          <div className="text-center py-10 text-gray-400 text-sm">
+          <div className="text-center py-10 text-gray-400 dark:text-gray-500 text-sm">
             {iconType === "comment"
               ? "첫 댓글을 남겨보세요! 💬"
               : "아직 방명록이 없어요. 첫 번째로 한마디 남겨주세요! 😎"}
@@ -181,7 +176,6 @@ export const CommentSection = ({
         }
         onConfirm={handleDelete}
       />
-
       <AlertModal
         isOpen={errorModal.isOpen}
         message={errorModal.message}

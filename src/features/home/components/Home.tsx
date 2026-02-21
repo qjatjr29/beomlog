@@ -16,7 +16,6 @@ export const Home = () => {
     viewCounts,
     commentCounts,
   } = usePostStorage();
-
   const {
     currentPage,
     totalPages,
@@ -42,17 +41,19 @@ export const Home = () => {
       {/* Updated news */}
       <div className="mb-4">
         <div className="flex items-center gap-2 mb-1.5">
-          <span className="text-xs font-bold text-gray-700">Updated news</span>
+          <span className="text-xs font-bold text-gray-700 dark:text-gray-200">
+            Updated news
+          </span>
         </div>
         <div className="space-y-0">
           {allPosts.slice(0, 4).map((post) => (
             <div
               key={post.id}
-              className="border-b border-blog-border-light py-1.5"
+              className="border-b border-blog-border-light dark:border-gray-700 py-1.5"
             >
               <Link
                 to={`/post/${post.id}`}
-                className="text-[11px] text-gray-600 hover:text-blog-primary transition-colors flex items-start gap-1"
+                className="text-[11px] text-gray-600 dark:text-gray-300 hover:text-blog-primary dark:hover:text-blog-primary transition-colors flex items-start gap-1"
               >
                 <span className="text-blog-primary shrink-0">•</span>
                 {post.title}
@@ -60,8 +61,8 @@ export const Home = () => {
             </div>
           ))}
           {allPosts.length === 0 && (
-            <div className="border-b border-blog-border-light py-1.5">
-              <p className="text-[11px] text-gray-400">
+            <div className="border-b border-blog-border-light dark:border-gray-700 py-1.5">
+              <p className="text-[11px] text-gray-400 dark:text-gray-500">
                 • 아직 게시물이 없습니다.
               </p>
             </div>
@@ -71,7 +72,9 @@ export const Home = () => {
 
       {/* Mini Room */}
       <div className="mb-1 flex items-center justify-between">
-        <span className="text-[11px] font-bold text-gray-600">Mini Room</span>
+        <span className="text-[11px] font-bold text-gray-600 dark:text-gray-300">
+          Mini Room
+        </span>
       </div>
       <MiniRoom />
 
@@ -80,12 +83,12 @@ export const Home = () => {
         <h3 className="text-xs font-bold text-blog-primary mb-2">
           What Visitors say
         </h3>
-        <div className="p-2.5 bg-blog-lightest border border-blog-border-light rounded text-[11px]">
+        <div className="p-2.5 bg-blog-lightest dark:bg-gray-800 border border-blog-border-light dark:border-gray-700 rounded text-[11px]">
           {latestComment ? (
             <div className="flex items-start gap-2">
-              <Quote className="w-3 h-3 text-blog-border mt-0.5 shrink-0" />
+              <Quote className="w-3 h-3 text-blog-border dark:text-gray-500 mt-0.5 shrink-0" />
               <div>
-                <p className="text-gray-600 italic">
+                <p className="text-gray-600 dark:text-gray-300 italic">
                   "{latestComment.content}"
                 </p>
                 <p className="text-blog-primary mt-1">
@@ -94,7 +97,7 @@ export const Home = () => {
               </div>
             </div>
           ) : (
-            <p className="text-gray-400 italic pl-1">
+            <p className="text-gray-400 dark:text-gray-500 italic pl-1">
               아직 방명록이 없어요. 첫 번째로 한마디 남겨주세요! 😎
             </p>
           )}
@@ -109,9 +112,9 @@ export const Home = () => {
         </div>
       </div>
 
-      {/* 전체 게시물 목록 헤더 */}
-      <div className="mb-4 pb-2 border-b-2 border-dotted border-gray-300">
-        <h2 className="text-sm flex items-center gap-2 font-bold text-gray-800">
+      {/* 전체 게시물 */}
+      <div className="mb-4 pb-2 border-b-2 border-dotted border-gray-300 dark:border-gray-600">
+        <h2 className="text-sm flex items-center gap-2 font-bold text-gray-800 dark:text-gray-100">
           <BookOpen className="w-4 h-4 text-blog-primary" />
           전체 게시물
           <span className="text-blog-primary text-xs">({allPosts.length})</span>

@@ -296,7 +296,7 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
   };
 
   return (
-    <div className="markdown-content max-w-none wrap-break-word text-gray-700">
+    <div className="markdown-content max-w-none wrap-break-word text-gray-700 dark:text-gray-300">
       {parseMarkdown(content)}
     </div>
   );

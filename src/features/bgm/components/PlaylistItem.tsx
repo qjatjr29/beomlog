@@ -40,9 +40,8 @@ export const PlaylistItem = ({
         setDragOverIndex(index);
       }}
       onDragLeave={(e) => {
-        if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+        if (!e.currentTarget.contains(e.relatedTarget as Node))
           setDragOverIndex(null);
-        }
       }}
       onDrop={(e) => {
         e.preventDefault();
@@ -53,8 +52,8 @@ export const PlaylistItem = ({
       <div
         className={`flex items-center gap-1.5 px-2 py-1.5 rounded text-xs transition-colors cursor-pointer ${
           isCurrent
-            ? "bg-blog-light text-blog-primary"
-            : "hover:bg-gray-50 text-gray-700"
+            ? "bg-blog-light dark:bg-gray-700 text-blog-primary"
+            : "hover:bg-gray-50 dark:hover:bg-gray-700 text-gray-700 dark:text-gray-300"
         }`}
         onClick={onSelect}
       >
@@ -63,7 +62,7 @@ export const PlaylistItem = ({
             draggable
             onDragStart={() => onDragStart(index)}
             onDragEnd={onDragEnd}
-            className="cursor-grab active:cursor-grabbing text-gray-300 hover:text-gray-500 p-0.5"
+            className="cursor-grab active:cursor-grabbing text-gray-300 dark:text-gray-500 hover:text-gray-500 dark:hover:text-gray-300 p-0.5"
             onClick={(e) => e.stopPropagation()}
           >
             <GripVertical className="w-3 h-3" />
@@ -73,7 +72,7 @@ export const PlaylistItem = ({
           {isCurrent && isPlaying ? (
             <Equalizer />
           ) : !isAdminMode ? (
-            <GripVertical className="w-3 h-3 text-gray-300" />
+            <GripVertical className="w-3 h-3 text-gray-300 dark:text-gray-600" />
           ) : null}
         </div>
         <span className="flex-1 truncate">{track.title}</span>
@@ -84,13 +83,13 @@ export const PlaylistItem = ({
           >
             <button
               onClick={onEdit}
-              className="p-1 hover:bg-blog-light rounded text-gray-400 hover:text-blog-primary"
+              className="p-1 hover:bg-blog-light dark:hover:bg-gray-600 rounded text-gray-400 dark:text-gray-500 hover:text-blog-primary"
             >
               <Pencil className="w-3 h-3" />
             </button>
             <button
               onClick={onDelete}
-              className="p-1 hover:bg-red-50 rounded text-gray-400 hover:text-red-500"
+              className="p-1 hover:bg-red-50 dark:hover:bg-red-900/30 rounded text-gray-400 dark:text-gray-500 hover:text-red-500"
             >
               <Trash2 className="w-3 h-3" />
             </button>
