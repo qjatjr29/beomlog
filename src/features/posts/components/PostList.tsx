@@ -8,6 +8,7 @@ import { TagFilter } from "./TagFilter";
 import { PostCard } from "./PostCard";
 import { Pagination } from "@/shared/components/Pagination";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
+import { BookOpen } from "lucide-react";
 
 export const PostList = () => {
   const { category } = useParams<{ category: string }>();
@@ -47,30 +48,32 @@ export const PostList = () => {
       />
 
       <div className="space-y-3 mb-8">
-        {/* {currentPosts.map((post) => (
-          <PostCard
-            key={post.id}
-            post={post}
-            viewCount={viewCounts[post.id] ?? 0}
-            commentCount={commentCounts[post.id] ?? 0}
-            selectedTag={selectedTag}
-          />
-        ))} */}
-        {currentPosts.map((post, i) => (
-          <motion.div
-            key={post.id}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.06 }}
-          >
-            <PostCard
-              post={post}
-              viewCount={viewCounts[post.id] ?? 0}
-              commentCount={commentCounts[post.id] ?? 0}
-              selectedTag={selectedTag}
-            />
-          </motion.div>
-        ))}
+        {currentPosts.length === 0 ? (
+          <div className="flex flex-col items-center justify-center py-16 text-center">
+            <div className="w-16 h-16 mb-4 rounded-full bg-blog-lighter dark:bg-[#2a2a45] flex items-center justify-center">
+              <BookOpen className="w-7 h-7 text-blog-primary opacity-50" />
+            </div>
+            <p className="text-sm font-semibold text-gray-600 dark:text-gray-400 mb-1">
+              아직 게시글이 없습니다
+            </p>
+          </div>
+        ) : (
+          currentPosts.map((post, i) => (
+            <motion.div
+              key={post.id}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.06 }}
+            >
+              <PostCard
+                post={post}
+                viewCount={viewCounts[post.id] ?? 0}
+                commentCount={commentCounts[post.id] ?? 0}
+                selectedTag={selectedTag}
+              />
+            </motion.div>
+          ))
+        )}
       </div>
 
       <Pagination

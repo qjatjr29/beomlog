@@ -143,7 +143,7 @@ export const CommentSection = ({
           <div className="text-center py-10 text-gray-400 text-sm">
             {iconType === "comment"
               ? "첫 댓글을 남겨보세요! 💬"
-              : "첫 주인공이 되어보세요! ✨"}
+              : "아직 방명록이 없어요. 첫 번째로 한마디 남겨주세요! 😎"}
           </div>
         ) : (
           currentItems.map((item) => (
