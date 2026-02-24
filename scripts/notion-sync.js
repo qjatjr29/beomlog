@@ -137,17 +137,57 @@ function escapeYaml(text) {
 let numberedListCounter = 0;
 let lastBlockType = null;
 
+
 function extractExcerptFromContent(content, maxLength = 100) {
   const plainText = content
-    .replace(/```[\s\S]*?```/g, "") // 코드블록 제거
-    .replace(/!\[.*?\]\(.*?\)/g, "") // 이미지 제거
-    .replace(/<[^>]+>/g, "") // HTML 태그 제거
-    .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1") // 링크 → 텍스트만
-    .replace(/#{1,6}\s/g, "") // 헤더 마크 제거
-    .replace(/[*_~`>]/g, "") // 강조/인용 마크 제거
-    .replace(/^\s*[-*+]\s/gm, "") // 리스트 마크 제거
-    .replace(/^\s*\d+\.\s/gm, "") // 번호 리스트 마크 제거
-    .replace(/\n+/g, " ") // 개행 → 공백
+    // 1. 코드블록 제거 (``` ... ```)
+    .replace(/```[\s\S]*?```/g, "")
+
+    // 2. 테이블 제거 (| --- | 형식의 행들)
+    .replace(/^\|.*\|$/gm, "")
+
+    // 3. HTML img 태그 제거 (<img ... />)
+    .replace(/<img[^>]*\/>/g, "")
+
+    // 4. inline-link span 제거
+    .replace(/<span class="inline-link"[^>]*><\/span>/g, "")
+
+    // 5. details/summary 블록 제거 (toggle)
+    .replace(/<details>[\s\S]*?<\/details>/g, "")
+
+    // 6. bookmark div 제거
+    .replace(/<div class="bookmark">[\s\S]*?<\/div>/g, "")
+
+    // 7. 나머지 HTML 태그 제거 (<u>, <span>, 등)
+    .replace(/<[^>]+>/g, "")
+
+    // 8. 마크다운 이미지 제거 (![...](...)  )
+    .replace(/!\[.*?\]\(.*?\)/g, "")
+
+    // 9. 마크다운 링크 → 텍스트만 ([text](url))
+    .replace(/\[([^\]]+)\]\([^\)]+\)/g, "$1")
+
+    // 10. 헤더 마크 제거 (# ## ###)
+    .replace(/#{1,6}\s/g, "")
+
+    // 11. 수평선 제거 (---)
+    .replace(/^---+$/gm, "")
+
+    // 12. 강조/인용 마크 제거 (** * ~~ ` >)
+    .replace(/[*_~`>]/g, "")
+
+    // 13. 인라인 코드 제거 (`code`)  - 이미 ` 제거로 처리되나 명시적으로
+    .replace(/`[^`]+`/g, "")
+
+    // 14. 순서없는 리스트 마크 제거 (- * +)
+    .replace(/^\s*[-*+]\s/gm, "")
+
+    // 15. 순서있는 리스트 마크 제거 (1. 2.)
+    .replace(/^\s*\d+\.\s/gm, "")
+
+    // 16. 빈 줄 / 연속 공백 정리
+    .replace(/\n+/g, " ")
+    .replace(/\s{2,}/g, " ")
     .trim();
 
   return plainText.length > maxLength
@@ -262,7 +302,7 @@ async function blockToMarkdown(block, depth = 0) {
     }
 
     case "callout": {
-      const icon = block.callout.icon?.emoji || "💡";
+      const icon = block.callout.icon?.emoji || null; // 기본값 제거
       const text = processRichText(block.callout.rich_text);
 
       let content = text;
@@ -280,7 +320,9 @@ async function blockToMarkdown(block, depth = 0) {
         .split("\n")
         .map((line) => `> ${line}`)
         .join("\n");
-      markdown = `> ${icon}\n${lines}\n\n`;
+
+      // 이모지 있을 때만 첫 줄에 추가
+      markdown = icon ? `> ${icon}\n${lines}\n\n` : `${lines}\n\n`;
       break;
     }
 
