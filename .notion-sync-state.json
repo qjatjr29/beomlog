@@ -1,10 +1,15 @@
 {
-  "lastSyncTime": "2026-02-20T07:18:28.840Z",
+  "lastSyncTime": "2026-02-24T10:09:48.082Z",
   "processedPages": {
     "30cd67b9-9e80-80cd-998e-c7da43171144": {
       "slug": "부스트캠프-후기",
       "categorySlug": "일상",
       "lastEdited": "2026-02-19T15:02:00.000Z"
+    },
+    "311d67b9-9e80-8024-811e-da2503ec108a": {
+      "slug": "like-b-tree-인덱스와-fts-full-text-search",
+      "categorySlug": "개발",
+      "lastEdited": "2026-02-24T10:09:00.000Z"
     }
   }
 }
