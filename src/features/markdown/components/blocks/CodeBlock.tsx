@@ -65,7 +65,7 @@ export const CodeBlock = ({ code, language }: CodeBlockProps) => {
         </div>
       </div>
       <div className="bg-gray-900 text-gray-100 p-4 rounded-b-xl overflow-x-auto border-2 border-t-0 border-gray-700">
-        <code className={`language-${language}`}>{code}</code>
+        <code className={`language-${language} whitespace-pre`}>{code}</code>
       </div>
     </div>
   );

@@ -14,5 +14,9 @@ export const parseInlineLink = (
   const url = inlineLinkMatch[1];
   const domain = inlineLinkMatch[2];
 
-  return <InlineLink key={`inline-link-${index}`} url={url} domain={domain} />;
+  return (
+    <div key={`inline-link-${index}`} className="my-1">
+      <InlineLink url={url} domain={domain} />
+    </div>
+  );
 };
