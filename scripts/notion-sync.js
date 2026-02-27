@@ -23,7 +23,6 @@ if (!NOTION_TOKEN || !DATABASE_ID) {
 }
 
 const notion = new Client({ auth: NOTION_TOKEN });
-
 const OUTPUT_DIR = path.join(__dirname, "../src/assets/posts");
 const SYNC_STATE_FILE = path.join(__dirname, "../.notion-sync-state.json");
 
@@ -45,20 +44,14 @@ const removeQueryParams = (url) =>
 /** 노션 이미지 URL 조립 */
 const buildNotionImageUrl = (encodedUrl, blockId) => {
   let url = `${NOTION_IMAGE_BASE_URL}${encodedUrl}`;
-
-  if (blockId) {
-    url += `?table=block&id=${blockId}&cache=v2`;
-  }
+  if (blockId) url += `?table=block&id=${blockId}&cache=v2`;
   return url;
 };
 
-/**
- * S3 URL을 notion.so/image/ 형식으로 변환합니다.
- */
+/** S3 URL을 notion.so/image/ 형식으로 변환합니다.*/
 export const formatNotionImageUrl = (url, blockId) => {
   if (!isValidHttpsUrl(url)) return url ?? "";
   if (isNotionImageUrl(url)) return url;
-
   try {
     const baseUrl = removeQueryParams(url);
     return buildNotionImageUrl(encodeURIComponent(baseUrl), blockId);
@@ -78,14 +71,14 @@ async function getImageMetadata(url) {
     const metadata = {
       width: result.width,
       height: result.height,
-      aspectRatio: result.height > 0 ? result.width / result.height : 1,
+      // aspectRatio: result.height > 0 ? result.width / result.height : 1,
     };
 
     imageMetadataCache.set(url, metadata);
-    console.log(`  📐 이미지 크기: ${metadata.width}x${metadata.height}`);
+    // console.log(`  📐 이미지 크기: ${metadata.width}x${metadata.height}`);
     return metadata;
   } catch (error) {
-    console.warn(`  ⚠️ 이미지 메타데이터 가져오기 실패: ${error.message}`);
+    // console.warn(`  ⚠️ 이미지 메타데이터 가져오기 실패: ${error.message}`);
     imageMetadataCache.set(url, null);
     return null;
   }
@@ -127,7 +120,16 @@ function slugify(text) {
 }
 
 function escapeYaml(text) {
-  return text.replace(/"/g, '\\"').replace(/\n/g, " ");
+  return (text || "").replace(/"/g, '\\"').replace(/\n/g, " ");
+}
+
+function extractCoverImage(page) {
+  if (!page.cover) return "";
+  if (page.cover.type === "external") return page.cover.external.url;
+  if (page.cover.type === "file") {
+    return formatNotionImageUrl(page.cover.file.url, page.id);
+  }
+  return "";
 }
 
 // ========================================
@@ -136,7 +138,6 @@ function escapeYaml(text) {
 
 let numberedListCounter = 0;
 let lastBlockType = null;
-
 
 function extractExcerptFromContent(content, maxLength = 100) {
   const plainText = content
@@ -240,13 +241,13 @@ async function blockToMarkdown(block, depth = 0) {
 
     case "heading_2": {
       const text = processRichText(block.heading_2.rich_text);
-      markdown = `## ${text}\n\n`;
+      markdown = `## ${text}\n`;
       break;
     }
 
     case "heading_3": {
       const text = processRichText(block.heading_3.rich_text);
-      markdown = `### ${text}\n\n`;
+      markdown = `### ${text}\n`;
       break;
     }
 
@@ -294,35 +295,56 @@ async function blockToMarkdown(block, depth = 0) {
       markdown = `<details>\n<summary>${summary}</summary>\n\n${content}\n\n</details>\n\n`;
       break;
     }
-
     case "quote": {
       const text = processRichText(block.quote.rich_text);
-      markdown = `> ${text}\n\n`;
-      break;
-    }
 
-    case "callout": {
-      const icon = block.callout.icon?.emoji || null; // 기본값 제거
-      const text = processRichText(block.callout.rich_text);
-
-      let content = text;
+      // 자식 블록(하위 리스트 등)이 있는지 확인하고 마크다운으로 변환
+      let childrenMd = "";
       if (block.has_children) {
         const children = await getBlockChildren(block.id);
         for (const child of children) {
-          const childText = await blockToMarkdown(child, depth + 1);
-          if (childText.trim()) {
-            content += "\n" + childText.trim();
+          const childMd = await blockToMarkdown(child, depth + 1);
+          if (childMd) {
+            const lines = childMd.split("\n");
+            // split("\n")으로 인해 마지막에 생기는 불필요한 빈 배열 요소 제거
+            if (lines[lines.length - 1] === "") lines.pop();
+
+            // 자식 블록의 각 줄 앞에 "> " 를 붙여서 들여쓰기 유지
+            const indented = lines
+              .map((l) => (l.trim() ? `> ${l}` : ">"))
+              .join("\n");
+            childrenMd += indented + "\n";
           }
         }
       }
 
-      const lines = content
-        .split("\n")
-        .map((line) => `> ${line}`)
-        .join("\n");
+      markdown = `> ${text}\n${childrenMd}\n`;
+      break;
+    }
 
-      // 이모지 있을 때만 첫 줄에 추가
-      markdown = icon ? `> ${icon}\n${lines}\n\n` : `${lines}\n\n`;
+    case "callout": {
+      const icon = block.callout.icon?.emoji || null;
+      const text = processRichText(block.callout.rich_text);
+
+      let childrenMd = "";
+      if (block.has_children) {
+        const children = await getBlockChildren(block.id);
+        for (const child of children) {
+          const childMd = await blockToMarkdown(child, depth + 1);
+          if (childMd) {
+            const lines = childMd.split("\n");
+            if (lines[lines.length - 1] === "") lines.pop();
+
+            const indented = lines
+              .map((l) => (l.trim() ? `> ${l}` : ">"))
+              .join("\n");
+            childrenMd += indented + "\n";
+          }
+        }
+      }
+
+      const firstLine = icon ? `> ${icon} ${text}` : `> ${text}`;
+      markdown = `${firstLine}\n${childrenMd}\n`;
       break;
     }
 
@@ -441,6 +463,30 @@ async function getBlockChildren(blockId) {
   return allResults;
 }
 
+async function getChildPages(pageId) {
+  const allResults = [];
+  let cursor = undefined;
+
+  while (true) {
+    const response = await notion.blocks.children.list({
+      block_id: pageId,
+      page_size: 100,
+      start_cursor: cursor,
+    });
+
+    // child_page 타입만 필터링
+    const childPages = response.results.filter(
+      (block) => block.type === "child_page",
+    );
+    allResults.push(...childPages);
+
+    if (!response.has_more) break;
+    cursor = response.next_cursor;
+  }
+
+  return allResults;
+}
+
 async function getPageContent(pageId) {
   const blocks = await getBlockChildren(pageId);
 
@@ -468,219 +514,349 @@ function loadSyncState() {
   } catch (error) {
     console.warn("⚠️ 이전 동기화 상태를 불러올 수 없습니다:", error.message);
   }
-  return {
-    lastSyncTime: null,
-    processedPages: {},
-  };
+  return { lastSyncTime: null, processedPages: {} };
 }
 
 function saveSyncState(state) {
   fs.writeFileSync(SYNC_STATE_FILE, JSON.stringify(state, null, 2), "utf-8");
 }
 
-async function syncNotionPosts() {
-  try {
-    console.log("📚 Notion 동기화 시작...\n");
-
-    const syncState = loadSyncState();
-    const lastSyncTime = syncState.lastSyncTime
-      ? new Date(syncState.lastSyncTime)
-      : null;
-
-    if (lastSyncTime) {
-      console.log(`⏰ 마지막 동기화: ${lastSyncTime.toLocaleString("ko-KR")}`);
-    } else {
-      console.log("🆕 첫 동기화입니다. 모든 포스트를 가져옵니다.");
-    }
-
-    if (!fs.existsSync(OUTPUT_DIR)) {
-      fs.mkdirSync(OUTPUT_DIR, { recursive: true });
-    }
-
+async function getAllPublishedPages() {
+  const allResults = [];
+  let cursor = undefined;
+  while (true) {
     const database = await notion.databases.retrieve({
       database_id: DATABASE_ID,
     });
 
     const dataSourceId = database.data_sources[0].id;
-    console.log(`📊 Data Source ID: ${dataSourceId}\n`);
 
     const response = await notion.dataSources.query({
       data_source_id: dataSourceId,
-      filter: {
-        property: "Published",
-        checkbox: { equals: true },
-      },
-      sorts: [
-        {
-          property: "Date",
-          direction: "descending",
-        },
-      ],
+      filter: { property: "Published", checkbox: { equals: true } },
+      sorts: [{ property: "Date", direction: "descending" }],
+      page_size: 100,
+      start_cursor: cursor,
     });
+    allResults.push(...response.results);
+    if (!response.has_more) break;
+    cursor = response.next_cursor;
+  }
+  return allResults;
+}
 
-    console.log(`✅ ${response.results.length}개의 공개 포스트를 찾았습니다.`);
+async function syncNotionPosts() {
+  try {
+    console.log("📚 Notion 동기화 시작...\n");
 
+    if (!fs.existsSync(OUTPUT_DIR)) {
+      fs.mkdirSync(OUTPUT_DIR, { recursive: true });
+    }
+
+    const syncState = loadSyncState();
+    const allPages = await getAllPublishedPages();
+    console.log(`✅ 총 ${allPages.length}개 Published 페이지 발견\n`);
+
+    // ── 그룹 페이지 / 일반 글 분리 ──
+    const groupPages = allPages.filter(
+      (p) => p.properties.IsGroup?.checkbox === true,
+    );
+    const normalPostPages = allPages.filter(
+      (p) => p.properties.IsGroup?.checkbox !== true,
+    );
+
+    console.log(`📁 그룹 페이지: ${groupPages.length}개`);
+    console.log(`📝 일반 글: ${normalPostPages.length}개\n`);
     const currentSyncTime = new Date();
-    const currentPageIds = new Set();
+    // 현재 유효한 페이지 ID 추적 (그룹 + 일반 + 하위 페이지)
+    const currentPageIds = new Set(allPages.map((p) => p.id));
     const updatedPages = {};
-    const categoryCount = {};
     const postsMetadata = [];
+    const groupsMetadata = [];
+    let newCount = 0,
+      updatedCount = 0,
+      skippedCount = 0;
 
-    let newCount = 0;
-    let updatedCount = 0;
-    let skippedCount = 0;
+    // ── 그룹 페이지 처리 ──────────────────────────────────
+    for (const groupPage of groupPages) {
+      const props = groupPage.properties;
+      const groupTitle = getPlainText(props.Title?.title) || "Untitled";
+      const category = props.Category?.select?.name || "uncategorized";
+      const coverImage = extractCoverImage(groupPage);
+      const description = getPlainText(props.Description?.rich_text) || "";
 
-    for (const page of response.results) {
-      currentPageIds.add(page.id);
+      console.log(`\n📁 그룹 처리: [${category}] ${groupTitle}`);
 
+      const groupMeta = {
+        id: groupPage.id,
+        title: groupTitle,
+        category,
+        categorySlug: slugify(category),
+        coverImage,
+        description,
+        postCount: 0,
+        lastEdited: groupPage.last_edited_time,
+      };
+      groupsMetadata.push(groupMeta);
+
+      // 하위 페이지 목록 가져오기
+      const childPages = await getChildPages(groupPage.id);
+      console.log(`  └─ 하위 페이지 ${childPages.length}개 발견`);
+
+      for (const childBlock of childPages) {
+        const childTitle = childBlock.child_page.title || "Untitled";
+
+        // [draft] prefix 스킵
+        if (childTitle.toLowerCase().startsWith("[draft]")) {
+          console.log(`  ⏭️  스킵 (draft): ${childTitle}`);
+          continue;
+        }
+
+        currentPageIds.add(childBlock.id); // 유효 ID에 추가
+
+        const cachedPage = syncState.processedPages[childBlock.id];
+        const pageLastEdited = new Date(childBlock.last_edited_time ?? 0);
+        const isNew = !cachedPage;
+        const isUpdated =
+          cachedPage && new Date(cachedPage.lastEdited) < pageLastEdited;
+
+        if (!isNew && !isUpdated) {
+          skippedCount++;
+          // 캐시에서 메타데이터 복원
+          if (cachedPage) {
+            postsMetadata.push({
+              id: childBlock.id,
+              title: childTitle,
+              slug: cachedPage.slug,
+              category,
+              categorySlug: slugify(category),
+              tags: cachedPage.tags ?? [],
+              date:
+                cachedPage.date ?? groupPage.last_edited_time?.split("T")[0],
+              excerpt: cachedPage.excerpt ?? "",
+              groupId: groupPage.id,
+              path: `${slugify(category)}/${cachedPage.slug}.md`,
+              lastEdited: childBlock.last_edited_time,
+            });
+            groupMeta.postCount++;
+          }
+          continue;
+        }
+
+        try {
+          const postData = await processChildPost(
+            childBlock.id,
+            childTitle,
+            category,
+            groupPage.id,
+            groupPage.last_edited_time,
+          );
+          postsMetadata.push(postData);
+          groupMeta.postCount++;
+
+          updatedPages[childBlock.id] = {
+            slug: postData.slug,
+            categorySlug: postData.categorySlug,
+            tags: postData.tags,
+            date: postData.date,
+            excerpt: postData.excerpt,
+            lastEdited:
+              childBlock.last_edited_time ?? currentSyncTime.toISOString(),
+          };
+
+          if (isNew) {
+            newCount++;
+            console.log(`  🆕 새 글: ${postData.slug}`);
+          } else {
+            updatedCount++;
+            console.log(`  🔄 업데이트: ${postData.slug}`);
+          }
+        } catch (e) {
+          console.error(`  ❌ 처리 실패 (${childTitle}):`, e.message);
+        }
+      }
+    }
+
+    // ── 일반 글 처리 (기존과 동일) ───────────────────────
+    for (const page of normalPostPages) {
       const pageLastEdited = new Date(page.last_edited_time);
       const cachedPage = syncState.processedPages[page.id];
-
       const isNew = !cachedPage;
       const isUpdated =
         cachedPage && new Date(cachedPage.lastEdited) < pageLastEdited;
 
       if (!isNew && !isUpdated) {
         skippedCount++;
-
         try {
-          const properties = page.properties;
-          const title = getPlainText(properties.Title?.title) || "Untitled";
-          const slug =
-            getPlainText(properties.Slug?.rich_text) || slugify(title);
-          const category = properties.Category?.select?.name || "uncategorized";
-          const tags =
-            properties.Tags?.multi_select?.map((tag) => tag.name) || [];
+          const props = page.properties;
+          const title = getPlainText(props.Title?.title) || "Untitled";
+          const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
+          const category = props.Category?.select?.name || "uncategorized";
+          const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
           const date =
-            properties.Date?.date?.start ||
-            new Date().toISOString().split("T")[0];
-          const excerpt = getPlainText(properties.Excerpt?.rich_text) || "";
-          const categorySlug = slugify(category);
+            props.Date?.date?.start || new Date().toISOString().split("T")[0];
+          const excerpt = getPlainText(props.Excerpt?.rich_text) || "";
 
           postsMetadata.push({
             id: page.id,
             title,
             slug,
             category,
-            categorySlug,
+            categorySlug: slugify(category),
             tags,
             date,
             excerpt,
-            path: `${categorySlug}/${slug}.md`,
+            groupId: "",
+            path: `${slugify(category)}/${slug}.md`,
             lastEdited: page.last_edited_time,
           });
-        } catch (error) {
-          console.warn(
-            `⚠️ 메타데이터 추출 실패 (ID: ${page.id}):`,
-            error.message,
-          );
+        } catch (e) {
+          console.warn(`⚠️ 메타데이터 복원 실패 (ID: ${page.id}):`, e.message);
         }
-
         continue;
       }
 
       try {
         const postData = await processPost(page);
         postsMetadata.push(postData);
-
         updatedPages[page.id] = {
           slug: postData.slug,
           categorySlug: postData.categorySlug,
           lastEdited: page.last_edited_time,
         };
-
-        categoryCount[postData.category] =
-          (categoryCount[postData.category] || 0) + 1;
-
         if (isNew) {
           newCount++;
-          console.log(`  🆕 새 포스트`);
+          console.log(`🆕 새 포스트: ${postData.slug}`);
         } else {
           updatedCount++;
-          console.log(`  🔄 업데이트됨`);
+          console.log(`🔄 업데이트: ${postData.slug}`);
         }
-      } catch (error) {
-        console.error(`❌ 포스트 처리 실패 (ID: ${page.id}):`, error.message);
+      } catch (e) {
+        console.error(`❌ 처리 실패 (ID: ${page.id}):`, e.message);
       }
     }
 
-    const deletedPageIds = Object.keys(syncState.processedPages).filter(
+    // ── 삭제된 페이지 처리 ──
+    const deletedIds = Object.keys(syncState.processedPages).filter(
       (id) => !currentPageIds.has(id),
     );
-
-    if (deletedPageIds.length > 0) {
-      console.log(`\n🗑️  ${deletedPageIds.length}개의 삭제된 포스트 감지`);
-      for (const pageId of deletedPageIds) {
-        try {
-          const { slug, categorySlug } = syncState.processedPages[pageId];
-          const filePath = path.join(OUTPUT_DIR, categorySlug, `${slug}.md`);
-
-          if (fs.existsSync(filePath)) {
-            fs.unlinkSync(filePath);
-            console.log(`  ✅ 삭제됨: ${categorySlug}/${slug}.md`);
-          }
-
-          delete syncState.processedPages[pageId];
-        } catch (error) {
-          console.error(`❌ 파일 삭제 실패 (ID: ${pageId}):`, error.message);
+    for (const pageId of deletedIds) {
+      try {
+        const cached = syncState.processedPages[pageId];
+        const filePath = path.join(
+          OUTPUT_DIR,
+          cached.categorySlug,
+          `${cached.slug}.md`,
+        );
+        if (fs.existsSync(filePath)) {
+          fs.unlinkSync(filePath);
+          console.log(`🗑️  삭제: ${cached.categorySlug}/${cached.slug}.md`);
         }
+      } catch (e) {
+        console.error(`❌ 삭제 실패 (ID: ${pageId}):`, e.message);
       }
     }
 
-    const metadataPath = path.join(OUTPUT_DIR, "posts.json");
+    // ── JSON 저장 ──
     postsMetadata.sort((a, b) => new Date(b.date) - new Date(a.date));
     fs.writeFileSync(
-      metadataPath,
+      path.join(OUTPUT_DIR, "posts.json"),
       JSON.stringify(postsMetadata, null, 2),
       "utf-8",
     );
-    console.log(
-      `\n📋 posts.json 업데이트 (총 ${postsMetadata.length}개 포스트)`,
+    fs.writeFileSync(
+      path.join(OUTPUT_DIR, "groups.json"),
+      JSON.stringify(groupsMetadata, null, 2),
+      "utf-8",
     );
+
+    console.log(`\n📋 posts.json (${postsMetadata.length}개)`);
+    console.log(`📋 groups.json (${groupsMetadata.length}개 그룹)`);
 
     saveSyncState({
       lastSyncTime: currentSyncTime.toISOString(),
-      processedPages: {
-        ...syncState.processedPages,
-        ...updatedPages,
-      },
+      processedPages: { ...syncState.processedPages, ...updatedPages },
     });
 
-    console.log("\n📊 동기화 통계:");
-    console.log(`  🆕 새 포스트: ${newCount}개`);
-    console.log(`  🔄 업데이트: ${updatedCount}개`);
-    console.log(`  ⏭️  변경 없음: ${skippedCount}개`);
-    console.log(`  🗑️  삭제됨: ${deletedPageIds.length}개`);
-
-    if (Object.keys(categoryCount).length > 0) {
-      console.log("\n📂 카테고리별 처리된 포스트:");
-      Object.entries(categoryCount).forEach(([category, count]) => {
-        console.log(`  ${category}: ${count}개`);
-      });
-    }
-
-    console.log("\n🎉 동기화 완료!");
-  } catch (error) {
-    console.error("❌ 동기화 실패:", error);
+    console.log(
+      `\n📊 완료: 새 ${newCount} / 업데이트 ${updatedCount} / 스킵 ${skippedCount} / 삭제 ${deletedIds.length}`,
+    );
+  } catch (e) {
+    console.error("❌ 동기화 실패:", e);
     process.exit(1);
   }
 }
 
-async function processPost(page) {
-  const properties = page.properties;
-  const id = page.id;
-  const title = getPlainText(properties.Title?.title) || "Untitled";
-  const slug = getPlainText(properties.Slug?.rich_text) || slugify(title);
-  const category = properties.Category?.select?.name || "uncategorized";
-  const tags = properties.Tags?.multi_select?.map((tag) => tag.name) || [];
+async function processChildPost(
+  pageId,
+  title,
+  category,
+  groupId,
+  groupLastEdited,
+) {
+  const slug = slugify(title);
+  const categorySlug = slugify(category);
+
+  const content = await getPageContent(pageId);
+  const excerpt = extractExcerptFromContent(content);
   const date =
-    properties.Date?.date?.start || new Date().toISOString().split("T")[0];
+    groupLastEdited?.split("T")[0] ?? new Date().toISOString().split("T")[0];
+
+  const categoryDir = path.join(OUTPUT_DIR, categorySlug);
+  if (!fs.existsSync(categoryDir))
+    fs.mkdirSync(categoryDir, { recursive: true });
+
+  const frontMatter = `---
+id: "${pageId}"
+title: "${escapeYaml(title)}"
+slug: "${slug}"
+category: "${category}"
+tags: []
+date: "${date}"
+excerpt: "${escapeYaml(excerpt)}"
+groupId: "${groupId}"
+lastEdited: "${new Date().toISOString()}"
+---
+
+${content}`;
+
+  fs.writeFileSync(path.join(categoryDir, `${slug}.md`), frontMatter, "utf-8");
+  console.log(`  📝 저장: ${categorySlug}/${slug}`);
+
+  return {
+    id: pageId,
+    title,
+    slug,
+    category,
+    categorySlug,
+    tags: [],
+    date,
+    excerpt,
+    groupId,
+    path: `${categorySlug}/${slug}.md`,
+    lastEdited: new Date().toISOString(),
+  };
+}
+
+async function processPost(page) {
+  const props = page.properties;
+  const id = page.id;
+  const title = getPlainText(props.Title?.title) || "Untitled";
+  const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
+  const category = props.Category?.select?.name || "uncategorized";
+  const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
+  const date =
+    props.Date?.date?.start || new Date().toISOString().split("T")[0];
+  const groupId = getPlainText(props.GroupId?.rich_text) || "";
 
   const content = await getPageContent(page.id);
-  const rawExcerpt = getPlainText(properties.Excerpt?.rich_text);
+  const rawExcerpt = getPlainText(props.Excerpt?.rich_text);
   const excerpt = rawExcerpt || extractExcerptFromContent(content);
 
-  console.log(`📝 처리 중: ${category}/${slug}`);
+  const categorySlug = slugify(category);
+  const categoryDir = path.join(OUTPUT_DIR, categorySlug);
+  if (!fs.existsSync(categoryDir))
+    fs.mkdirSync(categoryDir, { recursive: true });
 
   const frontMatter = `---
 id: "${id}"
@@ -690,19 +866,14 @@ category: "${category}"
 tags: ${JSON.stringify(tags)}
 date: "${date}"
 excerpt: "${escapeYaml(excerpt)}"
+groupId: "${groupId}"
 lastEdited: "${page.last_edited_time}"
 ---
 
 ${content}`;
 
-  const categorySlug = slugify(category);
-  const categoryDir = path.join(OUTPUT_DIR, categorySlug);
-  if (!fs.existsSync(categoryDir)) {
-    fs.mkdirSync(categoryDir, { recursive: true });
-  }
-
-  const filePath = path.join(categoryDir, `${slug}.md`);
-  fs.writeFileSync(filePath, frontMatter, "utf-8");
+  fs.writeFileSync(path.join(categoryDir, `${slug}.md`), frontMatter, "utf-8");
+  console.log(`  📝 저장: ${categorySlug}/${slug}`);
 
   return {
     id,
@@ -713,6 +884,7 @@ ${content}`;
     tags,
     date,
     excerpt,
+    groupId,
     path: `${categorySlug}/${slug}.md`,
     lastEdited: page.last_edited_time,
   };
