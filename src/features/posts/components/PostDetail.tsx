@@ -9,10 +9,12 @@ import { incrementPostViews } from "../../../data/storage/post.storage";
 import { PostSideActions } from "./PostSideActions";
 import { PostHeader } from "./PostHeader";
 import { PostNavigation } from "./PostNavigation";
+import { GroupSidebar } from "./GroupSidebar";
+import { loadGroupById } from "../utils/group-loader";
 
 export const PostDetail = () => {
   const { id } = useParams<{ id: string }>();
-  const { getPostById } = usePosts();
+  const { getPostById, posts } = usePosts();
   const post = getPostById(id!);
   const { prevPost, nextPost } = usePostNavigation(id!);
 
@@ -49,9 +51,21 @@ export const PostDetail = () => {
     );
   }
 
+  const group = post.groupId ? loadGroupById(post.groupId) : null;
+  const groupPosts = post.groupId
+    ? posts
+        .filter((p) => p.groupId === post.groupId)
+        .sort(
+          (a, b) =>
+            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+        )
+    : [];
+
   return (
+    // fixed 사이드바이므로 flex 불필요, 기존 단순 구조로
     <div className="w-full max-w-full overflow-hidden relative">
       <PostSideActions />
+
       <Link
         to={`/posts/${post.category}`}
         className="inline-flex items-center gap-2 text-gray-500 dark:text-gray-400 hover:text-blog-primary mb-6 text-sm transition-colors no-underline group"
@@ -59,6 +73,16 @@ export const PostDetail = () => {
         <ArrowLeft className="w-4 h-4 group-hover:-translate-x-1 transition-transform" />
         <span className="font-medium">목록으로</span>
       </Link>
+
+      {/* GroupSidebar: fixed라 여기 위치 무관하게 뷰포트 기준으로 표시됨 */}
+      {group && groupPosts.length > 1 && (
+        <GroupSidebar
+          currentPost={post}
+          group={group}
+          groupPosts={groupPosts}
+        />
+      )}
+
       <PostHeader post={post} views={views} />
       <article className="w-full overflow-hidden mb-16 prose prose-slate max-w-none">
         <MarkdownRenderer content={post.content} />
