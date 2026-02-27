@@ -1,5 +1,18 @@
 [
   {
+    "id": "314d67b9-9e80-80f3-982f-c1a06fa8baa2",
+    "title": "1. 사용자 수에 따른 규모 확장성",
+    "slug": "1-사용자-수에-따른-규모-확장성",
+    "category": "책",
+    "categorySlug": "책",
+    "tags": [],
+    "date": "2026-02-27",
+    "excerpt": "한 명의 사용자를 지원하는 시스템에서 몇백만 사용자를 지원하는 시스템을 설계하는 과정에서 규모 확장성과 관계된 설계 문제를 푸는데 필요한 지식들을 학습 📌 단일 서버 웹, 앱, ...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/1-사용자-수에-따른-규모-확장성.md",
+    "lastEdited": "2026-02-27T06:46:00.000Z"
+  },
+  {
     "id": "311d67b9-9e80-8024-811e-da2503ec108a",
     "title": "LIKE + B+Tree 인덱스와 FTS(Full-Text Search)",
     "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -9,10 +22,11 @@
       "데이터베이스",
       "MySQL"
     ],
-    "date": "2026-02-24",
-    "excerpt": "🌲 B+ Tree 자료구조 대부분의 RDBMS(MySQL, PostgreSQL 등)는 기본 인덱스 구조로 B+Tree를 사용합니다. | Leaf Node | 실제 데이터의 키 값...",
+    "date": "2026-02-27",
+    "excerpt": "",
+    "groupId": "",
     "path": "개발/like-b-tree-인덱스와-fts-full-text-search.md",
-    "lastEdited": "2026-02-24T10:09:00.000Z"
+    "lastEdited": "2026-02-27T05:42:00.000Z"
   },
   {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
@@ -23,8 +37,9 @@
     "tags": [
       "네이버부스트캠프"
     ],
-    "date": "2026-02-24",
+    "date": "2026-02-27",
     "excerpt": "",
+    "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-19T15:02:00.000Z"
   }
