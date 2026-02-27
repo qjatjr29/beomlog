@@ -31,6 +31,8 @@ export const loadAllPosts = (): Post[] => {
         tags: frontMatter.tags,
         createdAt: frontMatter.date,
         slug: frontMatter.slug ?? frontMatter.id,
+        groupId: frontMatter.groupId ?? "",
+        coverImage: frontMatter.coverImage ?? "",
         filename,
         excerpt: frontMatter.excerpt ?? frontMatter.title,
       };

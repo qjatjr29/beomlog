@@ -20,6 +20,19 @@ export interface Post {
   filename: string;
   views?: number;
   updatedAt?: string;
+  groupId?: string;
+  coverImage?: string;
+}
+
+export interface GroupMeta {
+  id: string;
+  title: string;
+  category: string;
+  categorySlug: string;
+  coverImage: string;
+  description: string;
+  postCount: number;
+  lastEdited: string;
 }
 
 export interface PostFrontMatter {
@@ -31,6 +44,8 @@ export interface PostFrontMatter {
   excerpt?: string;
   category: string;
   lastEdited?: string;
+  groupId?: string;
+  coverImage?: string;
 }
 
 export interface ParsedPost {

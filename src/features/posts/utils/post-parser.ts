@@ -29,6 +29,8 @@ export const parsePostContent = (
       case "date":
       case "category":
       case "lastEdited":
+      case "groupId":
+      case "coverImage":
         metadata[key] = cleanValue(value);
         break;
       case "tags":

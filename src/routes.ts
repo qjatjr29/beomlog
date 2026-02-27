@@ -5,6 +5,7 @@ import { PostDetail, PostList } from "./features/posts/components";
 import { Guestbook } from "./features/guestbook/components";
 import { About } from "./features/about/components";
 import { NotFound } from "./features/not-found/components";
+import { GroupPostList } from "./features/posts/components/GroupPostList";
 
 export const router = createBrowserRouter([
   {
@@ -13,6 +14,7 @@ export const router = createBrowserRouter([
     children: [
       { index: true, Component: Home },
       { path: "posts/:category", Component: PostList },
+      { path: "group/:groupId", Component: GroupPostList },
       { path: "post/:id", Component: PostDetail },
       { path: "guestbook", Component: Guestbook },
       { path: "profile", Component: About },
