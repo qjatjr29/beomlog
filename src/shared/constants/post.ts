@@ -1,34 +1,35 @@
 import {
   Laptop,
   Coffee,
-  Plane,
   LucideIcon,
   BookOpen,
-  PenTool,
+  FolderKanban,
 } from "lucide-react";
 
 export const POSTS_PER_PAGE = 5;
 
 export const CATEGORIES = {
-  DEV_LOG: "개발",
+  PROJECT: "프로젝트",
+  DEV: "개발",
   DAILY: "일상",
-  TRAVEL: "여행",
-  STUDY: "학습",
-  TIL: "TIL",
+  BOOK: "책",
 } as const;
 
+export const GALLERY_CATEGORIES = new Set([
+  CATEGORIES.PROJECT,
+  CATEGORIES.BOOK,
+]);
+
 export const CATEGORY_ICONS: Record<string, LucideIcon> = {
-  [CATEGORIES.DEV_LOG]: Laptop,
+  [CATEGORIES.PROJECT]: FolderKanban,
+  [CATEGORIES.DEV]: Laptop,
   [CATEGORIES.DAILY]: Coffee,
-  [CATEGORIES.TRAVEL]: Plane,
-  [CATEGORIES.STUDY]: BookOpen,
-  [CATEGORIES.TIL]: PenTool,
+  [CATEGORIES.BOOK]: BookOpen,
 };
 
 export const CATEGORY_LABELS: Record<string, string> = {
-  [CATEGORIES.DEV_LOG]: "개발",
+  [CATEGORIES.PROJECT]: "프로젝트",
+  [CATEGORIES.DEV]: "개발",
   [CATEGORIES.DAILY]: "일상",
-  [CATEGORIES.TRAVEL]: "여행",
-  [CATEGORIES.STUDY]: "학습",
-  [CATEGORIES.TIL]: "오늘 배운 것",
+  [CATEGORIES.BOOK]: "서적",
 };

@@ -6,14 +6,26 @@ export const NAVIGATION_TABS: Tab[] = [
   { name: "홈", path: "/", icon: Home },
   { name: "프로필", path: "/profile", icon: User },
   {
-    name: "개발",
-    path: `/posts/${CATEGORIES.DEV_LOG}`,
-    icon: CATEGORY_ICONS[CATEGORIES.DEV_LOG],
+    name: CATEGORIES.DEV,
+    path: `/posts/${CATEGORIES.DEV}`,
+    icon: CATEGORY_ICONS[CATEGORIES.DEV],
   },
   {
-    name: "일상",
+    name: CATEGORIES.PROJECT,
+    path: `/posts/${CATEGORIES.PROJECT}`,
+    icon: CATEGORY_ICONS[CATEGORIES.PROJECT],
+  },
+  {
+    name: CATEGORIES.DAILY,
     path: `/posts/${CATEGORIES.DAILY}`,
     icon: CATEGORY_ICONS[CATEGORIES.DAILY],
   },
+  {
+    name: CATEGORIES.BOOK,
+    path: `/posts/${CATEGORIES.BOOK}`,
+    icon: CATEGORY_ICONS[CATEGORIES.BOOK],
+  },
   { name: "방명록", path: "/guestbook", icon: MessageSquare },
 ];
+
+export const MOBILE_TABS = ["홈", "개발", "일상", "방명록"];

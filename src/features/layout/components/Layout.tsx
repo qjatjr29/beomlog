@@ -181,14 +181,14 @@ export const Layout = ({ children }: LayoutProps) => {
               <Link
                 key={tab.path}
                 to={tab.path}
-                className={`flex-1 py-2 flex flex-col items-center gap-0.5 text-[10px] ${
+                className={`flex-1 py-2 flex flex-col items-center justify-center gap-0.5 text-[10px] transition-colors ${
                   isActive
                     ? "text-blog-primary font-bold"
                     : "text-gray-500 dark:text-gray-400"
                 }`}
+                title={tab.name}
               >
-                {Icon && <Icon className="w-4 h-4" />}
-                {tab.name}
+                {Icon && <Icon className="w-5 h-5" />}
               </Link>
             );
           })}
