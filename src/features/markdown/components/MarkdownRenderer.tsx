@@ -26,12 +26,100 @@ import {
   parseEmptyLine,
 } from "./parsers";
 
+// 연속된 inline-link들을 하나의 박스로 그룹핑
+const groupInlineLinks = (elements: JSX.Element[]): JSX.Element[] => {
+  const grouped: JSX.Element[] = [];
+  let linkGroup: { url: string; domain: string }[] = [];
+  let linkGroupKey = "";
+
+  const flushLinkGroup = () => {
+    if (linkGroup.length === 0) return;
+
+    grouped.push(
+      <div
+        key={`link-group-${linkGroupKey}`}
+        className="my-3 border border-blue-200 dark:border-blue-800 rounded-lg overflow-hidden"
+      >
+        <div className="px-3 py-1.5 bg-blue-50 dark:bg-blue-900/30 border-b border-blue-200 dark:border-blue-800">
+          <span className="text-[11px] text-blue-500 font-medium">
+            🔗 Links
+          </span>
+        </div>
+        <ul className="divide-y divide-blue-100 dark:divide-blue-900">
+          {linkGroup.map(({ url, domain }, idx) => (
+            <li key={idx}>
+              <a
+                href={url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center gap-2 px-3 py-2 hover:bg-blue-50 dark:hover:bg-blue-900/20 transition-colors"
+              >
+                <img
+                  src={`https://www.google.com/s2/favicons?domain=${domain}&sz=32`}
+                  alt=""
+                  className="w-4 h-4 shrink-0 rounded-sm"
+                  onError={(e) => {
+                    e.currentTarget.src =
+                      'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="16" height="16"%3E%3Crect fill="%2393c5fd" width="16" height="16" rx="2"/%3E%3C/svg%3E';
+                  }}
+                />
+                <span className="text-sm text-blue-700 dark:text-blue-300 flex-1 truncate">
+                  {url}
+                </span>
+                <svg
+                  className="w-3.5 h-3.5 text-blue-400 shrink-0"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                  />
+                </svg>
+              </a>
+            </li>
+          ))}
+        </ul>
+      </div>,
+    );
+    linkGroup = [];
+    linkGroupKey = "";
+  };
+
+  for (const el of elements) {
+    const key = el.key?.toString() ?? "";
+    const isInlineLink = key.startsWith("inline-link-");
+
+    if (isInlineLink) {
+      const child = (el.props as any)?.children;
+      const url: string = child?.props?.url ?? "";
+      const domain: string = child?.props?.domain ?? "";
+
+      if (url) {
+        if (linkGroup.length === 0) linkGroupKey = key;
+        linkGroup.push({ url, domain });
+      } else {
+        flushLinkGroup();
+        grouped.push(el);
+      }
+    } else {
+      flushLinkGroup();
+      grouped.push(el);
+    }
+  }
+
+  flushLinkGroup();
+  return grouped;
+};
+
 export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
   const parseMarkdown = (text: string) => {
     const lines = text.split("\n");
     const result: JSX.Element[] = [];
 
-    // States
     const state = {
       inCodeBlock: false,
       codeBlockContent: [] as string[],
@@ -292,7 +380,8 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       );
     }
 
-    return result;
+    // inline-link 그룹핑 후처리
+    return groupInlineLinks(result);
   };
 
   return (

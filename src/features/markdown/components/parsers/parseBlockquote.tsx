@@ -16,23 +16,14 @@ export const parseBlockquote = (
   newState: BlockquoteState;
 } => {
   if (line.startsWith("> ")) {
-    if (!state.inBlockquote) {
-      return {
-        shouldReturn: true,
-        newState: {
-          inBlockquote: true,
-          blockquoteLines: [line.substring(2)],
-        },
-      };
-    } else {
-      return {
-        shouldReturn: true,
-        newState: {
-          ...state,
-          blockquoteLines: [...state.blockquoteLines, line.substring(2)],
-        },
-      };
-    }
+    const content = line.substring(2);
+    return {
+      shouldReturn: true,
+      newState: {
+        inBlockquote: true,
+        blockquoteLines: [...state.blockquoteLines, content],
+      },
+    };
   }
 
   if (state.inBlockquote && !line.startsWith("> ")) {
@@ -41,15 +32,8 @@ export const parseBlockquote = (
         <BlockquoteBlock key={`quote-${index}`} lines={state.blockquoteLines} />
       ),
       shouldReturn: false,
-      newState: {
-        inBlockquote: false,
-        blockquoteLines: [],
-      },
+      newState: { inBlockquote: false, blockquoteLines: [] },
     };
-  }
-
-  if (state.inBlockquote) {
-    return { shouldReturn: true, newState: state };
   }
 
   return { shouldReturn: false, newState: state };
