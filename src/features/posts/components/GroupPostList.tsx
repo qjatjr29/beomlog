@@ -1,9 +1,11 @@
+import { useState } from "react";
 import { useParams, Link } from "react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { usePosts } from "@/contexts/PostsContext";
 import { loadGroupById } from "../utils/group-loader";
 import { PostCard } from "../components/PostCard";
+import { TagFilter } from "../components/TagFilter";
 import { Pagination } from "@/shared/components/Pagination";
 import { usePagination } from "@/shared/hooks/usePagination";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
@@ -14,16 +16,22 @@ export const GroupPostList = () => {
   const group = loadGroupById(groupId!);
   const { viewCounts, commentCounts } = usePostStorage();
   const { posts } = usePosts();
+  const [selectedTag, setSelectedTag] = useState<string | null>(null);
 
-  const groupPosts = posts
-    .filter((p) => p.groupId === groupId)
-    .sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-    );
+  const groupPosts = posts.filter((p) => p.groupId === groupId);
+
+  // 태그 목록 수집
+  const availableTags = Array.from(
+    new Set(groupPosts.flatMap((p) => p.tags ?? [])),
+  );
+
+  // 태그 필터링
+  const filteredPosts = selectedTag
+    ? groupPosts.filter((p) => p.tags?.includes(selectedTag))
+    : groupPosts;
 
   const { currentPage, totalPages, currentItems, handlePageChange } =
-    usePagination(groupPosts, POSTS_PER_PAGE);
+    usePagination(filteredPosts, POSTS_PER_PAGE);
 
   if (!group) {
     return (
@@ -43,7 +51,6 @@ export const GroupPostList = () => {
         >
           <ArrowLeft className="w-3 h-3" /> {group.category}로
         </Link>
-
         <div className="pb-4 border-b-2 border-dotted border-gray-300 dark:border-gray-600">
           <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100">
             {group.title}
@@ -55,27 +62,54 @@ export const GroupPostList = () => {
           )}
           <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
             총 {groupPosts.length}개의 글
+            {selectedTag && (
+              <span className="ml-2 text-blog-primary">
+                · {filteredPosts.length}개 필터됨
+              </span>
+            )}
           </p>
         </div>
       </div>
 
+      {/* 태그 필터 */}
+      {availableTags.length > 0 && (
+        <TagFilter
+          tags={availableTags}
+          selectedTag={selectedTag}
+          onTagClick={(tag) => {
+            setSelectedTag((prev) => (prev === tag ? null : tag));
+            handlePageChange(1);
+          }}
+          onClear={() => {
+            setSelectedTag(null);
+            handlePageChange(1);
+          }}
+        />
+      )}
+
       {/* 포스트 목록 */}
       <div className="space-y-3 mb-8">
-        {currentItems.map((post, i) => (
-          <motion.div
-            key={post.id}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.06 }}
-          >
-            <PostCard
-              post={post}
-              viewCount={viewCounts[post.id] ?? 0}
-              commentCount={commentCounts[post.id] ?? 0}
-              selectedTag={null}
-            />
-          </motion.div>
-        ))}
+        {currentItems.length === 0 ? (
+          <div className="py-10 text-center text-sm text-gray-400 dark:text-gray-500">
+            해당 태그의 글이 없습니다.
+          </div>
+        ) : (
+          currentItems.map((post, i) => (
+            <motion.div
+              key={post.id}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.06 }}
+            >
+              <PostCard
+                post={post}
+                viewCount={viewCounts[post.id] ?? 0}
+                commentCount={commentCounts[post.id] ?? 0}
+                selectedTag={selectedTag}
+              />
+            </motion.div>
+          ))
+        )}
       </div>
 
       <Pagination
