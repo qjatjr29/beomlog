@@ -53,12 +53,7 @@ export const PostDetail = () => {
 
   const group = post.groupId ? loadGroupById(post.groupId) : null;
   const groupPosts = post.groupId
-    ? posts
-        .filter((p) => p.groupId === post.groupId)
-        .sort(
-          (a, b) =>
-            new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
-        )
+    ? posts.filter((p) => p.groupId === post.groupId)
     : [];
 
   return (
