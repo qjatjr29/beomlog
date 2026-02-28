@@ -14,8 +14,7 @@ export const usePostNavigation = (postId: string): PostNavigationResult => {
       : posts.filter((p) => p.category === currentPost.category && !p.groupId);
 
     const sorted = [...scopedPosts].sort(
-      (a, b) =>
-        new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+      (a, b) => new Date(b.date).getTime() - new Date(a.date).getTime(),
     );
 
     const currentIndex = sorted.findIndex((p) => p.id === postId);
