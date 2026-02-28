@@ -1,28 +1,21 @@
 import { useState, useMemo, useCallback } from "react";
-import { PaginationOptions } from "../types";
 
-export const usePagination = <T>(
-  data: T[],
-  itemsPerPage: number,
-  options: PaginationOptions = { scrollToTop: true },
-) => {
+export const usePagination = <T>(data: T[], itemsPerPage: number) => {
   const [currentPage, setCurrentPage] = useState(1);
 
-  const totalPages = Math.ceil(data.length / itemsPerPage);
+  const totalPages = Math.max(1, Math.ceil(data.length / itemsPerPage));
 
-  const currentItems = useMemo(() => {
+  const currentItems = useMemo<T[]>(() => {
     const start = (currentPage - 1) * itemsPerPage;
     return data.slice(start, start + itemsPerPage);
   }, [data, currentPage, itemsPerPage]);
 
-  const handlePageChange = (page: number) => {
+  const handlePageChange = useCallback((page: number) => {
     setCurrentPage(page);
-    if (options.scrollToTop) {
-      window.scrollTo({ top: 0, behavior: "smooth" });
-    }
-  };
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }, []);
 
-  const resetPage = useCallback(() => setCurrentPage(1), []); // useCallback 추가
+  const resetPage = useCallback(() => setCurrentPage(1), []);
 
   return { currentPage, totalPages, currentItems, handlePageChange, resetPage };
 };

@@ -21,3 +21,8 @@ export interface PaginationProps {
 export interface PaginationOptions {
   scrollToTop?: boolean;
 }
+
+export interface PostNavigationResult {
+  prevPost: { id: string; title: string } | null;
+  nextPost: { id: string; title: string } | null;
+}
