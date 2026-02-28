@@ -4,10 +4,10 @@ title: "LIKE + B+Tree 인덱스와 FTS(Full-Text Search)"
 slug: "like-b-tree-인덱스와-fts-full-text-search"
 category: "개발"
 tags: ["데이터베이스","MySQL"]
-date: "2026-02-27"
+date: "2026-02-28"
 excerpt: "🌲 B+ Tree 자료구조 대부분의 RDBMS(MySQL, PostgreSQL 등)는 기본 인덱스 구조로 B+Tree를 사용합니다. | Leaf Node | 실제 데이터의 키 값..."
 groupId: ""
-lastEdited: "2026-02-27T05:42:00.000Z"
+lastEdited: "2026-02-28T04:13:00.000Z"
 ---
 
 ## 🌲 B+ Tree 자료구조
@@ -143,13 +143,13 @@ WHERE MATCH(title) AGAINST('치킨' IN BOOLEAN MODE);
 ### 🆚 실제 쿼리 실행 시간 측정 (Profiling)
 > ⚠️ **성능 테스트 전 캐시(Cache) 및 InnoDB Buffer Pool**
 > 정확한 성능 측정을 위해서는 쿼리 캐시 기능 또는 메모리에 올려지는 캐시를 잘 확인해야 합니다.
->
+> 
 > **Query Cache (쿼리 캐시)**
-> - MySQL 5.7 이하에서는 `SELECT SQL_NO_CACHE ...` 옵션을 주어 쿼리 캐시를 우회했습니다. 
-> - **MySQL 8.0부터는 쿼리 캐시 기능 자체가 완전히 삭제**되었습니다! 
->
+> - MySQL 5.7 이하에서는 `SELECT SQL_NO_CACHE ...` 옵션을 주어 쿼리 캐시를 우회했습니다.
+> - **MySQL 8.0부터는 쿼리 캐시 기능 자체가 완전히 삭제**되었습니다!
+> 
 > **InnoDB Buffer Pool & OS Cache**
-> - 디스크에서 읽어온 데이터 페이지(블록)를 메모리에 올려두는 캐시는 여전히 존재합니다. 
+> - 디스크에서 읽어온 데이터 페이지(블록)를 메모리에 올려두는 캐시는 여전히 존재합니다.
 > - 따라서 첫 번째 쿼리 실행보다 두 번째 실행이 디스크 I/O가 줄어들어 훨씬 빠릅니다.
 
 따라서 정확히 비교하기 위해 MySQL 서버를 재시작하면서 테스트를 하고자 합니다.
