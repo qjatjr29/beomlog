@@ -29,10 +29,12 @@ export const loadAllPosts = (): Post[] => {
         category,
         categorySlug,
         tags: frontMatter.tags,
-        createdAt: frontMatter.date,
+        date: frontMatter.date,
+        createdAt: frontMatter.createdAt ?? frontMatter.date,
         slug: frontMatter.slug ?? frontMatter.id,
         groupId: frontMatter.groupId ?? "",
         coverImage: frontMatter.coverImage ?? "",
+        thumbnail: frontMatter.thumbnail ?? "",
         filename,
         excerpt: frontMatter.excerpt ?? frontMatter.title,
       };

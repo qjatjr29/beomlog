@@ -14,7 +14,8 @@ export interface Post {
   category: string;
   categorySlug: string;
   tags: string[];
-  createdAt: string;
+  date: string; // 표시용
+  createdAt: string; // 정렬용
   excerpt: string;
   content: string;
   filename: string;
@@ -22,6 +23,7 @@ export interface Post {
   updatedAt?: string;
   groupId?: string;
   coverImage?: string;
+  thumbnail?: string;
 }
 
 export interface GroupMeta {
@@ -40,17 +42,25 @@ export interface PostFrontMatter {
   title: string;
   slug: string;
   date: string;
+  createdAt?: string;
   tags: string[];
   excerpt?: string;
   category: string;
   lastEdited?: string;
   groupId?: string;
   coverImage?: string;
+  thumbnail?: string;
 }
 
 export interface ParsedPost {
   frontMatter: PostFrontMatter;
   content: string;
+}
+
+export interface PostGridCardProps {
+  post: Post;
+  viewCount: number;
+  commentCount: number;
 }
 
 export interface Category {
