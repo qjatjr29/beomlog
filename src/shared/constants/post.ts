@@ -7,6 +7,7 @@ import {
 } from "lucide-react";
 
 export const POSTS_PER_PAGE = 5;
+export const GRID_POSTS_PER_PAGE = 8;
 
 export const CATEGORIES = {
   PROJECT: "프로젝트",
@@ -33,3 +34,5 @@ export const CATEGORY_LABELS: Record<string, string> = {
   [CATEGORIES.DAILY]: "일상",
   [CATEGORIES.BOOK]: "책",
 };
+
+export const GRID_CATEGORIES = new Set(["일상"]);
