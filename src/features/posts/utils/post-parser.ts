@@ -27,10 +27,12 @@ export const parsePostContent = (
       case "slug":
       case "excerpt":
       case "date":
+      case "createdAt":
       case "category":
       case "lastEdited":
       case "groupId":
       case "coverImage":
+      case "thumbnail":
         metadata[key] = cleanValue(value);
         break;
       case "tags":
