@@ -31,5 +31,5 @@ export const CATEGORY_LABELS: Record<string, string> = {
   [CATEGORIES.PROJECT]: "프로젝트",
   [CATEGORIES.DEV]: "개발",
   [CATEGORIES.DAILY]: "일상",
-  [CATEGORIES.BOOK]: "서적",
+  [CATEGORIES.BOOK]: "책",
 };
