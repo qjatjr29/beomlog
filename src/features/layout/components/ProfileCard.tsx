@@ -6,6 +6,7 @@ import minimiImage from "@/assets/minimiImage.jpeg";
 import { useAdmin } from "@/contexts/AdminContext";
 import { SOCIAL_LINKS } from "../constants/social";
 import { BGMPlayer } from "@/features/bgm/components/BGMPlayer";
+import { FriendLinks } from "./FriendLinks";
 
 export const ProfileCard = ({
   isAdminMode,
@@ -142,6 +143,7 @@ export const ProfileCard = ({
           );
         })}
       </div>
+      <FriendLinks /> 
     </div>
   );
 };
