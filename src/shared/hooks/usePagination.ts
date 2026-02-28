@@ -1,6 +1,14 @@
 import { useState, useMemo, useCallback } from "react";
 
-export const usePagination = <T>(data: T[], itemsPerPage: number) => {
+interface PaginationOptions {
+  scrollToTop?: boolean;
+}
+
+export const usePagination = <T>(
+  data: T[],
+  itemsPerPage: number,
+  options: PaginationOptions = { scrollToTop: true },
+) => {
   const [currentPage, setCurrentPage] = useState(1);
 
   const totalPages = Math.max(1, Math.ceil(data.length / itemsPerPage));
@@ -10,10 +18,15 @@ export const usePagination = <T>(data: T[], itemsPerPage: number) => {
     return data.slice(start, start + itemsPerPage);
   }, [data, currentPage, itemsPerPage]);
 
-  const handlePageChange = useCallback((page: number) => {
-    setCurrentPage(page);
-    window.scrollTo({ top: 0, behavior: "smooth" });
-  }, []);
+  const handlePageChange = useCallback(
+    (page: number) => {
+      setCurrentPage(page);
+      if (options.scrollToTop !== false) {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+      }
+    },
+    [options.scrollToTop],
+  );
 
   const resetPage = useCallback(() => setCurrentPage(1), []);
 
