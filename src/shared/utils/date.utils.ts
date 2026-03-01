@@ -25,3 +25,11 @@ export const getRelativeTime = (dateString: string): string => {
   if (months < 12) return `${months}개월 전`;
   return `${years}년 전`;
 };
+
+// KST 기준 오늘 날짜 반환
+export const getKSTDateString = (): string => {
+  const now = new Date();
+  // UTC+9
+  const kst = new Date(now.getTime() + 9 * 60 * 60 * 1000);
+  return kst.toISOString().split("T")[0];
+};
