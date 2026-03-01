@@ -79,7 +79,7 @@ export const GroupSidebar = ({
       className="overflow-y-auto p-2 space-y-0.5"
       style={{ height: `${containerHeight}px` }}
     >
-      {groupPosts.map((post, idx) => {
+      {groupPosts.map((post) => {
         const isCurrent = post.id === currentPost.id;
         const isNavigating = navigatingId === post.id;
 
