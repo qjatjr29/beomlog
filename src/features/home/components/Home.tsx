@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 import { Link } from "react-router";
-import { BookOpen, Quote } from "lucide-react";
+import { BookOpen, MessageCircleHeart } from "lucide-react";
 import { motion } from "framer-motion";
 import { POSTS_PER_PAGE } from "@/shared/constants";
 import { Pagination } from "@/shared/components/Pagination";
@@ -23,6 +23,20 @@ export const Home = () => {
     handlePageChange,
   } = usePagination(allPosts, POSTS_PER_PAGE);
 
+  const recentPosts = useMemo(() => {
+    const nowKST = new Date(Date.now() + 9 * 60 * 60 * 1000);
+    const oneWeekAgoKST = new Date(nowKST.getTime() - 7 * 24 * 60 * 60 * 1000);
+
+    return allPosts
+      .filter((post) => {
+        const postDateKST = new Date(
+          new Date(post.createdAt).getTime() + 9 * 60 * 60 * 1000,
+        );
+        return postDateKST >= oneWeekAgoKST;
+      })
+      .slice(0, 5);
+  }, [allPosts]);
+
   const [latestComment, setLatestComment] = useState<{
     author: string;
     content: string;
@@ -30,7 +44,7 @@ export const Home = () => {
   useEffect(() => {
     getComments("guestbook").then((comments) => {
       if (comments.length > 0) {
-        const latest = comments[comments.length - 1];
+        const latest = comments[0];
         setLatestComment({ author: latest.author, content: latest.content });
       }
     });
@@ -44,26 +58,30 @@ export const Home = () => {
           <span className="text-xs font-bold text-gray-700 dark:text-gray-200">
             Updated news
           </span>
+          <span className="text-[10px] text-gray-400 dark:text-gray-500">
+            최근 7일
+          </span>
         </div>
         <div className="space-y-0">
-          {allPosts.slice(0, 4).map((post) => (
-            <div
-              key={post.id}
-              className="border-b border-blog-border-light dark:border-gray-700 py-1.5"
-            >
-              <Link
-                to={`/post/${post.id}`}
-                className="text-[11px] text-gray-600 dark:text-gray-300 hover:text-blog-primary dark:hover:text-blog-primary transition-colors flex items-start gap-1"
+          {recentPosts.length > 0 ? (
+            recentPosts.map((post) => (
+              <div
+                key={post.id}
+                className="border-b border-blog-border-light dark:border-gray-700 py-1.5"
               >
-                <span className="text-blog-primary shrink-0">•</span>
-                {post.title}
-              </Link>
-            </div>
-          ))}
-          {allPosts.length === 0 && (
+                <Link
+                  to={`/post/${post.id}`}
+                  className="text-[11px] text-gray-600 dark:text-gray-300 hover:text-blog-primary dark:hover:text-blog-primary transition-colors flex items-start gap-1"
+                >
+                  <span className="text-blog-primary shrink-0">•</span>
+                  {post.title}
+                </Link>
+              </div>
+            ))
+          ) : (
             <div className="border-b border-blog-border-light dark:border-gray-700 py-1.5">
               <p className="text-[11px] text-gray-400 dark:text-gray-500">
-                • 아직 게시물이 없습니다.
+                • 최근 7일간 새 게시물이 없습니다.
               </p>
             </div>
           )}
@@ -86,7 +104,7 @@ export const Home = () => {
         <div className="p-2.5 bg-blog-lightest dark:bg-gray-800 border border-blog-border-light dark:border-gray-700 rounded text-[11px]">
           {latestComment ? (
             <div className="flex items-start gap-2">
-              <Quote className="w-3 h-3 text-blog-border dark:text-gray-500 mt-0.5 shrink-0" />
+              <MessageCircleHeart className="w-3 h-3 text-blog-border dark:text-gray-500 mt-0.5 shrink-0" />
               <div>
                 <p className="text-gray-600 dark:text-gray-300 italic">
                   "{latestComment.content}"
