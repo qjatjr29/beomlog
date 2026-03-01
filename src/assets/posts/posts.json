@@ -5,10 +5,7 @@
     "slug": "like-b-tree-인덱스와-fts-full-text-search",
     "category": "개발",
     "categorySlug": "개발",
-    "tags": [
-      "데이터베이스",
-      "MySQL"
-    ],
+    "tags": ["데이터베이스", "MySQL"],
     "date": "2026-02-28",
     "excerpt": "🌲 B+ Tree 자료구조 대부분의 RDBMS(MySQL, PostgreSQL 등)는 기본 인덱스 구조로 B+Tree를 사용합니다. | Leaf Node | 실제 데이터의 키 값...",
     "groupId": "",
@@ -21,9 +18,7 @@
     "slug": "부스트캠프-후기",
     "category": "일상",
     "categorySlug": "일상",
-    "tags": [
-      "네이버부스트캠프"
-    ],
+    "tags": ["네이버부스트캠프"],
     "date": "2026-02-19",
     "createdAt": "2026-02-19T01:26:00.000Z",
     "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
@@ -39,9 +34,7 @@
     "category": "책",
     "categorySlug": "책",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [
-      "rate limit"
-    ],
+    "tags": ["rate limit"],
     "date": "2026-02-28",
     "excerpt": "네트워크 시스템에서 처리율 제한 장치(rate limiter)는 클라이언트 또는 서비스가 보내는 트래픽의 처리율을 제어하기 위한 장치 ex) 특정 기간 내에 전송되는 클라이언트 H...",
     "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",

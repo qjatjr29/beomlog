@@ -11,6 +11,8 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const NOTION_TOKEN = process.env.NOTION_TOKEN;
+const BLOG_URL = process.env.BLOG_URL || "https://www.xxxx.store";
+const SITEMAP_PATH = path.join(__dirname, "../public/sitemap.xml");
 // const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 const DB_CONFIG = [
@@ -527,30 +529,6 @@ async function findInternalDatabase(groupPageId) {
   return dbBlock.id; // 내부 DB의 ID
 }
 
-// async function getPublishedPostsFromDB(databaseId) {
-//   const allResults = [];
-//   let cursor = undefined;
-//   while (true) {
-//     const database = await notion.databases.retrieve({
-//       database_id: databaseId,
-//     });
-
-//     const dataSourceId = database.data_sources[0].id;
-
-//     const response = await notion.dataSources.query({
-//       data_source_id: dataSourceId,
-//       filter: { property: "Published", checkbox: { equals: true } },
-//       sorts: [{ property: "Date", direction: "descending" }],
-//       page_size: 100,
-//       start_cursor: cursor,
-//     });
-//     allResults.push(...response.results);
-//     if (!response.has_more) break;
-//     cursor = response.next_cursor;
-//   }
-//   return allResults;
-// }
-
 // ========================================
 // 🔧 동기화 로직
 // ========================================
@@ -719,6 +697,8 @@ async function syncNotionPosts() {
                 title: postData.title,
                 tags: postData.tags,
                 date: postData.date,
+                createdAt: postData.createdAt,
+                thumbnail: postData.thumbnail,
                 excerpt: postData.excerpt,
                 lastEdited: page.last_edited_time,
               };
@@ -797,7 +777,6 @@ async function syncNotionPosts() {
     }
 
     // ── JSON 저장 ──────────────────────────────────────────
-    // postsMetadata.sort((a, b) => new Date(b.date) - new Date(a.date));
     postsMetadata.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
     fs.writeFileSync(
@@ -813,6 +792,8 @@ async function syncNotionPosts() {
 
     console.log(`\n📋 posts.json (${postsMetadata.length}개)`);
     console.log(`📋 groups.json (${groupsMetadata.length}개 그룹)`);
+
+    await generateSitemap(postsMetadata);
 
     saveSyncState({
       lastSyncTime: currentSyncTime.toISOString(),
@@ -864,6 +845,8 @@ async function processNormalPage(
         categorySlug: slugify(category),
         tags: cachedPage.tags ?? [],
         date: cachedPage.date ?? page.last_edited_time.split("T")[0],
+        createdAt: cachedPage.createdAt ?? page.created_time,
+        thumbnail: cachedPage.thumbnail,
         excerpt: cachedPage.excerpt ?? "",
         groupId: "",
         path: `${slugify(category)}/${cachedPage.slug}.md`,
@@ -882,6 +865,8 @@ async function processNormalPage(
       title: postData.title,
       tags: postData.tags,
       date: postData.date,
+      createdAt: postData.createdAt,
+      thumbnail: postData.thumbnail,
       excerpt: postData.excerpt,
       lastEdited: page.last_edited_time,
     };
@@ -898,56 +883,6 @@ async function processNormalPage(
  * 그룹 내부 DB 글 처리
  * ✅ 경로: 카테고리/그룹슬러그/글슬러그.md
  */
-// async function processGroupPost(page, category, groupId, groupSlug) {
-//   const props = page.properties;
-//   const id = page.id;
-//   const title = getPlainText(props.Title?.title) || "Untitled";
-//   const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
-//   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
-//   const date = props.Date?.date?.start || page.last_edited_time.split("T")[0];
-//   const categorySlug = slugify(category);
-
-//   const content = await getPageContent(id);
-//   const excerpt = extractExcerptFromContent(content);
-
-//   // ✅ 카테고리/그룹슬러그/ 디렉토리 생성
-//   const groupDir = path.join(OUTPUT_DIR, categorySlug, groupSlug);
-//   if (!fs.existsSync(groupDir)) fs.mkdirSync(groupDir, { recursive: true });
-
-//   const frontMatter = `---
-// id: "${id}"
-// title: "${escapeYaml(title)}"
-// slug: "${slug}"
-// category: "${category}"
-// tags: ${JSON.stringify(tags)}
-// date: "${date}"
-// excerpt: "${escapeYaml(excerpt)}"
-// groupId: "${groupId}"
-// groupSlug: "${groupSlug}"
-// lastEdited: "${page.last_edited_time}"
-// ---
-
-// ${content}`;
-
-//   fs.writeFileSync(path.join(groupDir, `${slug}.md`), frontMatter, "utf-8");
-//   console.log(`      📝 저장: ${categorySlug}/${groupSlug}/${slug}`);
-
-//   return {
-//     id,
-//     title,
-//     slug,
-//     category,
-//     categorySlug,
-//     groupSlug,
-//     tags,
-//     date,
-//     excerpt,
-//     groupId,
-//     path: `${categorySlug}/${groupSlug}/${slug}.md`,
-//     lastEdited: page.last_edited_time,
-//   };
-// }
-
 async function processGroupPost(page, category, groupId, groupSlug) {
   const props = page.properties;
   const id = page.id;
@@ -1009,56 +944,6 @@ ${content}`;
  * 일반 글 처리
  * 경로: 카테고리/글슬러그.md
  */
-// async function processPost(page, category) {
-//   const props = page.properties;
-//   const id = page.id;
-//   const title = getPlainText(props.Title?.title) || "Untitled";
-//   const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
-//   // category 파라미터로 받음 (DB별로 카테고리 고정)
-//   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
-//   const date = props.Date?.date?.start || page.last_edited_time.split("T")[0];
-//   const categorySlug = slugify(category);
-
-//   const content = await getPageContent(id);
-//   const rawExcerpt = getPlainText(props.Excerpt?.rich_text);
-//   const excerpt = rawExcerpt || extractExcerptFromContent(content);
-
-//   const categoryDir = path.join(OUTPUT_DIR, categorySlug);
-//   if (!fs.existsSync(categoryDir))
-//     fs.mkdirSync(categoryDir, { recursive: true });
-
-//   const frontMatter = `---
-// id: "${id}"
-// title: "${escapeYaml(title)}"
-// slug: "${slug}"
-// category: "${category}"
-// tags: ${JSON.stringify(tags)}
-// date: "${date}"
-// excerpt: "${escapeYaml(excerpt)}"
-// groupId: ""
-// lastEdited: "${page.last_edited_time}"
-// ---
-
-// ${content}`;
-
-//   fs.writeFileSync(path.join(categoryDir, `${slug}.md`), frontMatter, "utf-8");
-//   console.log(`  📝 저장: ${categorySlug}/${slug}`);
-
-//   return {
-//     id,
-//     title,
-//     slug,
-//     category,
-//     categorySlug,
-//     tags,
-//     date,
-//     excerpt,
-//     groupId: "",
-//     path: `${categorySlug}/${slug}.md`,
-//     lastEdited: page.last_edited_time,
-//   };
-// }
-
 async function processPost(page, category) {
   const props = page.properties;
   const id = page.id;
@@ -1117,6 +1002,57 @@ ${content}`;
     path: `${categorySlug}/${slug}.md`,
     lastEdited: page.last_edited_time,
   };
+}
+
+async function generateSitemap(posts) {
+  const staticUrls = [
+    { loc: `${BLOG_URL}/`, priority: "1.0", changefreq: "daily" },
+    { loc: `${BLOG_URL}/posts/개발`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${BLOG_URL}/posts/일상`, priority: "0.8", changefreq: "weekly" },
+    { loc: `${BLOG_URL}/posts/책`, priority: "0.8", changefreq: "weekly" },
+    {
+      loc: `${BLOG_URL}/posts/프로젝트`,
+      priority: "0.8",
+      changefreq: "weekly",
+    },
+    { loc: `${BLOG_URL}/guestbook`, priority: "0.5", changefreq: "monthly" },
+  ];
+
+  const postUrls = posts.map((post) => ({
+    loc: `${BLOG_URL}/post/${post.id}`,
+    lastmod: post.lastEdited?.split("T")[0] ?? post.date,
+    priority: "0.7",
+    changefreq: "monthly",
+  }));
+
+  const allUrls = [...staticUrls, ...postUrls];
+
+  const urlEntries = allUrls
+    .map((u) => {
+      const lastmod = u.lastmod ? `\n    <lastmod>${u.lastmod}</lastmod>` : "";
+      const changefreq = u.changefreq
+        ? `\n    <changefreq>${u.changefreq}</changefreq>`
+        : "";
+      const priority = u.priority
+        ? `\n    <priority>${u.priority}</priority>`
+        : "";
+      return `  <url>\n    <loc>${u.loc}</loc>${lastmod}${changefreq}${priority}\n  </url>`;
+    })
+    .join("\n");
+
+  const xml = `<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+  xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
+>
+${urlEntries}
+</urlset>`;
+
+  fs.writeFileSync(SITEMAP_PATH, xml, "utf-8");
+  console.log(
+    `\n🗺️  sitemap.xml 갱신 완료 (정적 ${staticUrls.length}개 + 포스트 ${posts.length}개)`,
+  );
 }
 
 syncNotionPosts();
