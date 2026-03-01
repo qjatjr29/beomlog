@@ -133,7 +133,7 @@ export const ProfileCard = ({
               href={link.href}
               target={link.id !== "email" ? "_blank" : undefined}
               rel={link.id !== "email" ? "noopener noreferrer" : undefined}
-              className="p-1.5 hover:bg-blog-light dark:hover:bg-gray-700 rounded-full transition-colors"
+              className={`group p-1.5 rounded-full transition-colors ${link.hoverBg}`}
               title={link.label}
             >
               <Icon
@@ -143,7 +143,7 @@ export const ProfileCard = ({
           );
         })}
       </div>
-      <FriendLinks /> 
+      <FriendLinks />
     </div>
   );
 };
