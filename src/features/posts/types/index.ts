@@ -1,12 +1,3 @@
-export interface PostNavigationResult {
-  prevPost: { id: string; title: string } | null;
-  nextPost: { id: string; title: string } | null;
-}
-
-export interface ParsedPost extends Post {
-  path?: string;
-}
-
 export interface Post {
   id: string;
   title: string;
@@ -37,6 +28,7 @@ export interface GroupMeta {
   lastEdited: string;
 }
 
+// 파서에서 사용하는 타입
 export interface PostFrontMatter {
   id: string;
   title: string;
@@ -48,49 +40,19 @@ export interface PostFrontMatter {
   category: string;
   lastEdited?: string;
   groupId?: string;
+  groupSlug?: string;
   coverImage?: string;
   thumbnail?: string;
 }
 
-export interface ParsedPost {
-  frontMatter: PostFrontMatter;
-  content: string;
+// usePostNavigation 반환값
+export interface PostNavigationResult {
+  prevPost: { id: string; title: string } | null;
+  nextPost: { id: string; title: string } | null;
 }
 
-export interface PostGridCardProps {
-  post: Post;
-  viewCount: number;
-  commentCount: number;
-}
-
-export interface Category {
-  name: string;
-  count: number;
-}
-
-export interface PostCardProps {
-  post: Post;
-  viewCount: number;
-  commentCount?: number;
-  selectedTag: string | null;
-}
-
-export interface PostHeaderProps {
-  post: Post;
-  views: number;
-}
-
-interface NavPost {
+// NavPost: PostNavigation 컴포넌트와 hook에서 공유
+export interface NavPost {
   id: string;
   title: string;
-}
-
-export interface PostNavigationProps {
-  prevPost: NavPost | null;
-  nextPost: NavPost | null;
-}
-
-export interface PostListHeaderProps {
-  category?: string;
-  totalCount: number;
 }

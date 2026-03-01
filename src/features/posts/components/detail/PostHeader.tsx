@@ -1,5 +1,10 @@
 import { Calendar, Eye } from "lucide-react";
-import { PostHeaderProps } from "../types";
+import { Post } from "../../types";
+
+export interface PostHeaderProps {
+  post: Post;
+  views: number;
+}
 
 export const PostHeader = ({ post, views }: PostHeaderProps) => (
   <div className="mb-8 pb-6 border-b-2 border-dotted border-gray-300 dark:border-gray-600">

@@ -1,5 +1,10 @@
 import { Link } from "react-router";
-import { PostNavigationProps } from "../types";
+import { NavPost } from "../../types";
+
+export interface PostNavigationProps {
+  prevPost: NavPost | null;
+  nextPost: NavPost | null;
+}
 
 export const PostNavigation = ({ prevPost, nextPost }: PostNavigationProps) => (
   <div className="grid grid-cols-1 md:grid-cols-2 gap-3 mb-8 pb-8">

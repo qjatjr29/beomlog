@@ -3,9 +3,10 @@ import { useParams, Link } from "react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
 import { usePosts } from "@/contexts/PostsContext";
-import { loadGroupById } from "../utils/group-loader";
-import { PostCard } from "../components/PostCard";
-import { TagFilter } from "../components/TagFilter";
+import { loadGroupById } from "@/features/posts/utils/group-loader";
+import { PostListCard } from "../cards/PostListCard";
+import { TagFilter } from "../shared/TagFilter";
+import { EmptyState } from "../shared/EmptyState";
 import { Pagination } from "@/shared/components/Pagination";
 import { usePagination } from "@/shared/hooks/usePagination";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
@@ -20,12 +21,10 @@ export const GroupPostList = () => {
 
   const groupPosts = posts.filter((p) => p.groupId === groupId);
 
-  // 태그 목록 수집
   const availableTags = Array.from(
     new Set(groupPosts.flatMap((p) => p.tags ?? [])),
   );
 
-  // 태그 필터링
   const filteredPosts = selectedTag
     ? groupPosts.filter((p) => p.tags?.includes(selectedTag))
     : groupPosts;
@@ -43,13 +42,12 @@ export const GroupPostList = () => {
 
   return (
     <div>
-      {/* 헤더 */}
       <div className="mb-6">
         <Link
           to={`/posts/${group.category}`}
           className="inline-flex items-center gap-1 text-xs text-gray-500 dark:text-gray-400 hover:text-blog-primary mb-3 transition-colors"
         >
-          <ArrowLeft className="w-3 h-3" /> {group.category}로
+          <ArrowLeft className="w-3 h-3" /> 이전으로
         </Link>
         <div className="pb-4 border-b-2 border-dotted border-gray-300 dark:border-gray-600">
           <h1 className="text-xl font-bold text-gray-800 dark:text-gray-100">
@@ -71,7 +69,6 @@ export const GroupPostList = () => {
         </div>
       </div>
 
-      {/* 태그 필터 */}
       {availableTags.length > 0 && (
         <TagFilter
           tags={availableTags}
@@ -87,12 +84,9 @@ export const GroupPostList = () => {
         />
       )}
 
-      {/* 포스트 목록 */}
       <div className="space-y-3 mb-8">
         {currentItems.length === 0 ? (
-          <div className="py-10 text-center text-sm text-gray-400 dark:text-gray-500">
-            해당 태그의 글이 없습니다.
-          </div>
+          <EmptyState message="해당 태그의 글이 없습니다." />
         ) : (
           currentItems.map((post, i) => (
             <motion.div
@@ -101,7 +95,7 @@ export const GroupPostList = () => {
               animate={{ opacity: 1, x: 0 }}
               transition={{ delay: i * 0.06 }}
             >
-              <PostCard
+              <PostListCard
                 post={post}
                 viewCount={viewCounts[post.id] ?? 0}
                 commentCount={commentCounts[post.id] ?? 0}

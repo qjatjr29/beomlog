@@ -1,12 +1,18 @@
 import { Link } from "react-router";
 import { Calendar, Eye, MessageSquare } from "lucide-react";
-import { PostCardProps } from "../types";
+import { Post } from "@/features/posts/types";
+
+interface HomePostCardProps {
+  post: Post;
+  viewCount: number;
+  commentCount?: number;
+}
 
 export const HomePostCard = ({
   post,
   viewCount,
   commentCount,
-}: PostCardProps) => (
+}: HomePostCardProps) => (
   <Link
     to={`/post/${post.id}`}
     className="flex items-center gap-2 py-2 border-b border-blog-border-light dark:border-gray-700 hover:bg-blog-lightest dark:hover:bg-gray-800 transition-colors group px-1"
@@ -29,7 +35,7 @@ export const HomePostCard = ({
     <div className="flex items-center gap-2 shrink-0 text-[10px] text-gray-400 dark:text-gray-500">
       <span className="hidden sm:inline items-center gap-0.5">
         <Calendar className="w-2.5 h-2.5 inline mr-0.5" />
-        {post.createdAt}
+        {post.date}
       </span>
       <span className="flex items-center gap-0.5">
         <Eye className="w-2.5 h-2.5" />

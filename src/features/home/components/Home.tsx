@@ -1,14 +1,14 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router";
 import { BookOpen, Quote } from "lucide-react";
-import { MiniRoom } from "../../mini-room/components";
+import { motion } from "framer-motion";
 import { POSTS_PER_PAGE } from "@/shared/constants";
 import { Pagination } from "@/shared/components/Pagination";
 import { usePagination } from "@/shared/hooks/usePagination";
-import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
 import { getComments } from "@/data/storage";
-import { motion } from "framer-motion";
-import { HomePostCard } from "@/features/posts/components/HomePostCard";
+import { MiniRoom } from "@/features/mini-room/components";
+import { HomePostCard } from "@/features/posts/components/cards/HomePostCard";
+import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
 
 export const Home = () => {
   const {
@@ -133,7 +133,6 @@ export const Home = () => {
               post={post}
               viewCount={viewCounts[post.id] ?? 0}
               commentCount={commentCounts[post.id] ?? 0}
-              selectedTag={null}
             />
           </motion.div>
         ))}

@@ -1,16 +1,16 @@
 import { useEffect, useState } from "react";
 import { useParams, Link } from "react-router";
 import { ArrowLeft } from "lucide-react";
-import { usePosts } from "../../../contexts/PostsContext";
-import { usePostNavigation } from "../hooks/usePostNavigation";
-import { MarkdownRenderer } from "../../markdown/components/MarkdownRenderer";
-import { CommentSection } from "../../guestbook/components";
-import { incrementPostViews } from "../../../data/storage/post.storage";
+import { usePosts } from "../../../../contexts/PostsContext";
+import { usePostNavigation } from "../../hooks/usePostNavigation";
+import { MarkdownRenderer } from "../../../markdown/components/MarkdownRenderer";
+import { CommentSection } from "../../../guestbook/components";
+import { incrementPostViews } from "../../../../data/storage/post.storage";
 import { PostSideActions } from "./PostSideActions";
 import { PostHeader } from "./PostHeader";
 import { PostNavigation } from "./PostNavigation";
 import { GroupSidebar } from "./GroupSidebar";
-import { loadGroupById } from "../utils/group-loader";
+import { loadGroupById } from "../../utils/group-loader";
 
 export const PostDetail = () => {
   const { id } = useParams<{ id: string }>();

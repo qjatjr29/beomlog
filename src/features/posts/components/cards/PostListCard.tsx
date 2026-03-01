@@ -1,13 +1,20 @@
 import { Link } from "react-router";
 import { Calendar, Eye, MessageSquare } from "lucide-react";
-import { PostCardProps } from "../types";
+import { Post } from "@/features/posts/types";
 
-export const PostCard = ({
+interface PostListCardProps {
+  post: Post;
+  viewCount: number;
+  commentCount?: number;
+  selectedTag: string | null;
+}
+
+export const PostListCard = ({
   post,
   viewCount,
   commentCount,
   selectedTag,
-}: PostCardProps) => {
+}: PostListCardProps) => {
   return (
     <Link
       to={`/post/${post.id}`}
@@ -24,7 +31,7 @@ export const PostCard = ({
           </span>
           <span className="flex items-center gap-0.5">
             <Calendar className="w-2.5 h-2.5" />
-            {post.createdAt}
+            {post.date}
           </span>
         </div>
       </div>
