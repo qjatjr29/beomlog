@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { Link, useNavigate } from "react-router";
 import { motion, AnimatePresence } from "framer-motion";
 import { Post, GroupMeta } from "@/features/posts/types";
@@ -16,6 +16,9 @@ interface GroupSidebarProps {
   groupPosts: Post[];
 }
 
+const ITEM_HEIGHT = 32;
+const VISIBLE_COUNT = 5;
+
 export const GroupSidebar = ({
   currentPost,
   group,
@@ -25,6 +28,43 @@ export const GroupSidebar = ({
   const [navigatingId, setNavigatingId] = useState<string | null>(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
 
+  const desktopScrollRef = useRef<HTMLDivElement | null>(null);
+  const mobileScrollRef = useRef<HTMLDivElement | null>(null);
+  // 현재 아이템 index 기반으로 직접 스크롤 계산
+  const currentIndex = groupPosts.findIndex((p) => p.id === currentPost.id);
+  const containerHeight = ITEM_HEIGHT * VISIBLE_COUNT + 16;
+
+  const scrollToCurrentItem = useCallback(
+    (container: HTMLDivElement | null) => {
+      if (!container) return;
+      // 각 아이템 높이 * 현재 인덱스 - 컨테이너 중앙 오프셋
+      const scrollTop =
+        currentIndex * ITEM_HEIGHT -
+        Math.floor(VISIBLE_COUNT / 2) * ITEM_HEIGHT;
+      container.scrollTop = Math.max(0, scrollTop);
+    },
+    [currentIndex],
+  );
+
+  // 데스크탑: 마운트 + currentIndex 변경 시
+  useEffect(() => {
+    // 약간의 딜레이로 DOM 렌더링 후 실행 보장
+    const timer = setTimeout(() => {
+      scrollToCurrentItem(desktopScrollRef.current);
+    }, 50);
+    return () => clearTimeout(timer);
+  }, [currentIndex, scrollToCurrentItem]);
+
+  // 모바일: 패널 열릴 때
+  useEffect(() => {
+    if (isMobileOpen) {
+      const timer = setTimeout(() => {
+        scrollToCurrentItem(mobileScrollRef.current);
+      }, 100); // AnimatePresence 애니메이션 후
+      return () => clearTimeout(timer);
+    }
+  }, [isMobileOpen, scrollToCurrentItem]);
+
   const handlePostClick = async (e: React.MouseEvent, postId: string) => {
     e.preventDefault();
     if (postId === currentPost.id) return;
@@ -33,13 +73,16 @@ export const GroupSidebar = ({
     navigate(`/post/${postId}`);
   };
 
-  const currentIndex = groupPosts.findIndex((p) => p.id === currentPost.id);
-
-  const PostList = () => (
-    <div className="overflow-y-auto max-h-60 xl:max-h-[calc(100vh-200px)] p-2 space-y-0.5">
+  const renderList = (scrollRef: React.RefObject<HTMLDivElement | null>) => (
+    <div
+      ref={scrollRef}
+      className="overflow-y-auto p-2 space-y-0.5"
+      style={{ height: `${containerHeight}px` }}
+    >
       {groupPosts.map((post, idx) => {
         const isCurrent = post.id === currentPost.id;
         const isNavigating = navigatingId === post.id;
+
         return (
           <motion.a
             key={post.id}
@@ -49,23 +92,21 @@ export const GroupSidebar = ({
               isNavigating ? { opacity: 0.5, x: 4 } : { opacity: 1, x: 0 }
             }
             transition={{ duration: 0.2 }}
-            className={`flex items-start gap-2 px-2 py-1.5 rounded text-[11px] transition-colors group/item cursor-pointer ${
+            style={{ height: `${ITEM_HEIGHT}px` }}
+            className={`flex items-center gap-2 px-2 rounded text-[11px] transition-colors group/item cursor-pointer ${
               isCurrent
                 ? "bg-blog-light dark:bg-gray-700 text-blog-primary font-bold"
                 : "text-gray-600 dark:text-gray-400 hover:bg-blog-lightest dark:hover:bg-gray-700 hover:text-blog-primary"
             }`}
           >
-            <span className="shrink-0 mt-0.5 text-[10px] text-gray-400 w-4 text-right">
-              {idx + 1}.
-            </span>
-            <span className="shrink-0 mt-0.5">
+            <span className="shrink-0">
               {isCurrent ? (
                 <CheckCircle2 className="w-3 h-3 text-blog-primary" />
               ) : (
                 <Circle className="w-3 h-3 text-gray-300 dark:text-gray-600 group-hover/item:text-blog-primary/50" />
               )}
             </span>
-            <span className="leading-relaxed line-clamp-2">{post.title}</span>
+            <span className="flex-1 truncate min-w-0">{post.title}</span>
           </motion.a>
         );
       })}
@@ -75,7 +116,7 @@ export const GroupSidebar = ({
   return (
     <>
       {/* xl 이상: fixed 사이드바 */}
-      <div className="fixed z-40 hidden xl:block w-44 right-8 top-20">
+      <div className="fixed z-40 hidden xl:block w-48 right-8 top-20">
         <motion.div
           initial={{ opacity: 0, x: 20 }}
           animate={{ opacity: 1, x: 0 }}
@@ -90,14 +131,16 @@ export const GroupSidebar = ({
             <span className="text-[11px] font-bold text-blog-primary tracking-wider truncate group-hover:underline">
               {group.title}
             </span>
+            <span className="ml-auto text-[10px] text-gray-400 shrink-0">
+              {currentIndex + 1}/{groupPosts.length}
+            </span>
           </Link>
-          <PostList />
+          {renderList(desktopScrollRef)}
         </motion.div>
       </div>
 
       {/* xl 미만: 포스트 상단 인라인 패널 */}
       <div className="xl:hidden mb-4 border border-blog-border dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800">
-        {/* 헤더 - 클릭해서 접기/펼치기 */}
         <button
           onClick={() => setIsMobileOpen((prev) => !prev)}
           className="w-full flex items-center justify-between px-3 py-2.5 hover:bg-blog-lightest dark:hover:bg-gray-700 transition-colors"
@@ -118,7 +161,6 @@ export const GroupSidebar = ({
           )}
         </button>
 
-        {/* 펼쳐지는 목록 */}
         <AnimatePresence>
           {isMobileOpen && (
             <motion.div
@@ -128,7 +170,7 @@ export const GroupSidebar = ({
               transition={{ duration: 0.2 }}
               className="overflow-hidden border-t border-blog-border-light dark:border-gray-700"
             >
-              <PostList />
+              {renderList(mobileScrollRef)}
             </motion.div>
           )}
         </AnimatePresence>
