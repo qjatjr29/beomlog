@@ -1,4 +1,5 @@
 import { supabase } from "@/lib/supabase";
+import { getKSTDateString } from "@/shared/utils";
 import { hashIpString } from "@/shared/utils/ip.utils";
 
 export const getPostViews = async (postId: string): Promise<number> => {
@@ -12,7 +13,7 @@ export const getPostViews = async (postId: string): Promise<number> => {
 };
 
 export const incrementPostViews = async (postId: string): Promise<number> => {
-  const today = new Date().toISOString().split("T")[0];
+  const today = getKSTDateString();
   const cacheKey = `postView_${postId}_${today}`;
   const cached = localStorage.getItem(cacheKey);
 
@@ -20,10 +21,33 @@ export const incrementPostViews = async (postId: string): Promise<number> => {
     return parseInt(cached);
   }
 
+  // 날짜 바뀌면 이전 날짜 캐시 제거
+  const keys = Object.keys(localStorage).filter((k) =>
+    k.startsWith(`postView_${postId}_`),
+  );
+  keys.forEach((k) => {
+    if (k !== cacheKey) localStorage.removeItem(k);
+  });
+
   try {
-    const ipResponse = await fetch("https://api.ipify.org?format=json");
-    const { ip } = await ipResponse.json();
-    const ipHash = await hashIpString(ip);
+    const controller = new AbortController();
+    const timeout = setTimeout(() => controller.abort(), 3000);
+
+    let ipHash: string;
+    try {
+      const ipResponse = await fetch("https://api.ipify.org?format=json", {
+        signal: controller.signal,
+      });
+      clearTimeout(timeout);
+      const { ip } = await ipResponse.json();
+      ipHash = await hashIpString(ip);
+    } catch {
+      clearTimeout(timeout);
+      const sessionKey =
+        sessionStorage.getItem("sessionId") ?? crypto.randomUUID();
+      sessionStorage.setItem("sessionId", sessionKey);
+      ipHash = await hashIpString(sessionKey);
+    }
 
     const { data, error } = await supabase.rpc("increment_post_views", {
       p_post_id: postId,
