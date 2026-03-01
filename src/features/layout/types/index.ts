@@ -10,3 +10,10 @@ export interface Tab {
 export interface LayoutProps {
   children: ReactNode;
 }
+
+export interface FriendBlog {
+  name: string;
+  url: string;
+  description?: string;
+  emoji?: string;
+}
