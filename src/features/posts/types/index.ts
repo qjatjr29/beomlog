@@ -17,6 +17,11 @@ export interface Post {
   thumbnail?: string;
 }
 
+export interface Category {
+  name: string;
+  count: number;
+}
+
 export interface GroupMeta {
   id: string;
   title: string;
