@@ -207,6 +207,45 @@
     "lastEdited": "2026-02-28T03:35:00.000Z"
   },
   {
+    "id": "317d67b9-9e80-80ce-84f5-feaa3e021ed5",
+    "title": "검색 데이터 동기화 구조 [Outbox & RabbitMQ] ",
+    "slug": "검색-데이터-동기화-구조-outbox-rabbitmq",
+    "category": "프로젝트",
+    "categorySlug": "프로젝트",
+    "groupSlug": "locus",
+    "tags": [
+      "RabbitMQ",
+      "Elasticsearch",
+      "MessageQueue",
+      "OutboxPattern"
+    ],
+    "date": "2026-03-02",
+    "createdAt": "2026-03-02T06:26:00.000Z",
+    "excerpt": "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불...",
+    "thumbnail": "",
+    "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
+    "path": "프로젝트/locus/검색-데이터-동기화-구조-outbox-rabbitmq.md",
+    "lastEdited": "2026-03-02T06:33:00.000Z"
+  },
+  {
+    "id": "317d67b9-9e80-80b1-94f0-c4dcdfcd81a9",
+    "title": "검색 인덱스 설계 및 키워드 검색 구조",
+    "slug": "검색-인덱스-설계-및-키워드-검색-구조",
+    "category": "프로젝트",
+    "categorySlug": "프로젝트",
+    "groupSlug": "locus",
+    "tags": [
+      "Elasticsearch"
+    ],
+    "date": "2026-03-02",
+    "createdAt": "2026-03-02T06:17:00.000Z",
+    "excerpt": "이전 글에서는 Elasticsearch를 도입한 배경과 PostgreSQL과의 역할 분리 그리고 비동기 동기화 전략을 선택한 이유를 다뤘는데요!! 이번에는 실제로 Elasticse...",
+    "thumbnail": "",
+    "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
+    "path": "프로젝트/locus/검색-인덱스-설계-및-키워드-검색-구조.md",
+    "lastEdited": "2026-03-02T06:47:00.000Z"
+  },
+  {
     "id": "317d67b9-9e80-80c3-83a7-c880f79ec07e",
     "title": "Elasticsearch 도입 배경과 설계",
     "slug": "elasticsearch-도입-배경과-설계",
@@ -214,7 +253,7 @@
     "categorySlug": "프로젝트",
     "groupSlug": "locus",
     "tags": [
-      "elasticsearch"
+      "Elasticsearch"
     ],
     "date": "2026-03-02",
     "createdAt": "2026-03-02T01:29:00.000Z",
@@ -222,6 +261,6 @@
     "thumbnail": "",
     "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
     "path": "프로젝트/locus/elasticsearch-도입-배경과-설계.md",
-    "lastEdited": "2026-03-02T03:49:00.000Z"
+    "lastEdited": "2026-03-02T06:27:00.000Z"
   }
 ]

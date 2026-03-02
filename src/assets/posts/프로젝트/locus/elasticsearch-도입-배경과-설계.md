@@ -3,14 +3,14 @@ id: "317d67b9-9e80-80c3-83a7-c880f79ec07e"
 title: "Elasticsearch 도입 배경과 설계"
 slug: "elasticsearch-도입-배경과-설계"
 category: "프로젝트"
-tags: ["elasticsearch"]
+tags: ["Elasticsearch"]
 date: "2026-03-02"
 createdAt: "2026-03-02T01:29:00.000Z"
 excerpt: "이번 locus 서비스를 개발하면서 사용자들이 작성한 기록들을 효과적으로 찾을 수 있는 검색 기능이 필요하다고 생각했습니다. 처음에는 PostgreSQL의 기본 쿼리만으로도 충분하..."
 thumbnail: ""
 groupId: "314d67b9-9e80-80af-9f95-cd3e58daf439"
 groupSlug: "locus"
-lastEdited: "2026-03-02T03:49:00.000Z"
+lastEdited: "2026-03-02T06:27:00.000Z"
 ---
 
 
