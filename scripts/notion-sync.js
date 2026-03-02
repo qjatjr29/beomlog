@@ -561,7 +561,8 @@ async function getPublishedPages(dbId) {
 
     const response = await notion.dataSources.query({
       data_source_id: dataSourceId,
-      filter: { property: "Published", checkbox: { equals: true } },
+      filter: { property: "Status", select: { equals: "발행" } },
+      // filter: { property: "Published", checkbox: { equals: true } },
       sorts: [{ property: "Date", direction: "descending" }],
       page_size: 100,
       start_cursor: cursor,
@@ -776,6 +777,15 @@ async function syncNotionPosts() {
       }
     }
 
+    const totalChanges = newCount + updatedCount + deletedIds.length;
+
+    if (totalChanges === 0) {
+      console.log(
+        "\n✅ 변경된 페이지가 없습니다. JSON 파일 업데이트 건너뜁니다.",
+      );
+      return; // 아무 파일도 덮어쓰지 않음
+    }
+
     // ── JSON 저장 ──────────────────────────────────────────
     postsMetadata.sort((a, b) => new Date(b.createdAt) - new Date(a.createdAt));
 
@@ -795,9 +805,15 @@ async function syncNotionPosts() {
 
     await generateSitemap(postsMetadata);
 
+    // 삭제된 페이지는 상태(processedPages)에서도 완전히 지워주기!
+    const nextProcessedPages = { ...syncState.processedPages, ...updatedPages };
+    deletedIds.forEach((id) => {
+      delete nextProcessedPages[id]; // 상태 JSON에서 삭제된 ID 찌꺼기 완벽 제거
+    });
+
     saveSyncState({
       lastSyncTime: currentSyncTime.toISOString(),
-      processedPages: { ...syncState.processedPages, ...updatedPages },
+      processedPages: nextProcessedPages,
     });
 
     console.log(
