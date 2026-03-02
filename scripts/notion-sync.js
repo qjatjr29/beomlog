@@ -595,8 +595,8 @@ async function getPublishedPages(dbId) {
 
     const response = await notion.dataSources.query({
       data_source_id: dataSourceId,
-      filter: { property: "Status", select: { equals: "발행" } },
-      // filter: { property: "Published", checkbox: { equals: true } },
+      // filter: { property: "Status", select: { equals: "발행" } },
+      filter: { property: "Published", checkbox: { equals: true } },
       sorts: [{ property: "Date", direction: "descending" }],
       page_size: 100,
       start_cursor: cursor,
