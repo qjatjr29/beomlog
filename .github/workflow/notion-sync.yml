@@ -1,0 +1,64 @@
+name: Sync from Notion & Deploy
+
+on:
+  # 1시간마다 자동 실행
+  schedule:
+    - cron: "0 * * * *" # 매 시간 정각
+
+  # 수동 실행도 가능
+  workflow_dispatch:
+
+  # main 브랜치에 push 될 때도 실행 (선택사항)
+  push:
+    branches: [main]
+
+jobs:
+  sync-and-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      # 1. 저장소 체크아웃
+      - name: Checkout repository
+        uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      # 2. Node.js 설정
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: "npm"
+
+      # 3. 의존성 설치
+      - name: Install dependencies
+        run: npm ci
+
+      # 4. 노션 동기화 스크립트 실행
+      - name: Sync from Notion
+        env:
+          NOTION_TOKEN: ${{ secrets.NOTION_TOKEN }}
+          NOTION_DATABASE_ID: ${{ secrets.NOTION_DATABASE_ID }}
+        run: node scripts/notion-sync.js
+
+      # 5. 변경사항 확인
+      - name: Check for changes
+        id: check_changes
+        run: |
+          git diff --quiet public/posts/ || echo "changed=true" >> $GITHUB_OUTPUT
+
+      # 6. Git 설정 & Commit & Push
+      - name: Commit and push if changed
+        if: steps.check_changes.outputs.changed == 'true'
+        run: |
+          git config --local user.name "github-actions[bot]"
+          git config --local user.email "github-actions[bot]@users.noreply.github.com"
+          git add public/posts/
+          git add public/posts/posts.json
+          git commit -m "🔄 Sync from Notion - $(date +'%Y-%m-%d %H:%M:%S')"
+          git push
+
+      # 7. 변경사항 없을 때
+      - name: No changes detected
+        if: steps.check_changes.outputs.changed != 'true'
+        run: echo "✅ No changes from Notion"
