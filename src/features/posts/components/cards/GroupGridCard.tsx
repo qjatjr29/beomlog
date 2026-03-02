@@ -8,7 +8,7 @@ interface GroupGridCardProps {
 
 export const GroupGridCard = ({ group }: GroupGridCardProps) => (
   <Link
-    to={`/group/${group.id}`}
+    to={`/posts/group/${group.id}`}
     className="block rounded-lg overflow-hidden border border-blog-border dark:border-gray-700 hover:shadow-lg transition-all group h-full"
   >
     {/* 커버 이미지 */}
