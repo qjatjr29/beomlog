@@ -50,7 +50,7 @@
 
 ### ↗️ 전체적인 흐름
 
-![image.png](attachment:138a7b7f-77d5-4f91-9281-8bdb143ff89d:image.png)
+<img width="710" height="269" alt="Image" src="https://github.com/user-attachments/assets/09e991f3-9584-4e26-823b-bcd29cd6837e" />
 
 ## 📂 폴더 구조
 
