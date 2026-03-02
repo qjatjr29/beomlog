@@ -7,10 +7,10 @@ tags: ["RabbitMQ","Elasticsearch","MessageQueue","OutboxPattern"]
 date: "2026-03-02"
 createdAt: "2026-03-02T06:26:00.000Z"
 excerpt: "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불..."
-thumbnail: ""
+thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2"
 groupId: "314d67b9-9e80-80af-9f95-cd3e58daf439"
 groupSlug: "locus"
-lastEdited: "2026-03-02T06:33:00.000Z"
+lastEdited: "2026-03-02T07:00:00.000Z"
 ---
 
 ## ⚠️ 동기화의 근본적인 문제
@@ -196,38 +196,7 @@ Publisher는 타임아웃으로 실패로 판단
 ## 👷‍♂️ 전체 아키텍처 정리
 최종적으로 완성된 동기화 구조는 다음과 같습니다.
 
-```mermaid
-sequenceDiagram
-    autonumber
-    actor User as 사용자
-    participant API as API Server
-    participant DB as PostgreSQL
-    participant Cron as Outbox Publisher<br/>(Cron Job)
-    participant MQ as RabbitMQ
-    participant Consumer as Record Sync Consumer
-    participant ES as Elasticsearch
-
-    User->>API: 기록 생성/수정/삭제 요청
-    
-    rect rgb(240, 240, 240)
-        Note over API, DB: Database Transaction
-        API->>DB: 1. Record 데이터 저장
-        API->>DB: 2. Outbox 이벤트 저장
-    end
-
-    API-->>User: 200 OK (즉시 응답)
-
-    loop 5초마다 실행
-        Cron->>DB: 처리되지 않은 이벤트 조회
-        DB-->>Cron: 이벤트 리스트 반환
-        Cron->>MQ: RabbitMQ에 이벤트 발행
-        Cron->>DB: 이벤트 처리 완료 표시 (Status Update)
-    end
-
-    MQ->>Consumer: 이벤트 전달 (Push)
-    Consumer->>ES: 데이터 동기화 (Index/Update/Delete)
-    ES-->>Consumer: 완료
-```
+<img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2" alt="image" width="1294" height="688" loading="lazy" />
 
 
 ## 🤔 트레이드오프와 선택

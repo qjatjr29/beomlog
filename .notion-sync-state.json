@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-02T06:56:33.251Z",
+  "lastSyncTime": "2026-03-02T07:10:34.243Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -193,9 +193,9 @@
       ],
       "date": "2026-03-02",
       "createdAt": "2026-03-02T06:26:00.000Z",
-      "thumbnail": "",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2",
       "excerpt": "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불...",
-      "lastEdited": "2026-03-02T06:33:00.000Z"
+      "lastEdited": "2026-03-02T07:00:00.000Z"
     },
     "317d67b9-9e80-80b1-94f0-c4dcdfcd81a9": {
       "slug": "검색-인덱스-설계-및-키워드-검색-구조",
@@ -207,9 +207,9 @@
       ],
       "date": "2026-03-02",
       "createdAt": "2026-03-02T06:17:00.000Z",
-      "thumbnail": "",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc6e8d029-f534-4ee0-88a0-186662de8c84%2Fimage.png?table=block&id=317d67b9-9e80-8087-a480-f7b32be7fdff&cache=v2",
       "excerpt": "이전 글에서는 Elasticsearch를 도입한 배경과 PostgreSQL과의 역할 분리 그리고 비동기 동기화 전략을 선택한 이유를 다뤘는데요!! 이번에는 실제로 Elasticse...",
-      "lastEdited": "2026-03-02T06:47:00.000Z"
+      "lastEdited": "2026-03-02T07:04:00.000Z"
     }
   }
 }
