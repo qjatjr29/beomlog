@@ -205,5 +205,23 @@
     "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
     "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/1장-사용자-수에-따른-규모-확장성.md",
     "lastEdited": "2026-02-28T03:35:00.000Z"
+  },
+  {
+    "id": "317d67b9-9e80-80c3-83a7-c880f79ec07e",
+    "title": "Elasticsearch 도입 배경과 설계",
+    "slug": "elasticsearch-도입-배경과-설계",
+    "category": "프로젝트",
+    "categorySlug": "프로젝트",
+    "groupSlug": "locus",
+    "tags": [
+      "elasticsearch"
+    ],
+    "date": "2026-03-02",
+    "createdAt": "2026-03-02T01:29:00.000Z",
+    "excerpt": "이번 locus 서비스를 개발하면서 사용자들이 작성한 기록들을 효과적으로 찾을 수 있는 검색 기능이 필요하다고 생각했습니다. 처음에는 PostgreSQL의 기본 쿼리만으로도 충분하...",
+    "thumbnail": "",
+    "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
+    "path": "프로젝트/locus/elasticsearch-도입-배경과-설계.md",
+    "lastEdited": "2026-03-02T03:49:00.000Z"
   }
 ]

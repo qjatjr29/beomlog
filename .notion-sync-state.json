@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-02T01:03:50.242Z",
+  "lastSyncTime": "2026-03-02T03:59:40.756Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -165,6 +165,20 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7d04c1d1-768b-4a47-bcc7-1410ebac116d%2Fimage.png?table=block&id=314d67b9-9e80-8117-975f-f65e66a0e1a7&cache=v2",
       "excerpt": "뉴스 피드 홈 페이지 중앙에 지속적으로 업데이트되는 스토리들 사용자의 상태 정보 업데이트, 사진, 비디오, 링크 등 페이스북 도움말 페이지 🎯 문제 이해 및 설계 범위 확정 모바...",
       "lastEdited": "2026-03-01T06:12:00.000Z"
+    },
+    "317d67b9-9e80-80c3-83a7-c880f79ec07e": {
+      "slug": "elasticsearch-도입-배경과-설계",
+      "categorySlug": "프로젝트",
+      "groupSlug": "locus",
+      "title": "Elasticsearch 도입 배경과 설계",
+      "tags": [
+        "elasticsearch"
+      ],
+      "date": "2026-03-02",
+      "createdAt": "2026-03-02T01:29:00.000Z",
+      "thumbnail": "",
+      "excerpt": "이번 locus 서비스를 개발하면서 사용자들이 작성한 기록들을 효과적으로 찾을 수 있는 검색 기능이 필요하다고 생각했습니다. 처음에는 PostgreSQL의 기본 쿼리만으로도 충분하...",
+      "lastEdited": "2026-03-02T03:49:00.000Z"
     }
   }
 }
