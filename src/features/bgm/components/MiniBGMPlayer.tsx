@@ -1,7 +1,7 @@
 import { Pause, Play, SkipForward, SkipBack } from "lucide-react";
 import { motion } from "framer-motion";
 import { useBGM } from "@/contexts/BGMContext";
-import { MarqueeText } from "../../bgm/components/MarqueeText";
+import { MarqueeText } from "./MarqueeText";
 
 export const MiniPlayer = () => {
   const {
