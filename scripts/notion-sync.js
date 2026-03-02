@@ -405,6 +405,40 @@ async function blockToMarkdown(block, depth = 0) {
       break;
     }
 
+    case "video": {
+      let url = "";
+      let caption = "";
+      let type = "external";
+      let videoId = "";
+
+      if (block.video.type === "file") {
+        url = formatNotionImageUrl(block.video.file.url, block.id);
+        type = "file";
+      } else if (block.video.type === "external") {
+        url = block.video.external.url;
+
+        const youtubeMatch = url.match(
+          /(?:youtube\.com\/watch\?v=|youtu\.be\/)([a-zA-Z0-9_-]+)/,
+        );
+        const vimeoMatch = url.match(/vimeo\.com\/(\d+)/);
+
+        if (youtubeMatch) {
+          type = "youtube";
+          videoId = youtubeMatch[1];
+        } else if (vimeoMatch) {
+          type = "vimeo";
+          videoId = vimeoMatch[1];
+        }
+      }
+
+      if (block.video.caption?.length > 0) {
+        caption = getPlainText(block.video.caption);
+      }
+
+      markdown = `<video-block src="${url}" caption="${caption}" type="${type}"${videoId ? ` videoId="${videoId}"` : ""}></video-block>\n\n`;
+      break;
+    }
+
     case "divider": {
       markdown = `---\n\n`;
       break;
