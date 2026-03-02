@@ -24,6 +24,7 @@ import {
   parseParagraph,
   parseHorizontalRule,
   parseEmptyLine,
+  parseVideoBlock,
 } from "./parsers";
 
 // 연속된 inline-link들을 하나의 박스로 그룹핑
@@ -291,6 +292,13 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       if (mdImg) {
         closeLists(index);
         result.push(mdImg);
+        return;
+      }
+
+      const video = parseVideoBlock(line, index);
+      if (video) {
+        closeLists(index);
+        result.push(video);
         return;
       }
 

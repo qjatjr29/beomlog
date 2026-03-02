@@ -12,3 +12,4 @@ export {
   parseHorizontalRule,
   parseEmptyLine,
 } from "./parseParagraph";
+export { parseVideoBlock } from "./parseVideo";
