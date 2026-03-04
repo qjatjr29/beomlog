@@ -10,7 +10,7 @@ excerpt: "정적 사이트의 특성상 노션 동기화 후 반드시 재빌드
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbd64f6d2-a3f5-4111-be51-a5470e4cb7c8%2Fimage.png?table=block&id=318d67b9-9e80-80d5-90b4-de4cf8e0f584&cache=v2"
 groupId: "318d67b9-9e80-8094-b1b0-fbfe2cef285d"
 groupSlug: "beomlog"
-lastEdited: "2026-03-04T04:30:00.000Z"
+lastEdited: "2026-03-04T04:42:00.000Z"
 ---
 
 
@@ -76,7 +76,7 @@ volumes:
 
 
 
-## :github: Github 인증 처리
+## 🔑 Github 인증 처리
 > n8n이 코드를 실행하고 Github에 `push`까지 하려면 **Git 권한**이 필요
 
 

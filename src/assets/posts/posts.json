@@ -218,9 +218,7 @@
       "PostgreSQL"
     ],
     "date": "2026-03-03",
-    "createdAt": "2026-03-03T04:31:00.000Z",
     "excerpt": "블로그의 동적 데이터(댓글, 방문자 통계, 조회수, 미니룸, BGM 등)등을 처리하기 위해서 DB가 필요하다고 생각했고 이렇게 실시간으로 변하는 데이터를 Supabase를 이용해서...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F027e4a4b-689e-45ce-86cc-5535d7747225%2Fimage.png?table=block&id=319d67b9-9e80-8094-94e4-f34e4a9e841f&cache=v2",
     "groupId": "318d67b9-9e80-8094-b1b0-fbfe2cef285d",
     "path": "프로젝트/beomlog/supabase-설계-및-연동.md",
     "lastEdited": "2026-03-04T04:30:00.000Z"
@@ -241,7 +239,7 @@
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbd64f6d2-a3f5-4111-be51-a5470e4cb7c8%2Fimage.png?table=block&id=318d67b9-9e80-80d5-90b4-de4cf8e0f584&cache=v2",
     "groupId": "318d67b9-9e80-8094-b1b0-fbfe2cef285d",
     "path": "프로젝트/beomlog/n8n을-이용한-자동화-워크플로우.md",
-    "lastEdited": "2026-03-04T04:30:00.000Z"
+    "lastEdited": "2026-03-04T04:42:00.000Z"
   },
   {
     "id": "318d67b9-9e80-800c-b76c-c5c9ab83a319",
@@ -259,7 +257,7 @@
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F48d646c7-ccc5-4596-8ac8-48719f8a51ea%2Fimage.png?table=block&id=318d67b9-9e80-80f4-9843-ddb5ed2af20b&cache=v2",
     "groupId": "318d67b9-9e80-8094-b1b0-fbfe2cef285d",
     "path": "프로젝트/beomlog/notion을-content-source로-이용하기.md",
-    "lastEdited": "2026-03-04T04:30:00.000Z"
+    "lastEdited": "2026-03-04T04:42:00.000Z"
   },
   {
     "id": "317d67b9-9e80-80ce-84f5-feaa3e021ed5",
@@ -275,9 +273,7 @@
       "OutboxPattern"
     ],
     "date": "2026-03-02",
-    "createdAt": "2026-03-02T06:26:00.000Z",
     "excerpt": "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2",
     "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
     "path": "프로젝트/locus/검색-데이터-동기화-구조-outbox-rabbitmq.md",
     "lastEdited": "2026-03-03T04:33:00.000Z"

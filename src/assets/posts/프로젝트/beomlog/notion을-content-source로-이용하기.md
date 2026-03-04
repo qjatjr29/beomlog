@@ -10,7 +10,7 @@ excerpt: "이번에 개인 블로그를 만들면서 노션을 Content Source로
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F48d646c7-ccc5-4596-8ac8-48719f8a51ea%2Fimage.png?table=block&id=318d67b9-9e80-80f4-9843-ddb5ed2af20b&cache=v2"
 groupId: "318d67b9-9e80-8094-b1b0-fbfe2cef285d"
 groupSlug: "beomlog"
-lastEdited: "2026-03-04T04:30:00.000Z"
+lastEdited: "2026-03-04T04:42:00.000Z"
 ---
 
 
@@ -218,7 +218,6 @@ const parsePostContent = (markdown: string) => {
 
 ### 마크다운 렌더링
 파싱된 `content`는 커스텀 마크다운 렌더러(`MarkdownRenderer`)를 통해 React 컴포넌트로 변환됩니다.
-마크다운 렌더러의 상세 구현은 **마크다운 렌더러 문서** 를 참고해주세요!
 
 **정적 사이트의 특성상** 노션 동기화 후 반드시 재빌드 및 재배포가 필요해요.
 따라서 n8n 워크플로우에서 동기화 완료 후 자동으로 빌드를 트리거하고자 해요. 
