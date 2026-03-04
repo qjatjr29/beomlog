@@ -1,5 +1,6 @@
 import { Calendar, Eye } from "lucide-react";
 import { Post } from "../../types";
+import { formatDateTime } from "@/shared/utils";
 
 export interface PostHeaderProps {
   post: Post;
@@ -14,7 +15,7 @@ export const PostHeader = ({ post, views }: PostHeaderProps) => (
     <div className="flex items-center gap-4 mb-5 text-xs text-gray-500 dark:text-gray-400">
       <span className="flex items-center gap-1">
         <Calendar className="w-3 h-3" />
-        {post.createdAt}
+        {formatDateTime(post.createdAt)}
       </span>
       <span className="flex items-center gap-1">
         <Eye className="w-3 h-3" />
