@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-04T04:45:43.378Z",
+  "lastSyncTime": "2026-03-04T08:33:52.627Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -253,6 +253,18 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F48d646c7-ccc5-4596-8ac8-48719f8a51ea%2Fimage.png?table=block&id=318d67b9-9e80-80f4-9843-ddb5ed2af20b&cache=v2",
       "excerpt": "이번에 개인 블로그를 만들면서 노션을 Content Source로 사용하고 이를 API를 통해서 가져와 사용하는 방법을 정리해보고자 해요. 🎯 왜 노션을 이용?!? 기존에는 노션...",
       "lastEdited": "2026-03-04T04:42:00.000Z"
+    },
+    "319d67b9-9e80-8091-890a-c1bcceb768c2": {
+      "slug": "1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션",
+      "categorySlug": "책",
+      "groupSlug": "데이터-중심-애플리케이션-설계",
+      "title": "1장. 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션",
+      "tags": [],
+      "date": "2026-03-04",
+      "createdAt": "2026-03-04T08:16:00.000Z",
+      "thumbnail": "",
+      "excerpt": "책 전반에 걸쳐 사용하는 전문 용어와 접근 방식 소개 신뢰성(reliability) 확장성(scalability) 유지보수성(maitainability) 이와 같은 단어의 실제 의...",
+      "lastEdited": "2026-03-04T08:32:00.000Z"
     }
   }
 }
