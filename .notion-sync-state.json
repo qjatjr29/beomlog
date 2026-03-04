@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-02T07:10:34.243Z",
+  "lastSyncTime": "2026-03-04T04:38:34.247Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -195,7 +195,7 @@
       "createdAt": "2026-03-02T06:26:00.000Z",
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2",
       "excerpt": "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불...",
-      "lastEdited": "2026-03-02T07:00:00.000Z"
+      "lastEdited": "2026-03-03T04:33:00.000Z"
     },
     "317d67b9-9e80-80b1-94f0-c4dcdfcd81a9": {
       "slug": "검색-인덱스-설계-및-키워드-검색-구조",
@@ -210,6 +210,49 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc6e8d029-f534-4ee0-88a0-186662de8c84%2Fimage.png?table=block&id=317d67b9-9e80-8087-a480-f7b32be7fdff&cache=v2",
       "excerpt": "이전 글에서는 Elasticsearch를 도입한 배경과 PostgreSQL과의 역할 분리 그리고 비동기 동기화 전략을 선택한 이유를 다뤘는데요!! 이번에는 실제로 Elasticse...",
       "lastEdited": "2026-03-02T07:04:00.000Z"
+    },
+    "318d67b9-9e80-80b2-b494-ddf6f1a51244": {
+      "slug": "supabase-설계-및-연동",
+      "categorySlug": "프로젝트",
+      "groupSlug": "beomlog",
+      "title": "Supabase 설계 및 연동",
+      "tags": [
+        "Supabase",
+        "PostgreSQL"
+      ],
+      "date": "2026-03-03",
+      "createdAt": "2026-03-03T04:31:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F027e4a4b-689e-45ce-86cc-5535d7747225%2Fimage.png?table=block&id=319d67b9-9e80-8094-94e4-f34e4a9e841f&cache=v2",
+      "excerpt": "블로그의 동적 데이터(댓글, 방문자 통계, 조회수, 미니룸, BGM 등)등을 처리하기 위해서 DB가 필요하다고 생각했고 이렇게 실시간으로 변하는 데이터를 Supabase를 이용해서...",
+      "lastEdited": "2026-03-04T04:30:00.000Z"
+    },
+    "318d67b9-9e80-80ab-8578-ca7480e0d732": {
+      "slug": "n8n을-이용한-자동화-워크플로우",
+      "categorySlug": "프로젝트",
+      "groupSlug": "beomlog",
+      "title": "n8n을 이용한 자동화 워크플로우",
+      "tags": [
+        "n8n"
+      ],
+      "date": "2026-03-03",
+      "createdAt": "2026-03-03T02:02:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbd64f6d2-a3f5-4111-be51-a5470e4cb7c8%2Fimage.png?table=block&id=318d67b9-9e80-80d5-90b4-de4cf8e0f584&cache=v2",
+      "excerpt": "정적 사이트의 특성상 노션 동기화 후 반드시 재빌드 및 재배포가 필요해요. 새로운 블로그 글이 생기거나 업데이트, 삭제가 발생했을 수 있기 때문 이렇게 제 프로젝트 구조에서는 노션...",
+      "lastEdited": "2026-03-04T04:30:00.000Z"
+    },
+    "318d67b9-9e80-800c-b76c-c5c9ab83a319": {
+      "slug": "notion을-content-source로-이용하기",
+      "categorySlug": "프로젝트",
+      "groupSlug": "beomlog",
+      "title": "Notion을 Content Source로 이용하기",
+      "tags": [
+        "Notion"
+      ],
+      "date": "2026-03-03",
+      "createdAt": "2026-03-03T02:01:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F48d646c7-ccc5-4596-8ac8-48719f8a51ea%2Fimage.png?table=block&id=318d67b9-9e80-80f4-9843-ddb5ed2af20b&cache=v2",
+      "excerpt": "이번에 개인 블로그를 만들면서 노션을 Content Source로 사용하고 이를 API를 통해서 가져와 사용하는 방법을 정리해보고자 해요. 🎯 왜 노션을 이용?!? 기존에는 노션...",
+      "lastEdited": "2026-03-04T04:30:00.000Z"
     }
   }
 }
