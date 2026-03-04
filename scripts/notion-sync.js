@@ -364,7 +364,7 @@ async function blockToMarkdown(block, depth = 0) {
 
       const allLines = [firstLine, ...childLines];
       const quoted = allLines.map((line) => `> ${line}`).join("\n");
-      markdown = `${quoted}\n\n`;
+      markdown = `${quoted}\n`;
       break;
     }
 

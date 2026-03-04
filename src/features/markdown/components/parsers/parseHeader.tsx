@@ -9,7 +9,7 @@ export const parseHeader = (
     return (
       <h1
         key={`h1-${index}`}
-        className="text-2xl font-bold mt-8 mb-4 pb-2 border-b-2 border-dotted border-gray-300"
+        className="text-2xl font-bold mt-8 mb-4 pb-2 border-b-2 border-gray-300 dark:border-gray-600"
       >
         {parseInlineMarkdown(line.substring(2))}
       </h1>
@@ -18,7 +18,10 @@ export const parseHeader = (
 
   if (line.startsWith("## ")) {
     return (
-      <h2 key={`h2-${index}`} className="text-xl font-bold mt-6 mb-3">
+      <h2
+        key={`h2-${index}`}
+        className="text-xl font-bold mt-6 mb-3 pb-2 border-b  border-gray-300 dark:border-gray-600"
+      >
         {parseInlineMarkdown(line.substring(3))}
       </h2>
     );
