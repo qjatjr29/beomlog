@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-04T08:33:52.627Z",
+  "lastSyncTime": "2026-03-04T08:42:51.595Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -264,7 +264,7 @@
       "createdAt": "2026-03-04T08:16:00.000Z",
       "thumbnail": "",
       "excerpt": "책 전반에 걸쳐 사용하는 전문 용어와 접근 방식 소개 신뢰성(reliability) 확장성(scalability) 유지보수성(maitainability) 이와 같은 단어의 실제 의...",
-      "lastEdited": "2026-03-04T08:32:00.000Z"
+      "lastEdited": "2026-03-04T08:36:00.000Z"
     }
   }
 }
