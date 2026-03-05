@@ -5,7 +5,7 @@ slug: "7장-분산-시스템을-위한-유일-id-생성기-설계"
 category: "책"
 tags: ["id"]
 date: "2026-02-27"
-createdAt: "2026-02-27T06:58:00.000Z"
+createdAt: "2026-02-27T06:56:00.000Z"
 excerpt: "1️⃣ 문제 이해 및 설계 범위 확정 질문을 통해서 요구사항을 이해하고 모호함을 해소하자. ID는 유일해야 한다. ID는 숫자로만 구성되어야 한다. ID는 64비트로 표현될 수 있..."
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F77d81796-06bd-4f1a-8bc3-3ecf858b7d60%2Fimage.png?table=block&id=314d67b9-9e80-815e-873a-c24c960e4d25&cache=v2"
 groupId: "314d67b9-9e80-8046-9fb4-da579c494117"

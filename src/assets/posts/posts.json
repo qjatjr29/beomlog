@@ -1,36 +1,56 @@
 [
   {
-    "id": "319d67b9-9e80-8091-890a-c1bcceb768c2",
-    "title": "1장. 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션",
-    "slug": "1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [],
-    "date": "2026-03-04",
-    "createdAt": "2026-03-04T08:16:00.000Z",
-    "excerpt": "책 전반에 걸쳐 사용하는 전문 용어와 접근 방식 소개 신뢰성(reliability) 확장성(scalability) 유지보수성(maitainability) 이와 같은 단어의 실제 의...",
-    "thumbnail": "",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션.md",
-    "lastEdited": "2026-03-04T08:36:00.000Z"
-  },
-  {
     "id": "311d67b9-9e80-8024-811e-da2503ec108a",
     "title": "LIKE + B+Tree 인덱스와 FTS(Full-Text Search)",
     "slug": "like-b-tree-인덱스와-fts-full-text-search",
     "category": "개발",
     "categorySlug": "개발",
+    "groupSlug": "데이터베이스",
     "tags": [
-      "데이터베이스",
-      "MySQL"
+      "MySQL",
+      "Full-Text-Search",
+      "B+Tree"
     ],
-    "date": "2026-02-28",
-    "createdAt": "2026-02-24T09:36:00.000Z",
+    "date": "2026-02-26",
     "excerpt": "🌲 B+ Tree 자료구조 대부분의 RDBMS(MySQL, PostgreSQL 등)는 기본 인덱스 구조로 B+Tree를 사용합니다. | Leaf Node | 실제 데이터의 키 값...",
-    "groupId": "",
-    "path": "개발/like-b-tree-인덱스와-fts-full-text-search.md",
-    "lastEdited": "2026-02-28T04:13:00.000Z"
+    "groupId": "31ad67b9-9e80-80e0-848d-d6da8d071164",
+    "path": "개발/데이터베이스/like-b-tree-인덱스와-fts-full-text-search.md",
+    "lastEdited": "2026-03-05T06:55:00.000Z"
+  },
+  {
+    "id": "31ad67b9-9e80-80fa-85ae-e670e1c3fd73",
+    "title": "인터럽트 (Interrupt)",
+    "slug": "인터럽트-interrupt",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "인터럽트"
+    ],
+    "date": "2026-03-05",
+    "createdAt": "2026-03-05T03:47:00.000Z",
+    "excerpt": "🤚 인터럽트 등장 배경 폴링 방식 초기 컴퓨터 시스템에는 주변 장치(ex: I/O 장치)가 많지 않아 CPU에서 직접 입출력 장치에 데이터를 가져오거나 내보냈다. CPU가 입출력...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdaeb04b9-5cdc-4f8d-9d3d-fd32e827ea34%2Fimage.png?table=block&id=31ad67b9-9e80-80d3-b6ec-c800f525b63b&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/인터럽트-interrupt.md",
+    "lastEdited": "2026-03-05T07:10:00.000Z"
+  },
+  {
+    "id": "31ad67b9-9e80-8085-8f4d-eb514ad25af8",
+    "title": "운영체제란?",
+    "slug": "운영체제란",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "시스템콜",
+      "커널"
+    ],
+    "date": "2026-03-05",
+    "excerpt": "🔍 운영체제(Operating System, OS) 컴퓨터 하드웨어 바로 위에 설치되어 사용자 및 다른 모든 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층 컴퓨터 하드웨어(CP...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/운영체제란.md",
+    "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
@@ -43,10 +63,25 @@
     ],
     "date": "2026-02-19",
     "createdAt": "2026-02-19T01:26:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
     "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "319d67b9-9e80-8091-890a-c1bcceb768c2",
+    "title": "1장. 신뢰할 수 있고 확장 가능하며 유지보수하기 쉬운 애플리케이션",
+    "slug": "1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [],
+    "date": "2026-03-04",
+    "excerpt": "책 전반에 걸쳐 사용하는 전문 용어와 접근 방식 소개 신뢰성(reliability) 확장성(scalability) 유지보수성(maitainability) 이와 같은 단어의 실제 의...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션.md",
+    "lastEdited": "2026-03-04T08:44:00.000Z"
   },
   {
     "id": "314d67b9-9e80-8044-b344-f2c4a3cbfb13",
@@ -74,7 +109,7 @@
     "tags": [
       "rate limit"
     ],
-    "date": "2026-02-28",
+    "date": "2026-02-27",
     "excerpt": "네트워크 시스템에서 처리율 제한 장치(rate limiter)는 클라이언트 또는 서비스가 보내는 트래픽의 처리율을 제어하기 위한 장치 ex) 특정 기간 내에 전송되는 클라이언트 H...",
     "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
     "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/4장-처리율-제한-장치의-설계.md",
@@ -188,7 +223,7 @@
     "categorySlug": "책",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
-    "date": "2026-02-28",
+    "date": "2026-02-27",
     "excerpt": "🔍 시스템 설계 면접이 있는 이유?? 모호한 문제를 풀기 위해서 해결책을 찾아내는 과정에 대한 시뮬레이션 정해진 결말도 정답도 없다! 설계 기술을 시연하는 자리이고 설계 과정에서...",
     "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
     "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/3장-시스템-설계-면접-공략법.md",
@@ -202,7 +237,7 @@
     "categorySlug": "책",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
-    "date": "2026-02-28",
+    "date": "2026-02-27",
     "excerpt": "시스템 설계 면접에서 시스템 용량, 성능 요구사항을 개략적으로 추정하라는 요구를 받게됨. 개략적인 규모 추정(back-of-the-envelope estimation) 보편적으로 ...",
     "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
     "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/2장-개략적인-규모-추정.md",
@@ -216,7 +251,7 @@
     "categorySlug": "책",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
-    "date": "2026-02-28",
+    "date": "2026-02-27",
     "excerpt": "한 명의 사용자를 지원하는 시스템에서 몇백만 사용자를 지원하는 시스템을 설계하는 과정에서 규모 확장성과 관계된 설계 문제를 푸는데 필요한 지식들을 학습 📌 단일 서버 웹, 앱, ...",
     "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
     "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/1장-사용자-수에-따른-규모-확장성.md",
