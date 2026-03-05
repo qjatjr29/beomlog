@@ -29,6 +29,7 @@ export interface GroupMeta {
   categorySlug: string;
   coverImage: string;
   description: string;
+  tags: string[];
   postCount: number;
   lastEdited: string;
 }

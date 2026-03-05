@@ -17,8 +17,9 @@ interface GroupPostListProps {
   category: string; // "책" | "프로젝트"
 }
 
-export const GroupThumbnailList = ({ category }: GroupPostListProps) => {
+export const GroupGridList = ({ category }: GroupPostListProps) => {
   const [selectedTag, setSelectedTag] = useState<string | null>(null);
+  const [selectedGroupTag, setSelectedGroupTag] = useState<string | null>(null);
   const [searchParams, setSearchParams] = useSearchParams();
 
   // 기본 갤러리, ?view=list 이면 리스트
@@ -29,6 +30,14 @@ export const GroupThumbnailList = ({ category }: GroupPostListProps) => {
 
   const groups = loadGroupsByCategory(category);
 
+  const availableGroupTags = Array.from(
+    new Set(groups.flatMap((g) => g.tags ?? [])),
+  );
+
+  const filteredGroups = selectedGroupTag
+    ? groups.filter((g) => g.tags?.includes(selectedGroupTag))
+    : groups;
+
   const { currentPage, totalPages, currentItems, handlePageChange, resetPage } =
     usePagination(filteredPosts, POSTS_PER_PAGE);
 
@@ -38,6 +47,8 @@ export const GroupThumbnailList = ({ category }: GroupPostListProps) => {
     else p.set("view", "list");
     setSearchParams(p);
     resetPage();
+    setSelectedTag(null);
+    setSelectedGroupTag(null);
   };
 
   return (
@@ -62,71 +73,150 @@ export const GroupThumbnailList = ({ category }: GroupPostListProps) => {
         </div>
       </div>
 
-      {isGalleryView ? (
-        // 갤러리 뷰: groups.json 기반 카드
-        groups.length === 0 ? (
-          <EmptyState type="gallery" message="아직 등록된 항목이 없습니다" />
-        ) : (
-          <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-            {groups.map((group, i) => (
-              <motion.div
-                key={group.id}
-                initial={{ opacity: 0, y: 16 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{
-                  delay: i * 0.08,
-                  duration: 0.35,
-                  ease: "easeOut",
-                }}
-              >
-                <GroupGridCard group={group} />
-              </motion.div>
-            ))}
-          </div>
-        )
-      ) : (
-        // 리스트 뷰: 일반 포스트 목록
-        <>
-          <TagFilter
-            tags={availableTags}
-            selectedTag={selectedTag}
-            onTagClick={(tag) => {
-              setSelectedTag((prev) => (prev === tag ? null : tag));
-              resetPage();
-            }}
-            onClear={() => {
-              setSelectedTag(null);
-              resetPage();
-            }}
-          />
-          <div className="space-y-3 mb-8">
-            {currentItems.length === 0 ? (
-              <EmptyState />
-            ) : (
-              currentItems.map((post, i) => (
-                <motion.div
-                  key={post.id}
-                  initial={{ opacity: 0, x: -10 }}
-                  animate={{ opacity: 1, x: 0 }}
-                  transition={{ delay: i * 0.06 }}
-                >
-                  <PostListCard
-                    post={post}
-                    viewCount={viewCounts[post.id] ?? 0}
-                    commentCount={commentCounts[post.id] ?? 0}
-                    selectedTag={selectedTag}
-                  />
-                </motion.div>
-              ))
+      {
+        isGalleryView ? (
+          <>
+            {availableGroupTags.length > 0 && (
+              <TagFilter
+                tags={availableGroupTags}
+                selectedTag={selectedGroupTag}
+                onTagClick={(tag) =>
+                  setSelectedGroupTag((prev) => (prev === tag ? null : tag))
+                }
+                onClear={() => setSelectedGroupTag(null)}
+              />
             )}
-          </div>
-          <Pagination
-            currentPage={currentPage}
-            totalPages={totalPages}
-            onPageChange={handlePageChange}
-          />
-        </>
-      )}
+            {filteredGroups.length === 0 ? (
+              <EmptyState
+                type="gallery"
+                message="해당 태그의 항목이 없습니다."
+              />
+            ) : (
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+                {filteredGroups.map((group, i) => (
+                  <motion.div
+                    key={group.id}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: i * 0.08,
+                      duration: 0.35,
+                      ease: "easeOut",
+                    }}
+                  >
+                    <GroupGridCard group={group} />
+                  </motion.div>
+                ))}
+              </div>
+            )}
+          </>
+        ) : (
+          <>
+            <TagFilter
+              tags={availableTags}
+              selectedTag={selectedTag}
+              onTagClick={(tag) => {
+                setSelectedTag((prev) => (prev === tag ? null : tag));
+                resetPage();
+              }}
+              onClear={() => {
+                setSelectedTag(null);
+                resetPage();
+              }}
+            />
+            <div className="space-y-3 mb-8">
+              {currentItems.length === 0 ? (
+                <EmptyState />
+              ) : (
+                currentItems.map((post, i) => (
+                  <motion.div
+                    key={post.id}
+                    initial={{ opacity: 0, x: -10 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ delay: i * 0.06 }}
+                  >
+                    <PostListCard
+                      post={post}
+                      viewCount={viewCounts[post.id] ?? 0}
+                      commentCount={commentCounts[post.id] ?? 0}
+                      selectedTag={selectedTag}
+                    />
+                  </motion.div>
+                ))
+              )}
+            </div>
+            <Pagination
+              currentPage={currentPage}
+              totalPages={totalPages}
+              onPageChange={handlePageChange}
+            />
+          </>
+        )
+        // 갤러리 뷰: groups.json 기반 카드
+        //   groups.length === 0 ? (
+        //     <EmptyState type="gallery" message="아직 등록된 항목이 없습니다" />
+        //   ) : (
+        //     <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+        //       {groups.map((group, i) => (
+        //         <motion.div
+        //           key={group.id}
+        //           initial={{ opacity: 0, y: 16 }}
+        //           animate={{ opacity: 1, y: 0 }}
+        //           transition={{
+        //             delay: i * 0.08,
+        //             duration: 0.35,
+        //             ease: "easeOut",
+        //           }}
+        //         >
+        //           <GroupGridCard group={group} />
+        //         </motion.div>
+        //       ))}
+        //     </div>
+        //   )
+        // ) : (
+        //   // 리스트 뷰: 일반 포스트 목록
+        //   <>
+        //     <TagFilter
+        //       tags={availableTags}
+        //       selectedTag={selectedTag}
+        //       onTagClick={(tag) => {
+        //         setSelectedTag((prev) => (prev === tag ? null : tag));
+        //         resetPage();
+        //       }}
+        //       onClear={() => {
+        //         setSelectedTag(null);
+        //         resetPage();
+        //       }}
+        //     />
+        //     <div className="space-y-3 mb-8">
+        //       {currentItems.length === 0 ? (
+        //         <EmptyState />
+        //       ) : (
+        //         currentItems.map((post, i) => (
+        //           <motion.div
+        //             key={post.id}
+        //             initial={{ opacity: 0, x: -10 }}
+        //             animate={{ opacity: 1, x: 0 }}
+        //             transition={{ delay: i * 0.06 }}
+        //           >
+        //             <PostListCard
+        //               post={post}
+        //               viewCount={viewCounts[post.id] ?? 0}
+        //               commentCount={commentCounts[post.id] ?? 0}
+        //               selectedTag={selectedTag}
+        //             />
+        //           </motion.div>
+        //         ))
+        //       )}
+        //     </div>
+        //     <Pagination
+        //       currentPage={currentPage}
+        //       totalPages={totalPages}
+        //       onPageChange={handlePageChange}
+        //     />
+        //   </>
+        // )}
+      }
     </div>
   );
 };

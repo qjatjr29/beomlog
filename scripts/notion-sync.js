@@ -16,7 +16,8 @@ const SITEMAP_PATH = path.join(__dirname, "../public/sitemap.xml");
 // const DATABASE_ID = process.env.NOTION_DATABASE_ID;
 
 const DB_CONFIG = [
-  { dbId: process.env.NOTION_DB_DEV, category: "개발", hasGroups: false },
+  { dbId: process.env.NOTION_DB_DEV, category: "개발", hasGroups: true },
+  // { dbId: process.env.NOTION_DB_DEV, category: "개발", hasGroups: false },
   { dbId: process.env.NOTION_DB_DAILY, category: "일상", hasGroups: false },
   { dbId: process.env.NOTION_DB_BOOK, category: "책", hasGroups: true },
   {
@@ -221,10 +222,19 @@ async function blockToMarkdown(block, depth = 0) {
   const type = block.type;
 
   // 리스트 카운터 관리
-  if (type !== "numbered_list_item" && lastBlockType === "numbered_list_item") {
-    numberedListCounter = 0;
+  if (depth === 0) {
+    if (
+      type !== "numbered_list_item" &&
+      lastBlockType === "numbered_list_item"
+    ) {
+      numberedListCounter = 0;
+    }
+    lastBlockType = type;
   }
-  lastBlockType = type;
+  // if (type !== "numbered_list_item" && lastBlockType === "numbered_list_item") {
+  //   numberedListCounter = 0;
+  // }
+  // lastBlockType = type;
 
   let markdown = "";
 
@@ -272,9 +282,16 @@ async function blockToMarkdown(block, depth = 0) {
       break;
     }
 
-    case "bulleted_list_item": {
-      const text = processRichText(block.bulleted_list_item.rich_text);
-      markdown = `- ${text}\n`;
+    case "numbered_list_item": {
+      // numberedListCounter++;
+      if (depth === 0) {
+        numberedListCounter++;
+      }
+      const num = depth === 0 ? numberedListCounter : 1; // 자식은 번호 의미 없음
+
+      const text = processRichText(block.numbered_list_item.rich_text);
+      markdown = `${num}. ${text}\n`;
+      // markdown = `${numberedListCounter}. ${text}\n`;
 
       if (block.has_children) {
         const children = await getBlockChildren(block.id);
@@ -286,10 +303,9 @@ async function blockToMarkdown(block, depth = 0) {
       break;
     }
 
-    case "numbered_list_item": {
-      numberedListCounter++;
-      const text = processRichText(block.numbered_list_item.rich_text);
-      markdown = `${numberedListCounter}. ${text}\n`;
+    case "bulleted_list_item": {
+      const text = processRichText(block.bulleted_list_item.rich_text);
+      markdown = `- ${text}\n`;
 
       if (block.has_children) {
         const children = await getBlockChildren(block.id);
@@ -665,6 +681,7 @@ async function syncNotionPosts() {
             categorySlug: slugify(category),
             coverImage,
             description,
+            tags: props.Tags?.multi_select?.map((t) => t.name) || [],
             postCount: 0,
             lastEdited: groupPage.last_edited_time,
           };
