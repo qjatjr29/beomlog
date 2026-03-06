@@ -13,3 +13,4 @@ export {
   parseEmptyLine,
 } from "./parseParagraph";
 export { parseVideoBlock } from "./parseVideo";
+export { parseFigure } from "./parseFigure";

@@ -412,11 +412,28 @@ async function blockToMarkdown(block, depth = 0) {
       }
 
       // 🎯 메타데이터가 있으면 HTML img 태그 사용
+      // if (metadata) {
+      //   markdown = `<img src="${formattedUrl}" alt="${caption || "image"}" width="${metadata.width}" height="${metadata.height}" loading="lazy" />\n\n`;
+      // } else {
+      //   // 메타데이터 없으면 기본 마크다운
+      //   markdown = `![${caption || "image"}](${formattedUrl})\n\n`;
+      // }
+
+      // 🎯 메타데이터가 있으면 HTML img 태그 사용
       if (metadata) {
-        markdown = `<img src="${formattedUrl}" alt="${caption || "image"}" width="${metadata.width}" height="${metadata.height}" loading="lazy" />\n\n`;
+        markdown = `<img src="${formattedUrl}" alt="${caption || "image"}" width="${metadata.width}" height="${metadata.height}" loading="lazy" />\n`;
+        // 캡션이 있으면 figure 형태로 저장
+        if (caption) {
+          markdown = `<figure>\n<img src="${formattedUrl}" alt="${caption}" width="${metadata.width}" height="${metadata.height}" loading="lazy" />\n<figcaption>${caption}</figcaption>\n</figure>\n\n`;
+        } else {
+          markdown = `<img src="${formattedUrl}" alt="image" width="${metadata.width}" height="${metadata.height}" loading="lazy" />\n\n`;
+        }
       } else {
-        // 메타데이터 없으면 기본 마크다운
-        markdown = `![${caption || "image"}](${formattedUrl})\n\n`;
+        if (caption) {
+          markdown = `<figure>\n<img src="${formattedUrl}" alt="${caption}" />\n<figcaption>${caption}</figcaption>\n</figure>\n\n`;
+        } else {
+          markdown = `![image](${formattedUrl})\n\n`;
+        }
       }
       break;
     }

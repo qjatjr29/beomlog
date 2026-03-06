@@ -25,6 +25,7 @@ import {
   parseHorizontalRule,
   parseEmptyLine,
   parseVideoBlock,
+  parseFigure,
 } from "./parsers";
 
 // 연속된 inline-link들을 하나의 박스로 그룹핑
@@ -139,6 +140,8 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       unorderedListItems: [] as JSX.Element[],
       inOrderedList: false,
       orderedListItems: [] as JSX.Element[],
+      inFigure: false,
+      figureLines: [] as string[],
     };
 
     const closeLists = (currentIndex: number) => {
@@ -281,6 +284,19 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       }
 
       // 6. Images
+      const figureResult = parseFigure(line, index, {
+        inFigure: state.inFigure,
+        figureLines: state.figureLines,
+      });
+      if (figureResult.handled) {
+        if (figureResult.element) {
+          closeLists(index);
+          result.push(figureResult.element);
+        }
+        state.inFigure = figureResult.state.inFigure;
+        state.figureLines = figureResult.state.figureLines;
+        return;
+      }
       const htmlImg = parseHtmlImage(line, index, ImageBlock);
       if (htmlImg) {
         closeLists(index);
@@ -321,6 +337,10 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       // 9. Lists
       const ulItem = parseUnorderedList(line, index);
       if (ulItem) {
+        if (state.inOrderedList && /^\s+- /.test(line)) {
+          state.orderedListItems.push(ulItem);
+          return;
+        }
         if (state.inOrderedList) {
           result.push(
             <ol key={`ol-close-${index}-${result.length}`} className="my-4">
