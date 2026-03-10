@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-06T15:31:05.780Z",
+  "lastSyncTime": "2026-03-10T05:55:48.629Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -323,6 +323,65 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F72b7e6e3-5dfe-4427-94cd-d982cd66c73a%2Fimage.png?table=block&id=31bd67b9-9e80-80c7-8c38-edab950fe6ed&cache=v2",
       "excerpt": "프로세스 관리는 운영체제의 핵심 역할입니다. 프로그램이 실행되어 프로세스가 생성된 이후 작업을 마칠때 까지 어떤 상태를 거치고 각 상태에서 고려할 사항이 무엇인지, OS가 프로레스...",
       "lastEdited": "2026-03-06T15:30:00.000Z"
+    },
+    "31cd67b9-9e80-808a-bae3-e49fbefeef7b": {
+      "slug": "cpu-scheduling",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "CPU Scheduling",
+      "tags": [
+        "CPU"
+      ],
+      "date": "2026-03-09",
+      "createdAt": "2026-03-07T05:21:00.000Z",
+      "thumbnail": "",
+      "excerpt": "⭐ CPU Scheduler Ready 상태의 프로세스 중(ready queue)에서 실행할 프로세스를 선택해 CPU를 할당 CPU는 하나인데 실행할 프로세스는 많을 때 다음엔 누...",
+      "lastEdited": "2026-03-10T02:21:00.000Z"
+    },
+    "31cd67b9-9e80-8034-900c-c79b58f0d7c1": {
+      "slug": "cpu-burst-와-i-o-burst",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "CPU burst 와 I/O burst",
+      "tags": [
+        "CPU",
+        "I/O"
+      ],
+      "date": "2026-03-07",
+      "createdAt": "2026-03-07T05:20:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9d8339cc-1b97-4447-935c-85f70403211a%2Fimage.png?table=block&id=31cd67b9-9e80-80cf-b09b-db97657a615b&cache=v2",
+      "excerpt": "🖥️ 프로그램의 실행 프로그램이 실행된다는 것은 CPU를 사용하여 연산을 하는 단계(CPU Burst)와 파일 읽기/쓰기, 네트워크 통신과 같은 I/O 작업(I/O Burst)이...",
+      "lastEdited": "2026-03-07T05:21:00.000Z"
+    },
+    "31cd67b9-9e80-80b8-9b1b-f386ad678c0e": {
+      "slug": "ipc-프로세스간-통신",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "IPC - 프로세스간 통신",
+      "tags": [
+        "프로세스",
+        "IPC"
+      ],
+      "date": "2026-03-07",
+      "createdAt": "2026-03-07T04:40:00.000Z",
+      "thumbnail": "",
+      "excerpt": "프로세스 운영체제로부터 자신만의 독립적인 메모리공간(주소 공간)을 가지고 있습니다. 따라서 서로 데이터를 주고 받기 위해서는 IPC(Inter Process Communicatio...",
+      "lastEdited": "2026-03-07T04:41:00.000Z"
+    },
+    "31fd67b9-9e80-8000-bf80-c4b5268decca": {
+      "slug": "2장-데이터-모델과-질의-언어",
+      "categorySlug": "책",
+      "groupSlug": "데이터-중심-애플리케이션-설계",
+      "title": "2장. 데이터 모델과 질의 언어",
+      "tags": [
+        "SQL",
+        "NoSQL"
+      ],
+      "date": "2026-03-10",
+      "createdAt": "2026-03-10T05:25:00.000Z",
+      "thumbnail": "",
+      "excerpt": "데이터 모델은 소프트웨어 개발에서 제일 중요한 부분일 것이다. 소프트웨어가 어떻게 작성됐는지 뿐만 아니라 해결하려는 문제를 어떻게 생각해야 하는지에 대해서도 영향을 미치기 때문 추...",
+      "lastEdited": "2026-03-10T05:39:00.000Z"
     }
   }
 }
