@@ -18,6 +18,45 @@
     "lastEdited": "2026-03-05T06:55:00.000Z"
   },
   {
+    "id": "321d67b9-9e80-808f-bf2d-ddc2599f968b",
+    "title": "데드락 (Deadlock, 교착상태)",
+    "slug": "데드락-deadlock-교착상태",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "데드락"
+    ],
+    "date": "2026-03-12",
+    "createdAt": "2026-03-12T06:42:00.000Z",
+    "excerpt": "☠️ 데드락(Deadlock, 교착 상태)이란? 데드락은 2개 이상의 프로세스나 스레드가 서로 다른 프로세스가 점유하고 있는 자원을 얻기 위해 영원히 무한 대기하는 상태를 말합니다...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2f2fa15d-cdd0-4abf-a2b3-c20236ab910d%2Fimage.png?table=block&id=321d67b9-9e80-800f-a6d0-cb092d96a084&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/데드락-deadlock-교착상태.md",
+    "lastEdited": "2026-03-12T07:09:00.000Z"
+  },
+  {
+    "id": "321d67b9-9e80-80ad-a4c2-cc05d959f6c9",
+    "title": "프로세스 Synchronization",
+    "slug": "프로세스-synchronization",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "동기화",
+      "프로세스",
+      "스레드",
+      "race condition"
+    ],
+    "date": "2026-03-10",
+    "createdAt": "2026-03-12T02:31:00.000Z",
+    "excerpt": "실무에서 대규모 트래픽을 다룰 때 발생하는 데이터 정합성 이슈(예: 수강신청, 선착순 쿠폰 발급, 재고 차감 등)는 모두 프로세스 동기화(Process Synchronization...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9c09b75b-9e05-4c3c-9a37-61a26a314c29%2Fimage.png?table=block&id=321d67b9-9e80-80da-a712-f9e77ddc7bbb&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/프로세스-synchronization.md",
+    "lastEdited": "2026-03-12T06:42:00.000Z"
+  },
+  {
     "id": "31cd67b9-9e80-808a-bae3-e49fbefeef7b",
     "title": "CPU Scheduling",
     "slug": "cpu-scheduling",
@@ -28,9 +67,7 @@
       "CPU"
     ],
     "date": "2026-03-09",
-    "createdAt": "2026-03-07T05:21:00.000Z",
     "excerpt": "⭐ CPU Scheduler Ready 상태의 프로세스 중(ready queue)에서 실행할 프로세스를 선택해 CPU를 할당 CPU는 하나인데 실행할 프로세스는 많을 때 다음엔 누...",
-    "thumbnail": "",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/cpu-scheduling.md",
     "lastEdited": "2026-03-10T02:21:00.000Z"
@@ -47,9 +84,7 @@
       "I/O"
     ],
     "date": "2026-03-07",
-    "createdAt": "2026-03-07T05:20:00.000Z",
     "excerpt": "🖥️ 프로그램의 실행 프로그램이 실행된다는 것은 CPU를 사용하여 연산을 하는 단계(CPU Burst)와 파일 읽기/쓰기, 네트워크 통신과 같은 I/O 작업(I/O Burst)이...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9d8339cc-1b97-4447-935c-85f70403211a%2Fimage.png?table=block&id=31cd67b9-9e80-80cf-b09b-db97657a615b&cache=v2",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/cpu-burst-와-i-o-burst.md",
     "lastEdited": "2026-03-07T05:21:00.000Z"
@@ -66,9 +101,7 @@
       "IPC"
     ],
     "date": "2026-03-07",
-    "createdAt": "2026-03-07T04:40:00.000Z",
     "excerpt": "프로세스 운영체제로부터 자신만의 독립적인 메모리공간(주소 공간)을 가지고 있습니다. 따라서 서로 데이터를 주고 받기 위해서는 IPC(Inter Process Communicatio...",
-    "thumbnail": "",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/ipc-프로세스간-통신.md",
     "lastEdited": "2026-03-07T04:41:00.000Z"
@@ -124,25 +157,6 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "31fd67b9-9e80-8000-bf80-c4b5268decca",
-    "title": "2장. 데이터 모델과 질의 언어",
-    "slug": "2장-데이터-모델과-질의-언어",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [
-      "SQL",
-      "NoSQL"
-    ],
-    "date": "2026-03-10",
-    "createdAt": "2026-03-10T05:25:00.000Z",
-    "excerpt": "데이터 모델은 소프트웨어 개발에서 제일 중요한 부분일 것이다. 소프트웨어가 어떻게 작성됐는지 뿐만 아니라 해결하려는 문제를 어떻게 생각해야 하는지에 대해서도 영향을 미치기 때문 추...",
-    "thumbnail": "",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/2장-데이터-모델과-질의-언어.md",
-    "lastEdited": "2026-03-10T05:39:00.000Z"
-  },
-  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -158,6 +172,23 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "31fd67b9-9e80-8000-bf80-c4b5268decca",
+    "title": "2장. 데이터 모델과 질의 언어",
+    "slug": "2장-데이터-모델과-질의-언어",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "SQL",
+      "NoSQL"
+    ],
+    "date": "2026-03-10",
+    "excerpt": "데이터 모델은 소프트웨어 개발에서 제일 중요한 부분일 것이다. 소프트웨어가 어떻게 작성됐는지 뿐만 아니라 해결하려는 문제를 어떻게 생각해야 하는지에 대해서도 영향을 미치기 때문 추...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/2장-데이터-모델과-질의-언어.md",
+    "lastEdited": "2026-03-10T05:39:00.000Z"
   },
   {
     "id": "319d67b9-9e80-8091-890a-c1bcceb768c2",

@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-10T05:55:48.629Z",
+  "lastSyncTime": "2026-03-12T07:09:32.036Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -382,6 +382,37 @@
       "thumbnail": "",
       "excerpt": "데이터 모델은 소프트웨어 개발에서 제일 중요한 부분일 것이다. 소프트웨어가 어떻게 작성됐는지 뿐만 아니라 해결하려는 문제를 어떻게 생각해야 하는지에 대해서도 영향을 미치기 때문 추...",
       "lastEdited": "2026-03-10T05:39:00.000Z"
+    },
+    "321d67b9-9e80-808f-bf2d-ddc2599f968b": {
+      "slug": "데드락-deadlock-교착상태",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "데드락 (Deadlock, 교착상태)",
+      "tags": [
+        "데드락"
+      ],
+      "date": "2026-03-12",
+      "createdAt": "2026-03-12T06:42:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2f2fa15d-cdd0-4abf-a2b3-c20236ab910d%2Fimage.png?table=block&id=321d67b9-9e80-800f-a6d0-cb092d96a084&cache=v2",
+      "excerpt": "☠️ 데드락(Deadlock, 교착 상태)이란? 데드락은 2개 이상의 프로세스나 스레드가 서로 다른 프로세스가 점유하고 있는 자원을 얻기 위해 영원히 무한 대기하는 상태를 말합니다...",
+      "lastEdited": "2026-03-12T07:09:00.000Z"
+    },
+    "321d67b9-9e80-80ad-a4c2-cc05d959f6c9": {
+      "slug": "프로세스-synchronization",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "프로세스 Synchronization",
+      "tags": [
+        "동기화",
+        "프로세스",
+        "스레드",
+        "race condition"
+      ],
+      "date": "2026-03-10",
+      "createdAt": "2026-03-12T02:31:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9c09b75b-9e05-4c3c-9a37-61a26a314c29%2Fimage.png?table=block&id=321d67b9-9e80-80da-a712-f9e77ddc7bbb&cache=v2",
+      "excerpt": "실무에서 대규모 트래픽을 다룰 때 발생하는 데이터 정합성 이슈(예: 수강신청, 선착순 쿠폰 발급, 재고 차감 등)는 모두 프로세스 동기화(Process Synchronization...",
+      "lastEdited": "2026-03-12T06:42:00.000Z"
     }
   }
 }
