@@ -18,6 +18,27 @@
     "lastEdited": "2026-03-05T06:55:00.000Z"
   },
   {
+    "id": "323d67b9-9e80-8063-99d6-d2dc71083111",
+    "title": "Memory Management",
+    "slug": "memory-management",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "메모리관리",
+      "페이징",
+      "세그먼테이션",
+      "TLB"
+    ],
+    "date": "2026-03-13",
+    "createdAt": "2026-03-14T07:47:00.000Z",
+    "excerpt": "제가 개발한 프로그램이 어떻게 물리적인 RAM에 올라가고 8GB밖에 안 되는 RAM으로 어떻게 10GB짜리 게임을 돌릴 수 있는지등을 확인하기 위해서 OS의 메모리 관리에 대해서 ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fce6516f3-505d-446e-ad31-28bd990e333c%2Fimage.png?table=block&id=323d67b9-9e80-80c3-aa73-d6c97d4e0d7d&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/memory-management.md",
+    "lastEdited": "2026-03-14T07:48:00.000Z"
+  },
+  {
     "id": "321d67b9-9e80-808f-bf2d-ddc2599f968b",
     "title": "데드락 (Deadlock, 교착상태)",
     "slug": "데드락-deadlock-교착상태",
@@ -28,9 +49,7 @@
       "데드락"
     ],
     "date": "2026-03-12",
-    "createdAt": "2026-03-12T06:42:00.000Z",
     "excerpt": "☠️ 데드락(Deadlock, 교착 상태)이란? 데드락은 2개 이상의 프로세스나 스레드가 서로 다른 프로세스가 점유하고 있는 자원을 얻기 위해 영원히 무한 대기하는 상태를 말합니다...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2f2fa15d-cdd0-4abf-a2b3-c20236ab910d%2Fimage.png?table=block&id=321d67b9-9e80-800f-a6d0-cb092d96a084&cache=v2",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/데드락-deadlock-교착상태.md",
     "lastEdited": "2026-03-12T07:09:00.000Z"
@@ -49,9 +68,7 @@
       "race condition"
     ],
     "date": "2026-03-10",
-    "createdAt": "2026-03-12T02:31:00.000Z",
     "excerpt": "실무에서 대규모 트래픽을 다룰 때 발생하는 데이터 정합성 이슈(예: 수강신청, 선착순 쿠폰 발급, 재고 차감 등)는 모두 프로세스 동기화(Process Synchronization...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9c09b75b-9e05-4c3c-9a37-61a26a314c29%2Fimage.png?table=block&id=321d67b9-9e80-80da-a712-f9e77ddc7bbb&cache=v2",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/프로세스-synchronization.md",
     "lastEdited": "2026-03-12T06:42:00.000Z"
