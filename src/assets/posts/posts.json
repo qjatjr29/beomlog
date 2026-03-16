@@ -18,6 +18,25 @@
     "lastEdited": "2026-03-05T06:55:00.000Z"
   },
   {
+    "id": "325d67b9-9e80-804d-9e41-d71e3f0108a6",
+    "title": "가상 메모리(Virtual Memory) - Demand Paging, 페이징 교체",
+    "slug": "가상-메모리-virtual-memory-demand-paging-페이징-교체",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "메모리관리",
+      "페이징"
+    ],
+    "date": "2026-03-16",
+    "createdAt": "2026-03-16T05:22:00.000Z",
+    "excerpt": "✅ Demand Paging 프로그램 실행 시 모든 페이지를 메모리에 올리지 않고 실제 접근이 발생한 시점에만 해당 페이지를 메모리에 올리는 것 I/O 양 감소 Memory 사용량...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F638a6fb2-d4c8-4979-bf2b-ef4f5c9f7b48%2Fimage.png?table=block&id=325d67b9-9e80-8072-aa53-c9e3d5f9dfd3&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/가상-메모리-virtual-memory-demand-paging-페이징-교체.md",
+    "lastEdited": "2026-03-16T05:23:00.000Z"
+  },
+  {
     "id": "323d67b9-9e80-8063-99d6-d2dc71083111",
     "title": "Memory Management",
     "slug": "memory-management",
@@ -31,9 +50,7 @@
       "TLB"
     ],
     "date": "2026-03-13",
-    "createdAt": "2026-03-14T07:47:00.000Z",
     "excerpt": "제가 개발한 프로그램이 어떻게 물리적인 RAM에 올라가고 8GB밖에 안 되는 RAM으로 어떻게 10GB짜리 게임을 돌릴 수 있는지등을 확인하기 위해서 OS의 메모리 관리에 대해서 ...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fce6516f3-505d-446e-ad31-28bd990e333c%2Fimage.png?table=block&id=323d67b9-9e80-80c3-aa73-d6c97d4e0d7d&cache=v2",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/memory-management.md",
     "lastEdited": "2026-03-14T07:48:00.000Z"
