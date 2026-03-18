@@ -29,9 +29,7 @@
       "페이징"
     ],
     "date": "2026-03-16",
-    "createdAt": "2026-03-16T05:22:00.000Z",
     "excerpt": "✅ Demand Paging 프로그램 실행 시 모든 페이지를 메모리에 올리지 않고 실제 접근이 발생한 시점에만 해당 페이지를 메모리에 올리는 것 I/O 양 감소 Memory 사용량...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F638a6fb2-d4c8-4979-bf2b-ef4f5c9f7b48%2Fimage.png?table=block&id=325d67b9-9e80-8072-aa53-c9e3d5f9dfd3&cache=v2",
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/가상-메모리-virtual-memory-demand-paging-페이징-교체.md",
     "lastEdited": "2026-03-16T05:23:00.000Z"
@@ -189,6 +187,25 @@
     "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
     "path": "개발/운영체제/운영체제란.md",
     "lastEdited": "2026-03-05T06:54:00.000Z"
+  },
+  {
+    "id": "327d67b9-9e80-80b2-ac74-c04934f13bfe",
+    "title": "3장. 저장소와 검색",
+    "slug": "3장-저장소와-검색",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "LSM Tree",
+      "B Tree"
+    ],
+    "date": "2026-03-18",
+    "createdAt": "2026-03-18T08:10:00.000Z",
+    "excerpt": "이 장에서는 데이터베이스가 데이터를 저장하는 방법과 데이터를 요청했을 때 찾을 수 있는 방법을 설명합니다 🔍 색인 색인의 일반적인 개념은 어떤 부가적인 메타데이터를 유지하는 것으...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F5aef48d5-ac2a-4b5d-b4e6-4075882e1c2d%2Fimage.png?table=block&id=327d67b9-9e80-807a-81a9-d49271351d65&cache=v2",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/3장-저장소와-검색.md",
+    "lastEdited": "2026-03-18T08:11:00.000Z"
   },
   {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
