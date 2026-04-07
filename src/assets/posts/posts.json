@@ -18,6 +18,24 @@
     "lastEdited": "2026-03-05T06:55:00.000Z"
   },
   {
+    "id": "33bd67b9-9e80-806a-8bb3-fdac6c8c72a2",
+    "title": "파일 시스템",
+    "slug": "파일-시스템",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "파일시스템"
+    ],
+    "date": "2026-04-07",
+    "createdAt": "2026-04-07T06:16:00.000Z",
+    "excerpt": "📒 파일과 파일시스템 File A named collection of related information 관련 정보를 이름을 통해서 저장하는 것. 일반적으로 하드디스크 같은 비휘...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F68303538-b2bd-4af8-bc3a-7a28b851581e%2Fimage.png?table=block&id=33bd67b9-9e80-8007-a3ff-eac054127534&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/파일-시스템.md",
+    "lastEdited": "2026-04-07T06:17:00.000Z"
+  },
+  {
     "id": "325d67b9-9e80-804d-9e41-d71e3f0108a6",
     "title": "가상 메모리(Virtual Memory) - Demand Paging, 페이징 교체",
     "slug": "가상-메모리-virtual-memory-demand-paging-페이징-교체",
@@ -189,25 +207,6 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "327d67b9-9e80-80b2-ac74-c04934f13bfe",
-    "title": "3장. 저장소와 검색",
-    "slug": "3장-저장소와-검색",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [
-      "LSM Tree",
-      "B Tree"
-    ],
-    "date": "2026-03-18",
-    "createdAt": "2026-03-18T08:10:00.000Z",
-    "excerpt": "이 장에서는 데이터베이스가 데이터를 저장하는 방법과 데이터를 요청했을 때 찾을 수 있는 방법을 설명합니다 🔍 색인 색인의 일반적인 개념은 어떤 부가적인 메타데이터를 유지하는 것으...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F5aef48d5-ac2a-4b5d-b4e6-4075882e1c2d%2Fimage.png?table=block&id=327d67b9-9e80-807a-81a9-d49271351d65&cache=v2",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/3장-저장소와-검색.md",
-    "lastEdited": "2026-03-18T08:11:00.000Z"
-  },
-  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -223,6 +222,23 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "327d67b9-9e80-80b2-ac74-c04934f13bfe",
+    "title": "3장. 저장소와 검색",
+    "slug": "3장-저장소와-검색",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "LSM Tree",
+      "B Tree"
+    ],
+    "date": "2026-03-18",
+    "excerpt": "이 장에서는 데이터베이스가 데이터를 저장하는 방법과 데이터를 요청했을 때 찾을 수 있는 방법을 설명합니다 🔍 색인 색인의 일반적인 개념은 어떤 부가적인 메타데이터를 유지하는 것으...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/3장-저장소와-검색.md",
+    "lastEdited": "2026-03-18T08:11:00.000Z"
   },
   {
     "id": "31fd67b9-9e80-8000-bf80-c4b5268decca",

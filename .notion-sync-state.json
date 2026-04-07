@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-03-18T08:11:58.417Z",
+  "lastSyncTime": "2026-04-07T06:18:07.211Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -460,6 +460,20 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F5aef48d5-ac2a-4b5d-b4e6-4075882e1c2d%2Fimage.png?table=block&id=327d67b9-9e80-807a-81a9-d49271351d65&cache=v2",
       "excerpt": "이 장에서는 데이터베이스가 데이터를 저장하는 방법과 데이터를 요청했을 때 찾을 수 있는 방법을 설명합니다 🔍 색인 색인의 일반적인 개념은 어떤 부가적인 메타데이터를 유지하는 것으...",
       "lastEdited": "2026-03-18T08:11:00.000Z"
+    },
+    "33bd67b9-9e80-806a-8bb3-fdac6c8c72a2": {
+      "slug": "파일-시스템",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "파일 시스템",
+      "tags": [
+        "파일시스템"
+      ],
+      "date": "2026-04-07",
+      "createdAt": "2026-04-07T06:16:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F68303538-b2bd-4af8-bc3a-7a28b851581e%2Fimage.png?table=block&id=33bd67b9-9e80-8007-a3ff-eac054127534&cache=v2",
+      "excerpt": "📒 파일과 파일시스템 File A named collection of related information 관련 정보를 이름을 통해서 저장하는 것. 일반적으로 하드디스크 같은 비휘...",
+      "lastEdited": "2026-04-07T06:17:00.000Z"
     }
   }
 }
