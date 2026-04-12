@@ -205,38 +205,22 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "33fd67b9-9e80-803f-9597-d887128ca171",
-    "title": "5장. 복제",
-    "slug": "5장-복제",
+    "id": "340d67b9-9e80-80fd-b85f-e5de9d728612",
+    "title": "6장. 파티셔닝",
+    "slug": "6장-파티셔닝",
     "category": "책",
     "categorySlug": "책",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [
-      "replication"
+      "partitioning"
     ],
-    "date": "2026-04-07",
-    "createdAt": "2026-04-11T11:30:00.000Z",
-    "excerpt": "복제란 네트워크로 연결된 여러 장비에 동일한 데이터의 복사본을 유지한다는 의미. 데이터 복제가 필요한 이유 1️⃣ 지연 시간 감소 사용자와 지리적으로 가까운 노드에서 데이터를 제공...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F8b0f7c5b-1ec0-43ec-9973-3780ce3f71b9%2Fimage.png?table=block&id=33fd67b9-9e80-8046-b16a-fa668767c824&cache=v2",
+    "date": "2026-04-12",
+    "createdAt": "2026-04-12T05:13:00.000Z",
+    "excerpt": "5장에서는 동일한 데이터의 복사본 여러 개를 다른 노드에 저장하는 복제 개념을 다뤘다. 데이터 셋이 매우 크거나 질의 처리량이 매우 높다면 복제만으로는 부족하고 데이터를 파티션으로...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc4beebdb-7d63-4a93-9181-72b276fcbe7a%2Fimage.png?table=block&id=340d67b9-9e80-806a-9e61-c75916f8d4dc&cache=v2",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/5장-복제.md",
-    "lastEdited": "2026-04-11T11:31:00.000Z"
-  },
-  {
-    "id": "33fd67b9-9e80-80dd-bd0a-c690ab3caf5b",
-    "title": "4장. 부호화와 발전",
-    "slug": "4장-부호화와-발전",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [],
-    "date": "2026-03-31",
-    "createdAt": "2026-04-11T11:30:00.000Z",
-    "excerpt": "애플리케이션은 필연적으로 시간이 지남에 따라 변한다. 새로운 제품을 출시하거나 사용자 요구사항을 이해하게 되거나 비즈니스 환경이 변함에 따라 애플리케이션 기능은 추가되거나 변경된다...",
-    "thumbnail": "",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/4장-부호화와-발전.md",
-    "lastEdited": "2026-04-11T11:30:00.000Z"
+    "path": "책/데이터-중심-애플리케이션-설계/6장-파티셔닝.md",
+    "lastEdited": "2026-04-12T05:13:00.000Z"
   },
   {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
@@ -254,6 +238,36 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "33fd67b9-9e80-803f-9597-d887128ca171",
+    "title": "5장. 복제",
+    "slug": "5장-복제",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "replication"
+    ],
+    "date": "2026-04-07",
+    "excerpt": "복제란 네트워크로 연결된 여러 장비에 동일한 데이터의 복사본을 유지한다는 의미. 데이터 복제가 필요한 이유 1️⃣ 지연 시간 감소 사용자와 지리적으로 가까운 노드에서 데이터를 제공...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/5장-복제.md",
+    "lastEdited": "2026-04-11T11:31:00.000Z"
+  },
+  {
+    "id": "33fd67b9-9e80-80dd-bd0a-c690ab3caf5b",
+    "title": "4장. 부호화와 발전",
+    "slug": "4장-부호화와-발전",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [],
+    "date": "2026-03-31",
+    "excerpt": "애플리케이션은 필연적으로 시간이 지남에 따라 변한다. 새로운 제품을 출시하거나 사용자 요구사항을 이해하게 되거나 비즈니스 환경이 변함에 따라 애플리케이션 기능은 추가되거나 변경된다...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/4장-부호화와-발전.md",
+    "lastEdited": "2026-04-11T11:30:00.000Z"
   },
   {
     "id": "327d67b9-9e80-80b2-ac74-c04934f13bfe",
