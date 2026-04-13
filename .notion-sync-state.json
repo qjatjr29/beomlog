@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-04-12T05:14:52.427Z",
+  "lastSyncTime": "2026-04-13T02:48:34.307Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -514,6 +514,20 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc4beebdb-7d63-4a93-9181-72b276fcbe7a%2Fimage.png?table=block&id=340d67b9-9e80-806a-9e61-c75916f8d4dc&cache=v2",
       "excerpt": "5장에서는 동일한 데이터의 복사본 여러 개를 다른 노드에 저장하는 복제 개념을 다뤘다. 데이터 셋이 매우 크거나 질의 처리량이 매우 높다면 복제만으로는 부족하고 데이터를 파티션으로...",
       "lastEdited": "2026-04-12T05:13:00.000Z"
+    },
+    "341d67b9-9e80-801b-b0c3-f96f644d4c8e": {
+      "slug": "disk-management-scheduling",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "Disk Management & Scheduling",
+      "tags": [
+        "디스크"
+      ],
+      "date": "2026-04-13",
+      "createdAt": "2026-04-13T02:47:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb3401320-b6a7-4c05-8b78-885cd81a8ab8%2Fimage.png?table=block&id=341d67b9-9e80-8080-986e-e91431e3d909&cache=v2",
+      "excerpt": "🔨 Disk 구조 단위 물리적 단위(Sector): 디스크 내부에서 데이터를 관리하는 최소 단위 논리적 단위(Logical Block): 디스크 외부(운영체제)에서 디스크에 접근...",
+      "lastEdited": "2026-04-13T02:47:00.000Z"
     }
   }
 }

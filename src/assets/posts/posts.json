@@ -18,6 +18,24 @@
     "lastEdited": "2026-03-05T06:55:00.000Z"
   },
   {
+    "id": "341d67b9-9e80-801b-b0c3-f96f644d4c8e",
+    "title": "Disk Management & Scheduling",
+    "slug": "disk-management-scheduling",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "운영체제",
+    "tags": [
+      "디스크"
+    ],
+    "date": "2026-04-13",
+    "createdAt": "2026-04-13T02:47:00.000Z",
+    "excerpt": "🔨 Disk 구조 단위 물리적 단위(Sector): 디스크 내부에서 데이터를 관리하는 최소 단위 논리적 단위(Logical Block): 디스크 외부(운영체제)에서 디스크에 접근...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb3401320-b6a7-4c05-8b78-885cd81a8ab8%2Fimage.png?table=block&id=341d67b9-9e80-8080-986e-e91431e3d909&cache=v2",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/disk-management-scheduling.md",
+    "lastEdited": "2026-04-13T02:47:00.000Z"
+  },
+  {
     "id": "33bd67b9-9e80-806a-8bb3-fdac6c8c72a2",
     "title": "파일 시스템",
     "slug": "파일-시스템",
@@ -205,24 +223,6 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "340d67b9-9e80-80fd-b85f-e5de9d728612",
-    "title": "6장. 파티셔닝",
-    "slug": "6장-파티셔닝",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [
-      "partitioning"
-    ],
-    "date": "2026-04-12",
-    "createdAt": "2026-04-12T05:13:00.000Z",
-    "excerpt": "5장에서는 동일한 데이터의 복사본 여러 개를 다른 노드에 저장하는 복제 개념을 다뤘다. 데이터 셋이 매우 크거나 질의 처리량이 매우 높다면 복제만으로는 부족하고 데이터를 파티션으로...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc4beebdb-7d63-4a93-9181-72b276fcbe7a%2Fimage.png?table=block&id=340d67b9-9e80-806a-9e61-c75916f8d4dc&cache=v2",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/6장-파티셔닝.md",
-    "lastEdited": "2026-04-12T05:13:00.000Z"
-  },
-  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -238,6 +238,22 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "340d67b9-9e80-80fd-b85f-e5de9d728612",
+    "title": "6장. 파티셔닝",
+    "slug": "6장-파티셔닝",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "partitioning"
+    ],
+    "date": "2026-04-12",
+    "excerpt": "5장에서는 동일한 데이터의 복사본 여러 개를 다른 노드에 저장하는 복제 개념을 다뤘다. 데이터 셋이 매우 크거나 질의 처리량이 매우 높다면 복제만으로는 부족하고 데이터를 파티션으로...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/6장-파티셔닝.md",
+    "lastEdited": "2026-04-12T05:13:00.000Z"
   },
   {
     "id": "33fd67b9-9e80-803f-9597-d887128ca171",
