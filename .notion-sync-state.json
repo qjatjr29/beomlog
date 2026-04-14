@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-04-13T02:48:34.307Z",
+  "lastSyncTime": "2026-04-14T00:00:18.970Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -528,6 +528,23 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb3401320-b6a7-4c05-8b78-885cd81a8ab8%2Fimage.png?table=block&id=341d67b9-9e80-8080-986e-e91431e3d909&cache=v2",
       "excerpt": "🔨 Disk 구조 단위 물리적 단위(Sector): 디스크 내부에서 데이터를 관리하는 최소 단위 논리적 단위(Logical Block): 디스크 외부(운영체제)에서 디스크에 접근...",
       "lastEdited": "2026-04-13T02:47:00.000Z"
+    },
+    "341d67b9-9e80-808e-ab5e-c4cd5a3c94fc": {
+      "slug": "동기-비동기-블로킹-논블로킹",
+      "categorySlug": "개발",
+      "groupSlug": "운영체제",
+      "title": "동기/비동기 & 블로킹/논블로킹",
+      "tags": [
+        "동기",
+        "비동기",
+        "블로킹",
+        "논블로킹"
+      ],
+      "date": "2026-04-14",
+      "createdAt": "2026-04-13T23:59:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2dcdbf3a-316b-44e9-9e03-b5d1456d97da%2Fimage.png?table=block&id=341d67b9-9e80-8078-8626-f67a14324186&cache=v2",
+      "excerpt": "블로킹(Blocking) vs 논블로킹(Non-blocking) 제어권의 관점입니다. 호출된 함수가 바로 리턴을 하는가? 블로킹 호출된 함수가 자신의 일을 끝낼 때까지 제어권을 계...",
+      "lastEdited": "2026-04-13T23:59:00.000Z"
     }
   }
 }
