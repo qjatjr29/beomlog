@@ -28,6 +28,21 @@
     "lastEdited": "2026-03-05T07:04:00.000Z"
   },
   {
+    "id": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "title": "요즘 당근 AI 개발",
+    "category": "책",
+    "categorySlug": "책",
+    "coverImage": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fe1b282ef-d0e8-4dcd-9305-6e3ae03b9c9f%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-03-07_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%258C%25E1%2585%25A5%25E1%2586%25AB_12.32.56.png?table=block&id=31bd67b9-9e80-8084-9895-f02a0bc503ae&cache=v2",
+    "description": "AI가 만든 파도 위에서 과감히 서핑하는 법 | AI 에이전트, 프롬프트 엔지니어링, VoC 자동 분석, 운영자동화, 바이브 코딩 AI 검색과 추천까지 당근의 AI 활용 이야기",
+    "tags": [
+      "AI",
+      "개발",
+      "프롬프트"
+    ],
+    "postCount": 1,
+    "lastEdited": "2026-04-23T16:39:00.000Z"
+  },
+  {
     "id": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "title": "데이터 중심 애플리케이션 설계",
     "category": "책",

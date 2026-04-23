@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-04-20T04:27:51.086Z",
+  "lastSyncTime": "2026-04-23T16:41:21.156Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -559,6 +559,21 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F0bdd530c-740b-4af7-bbf9-06c01449c414%2Fimage.png?table=block&id=348d67b9-9e80-80cf-bd9b-eff2bec84773&cache=v2",
       "excerpt": "시스템이 신뢰성을 가지기 위해서는 여러 결함을 처리하여 전체 시스템의 치명적인 장애로 이어지는 것을 막아야 한다(내결함성을 갖춘 시스템) 구현하기 위해서는 할 일이 많다 수십년 동...",
       "lastEdited": "2026-04-20T04:26:00.000Z"
+    },
+    "34bd67b9-9e80-8034-9cd5-c1d86feee8b3": {
+      "slug": "ai-활용의-첫-걸음-01-비개발자를-위한-바이브-코딩-도전기",
+      "categorySlug": "책",
+      "groupSlug": "요즘-당근-ai-개발",
+      "title": "AI 활용의 첫 걸음 - 01. 비개발자를 위한 바이브 코딩 도전기",
+      "tags": [
+        "CursorAI",
+        "바이브코딩"
+      ],
+      "date": "2026-04-23",
+      "createdAt": "2026-04-23T16:13:00.000Z",
+      "thumbnail": "",
+      "excerpt": "#바이브코딩 #CursorAI #프롬프트엔지니어링 #비개발자코딩 검색 품질을 높이기 위해서는 사용자의 행동 데이터와 피드백을 분석, 문서 적합성을 점검하는 등 다양한 운영 업무가 ...",
+      "lastEdited": "2026-04-23T16:40:00.000Z"
     }
   }
 }
