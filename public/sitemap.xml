@@ -5,289 +5,289 @@
   xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd"
 >
   <url>
-    <loc>https://www.beomstory.store/</loc>
+    <loc>https://www.beomlog.site/</loc>
     <changefreq>daily</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/posts/개발</loc>
+    <loc>https://www.beomlog.site/posts/개발</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/posts/일상</loc>
+    <loc>https://www.beomlog.site/posts/일상</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/posts/책</loc>
+    <loc>https://www.beomlog.site/posts/책</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/posts/프로젝트</loc>
+    <loc>https://www.beomlog.site/posts/프로젝트</loc>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/guestbook</loc>
+    <loc>https://www.beomlog.site/guestbook</loc>
     <changefreq>monthly</changefreq>
     <priority>0.5</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/311d67b9-9e80-8024-811e-da2503ec108a</loc>
+    <loc>https://www.beomlog.site/post/311d67b9-9e80-8024-811e-da2503ec108a</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/341d67b9-9e80-808e-ab5e-c4cd5a3c94fc</loc>
+    <loc>https://www.beomlog.site/post/341d67b9-9e80-808e-ab5e-c4cd5a3c94fc</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/341d67b9-9e80-801b-b0c3-f96f644d4c8e</loc>
+    <loc>https://www.beomlog.site/post/341d67b9-9e80-801b-b0c3-f96f644d4c8e</loc>
     <lastmod>2026-04-13</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/33bd67b9-9e80-806a-8bb3-fdac6c8c72a2</loc>
+    <loc>https://www.beomlog.site/post/33bd67b9-9e80-806a-8bb3-fdac6c8c72a2</loc>
     <lastmod>2026-04-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/325d67b9-9e80-804d-9e41-d71e3f0108a6</loc>
+    <loc>https://www.beomlog.site/post/325d67b9-9e80-804d-9e41-d71e3f0108a6</loc>
     <lastmod>2026-03-16</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/323d67b9-9e80-8063-99d6-d2dc71083111</loc>
+    <loc>https://www.beomlog.site/post/323d67b9-9e80-8063-99d6-d2dc71083111</loc>
     <lastmod>2026-03-14</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/321d67b9-9e80-808f-bf2d-ddc2599f968b</loc>
+    <loc>https://www.beomlog.site/post/321d67b9-9e80-808f-bf2d-ddc2599f968b</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/321d67b9-9e80-80ad-a4c2-cc05d959f6c9</loc>
+    <loc>https://www.beomlog.site/post/321d67b9-9e80-80ad-a4c2-cc05d959f6c9</loc>
     <lastmod>2026-03-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31cd67b9-9e80-808a-bae3-e49fbefeef7b</loc>
+    <loc>https://www.beomlog.site/post/31cd67b9-9e80-808a-bae3-e49fbefeef7b</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31cd67b9-9e80-8034-900c-c79b58f0d7c1</loc>
+    <loc>https://www.beomlog.site/post/31cd67b9-9e80-8034-900c-c79b58f0d7c1</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31cd67b9-9e80-80b8-9b1b-f386ad678c0e</loc>
+    <loc>https://www.beomlog.site/post/31cd67b9-9e80-80b8-9b1b-f386ad678c0e</loc>
     <lastmod>2026-03-07</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31bd67b9-9e80-80e5-b417-ca895f7c3ba1</loc>
+    <loc>https://www.beomlog.site/post/31bd67b9-9e80-80e5-b417-ca895f7c3ba1</loc>
     <lastmod>2026-03-06</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31ad67b9-9e80-80fa-85ae-e670e1c3fd73</loc>
+    <loc>https://www.beomlog.site/post/31ad67b9-9e80-80fa-85ae-e670e1c3fd73</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31ad67b9-9e80-8085-8f4d-eb514ad25af8</loc>
+    <loc>https://www.beomlog.site/post/31ad67b9-9e80-8085-8f4d-eb514ad25af8</loc>
     <lastmod>2026-03-05</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/30cd67b9-9e80-80cd-998e-c7da43171144</loc>
+    <loc>https://www.beomlog.site/post/30cd67b9-9e80-80cd-998e-c7da43171144</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/34cd67b9-9e80-8068-abd8-c770979341fa</loc>
+    <loc>https://www.beomlog.site/post/34cd67b9-9e80-8068-abd8-c770979341fa</loc>
     <lastmod>2026-04-24</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/34bd67b9-9e80-8034-9cd5-c1d86feee8b3</loc>
+    <loc>https://www.beomlog.site/post/34bd67b9-9e80-8034-9cd5-c1d86feee8b3</loc>
     <lastmod>2026-04-23</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/34fd67b9-9e80-805f-b593-cfb19d2aab97</loc>
+    <loc>https://www.beomlog.site/post/34fd67b9-9e80-805f-b593-cfb19d2aab97</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/348d67b9-9e80-8067-b870-de3254984f9f</loc>
+    <loc>https://www.beomlog.site/post/348d67b9-9e80-8067-b870-de3254984f9f</loc>
     <lastmod>2026-04-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/340d67b9-9e80-80fd-b85f-e5de9d728612</loc>
+    <loc>https://www.beomlog.site/post/340d67b9-9e80-80fd-b85f-e5de9d728612</loc>
     <lastmod>2026-04-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/33fd67b9-9e80-803f-9597-d887128ca171</loc>
+    <loc>https://www.beomlog.site/post/33fd67b9-9e80-803f-9597-d887128ca171</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/33fd67b9-9e80-80dd-bd0a-c690ab3caf5b</loc>
+    <loc>https://www.beomlog.site/post/33fd67b9-9e80-80dd-bd0a-c690ab3caf5b</loc>
     <lastmod>2026-04-11</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/327d67b9-9e80-80b2-ac74-c04934f13bfe</loc>
+    <loc>https://www.beomlog.site/post/327d67b9-9e80-80b2-ac74-c04934f13bfe</loc>
     <lastmod>2026-03-18</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/31fd67b9-9e80-8000-bf80-c4b5268decca</loc>
+    <loc>https://www.beomlog.site/post/31fd67b9-9e80-8000-bf80-c4b5268decca</loc>
     <lastmod>2026-03-10</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/319d67b9-9e80-8091-890a-c1bcceb768c2</loc>
+    <loc>https://www.beomlog.site/post/319d67b9-9e80-8091-890a-c1bcceb768c2</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-8044-b344-f2c4a3cbfb13</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-8044-b344-f2c4a3cbfb13</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-8059-9b85-fc548ffd19d1</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-8059-9b85-fc548ffd19d1</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-80af-9cd0-e0d2a80c3ca0</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-80af-9cd0-e0d2a80c3ca0</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-803b-acba-e3d7590c0bbf</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-803b-acba-e3d7590c0bbf</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-8086-bdfb-f2121a37b4c5</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-8086-bdfb-f2121a37b4c5</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-8016-97e8-caefdfc84e46</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-8016-97e8-caefdfc84e46</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-8065-ab99-df941c98915c</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-8065-ab99-df941c98915c</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-80b0-8995-d19d2ed268c4</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-80b0-8995-d19d2ed268c4</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-80c2-bc7a-e0398392c183</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-80c2-bc7a-e0398392c183</loc>
     <lastmod>2026-03-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-80ae-bec9-f929b71ca5ca</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-80ae-bec9-f929b71ca5ca</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-80a7-a98a-e53574531c20</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-80a7-a98a-e53574531c20</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/314d67b9-9e80-80f3-982f-c1a06fa8baa2</loc>
+    <loc>https://www.beomlog.site/post/314d67b9-9e80-80f3-982f-c1a06fa8baa2</loc>
     <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/318d67b9-9e80-80b2-b494-ddf6f1a51244</loc>
+    <loc>https://www.beomlog.site/post/318d67b9-9e80-80b2-b494-ddf6f1a51244</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/318d67b9-9e80-80ab-8578-ca7480e0d732</loc>
+    <loc>https://www.beomlog.site/post/318d67b9-9e80-80ab-8578-ca7480e0d732</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/318d67b9-9e80-800c-b76c-c5c9ab83a319</loc>
+    <loc>https://www.beomlog.site/post/318d67b9-9e80-800c-b76c-c5c9ab83a319</loc>
     <lastmod>2026-03-04</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/317d67b9-9e80-80ce-84f5-feaa3e021ed5</loc>
+    <loc>https://www.beomlog.site/post/317d67b9-9e80-80ce-84f5-feaa3e021ed5</loc>
     <lastmod>2026-03-03</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/317d67b9-9e80-80b1-94f0-c4dcdfcd81a9</loc>
+    <loc>https://www.beomlog.site/post/317d67b9-9e80-80b1-94f0-c4dcdfcd81a9</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://www.beomstory.store/post/317d67b9-9e80-80c3-83a7-c880f79ec07e</loc>
+    <loc>https://www.beomlog.site/post/317d67b9-9e80-80c3-83a7-c880f79ec07e</loc>
     <lastmod>2026-03-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
