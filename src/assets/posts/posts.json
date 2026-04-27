@@ -240,24 +240,6 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "34cd67b9-9e80-8068-abd8-c770979341fa",
-    "title": "AI 활용의 첫 걸음 - 02. 당신과 함께 해서 행복했던 인형 올림",
-    "slug": "ai-활용의-첫-걸음-02-당신과-함께-해서-행복했던-인형-올림",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "LLM"
-    ],
-    "date": "2026-04-24",
-    "createdAt": "2026-04-24T04:45:00.000Z",
-    "excerpt": "#LLM #거래후기 #중고거래 #프롬프트엔지니어링 당근에서는 판매한 물건이 편지를 보내기 시작했습니다. 어떻게 물품이 직접 편지를 보내게 되었는지, 그 과정에서 LLM은 어떻게 활...",
-    "thumbnail": "",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/ai-활용의-첫-걸음-02-당신과-함께-해서-행복했던-인형-올림.md",
-    "lastEdited": "2026-04-24T04:48:00.000Z"
-  },
-  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -273,6 +255,22 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "34cd67b9-9e80-8068-abd8-c770979341fa",
+    "title": "AI 활용의 첫 걸음 - 02. 당신과 함께 해서 행복했던 인형 올림",
+    "slug": "ai-활용의-첫-걸음-02-당신과-함께-해서-행복했던-인형-올림",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "LLM"
+    ],
+    "date": "2026-04-24",
+    "excerpt": "#LLM #거래후기 #중고거래 #프롬프트엔지니어링 당근에서는 판매한 물건이 편지를 보내기 시작했습니다. 어떻게 물품이 직접 편지를 보내게 되었는지, 그 과정에서 LLM은 어떻게 활...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/ai-활용의-첫-걸음-02-당신과-함께-해서-행복했던-인형-올림.md",
+    "lastEdited": "2026-04-24T04:48:00.000Z"
   },
   {
     "id": "34bd67b9-9e80-8034-9cd5-c1d86feee8b3",
@@ -292,6 +290,22 @@
     "lastEdited": "2026-04-23T16:40:00.000Z"
   },
   {
+    "id": "34fd67b9-9e80-805f-b593-cfb19d2aab97",
+    "title": "8장. 분산 시스템의 골칫거리",
+    "slug": "8장-분산-시스템의-골칫거리",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [],
+    "date": "2026-04-27",
+    "createdAt": "2026-04-27T05:40:00.000Z",
+    "excerpt": "분산 시스템을 다루는 것은 한 컴퓨터에서 실행되는 소프트웨어를 작성하는 일과는 근본적으로 다르다. 이 장은 분산 시스템의 상태에 대해 생각하는 방법과 무슨 일이 일어났는지 추론하는...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7463e755-63c5-4a96-af9d-ed41cdc7cce3%2Fimage.png?table=block&id=34fd67b9-9e80-800e-9d57-fb4592465df2&cache=v2",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/8장-분산-시스템의-골칫거리.md",
+    "lastEdited": "2026-04-27T05:42:00.000Z"
+  },
+  {
     "id": "348d67b9-9e80-8067-b870-de3254984f9f",
     "title": "7장. 트랜잭션",
     "slug": "7장-트랜잭션",
@@ -302,10 +316,12 @@
       "Transaction"
     ],
     "date": "2026-04-20",
+    "createdAt": "2026-04-20T04:24:00.000Z",
     "excerpt": "시스템이 신뢰성을 가지기 위해서는 여러 결함을 처리하여 전체 시스템의 치명적인 장애로 이어지는 것을 막아야 한다(내결함성을 갖춘 시스템) 구현하기 위해서는 할 일이 많다 수십년 동...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F0bdd530c-740b-4af7-bbf9-06c01449c414%2Fimage.png?table=block&id=348d67b9-9e80-80cf-bd9b-eff2bec84773&cache=v2",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/7장-트랜잭션.md",
-    "lastEdited": "2026-04-20T04:26:00.000Z"
+    "lastEdited": "2026-04-27T05:40:00.000Z"
   },
   {
     "id": "340d67b9-9e80-80fd-b85f-e5de9d728612",
