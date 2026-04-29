@@ -6,3 +6,4 @@ export { ImageBlock } from "./ImageBlock";
 export { BlockquoteBlock } from "./BlockquoteBlock";
 export { TableBlock } from "./TableBlock";
 export { VideoBlock } from "./VideoBlock";
+export { CalloutBlock } from "./CalloutBlock";

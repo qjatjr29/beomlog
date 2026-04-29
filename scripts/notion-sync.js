@@ -366,9 +366,15 @@ async function blockToMarkdown(block, depth = 0) {
       const childLines = [];
       if (block.has_children) {
         const children = await getBlockChildren(block.id);
+
+        // 전역 카운터 저장 후 초기화
+        const savedCounter = numberedListCounter;
+        const savedLastType = lastBlockType;
+        numberedListCounter = 0;
+        lastBlockType = null;
+
         for (const child of children) {
-          const childMd = await blockToMarkdown(child, depth + 1);
-          // trailing newline 제거 후 각 줄을 분리
+          const childMd = await blockToMarkdown(child, 0); // depth 0으로 처리
           childMd
             .trimEnd()
             .split("\n")
@@ -376,10 +382,15 @@ async function blockToMarkdown(block, depth = 0) {
               childLines.push(line);
             });
         }
+
+        // 전역 카운터 복원
+        numberedListCounter = savedCounter;
+        lastBlockType = savedLastType;
       }
 
       const allLines = [firstLine, ...childLines];
-      const quoted = allLines.map((line) => `> ${line}`).join("\n");
+      // "> " 대신 ":::callout " prefix로 저장 → quote와 구분
+      const quoted = allLines.map((line) => `:::callout ${line}`).join("\n");
       markdown = `${quoted}\n`;
       break;
     }
@@ -750,6 +761,27 @@ async function syncNotionPosts() {
             }
 
             try {
+              if (cachedPage && cachedPage.slug) {
+                const oldSlug = cachedPage.slug;
+                const newSlug =
+                  getPlainText(page.properties.Slug?.rich_text) ||
+                  slugify(getPlainText(page.properties.Title?.title));
+                if (oldSlug !== newSlug) {
+                  const oldPath = path.join(
+                    OUTPUT_DIR,
+                    slugify(category),
+                    groupSlug,
+                    `${oldSlug}.md`,
+                  );
+                  if (fs.existsSync(oldPath)) {
+                    fs.unlinkSync(oldPath);
+                    // console.log(
+                    //   `🗑️  slug 변경으로 기존 파일 삭제: ${oldSlug}.md`,
+                    // );
+                  }
+                }
+              }
+
               // ✅ 경로: 카테고리/그룹슬러그/글슬러그.md
               const postData = await processGroupPost(
                 page,
@@ -941,6 +973,23 @@ async function processNormalPage(
   }
 
   try {
+    if (cachedPage && cachedPage.slug) {
+      const oldSlug = cachedPage.slug;
+      const newSlug =
+        getPlainText(page.properties.Slug?.rich_text) ||
+        slugify(getPlainText(page.properties.Title?.title));
+      if (oldSlug !== newSlug) {
+        const oldPath = path.join(
+          OUTPUT_DIR,
+          slugify(category),
+          `${oldSlug}.md`,
+        );
+        if (fs.existsSync(oldPath)) {
+          fs.unlinkSync(oldPath);
+          console.log(`🗑️  slug 변경으로 기존 파일 삭제: ${oldSlug}.md`);
+        }
+      }
+    }
     const postData = await processPost(page, category);
     postsMetadata.push(postData);
     updatedPages[page.id] = {

@@ -8,6 +8,7 @@ import {
   ImageBlock,
   BlockquoteBlock,
   TableBlock,
+  CalloutBlock,
 } from "./blocks";
 import {
   parseCodeBlock,
@@ -128,6 +129,8 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       codeBlockLang: "",
       inBlockquote: false,
       blockquoteLines: [] as string[],
+      inCallout: false,
+      calloutLines: [] as string[],
       inTable: false,
       tableLines: [] as string[],
       inDetails: false,
@@ -201,9 +204,12 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
         {
           inBlockquote: state.inBlockquote,
           blockquoteLines: state.blockquoteLines,
+          inCallout: state.inCallout, // 추가
+          calloutLines: state.calloutLines, // 추가
         },
         index,
         BlockquoteBlock,
+        CalloutBlock,
       );
 
       if (blockquoteResult.shouldReturn || blockquoteResult.element) {
@@ -213,6 +219,8 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
         }
         state.inBlockquote = blockquoteResult.newState.inBlockquote;
         state.blockquoteLines = blockquoteResult.newState.blockquoteLines;
+        state.inCallout = blockquoteResult.newState.inCallout; // 추가
+        state.calloutLines = blockquoteResult.newState.calloutLines; // 추가
         if (blockquoteResult.shouldReturn) return;
       }
 
