@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-04-29T03:05:58.612Z",
+  "lastSyncTime": "2026-04-29T04:34:36.899Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -279,7 +279,7 @@
       "createdAt": "2026-03-02T06:26:00.000Z",
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2",
       "excerpt": "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불...",
-      "lastEdited": "2026-03-03T04:33:00.000Z"
+      "lastEdited": "2026-04-29T04:34:00.000Z"
     },
     "317d67b9-9e80-80b1-94f0-c4dcdfcd81a9": {
       "slug": "검색-인덱스-설계-및-키워드-검색-구조",
@@ -293,7 +293,7 @@
       "createdAt": "2026-03-02T06:17:00.000Z",
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc6e8d029-f534-4ee0-88a0-186662de8c84%2Fimage.png?table=block&id=317d67b9-9e80-8087-a480-f7b32be7fdff&cache=v2",
       "excerpt": "이전 글에서는 Elasticsearch를 도입한 배경과 PostgreSQL과의 역할 분리 그리고 비동기 동기화 전략을 선택한 이유를 다뤘는데요!! 이번에는 실제로 Elasticse...",
-      "lastEdited": "2026-03-02T07:04:00.000Z"
+      "lastEdited": "2026-04-29T04:33:00.000Z"
     },
     "317d67b9-9e80-80c3-83a7-c880f79ec07e": {
       "slug": "elasticsearch-도입-배경과-설계",
@@ -307,7 +307,7 @@
       "createdAt": "2026-03-02T01:29:00.000Z",
       "thumbnail": "",
       "excerpt": "이번 locus 서비스를 개발하면서 사용자들이 작성한 기록들을 효과적으로 찾을 수 있는 검색 기능이 필요하다고 생각했습니다. 처음에는 PostgreSQL의 기본 쿼리만으로도 충분하...",
-      "lastEdited": "2026-03-02T06:27:00.000Z"
+      "lastEdited": "2026-04-29T04:33:00.000Z"
     },
     "31bd67b9-9e80-80e5-b417-ca895f7c3ba1": {
       "slug": "프로세스와-스레드",
@@ -615,6 +615,21 @@
       "thumbnail": "",
       "excerpt": "#AI글쓰기 #LLM #프롬프트엔지니어링 팔아야 할 물건은 쌓여가는데 막상 판매 글을 쓰려니 제목은 뭐로 할까? 언제 얼마에 샀었지? 등 사소한 질문들에 나중에 하자고 미루게 되는...",
       "lastEdited": "2026-04-29T02:34:00.000Z"
+    },
+    "351d67b9-9e80-8066-acdb-e3bb926defd5": {
+      "slug": "요즘-당근-ai-개발-04-gpt를-사용한-리뷰-자동화-시스템-구축기",
+      "categorySlug": "책",
+      "groupSlug": "요즘-당근-ai-개발",
+      "title": "[요즘 당근 AI 개발] 04. GPT를 사용한 리뷰 자동화 시스템 구축기",
+      "tags": [
+        "GPT",
+        "자동화"
+      ],
+      "date": "2026-04-29",
+      "createdAt": "2026-04-29T04:19:00.000Z",
+      "thumbnail": "",
+      "excerpt": "#VOC #업무자동화 #GPT #운영효율화 #데이터분석 앱 리뷰는 사용자의 목소리를 가장 생생하게 들을 수 있는 중요한 소통 창구입니다. 하지만 매일 많은 리뷰를 사람이 직접 확인...",
+      "lastEdited": "2026-04-29T04:22:00.000Z"
     }
   }
 }
