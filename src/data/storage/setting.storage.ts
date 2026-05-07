@@ -3,6 +3,13 @@ import { supabase } from "@/lib/supabase";
 const settingCache = {
   statusText: null as string | null,
   playlist: null as BGMTrack[] | null,
+  pinnedPostIds: null as string[] | null,
+};
+
+const MAX_PINNED_POSTS = 5;
+
+const normalizePinnedPostIds = (postIds: string[]) => {
+  return Array.from(new Set(postIds)).slice(0, MAX_PINNED_POSTS);
 };
 
 export const getStatusText = async (): Promise<string> => {
@@ -145,4 +152,79 @@ export const deleteBGMTrack = async (
   if (settingCache.playlist)
     settingCache.playlist = settingCache.playlist.filter((t) => t.id !== id);
   return true;
+};
+
+// Pinned Post 관련 함수
+export const getPinnedPostIds = async (): Promise<string[]> => {
+  if (settingCache.pinnedPostIds !== null) return settingCache.pinnedPostIds;
+
+  const { data, error } = await supabase
+    .from("site_settings")
+    .select("pinned_post_ids")
+    .eq("id", 1)
+    .single();
+
+  if (!error && data?.pinned_post_ids) {
+    settingCache.pinnedPostIds = normalizePinnedPostIds(
+      data.pinned_post_ids ?? [],
+    );
+    return settingCache.pinnedPostIds;
+  }
+
+  const fallback = await supabase
+    .from("site_settings")
+    .select("pinned_post_id")
+    .eq("id", 1)
+    .single();
+
+  if (!fallback.error && fallback.data?.pinned_post_id) {
+    settingCache.pinnedPostIds = [fallback.data.pinned_post_id];
+    return settingCache.pinnedPostIds;
+  }
+
+  settingCache.pinnedPostIds = [];
+  return [];
+};
+
+export const setPinnedPostIds = async (
+  postIds: string[],
+  password: string,
+): Promise<{ ok: boolean; errorMessage?: string }> => {
+  const normalizedPostIds = normalizePinnedPostIds(postIds);
+  const { error } = await supabase.rpc("set_pinned_post_ids", {
+    p_post_ids: normalizedPostIds,
+    p_password: password,
+  });
+  if (error) {
+    if (normalizedPostIds.length <= 1) {
+      const fallback = await supabase.rpc("set_pinned_post", {
+        p_post_id: normalizedPostIds[0] ?? null,
+        p_password: password,
+      });
+      if (!fallback.error) {
+        settingCache.pinnedPostIds = normalizedPostIds;
+        return { ok: true };
+      }
+    }
+
+    console.error("핀된 게시물 저장 실패:", error);
+    return {
+      ok: false,
+      errorMessage: error.message ?? "핀 저장에 실패했습니다.",
+    };
+  }
+  settingCache.pinnedPostIds = normalizedPostIds;
+  return { ok: true };
+};
+
+export const getPinnedPostId = async (): Promise<string | null> => {
+  const pinnedPostIds = await getPinnedPostIds();
+  return pinnedPostIds[0] ?? null;
+};
+
+export const setPinnedPostId = async (
+  postId: string | null,
+  password: string,
+): Promise<{ ok: boolean; errorMessage?: string }> => {
+  return setPinnedPostIds(postId ? [postId] : [], password);
 };
