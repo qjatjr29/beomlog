@@ -6,9 +6,12 @@ import { POSTS_PER_PAGE } from "@/shared/constants";
 import { Pagination } from "@/shared/components/Pagination";
 import { usePagination } from "@/shared/hooks/usePagination";
 import { getComments } from "@/data/storage";
+import { getPinnedPostIds } from "@/data/storage/setting.storage";
 import { MiniRoom } from "@/features/mini-room/components";
 import { HomePostCard } from "@/features/posts/components/cards/HomePostCard";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
+import { useAdmin } from "@/contexts/AdminContext";
+import { PinnedPostModal } from "@/features/layout/components/PinnedPostModal";
 
 export const Home = () => {
   const {
@@ -16,6 +19,24 @@ export const Home = () => {
     viewCounts,
     commentCounts,
   } = usePostStorage();
+  const [pinnedPostIds, setPinnedPostIds] = useState<string[]>([]);
+  const { isAdminMode } = useAdmin();
+  const [showPinnedModal, setShowPinnedModal] = useState(false);
+
+  useEffect(() => {
+    getPinnedPostIds().then(setPinnedPostIds);
+  }, []);
+
+  const handlePinnedSaved = (nextPinnedIds: string[]) => {
+    setPinnedPostIds(nextPinnedIds);
+  };
+
+  const pinnedPosts = useMemo(() => {
+    return pinnedPostIds
+      .map((pinnedId) => allPosts.find((post) => post.id === pinnedId))
+      .filter((post): post is NonNullable<typeof post> => Boolean(post));
+  }, [allPosts, pinnedPostIds]);
+
   const {
     currentPage,
     totalPages,
@@ -52,39 +73,86 @@ export const Home = () => {
 
   return (
     <div>
-      {/* Updated news */}
-      <div className="mb-4">
-        <div className="flex items-center gap-2 mb-1.5">
-          <span className="text-xs font-bold text-gray-700 dark:text-gray-200">
-            Updated news
-          </span>
-          <span className="text-[10px] text-gray-400 dark:text-gray-500">
-            최근 7일
-          </span>
-        </div>
-        <div className="space-y-0">
-          {recentPosts.length > 0 ? (
-            recentPosts.map((post) => (
-              <div
-                key={post.id}
-                className="border-b border-blog-border-light dark:border-gray-700 py-1.5"
-              >
-                <Link
-                  to={`/post/${post.id}`}
-                  className="text-[11px] text-gray-600 dark:text-gray-300 hover:text-blog-primary dark:hover:text-blog-primary transition-colors flex items-start gap-1"
+      {/* Updated news & Pinned Posts */}
+      <div className="grid grid-cols-2 gap-4 mb-4">
+        {/* Updated news */}
+        <div>
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="text-xs font-bold text-gray-700 dark:text-gray-200">
+              Updated news
+            </span>
+            <span className="text-[10px] text-gray-400 dark:text-gray-500">
+              최근 7일
+            </span>
+          </div>
+          <div className="space-y-0">
+            {recentPosts.length > 0 ? (
+              recentPosts.map((post) => (
+                <div
+                  key={post.id}
+                  className="border-b border-blog-border-light dark:border-gray-700 py-1.5"
                 >
-                  <span className="text-blog-primary shrink-0">•</span>
-                  {post.title}
-                </Link>
+                  <Link
+                    to={`/post/${post.id}`}
+                    className="text-[11px] text-gray-600 dark:text-gray-300 hover:text-blog-primary dark:hover:text-blog-primary transition-colors flex items-start gap-1"
+                  >
+                    <span className="text-blog-primary shrink-0">•</span>
+                    {post.title}
+                  </Link>
+                </div>
+              ))
+            ) : (
+              <div className="border-b border-blog-border-light dark:border-gray-700 py-1.5">
+                <p className="text-[11px] text-gray-400 dark:text-gray-500">
+                  • 최근 7일간 새 게시물이 없습니다.
+                </p>
               </div>
-            ))
-          ) : (
-            <div className="border-b border-blog-border-light dark:border-gray-700 py-1.5">
-              <p className="text-[11px] text-gray-400 dark:text-gray-500">
-                • 최근 7일간 새 게시물이 없습니다.
-              </p>
-            </div>
-          )}
+            )}
+          </div>
+        </div>
+
+        {/* Pinned Posts */}
+        <div>
+          <div className="flex items-center gap-2 mb-1.5">
+            <span className="text-xs font-bold text-gray-700 dark:text-gray-200">
+              📌 Pinned
+            </span>
+            <span className="text-[10px] text-gray-400 dark:text-gray-500">
+              {pinnedPosts.length}/5
+            </span>
+            {isAdminMode && (
+              <button
+                onClick={() => setShowPinnedModal(true)}
+                className="ml-auto text-[10px] px-2 py-0.5 bg-blog-light dark:bg-gray-700 border border-blog-border rounded text-blog-primary hover:bg-blog-gradient-end"
+              >
+                설정
+              </button>
+            )}
+          </div>
+          <div className="space-y-0">
+            {pinnedPosts.length > 0 ? (
+              pinnedPosts.map((post) => (
+                <div
+                  key={post.id}
+                  className="border-b border-blog-border-light dark:border-gray-700 py-1.5"
+                >
+                  <Link
+                    to={`/post/${post.id}`}
+                    className="text-[11px] text-gray-600 dark:text-gray-300 hover:text-blog-primary dark:hover:text-blog-primary transition-colors flex items-start gap-1"
+                  >
+                    <span className="text-blog-primary shrink-0">•</span>
+                    {post.title}
+                  </Link>
+                </div>
+              ))
+            ) : (
+              <div className="border-b border-blog-border-light dark:border-gray-700 py-1.5">
+                <p className="text-[11px] text-gray-400 dark:text-gray-500">
+                  • 고정된 게시물이 없습니다.
+                </p>
+              </div>
+            )}
+          </div>
         </div>
       </div>
 
@@ -161,6 +229,13 @@ export const Home = () => {
         totalPages={totalPages}
         onPageChange={handlePageChange}
       />
+      {isAdminMode && (
+        <PinnedPostModal
+          show={showPinnedModal}
+          onClose={() => setShowPinnedModal(false)}
+          onSaved={handlePinnedSaved}
+        />
+      )}
     </div>
   );
 };
