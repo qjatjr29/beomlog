@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-06T17:06:51.297Z",
+  "lastSyncTime": "2026-05-09T03:40:55.033Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -645,6 +645,21 @@
       "thumbnail": "",
       "excerpt": "#LLM #운영자동화 #프롬프트엔지니어링 중고거래 플랫폼에서는 실시간으로 올라오는 수천 개의 게시글, 그 속에 생기는 개인, 단체간 이해관계, 사기 등 모든 것을 실시간으로 감지하...",
       "lastEdited": "2026-05-06T17:05:00.000Z"
+    },
+    "35bd67b9-9e80-801d-bf80-e450dd4be0e6": {
+      "slug": "락",
+      "categorySlug": "개발",
+      "groupSlug": "데이터베이스",
+      "title": "락",
+      "tags": [
+        "MySQL",
+        "Lock"
+      ],
+      "date": "2026-05-08",
+      "createdAt": "2026-05-09T03:39:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F45ecc474-2830-49f2-8ce1-8536284da480%2Fimage.png?table=block&id=35bd67b9-9e80-801d-8b73-d9ffe2ae52fb&cache=v2",
+      "excerpt": "락 락(Lock)은 여러 트랜잭션이 동시에 같은 데이터에 접근할 때 일관성을 보장하기 위한 메커니즘입니다. 공유락과 배타락 공유락 (Shared Lock, S-Lock) 데이터를 ...",
+      "lastEdited": "2026-05-09T03:40:00.000Z"
     }
   }
 }

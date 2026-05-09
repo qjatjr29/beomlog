@@ -1,5 +1,24 @@
 [
   {
+    "id": "35bd67b9-9e80-801d-bf80-e450dd4be0e6",
+    "title": "락",
+    "slug": "락",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "데이터베이스",
+    "tags": [
+      "MySQL",
+      "Lock"
+    ],
+    "date": "2026-05-08",
+    "createdAt": "2026-05-09T03:39:00.000Z",
+    "excerpt": "락 락(Lock)은 여러 트랜잭션이 동시에 같은 데이터에 접근할 때 일관성을 보장하기 위한 메커니즘입니다. 공유락과 배타락 공유락 (Shared Lock, S-Lock) 데이터를 ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F45ecc474-2830-49f2-8ce1-8536284da480%2Fimage.png?table=block&id=35bd67b9-9e80-801d-8b73-d9ffe2ae52fb&cache=v2",
+    "groupId": "31ad67b9-9e80-80e0-848d-d6da8d071164",
+    "path": "개발/데이터베이스/락.md",
+    "lastEdited": "2026-05-09T03:40:00.000Z"
+  },
+  {
     "id": "311d67b9-9e80-8024-811e-da2503ec108a",
     "title": "LIKE + B+Tree 인덱스와 FTS(Full-Text Search)",
     "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -240,25 +259,6 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "358d67b9-9e80-8081-a2d8-fd3087613347",
-    "title": "[요즘 당근 AI 개발] 05. LLM을 활용한 당근 중고거래 운영 자동화 전환기",
-    "slug": "요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "자동화",
-      "프롬프트엔지니어링"
-    ],
-    "date": "2026-05-07",
-    "createdAt": "2026-05-06T16:52:00.000Z",
-    "excerpt": "#LLM #운영자동화 #프롬프트엔지니어링 중고거래 플랫폼에서는 실시간으로 올라오는 수천 개의 게시글, 그 속에 생기는 개인, 단체간 이해관계, 사기 등 모든 것을 실시간으로 감지하...",
-    "thumbnail": "",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기.md",
-    "lastEdited": "2026-05-06T17:05:00.000Z"
-  },
-  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -274,6 +274,23 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "358d67b9-9e80-8081-a2d8-fd3087613347",
+    "title": "[요즘 당근 AI 개발] 05. LLM을 활용한 당근 중고거래 운영 자동화 전환기",
+    "slug": "요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "자동화",
+      "프롬프트엔지니어링"
+    ],
+    "date": "2026-05-07",
+    "excerpt": "#LLM #운영자동화 #프롬프트엔지니어링 중고거래 플랫폼에서는 실시간으로 올라오는 수천 개의 게시글, 그 속에 생기는 개인, 단체간 이해관계, 사기 등 모든 것을 실시간으로 감지하...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기.md",
+    "lastEdited": "2026-05-06T17:05:00.000Z"
   },
   {
     "id": "351d67b9-9e80-8066-acdb-e3bb926defd5",
