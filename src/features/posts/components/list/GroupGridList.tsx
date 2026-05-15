@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useMemo, useState } from "react";
 import { useSearchParams } from "react-router";
 import { motion } from "framer-motion";
 import { LayoutGrid, List } from "lucide-react";
@@ -12,6 +12,7 @@ import { Pagination } from "@/shared/components/Pagination";
 import { EmptyState } from "../shared/EmptyState";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
 import { loadGroupsByCategory } from "@/features/posts/utils/group-loader";
+import { SearchToggle } from "../shared/SearchToggle";
 
 interface GroupPostListProps {
   category: string; // "책" | "프로젝트"
@@ -28,6 +29,24 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
   const { filteredPosts, availableTags, viewCounts, commentCounts } =
     usePostStorage(category, selectedTag);
 
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const searchedPosts = useMemo(() => {
+    if (isGalleryView) {
+      return filteredPosts;
+    }
+
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return filteredPosts;
+    const kws = q.split(/\s+/).filter(Boolean);
+    return filteredPosts.filter((post) => {
+      const text = [post.title, post.content, post.category]
+        .join(" ")
+        .toLowerCase();
+      return kws.every((k) => text.includes(k));
+    });
+  }, [filteredPosts, isGalleryView, searchQuery]);
+
   const groups = loadGroupsByCategory(category);
 
   const availableGroupTags = Array.from(
@@ -39,7 +58,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
     : groups;
 
   const { currentPage, totalPages, currentItems, handlePageChange, resetPage } =
-    usePagination(filteredPosts, POSTS_PER_PAGE);
+    usePagination(searchedPosts, POSTS_PER_PAGE);
 
   const setView = (view: "gallery" | "list") => {
     const p = new URLSearchParams(searchParams);
@@ -54,7 +73,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
   return (
     <div>
       <div className="flex items-start justify-between">
-        <PostListHeader category={category} totalCount={filteredPosts.length} />
+        <PostListHeader category={category} totalCount={searchedPosts.length} />
         <div className="flex items-center gap-1 mt-1 shrink-0">
           <button
             onClick={() => setView("gallery")}
@@ -72,6 +91,20 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
           </button>
         </div>
       </div>
+
+      {!isGalleryView && (
+        <div className="mt-4 flex gap-6 justify-between items-start">
+          <div className="flex-1"></div>
+          <SearchToggle
+            value={searchQuery}
+            onChange={(v) => {
+              setSearchQuery(v);
+              resetPage();
+            }}
+            placeholder="제목, 본문, 카테고리"
+          />
+        </div>
+      )}
 
       {
         isGalleryView ? (
@@ -112,21 +145,31 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
           </>
         ) : (
           <>
-            <TagFilter
-              tags={availableTags}
-              selectedTag={selectedTag}
-              onTagClick={(tag) => {
-                setSelectedTag((prev) => (prev === tag ? null : tag));
-                resetPage();
-              }}
-              onClear={() => {
-                setSelectedTag(null);
-                resetPage();
-              }}
-            />
-            <div className="space-y-3 mb-8">
+            {availableTags.length > 0 && (
+              <div className="mt-4">
+                <TagFilter
+                  tags={availableTags}
+                  selectedTag={selectedTag}
+                  onTagClick={(tag) => {
+                    setSelectedTag((prev) => (prev === tag ? null : tag));
+                    resetPage();
+                  }}
+                  onClear={() => {
+                    setSelectedTag(null);
+                    resetPage();
+                  }}
+                />
+              </div>
+            )}
+            <div className="space-y-3 mb-8 transition-opacity duration-300">
               {currentItems.length === 0 ? (
-                <EmptyState />
+                <EmptyState
+                  message={
+                    searchQuery
+                      ? `${searchQuery}에 대한 글이 없습니다.`
+                      : undefined
+                  }
+                />
               ) : (
                 currentItems.map((post, i) => (
                   <motion.div

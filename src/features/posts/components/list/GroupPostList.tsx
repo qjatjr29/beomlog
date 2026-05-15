@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useMemo } from "react";
 import { useParams, Link } from "react-router";
 import { motion } from "framer-motion";
 import { ArrowLeft } from "lucide-react";
@@ -11,6 +11,7 @@ import { Pagination } from "@/shared/components/Pagination";
 import { usePagination } from "@/shared/hooks/usePagination";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
 import { POSTS_PER_PAGE } from "@/shared/constants";
+import { SearchToggle } from "../shared/SearchToggle";
 
 export const GroupPostList = () => {
   const { groupId } = useParams<{ groupId: string }>();
@@ -21,16 +22,30 @@ export const GroupPostList = () => {
 
   const groupPosts = posts.filter((p) => p.groupId === groupId);
 
-  const availableTags = Array.from(
-    new Set(groupPosts.flatMap((p) => p.tags ?? [])),
-  );
-
   const filteredPosts = selectedTag
     ? groupPosts.filter((p) => p.tags?.includes(selectedTag))
     : groupPosts;
 
-  const { currentPage, totalPages, currentItems, handlePageChange } =
-    usePagination(filteredPosts, POSTS_PER_PAGE);
+  const [searchQuery, setSearchQuery] = useState("");
+
+  const searchedPosts = useMemo(() => {
+    const q = searchQuery.trim().toLowerCase();
+    if (!q) return filteredPosts;
+    const kws = q.split(/\s+/).filter(Boolean);
+    return filteredPosts.filter((post) => {
+      const text = [post.title, post.content, post.category]
+        .join(" ")
+        .toLowerCase();
+      return kws.every((k) => text.includes(k));
+    });
+  }, [filteredPosts, searchQuery]);
+
+  const availableTags = Array.from(
+    new Set(groupPosts.flatMap((p) => p.tags ?? [])),
+  );
+
+  const { currentPage, totalPages, currentItems, handlePageChange, resetPage } =
+    usePagination(searchedPosts, POSTS_PER_PAGE);
 
   if (!group) {
     return (
@@ -58,35 +73,53 @@ export const GroupPostList = () => {
               {group.description}
             </p>
           )}
-          <p className="text-xs text-gray-400 dark:text-gray-500 mt-2">
-            총 {groupPosts.length}개의 글
-            {selectedTag && (
-              <span className="ml-2 text-blog-primary">
-                · {filteredPosts.length}개 필터됨
-              </span>
-            )}
-          </p>
+          <div className="mt-2 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+            <p className="text-xs text-gray-400 dark:text-gray-500">
+              총 {groupPosts.length}개의 글
+              {selectedTag && (
+                <span className="ml-2 text-blog-primary">
+                  · {filteredPosts.length}개 필터됨
+                </span>
+              )}
+            </p>
+            <SearchToggle
+              value={searchQuery}
+              onChange={(v) => {
+                setSearchQuery(v);
+                resetPage();
+              }}
+              placeholder="제목, 본문, 카테고리"
+            />
+          </div>
         </div>
       </div>
 
       {availableTags.length > 0 && (
-        <TagFilter
-          tags={availableTags}
-          selectedTag={selectedTag}
-          onTagClick={(tag) => {
-            setSelectedTag((prev) => (prev === tag ? null : tag));
-            handlePageChange(1);
-          }}
-          onClear={() => {
-            setSelectedTag(null);
-            handlePageChange(1);
-          }}
-        />
+        <div className="mt-4 flex gap-6">
+          <TagFilter
+            tags={availableTags}
+            selectedTag={selectedTag}
+            onTagClick={(tag) => {
+              setSelectedTag((prev) => (prev === tag ? null : tag));
+              handlePageChange(1);
+            }}
+            onClear={() => {
+              setSelectedTag(null);
+              handlePageChange(1);
+            }}
+          />
+        </div>
       )}
 
-      <div className="space-y-3 mb-8">
+      <div className="space-y-3 mb-8 transition-opacity duration-300">
         {currentItems.length === 0 ? (
-          <EmptyState message="해당 태그의 글이 없습니다." />
+          <EmptyState
+            message={
+              searchQuery
+                ? `${searchQuery}에 대한 글이 없습니다.`
+                : "해당 태그의 글이 없습니다."
+            }
+          />
         ) : (
           currentItems.map((post, i) => (
             <motion.div

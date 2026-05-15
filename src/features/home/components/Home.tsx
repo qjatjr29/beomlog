@@ -12,6 +12,7 @@ import { HomePostCard } from "@/features/posts/components/cards/HomePostCard";
 import { usePostStorage } from "@/features/posts/hooks/usePostStorage";
 import { useAdmin } from "@/contexts/AdminContext";
 import { PinnedPostModal } from "@/features/layout/components/PinnedPostModal";
+import { SearchToggle } from "@/features/posts/components/shared/SearchToggle";
 
 export const Home = () => {
   const {
@@ -22,6 +23,7 @@ export const Home = () => {
   const [pinnedPostIds, setPinnedPostIds] = useState<string[]>([]);
   const { isAdminMode } = useAdmin();
   const [showPinnedModal, setShowPinnedModal] = useState(false);
+  const [searchQuery, setSearchQuery] = useState("");
 
   useEffect(() => {
     getPinnedPostIds().then(setPinnedPostIds);
@@ -37,12 +39,35 @@ export const Home = () => {
       .filter((post): post is NonNullable<typeof post> => Boolean(post));
   }, [allPosts, pinnedPostIds]);
 
+  const filteredPosts = useMemo(() => {
+    const normalizedQuery = searchQuery.trim().toLowerCase();
+
+    if (!normalizedQuery) {
+      return allPosts;
+    }
+
+    const keywords = normalizedQuery.split(/\s+/).filter(Boolean);
+
+    return allPosts.filter((post) => {
+      const searchableText = [post.title, post.content, post.category]
+        .join(" ")
+        .toLowerCase();
+
+      return keywords.every((keyword) => searchableText.includes(keyword));
+    });
+  }, [allPosts, searchQuery]);
+
   const {
     currentPage,
     totalPages,
     currentItems: currentPosts,
     handlePageChange,
-  } = usePagination(allPosts, POSTS_PER_PAGE);
+    resetPage,
+  } = usePagination(filteredPosts, POSTS_PER_PAGE);
+
+  useEffect(() => {
+    resetPage();
+  }, [resetPage, searchQuery]);
 
   const recentPosts = useMemo(() => {
     const nowKST = new Date(Date.now() + 9 * 60 * 60 * 1000);
@@ -200,29 +225,57 @@ export const Home = () => {
 
       {/* 전체 게시물 */}
       <div className="mb-4 pb-2 border-b-2 border-dotted border-gray-300 dark:border-gray-600">
-        <h2 className="text-sm flex items-center gap-2 font-bold text-gray-800 dark:text-gray-100">
-          <BookOpen className="w-4 h-4 text-blog-primary" />
-          전체 게시물
-          <span className="text-blog-primary text-xs">({allPosts.length})</span>
-        </h2>
+        <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+          <h2 className="text-sm flex items-center gap-2 font-bold text-gray-800 dark:text-gray-100">
+            <BookOpen className="w-4 h-4 text-blog-primary" />
+            전체 게시물
+            <span className="text-blog-primary text-xs">
+              ({filteredPosts.length})
+            </span>
+          </h2>
+
+          <div className="flex items-center gap-2 ml-auto">
+            <SearchToggle
+              value={searchQuery}
+              onChange={(v) => setSearchQuery(v)}
+              onOpen={() => {}}
+              placeholder="제목, 본문, 카테고리"
+            />
+          </div>
+        </div>
       </div>
 
-      <div className="space-y-2 mb-6">
-        {currentPosts.map((post, i) => (
-          <motion.div
-            key={post.id}
-            initial={{ opacity: 0, x: -10 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ delay: i * 0.06 }}
-          >
-            <HomePostCard
-              post={post}
-              viewCount={viewCounts[post.id] ?? 0}
-              commentCount={commentCounts[post.id] ?? 0}
-            />
-          </motion.div>
-        ))}
-      </div>
+      {currentPosts.length > 0 ? (
+        <div className="space-y-2 mb-6 transition-opacity duration-300">
+          {currentPosts.map((post, i) => (
+            <motion.div
+              key={post.id}
+              initial={{ opacity: 0, x: -10 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ delay: i * 0.06 }}
+            >
+              <HomePostCard
+                post={post}
+                viewCount={viewCounts[post.id] ?? 0}
+                commentCount={commentCounts[post.id] ?? 0}
+              />
+            </motion.div>
+          ))}
+        </div>
+      ) : (
+        <div className="mb-6 rounded-xl border border-dashed border-blog-border-light dark:border-gray-700 bg-blog-lightest dark:bg-gray-800/60 px-4 py-12 text-center transition-opacity duration-300">
+          <p className="text-sm font-medium text-gray-700 dark:text-gray-200">
+            {searchQuery
+              ? `${searchQuery}에 대한 글이 없습니다.`
+              : "아직 게시글이 없습니다."}
+          </p>
+          {searchQuery ? (
+            <p className="mt-2 text-[11px] text-gray-400 dark:text-gray-500">
+              다른 키워드로 다시 찾아보세요.
+            </p>
+          ) : null}
+        </div>
+      )}
 
       <Pagination
         currentPage={currentPage}
