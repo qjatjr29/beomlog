@@ -59,9 +59,7 @@ export const PostDetail = () => {
 
   return (
     // fixed 사이드바이므로 flex 불필요, 기존 단순 구조로
-    <div
-      className={`w-full max-w-full overflow-hidden relative ${showGroupSidebar ? "xl:pr-56" : ""}`}
-    >
+    <div className={`w-full max-w-full overflow-hidden relative`}>
       <PostSideActions />
 
       <Link
