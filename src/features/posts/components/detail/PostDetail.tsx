@@ -55,10 +55,13 @@ export const PostDetail = () => {
   const groupPosts = post.groupId
     ? posts.filter((p) => p.groupId === post.groupId)
     : [];
+  const showGroupSidebar = Boolean(group && groupPosts.length > 0);
 
   return (
     // fixed 사이드바이므로 flex 불필요, 기존 단순 구조로
-    <div className="w-full max-w-full overflow-hidden relative">
+    <div
+      className={`w-full max-w-full overflow-hidden relative ${showGroupSidebar ? "xl:pr-56" : ""}`}
+    >
       <PostSideActions />
 
       <Link
@@ -70,10 +73,10 @@ export const PostDetail = () => {
       </Link>
 
       {/* GroupSidebar: fixed라 여기 위치 무관하게 뷰포트 기준으로 표시됨 */}
-      {group && groupPosts.length > 1 && (
+      {showGroupSidebar && (
         <GroupSidebar
           currentPost={post}
-          group={group}
+          group={group!}
           groupPosts={groupPosts}
         />
       )}

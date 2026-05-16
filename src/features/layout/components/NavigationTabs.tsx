@@ -1,4 +1,3 @@
-
 import { Link, useLocation } from "react-router";
 import { NAVIGATION_TABS } from "../constants/navigation";
 
@@ -6,7 +5,10 @@ export const NavigationTabs = () => {
   const location = useLocation();
 
   return (
-    <div className="w-18 mt-1 shrink-0 hidden md:flex flex-col border-l border-blog-border-light dark:border-gray-700/50">
+    <div
+      data-nav-tabs
+      className="w-18 mt-1 shrink-0 hidden md:flex flex-col border-l border-blog-border-light dark:border-gray-700/50"
+    >
       <div className="bg-blog-primary dark:bg-blog-primary/60 text-white text-[9px] text-center py-1.5 font-bold border-b border-blog-primary-hover dark:border-blog-primary/30">
         MENU
       </div>

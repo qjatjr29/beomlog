@@ -18,6 +18,10 @@ interface GroupSidebarProps {
 
 const ITEM_HEIGHT = 32;
 const VISIBLE_COUNT = 5;
+const SIDEBAR_MAX_WIDTH = 192;
+const SIDEBAR_MIN_WIDTH = 144;
+const SIDEBAR_RIGHT_GAP = 32;
+const SIDEBAR_NAV_GAP = 12;
 
 export const GroupSidebar = ({
   currentPost,
@@ -27,6 +31,8 @@ export const GroupSidebar = ({
   const navigate = useNavigate();
   const [navigatingId, setNavigatingId] = useState<string | null>(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
+  const [showDesktopSidebar, setShowDesktopSidebar] = useState(true);
+  const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR_MAX_WIDTH);
 
   const desktopScrollRef = useRef<HTMLDivElement | null>(null);
   const mobileScrollRef = useRef<HTMLDivElement | null>(null);
@@ -64,6 +70,38 @@ export const GroupSidebar = ({
       return () => clearTimeout(timer);
     }
   }, [isMobileOpen, scrollToCurrentItem]);
+
+  useEffect(() => {
+    const updateVisibility = () => {
+      const nav = document.querySelector(
+        "[data-nav-tabs]",
+      ) as HTMLElement | null;
+
+      if (!nav) {
+        setShowDesktopSidebar(window.innerWidth >= 1280);
+        setSidebarWidth(SIDEBAR_MAX_WIDTH);
+        return;
+      }
+
+      const navRect = nav.getBoundingClientRect();
+      const availableWidth = Math.floor(
+        window.innerWidth - SIDEBAR_RIGHT_GAP - navRect.right - SIDEBAR_NAV_GAP,
+      );
+
+      if (window.innerWidth < 1280 || availableWidth < SIDEBAR_MIN_WIDTH) {
+        setShowDesktopSidebar(false);
+        setSidebarWidth(SIDEBAR_MAX_WIDTH);
+        return;
+      }
+
+      setShowDesktopSidebar(true);
+      setSidebarWidth(Math.min(SIDEBAR_MAX_WIDTH, availableWidth));
+    };
+
+    updateVisibility();
+    window.addEventListener("resize", updateVisibility);
+    return () => window.removeEventListener("resize", updateVisibility);
+  }, []);
 
   const handlePostClick = async (e: React.MouseEvent, postId: string) => {
     e.preventDefault();
@@ -116,28 +154,33 @@ export const GroupSidebar = ({
   return (
     <>
       {/* xl 이상: fixed 사이드바 */}
-      <div className="fixed z-40 hidden xl:block w-48 right-8 top-20">
-        <motion.div
-          initial={{ opacity: 0, x: 20 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.3, ease: "easeOut" }}
-          className="bg-white dark:bg-gray-800 border border-blog-border dark:border-gray-700 rounded-lg shadow-lg overflow-hidden"
+      {showDesktopSidebar && (
+        <div
+          className="fixed z-40 hidden xl:block right-8 top-20 transition-[width,opacity,transform] duration-300"
+          style={{ width: `${sidebarWidth}px` }}
         >
-          <Link
-            to={`/group/${group.id}`}
-            className="flex items-center gap-1.5 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 hover:bg-blog-lightest dark:hover:bg-gray-700 transition-colors group"
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.3, ease: "easeOut" }}
+            className="bg-white dark:bg-gray-800 border border-blog-border dark:border-gray-700 rounded-lg shadow-lg overflow-hidden"
           >
-            <div className="w-1 h-3 bg-blog-primary rounded-full shrink-0" />
-            <span className="text-[11px] font-bold text-blog-primary tracking-wider truncate group-hover:underline">
-              {group.title}
-            </span>
-            <span className="ml-auto text-[10px] text-gray-400 shrink-0">
-              {currentIndex + 1}/{groupPosts.length}
-            </span>
-          </Link>
-          {renderList(desktopScrollRef)}
-        </motion.div>
-      </div>
+            <Link
+              to={`/group/${group.id}`}
+              className="flex items-center gap-1.5 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 hover:bg-blog-lightest dark:hover:bg-gray-700 transition-colors group"
+            >
+              <div className="w-1 h-3 bg-blog-primary rounded-full shrink-0" />
+              <span className="text-[11px] font-bold text-blog-primary tracking-wider truncate group-hover:underline">
+                {group.title}
+              </span>
+              <span className="ml-auto text-[10px] text-gray-400 shrink-0">
+                {currentIndex + 1}/{groupPosts.length}
+              </span>
+            </Link>
+            {renderList(desktopScrollRef)}
+          </motion.div>
+        </div>
+      )}
 
       {/* xl 미만: 포스트 상단 인라인 패널 */}
       <div className="xl:hidden mb-4 border border-blog-border dark:border-gray-700 rounded-lg overflow-hidden bg-white dark:bg-gray-800">
