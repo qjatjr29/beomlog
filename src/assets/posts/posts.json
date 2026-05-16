@@ -358,6 +358,22 @@
     "lastEdited": "2026-04-29T03:05:00.000Z"
   },
   {
+    "id": "362d67b9-9e80-8011-b9f5-cacd4b06fdf7",
+    "title": "10장. 일괄 처리",
+    "slug": "10장-일괄-처리",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [],
+    "date": "2026-05-16",
+    "createdAt": "2026-05-16T04:53:00.000Z",
+    "excerpt": "현대 데이터 시스템에서 데이터 처리 방식은 시스템에 요청한 후 시스템으로부터 결과를 반환받는 방식이다. 이런 시스템에서는 응답 시간 단축에 노력을 많이 기울인다. 이 요청-응답 방...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F90c68722-ddb0-440f-aa95-173ab6a1c96a%2Fimage.png?table=block&id=362d67b9-9e80-8071-a8cf-dad3d8f6be77&cache=v2",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/10장-일괄-처리.md",
+    "lastEdited": "2026-05-16T04:54:00.000Z"
+  },
+  {
     "id": "361d67b9-9e80-80fe-80d2-f6c47d54a249",
     "title": "9장. 일관성과 합의",
     "slug": "9장-일관성과-합의",
@@ -366,9 +382,7 @@
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-05-11",
-    "createdAt": "2026-05-15T05:36:00.000Z",
     "excerpt": "이번 장에서는 내결함성을 지닌 분산 시스템을 구축하는데 쓰이는 알고리즘과 프로토콜 이야기를 한다. 내결함성을 지닌 시스템을 구축하는 가장 좋은 방법은 유용한 보장을 해주는 범용 추...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc198f43b-f092-4633-98dd-022ebee2652b%2Fimage.png?table=block&id=361d67b9-9e80-803f-abc1-c64da6defcdf&cache=v2",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/9장-일관성과-합의.md",
     "lastEdited": "2026-05-15T05:36:00.000Z"
