@@ -257,6 +257,27 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "362d67b9-9e80-8002-8dbc-fc817bee8e3b",
+    "title": "[요즘 당근 AI 개발] 06. 작은 팀, LLM으로 큰 업무효율 내기",
+    "slug": "요즘-당근-ai-개발-06-작은-팀-llm으로-큰-업무효율-내기",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "LLM",
+      "n8n",
+      "MCP",
+      "자동화"
+    ],
+    "date": "2026-05-16",
+    "createdAt": "2026-05-16T05:54:00.000Z",
+    "excerpt": "#LLM #업무자동화 #n8n #MCP #온콜자동화 🔍 끝없는 온콜의 늪, 작은 팀의 절규 PM 1명과 백엔드 개발자 4명으로 구성된 작은 팀으로 사용자의 가입부터 탈퇴까지 과정...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fa5f8de4f-003f-4a66-bf1d-31c01a3fd242%2Fimage.png?table=block&id=362d67b9-9e80-8010-b05d-fa381262922c&cache=v2",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-06-작은-팀-llm으로-큰-업무효율-내기.md",
+    "lastEdited": "2026-05-16T05:55:00.000Z"
+  },
+  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -366,9 +387,7 @@
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-05-16",
-    "createdAt": "2026-05-16T04:53:00.000Z",
     "excerpt": "현대 데이터 시스템에서 데이터 처리 방식은 시스템에 요청한 후 시스템으로부터 결과를 반환받는 방식이다. 이런 시스템에서는 응답 시간 단축에 노력을 많이 기울인다. 이 요청-응답 방...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F90c68722-ddb0-440f-aa95-173ab6a1c96a%2Fimage.png?table=block&id=362d67b9-9e80-8071-a8cf-dad3d8f6be77&cache=v2",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/10장-일괄-처리.md",
     "lastEdited": "2026-05-16T04:54:00.000Z"
