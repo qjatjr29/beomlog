@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-18T06:41:12.525Z",
+  "lastSyncTime": "2026-05-18T06:45:27.916Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -748,6 +748,21 @@
       "thumbnail": "",
       "excerpt": "#LLM #중고거래 #프롬프트엔지니어링 #벡터DB #데이터검색 LLM을 활용하여 중고거래 게시글에서 스마트폰 정보를 추출하고 이를 통해 시세를 산출한 방법을 소개하고자 합니다. L...",
       "lastEdited": "2026-05-18T03:11:00.000Z"
+    },
+    "364d67b9-9e80-803a-b3fa-feb0db747f1d": {
+      "slug": "jvm-runtime-data-area",
+      "categorySlug": "개발",
+      "groupSlug": "java",
+      "title": "JVM & Runtime Data Area ",
+      "tags": [
+        "JVM",
+        "Runtime Data Area"
+      ],
+      "date": "2026-05-18",
+      "createdAt": "2026-05-18T06:29:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F44e01968-9f37-4b81-aa91-a7f8edddd403%2Fimage.png?table=block&id=364d67b9-9e80-80d1-a57f-ce3bd6761757&cache=v2",
+      "excerpt": "JVM Architecture & Runtime Data Area 핵심 개념 요약 JVM(Java Virtual Machine)은 자바 바이트코드를 운영체제에 맞게 해석하고 실행하...",
+      "lastEdited": "2026-05-18T06:43:00.000Z"
     }
   }
 }
