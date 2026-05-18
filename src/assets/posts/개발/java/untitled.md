@@ -10,7 +10,7 @@ excerpt: "JVM Architecture & Runtime Data Area 핵심 개념 요약 JVM(Java Vir
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F44e01968-9f37-4b81-aa91-a7f8edddd403%2Fimage.png?table=block&id=364d67b9-9e80-80d1-a57f-ce3bd6761757&cache=v2"
 groupId: "364d67b9-9e80-8029-8cab-f5b0a3f733f3"
 groupSlug: "java"
-lastEdited: "2026-05-18T06:33:00.000Z"
+lastEdited: "2026-05-18T06:37:00.000Z"
 ---
 
 ## JVM Architecture & Runtime Data Area
