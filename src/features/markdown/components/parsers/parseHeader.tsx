@@ -35,5 +35,13 @@ export const parseHeader = (
     );
   }
 
+  if (line.startsWith("#### ")) {
+    return (
+      <h4 key={`h4-${index}`} className="text-base font-semibold mt-4 mb-2">
+        {parseInlineMarkdown(line.substring(5))}
+      </h4>
+    );
+  }
+
   return null;
 };
