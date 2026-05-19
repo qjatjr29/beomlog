@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-18T06:45:27.916Z",
+  "lastSyncTime": "2026-05-19T05:08:06.305Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -763,6 +763,38 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F44e01968-9f37-4b81-aa91-a7f8edddd403%2Fimage.png?table=block&id=364d67b9-9e80-80d1-a57f-ce3bd6761757&cache=v2",
       "excerpt": "JVM Architecture & Runtime Data Area 핵심 개념 요약 JVM(Java Virtual Machine)은 자바 바이트코드를 운영체제에 맞게 해석하고 실행하...",
       "lastEdited": "2026-05-18T06:43:00.000Z"
+    },
+    "365d67b9-9e80-8020-b774-d11b7d8a13d4": {
+      "slug": "요즘-당근-ai-개발-11-voc-플레이그라운드로-고객-목소리에-반응하는-당근-만들기",
+      "categorySlug": "책",
+      "groupSlug": "요즘-당근-ai-개발",
+      "title": "[요즘 당근 AI 개발] 11. VoC 플레이그라운드로 고객 목소리에 반응하는 당근 만들기",
+      "tags": [
+        "VoC",
+        "LLM"
+      ],
+      "date": "2026-05-19",
+      "createdAt": "2026-05-19T03:51:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7f05163b-3643-4160-9506-0596e539d535%2Fimage.png?table=block&id=365d67b9-9e80-80f1-a374-dacc951c5c83&cache=v2",
+      "excerpt": "#VoC #Data #LLM #사용자의견분석 #업무효율화 VoC는 Voice of Customer의 줄임말로 고객의 목소리 또는 사용자 의견을 말합니다. 사용자가 제품이나 서비스를...",
+      "lastEdited": "2026-05-19T03:52:00.000Z"
+    },
+    "365d67b9-9e80-80b4-a2c3-c9b7cc66dc5d": {
+      "slug": "요즘-당근-ai-개발-10-연간-llm-호출-비용-25-절감-인턴이-도전한-시맨틱-캐싱-도입-기록",
+      "categorySlug": "책",
+      "groupSlug": "요즘-당근-ai-개발",
+      "title": "[요즘 당근 AI 개발] 10. 연간 LLM 호출 비용 25% 절감, 인턴이 도전한 시맨틱 캐싱 도입 기록",
+      "tags": [
+        "LLM",
+        "비용절감",
+        "시맨틱캐싱",
+        "벡터DB"
+      ],
+      "date": "2026-05-19",
+      "createdAt": "2026-05-19T02:55:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdb5f1d46-32a3-42db-9ba0-8d3d9b4b5f36%2Fimage.png?table=block&id=365d67b9-9e80-8076-8c2b-e2a8a88c423e&cache=v2",
+      "excerpt": "#LLM비용절감 #시맨틱캐싱 #AI메시지추천 #벡터DB #DBSCAN 연간 LLM 호출 비용을 약 25% 절감한 프로젝트를 소개합니다. AI를 잘 활용하면서도 비용을 효율적으로 관...",
+      "lastEdited": "2026-05-19T03:51:00.000Z"
     }
   }
 }
