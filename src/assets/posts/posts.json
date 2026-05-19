@@ -1,5 +1,24 @@
 [
   {
+    "id": "365d67b9-9e80-80f7-a19d-d8b8762c684f",
+    "title": "인터페이스와 추상클래스",
+    "slug": "인터페이스와-추상클래스",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "java",
+    "tags": [
+      "Interface",
+      "Abstract Class"
+    ],
+    "date": "2026-05-19",
+    "createdAt": "2026-05-19T05:53:00.000Z",
+    "excerpt": "💡핵심 개념 요약 추상 클래스(Abstract Class)는 클래스간 IS-A관계를 바탕으로 공통된 상태(필드)와 행위(메소드)을 추상화하여 재사용성과 확장성을 제공해줍니다. 인...",
+    "thumbnail": "",
+    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
+    "path": "개발/java/인터페이스와-추상클래스.md",
+    "lastEdited": "2026-05-19T05:54:00.000Z"
+  },
+  {
     "id": "364d67b9-9e80-803a-b3fa-feb0db747f1d",
     "title": "JVM & Runtime Data Area ",
     "slug": "jvm-runtime-data-area",
@@ -274,6 +293,23 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
+    "title": "부스트캠프 후기",
+    "slug": "부스트캠프-후기",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "네이버부스트캠프"
+    ],
+    "date": "2026-02-19",
+    "createdAt": "2026-02-19T01:26:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
+    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
+    "groupId": "",
+    "path": "일상/부스트캠프-후기.md",
+    "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
     "id": "365d67b9-9e80-8020-b774-d11b7d8a13d4",
     "title": "[요즘 당근 AI 개발] 11. VoC 플레이그라운드로 고객 목소리에 반응하는 당근 만들기",
     "slug": "요즘-당근-ai-개발-11-voc-플레이그라운드로-고객-목소리에-반응하는-당근-만들기",
@@ -285,9 +321,7 @@
       "LLM"
     ],
     "date": "2026-05-19",
-    "createdAt": "2026-05-19T03:51:00.000Z",
     "excerpt": "#VoC #Data #LLM #사용자의견분석 #업무효율화 VoC는 Voice of Customer의 줄임말로 고객의 목소리 또는 사용자 의견을 말합니다. 사용자가 제품이나 서비스를...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7f05163b-3643-4160-9506-0596e539d535%2Fimage.png?table=block&id=365d67b9-9e80-80f1-a374-dacc951c5c83&cache=v2",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-11-voc-플레이그라운드로-고객-목소리에-반응하는-당근-만들기.md",
     "lastEdited": "2026-05-19T03:52:00.000Z"
@@ -306,29 +340,10 @@
       "벡터DB"
     ],
     "date": "2026-05-19",
-    "createdAt": "2026-05-19T02:55:00.000Z",
     "excerpt": "#LLM비용절감 #시맨틱캐싱 #AI메시지추천 #벡터DB #DBSCAN 연간 LLM 호출 비용을 약 25% 절감한 프로젝트를 소개합니다. AI를 잘 활용하면서도 비용을 효율적으로 관...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdb5f1d46-32a3-42db-9ba0-8d3d9b4b5f36%2Fimage.png?table=block&id=365d67b9-9e80-8076-8c2b-e2a8a88c423e&cache=v2",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-10-연간-llm-호출-비용-25-절감-인턴이-도전한-시맨틱-캐싱-도입-기록.md",
     "lastEdited": "2026-05-19T03:51:00.000Z"
-  },
-  {
-    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
-    "title": "부스트캠프 후기",
-    "slug": "부스트캠프-후기",
-    "category": "일상",
-    "categorySlug": "일상",
-    "tags": [
-      "네이버부스트캠프"
-    ],
-    "date": "2026-02-19",
-    "createdAt": "2026-02-19T01:26:00.000Z",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
-    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
-    "groupId": "",
-    "path": "일상/부스트캠프-후기.md",
-    "lastEdited": "2026-02-28T16:53:00.000Z"
   },
   {
     "id": "364d67b9-9e80-80f5-b8d6-caccdb02d0e8",

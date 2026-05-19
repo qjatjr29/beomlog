@@ -35,6 +35,12 @@
     <priority>0.5</priority>
   </url>
   <url>
+    <loc>https://www.beomlog.site/post/365d67b9-9e80-80f7-a19d-d8b8762c684f</loc>
+    <lastmod>2026-05-19</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.beomlog.site/post/364d67b9-9e80-803a-b3fa-feb0db747f1d</loc>
     <lastmod>2026-05-18</lastmod>
     <changefreq>monthly</changefreq>
@@ -131,6 +137,12 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://www.beomlog.site/post/30cd67b9-9e80-80cd-998e-c7da43171144</loc>
+    <lastmod>2026-02-28</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://www.beomlog.site/post/365d67b9-9e80-8020-b774-d11b7d8a13d4</loc>
     <lastmod>2026-05-19</lastmod>
     <changefreq>monthly</changefreq>
@@ -139,12 +151,6 @@
   <url>
     <loc>https://www.beomlog.site/post/365d67b9-9e80-80b4-a2c3-c9b7cc66dc5d</loc>
     <lastmod>2026-05-19</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
-  </url>
-  <url>
-    <loc>https://www.beomlog.site/post/30cd67b9-9e80-80cd-998e-c7da43171144</loc>
-    <lastmod>2026-02-28</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
