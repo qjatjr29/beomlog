@@ -32,6 +32,7 @@ export const GroupSidebar = ({
   const [navigatingId, setNavigatingId] = useState<string | null>(null);
   const [isMobileOpen, setIsMobileOpen] = useState(false);
   const [showDesktopSidebar, setShowDesktopSidebar] = useState(true);
+  const [isCollapsed, setIsCollapsed] = useState<boolean>(false);
   const [sidebarWidth, setSidebarWidth] = useState(SIDEBAR_MAX_WIDTH);
 
   const desktopScrollRef = useRef<HTMLDivElement | null>(null);
@@ -97,7 +98,6 @@ export const GroupSidebar = ({
       setShowDesktopSidebar(true);
       setSidebarWidth(Math.min(SIDEBAR_MAX_WIDTH, availableWidth));
     };
-
     updateVisibility();
     window.addEventListener("resize", updateVisibility);
     return () => window.removeEventListener("resize", updateVisibility);
@@ -156,28 +156,52 @@ export const GroupSidebar = ({
       {/* xl 이상: fixed 사이드바 */}
       {showDesktopSidebar && (
         <div
-          className="fixed z-40 hidden xl:block right-8 top-20 transition-[width,opacity,transform] duration-300"
-          style={{ width: `${sidebarWidth}px` }}
+          className="fixed z-40 hidden xl:block right-8 top-20 transition-[height,opacity,transform] duration-300"
+          style={{
+            width: `${sidebarWidth}px`,
+            height: `${isCollapsed ? 44 : containerHeight + 56}px`,
+          }}
         >
           <motion.div
-            initial={{ opacity: 0, x: 20 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.3, ease: "easeOut" }}
+            initial={{ opacity: 0, y: 8 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.28, ease: "easeOut" }}
             className="bg-white dark:bg-gray-800 border border-blog-border dark:border-gray-700 rounded-lg shadow-lg overflow-hidden"
           >
-            <Link
-              to={`/group/${group.id}`}
-              className="flex items-center gap-1.5 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 hover:bg-blog-lightest dark:hover:bg-gray-700 transition-colors group"
-            >
-              <div className="w-1 h-3 bg-blog-primary rounded-full shrink-0" />
-              <span className="text-[11px] font-bold text-blog-primary tracking-wider truncate group-hover:underline">
-                {group.title}
-              </span>
-              <span className="ml-auto text-[10px] text-gray-400 shrink-0">
-                {currentIndex + 1}/{groupPosts.length}
-              </span>
-            </Link>
-            {renderList(desktopScrollRef)}
+            {isCollapsed ? (
+              <div className="flex items-center justify-between px-3 py-2.5 border-b border-gray-100 dark:border-gray-700">
+                <span className="text-[11px] font-bold text-blog-primary truncate">
+                  {group.title}
+                </span>
+                <button
+                  onClick={() => setIsCollapsed(false)}
+                  className="p-1 rounded hover:bg-blog-lightest dark:hover:bg-gray-700 transition-colors"
+                  aria-label="Expand sidebar"
+                >
+                  <ChevronDown className="w-4 h-4 text-blog-primary" />
+                </button>
+              </div>
+            ) : (
+              <>
+                <div className="flex items-center gap-1.5 px-3 py-2.5 border-b border-gray-100 dark:border-gray-700 group">
+                  <div className="w-1 h-3 bg-blog-primary rounded-full shrink-0" />
+                  <span className="text-[11px] font-bold text-blog-primary tracking-wider truncate">
+                    {group.title}
+                  </span>
+                  <span className="ml-auto text-[10px] text-gray-400 shrink-0">
+                    {currentIndex + 1}/{groupPosts.length}
+                  </span>
+                  <button
+                    onClick={() => setIsCollapsed(true)}
+                    className="ml-2 p-1 rounded hover:bg-blog-lightest dark:hover:bg-gray-700 transition-colors"
+                    aria-label="Collapse sidebar"
+                  >
+                    <ChevronUp className="w-4 h-4 text-gray-500" />
+                  </button>
+                </div>
+                <div className="p-0">{renderList(desktopScrollRef)}</div>
+              </>
+            )}
           </motion.div>
         </div>
       )}
