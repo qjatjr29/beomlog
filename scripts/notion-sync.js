@@ -282,6 +282,12 @@ async function blockToMarkdown(block, depth = 0) {
       break;
     }
 
+    case "heading_4": {
+      const text = processRichText(block.heading_4.rich_text);
+      markdown = `#### ${text}\n`;
+      break;
+    }
+
     case "numbered_list_item": {
       // numberedListCounter++;
       if (depth === 0) {

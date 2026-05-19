@@ -12,6 +12,7 @@ export const TableOfContents = ({ content }: { content: string }) => {
     const m = line.match(/^(#{1,6})\s+(.*)$/);
     if (m) {
       const level = m[1].length;
+      if (level > 3) return;
       const text = m[2].trim();
       const id = `${slugify(text)}-${idx}`;
       items.push({ id, text, level });
