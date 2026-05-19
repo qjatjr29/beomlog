@@ -4,6 +4,7 @@ import { ArrowLeft } from "lucide-react";
 import { usePosts } from "../../../../contexts/PostsContext";
 import { usePostNavigation } from "../../hooks/usePostNavigation";
 import { MarkdownRenderer } from "../../../markdown/components/MarkdownRenderer";
+import { TableOfContents } from "../../../markdown/components/TableOfContents";
 import { CommentSection } from "../../../guestbook/components";
 import { incrementPostViews } from "../../../../data/storage/post.storage";
 import { PostSideActions } from "./PostSideActions";
@@ -80,6 +81,7 @@ export const PostDetail = () => {
       )}
 
       <PostHeader post={post} views={views} />
+      <TableOfContents content={post.content} />
       <article className="w-full overflow-hidden mb-16 prose prose-slate max-w-none">
         <MarkdownRenderer content={post.content} />
       </article>
