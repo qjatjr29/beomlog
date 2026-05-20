@@ -10,9 +10,7 @@
       "Record"
     ],
     "date": "2026-05-19",
-    "createdAt": "2026-05-19T06:01:00.000Z",
     "excerpt": "Java Record란 무엇인가? Java 14에서 등장하여 Java 16에서 정식 스펙이 된 Record는 \"불변(Immutable) 데이터 전달 객체(DTO)\"를 간결하게 간결...",
-    "thumbnail": "",
     "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
     "path": "개발/java/java-record.md",
     "lastEdited": "2026-05-19T06:12:00.000Z"
@@ -309,6 +307,63 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "366d67b9-9e80-80e8-a0c6-ea111fef0ba3",
+    "title": "[요즘 당근 AI 개발] 13. 모든 당근 사용자에게 AI 에이전트 제공하기 - 2부",
+    "slug": "요즘-당근-ai-개발-13-모든-당근-사용자에게-ai-에이전트-제공하기-2부",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "AI에이전트",
+      "멀티에이전트",
+      "자동화"
+    ],
+    "date": "2026-05-20",
+    "createdAt": "2026-05-20T04:05:00.000Z",
+    "excerpt": "#AI에이전트 #멀티에이전트 #업무자동화 🔍 KAMP에 당근 특화 기능 넣기 실제 사용자에게 제공하는 당근 AI 에이전트를 기획하고 만들다보니 기본 에이전트 구조에는 없는 당근의...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F14a6a574-b64f-4026-b5f6-932b031436bb%2Fimage.png?table=block&id=366d67b9-9e80-80d3-9812-c2af52d18497&cache=v2",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-13-모든-당근-사용자에게-ai-에이전트-제공하기-2부.md",
+    "lastEdited": "2026-05-20T04:06:00.000Z"
+  },
+  {
+    "id": "366d67b9-9e80-8092-bd1b-de99130e1bc7",
+    "title": "[요즘 당근 AI 개발] 12. 모든 당근 사용자에게 AI 에이전트 제공하기 - 1부",
+    "slug": "요즘-당근-ai-개발-12-모든-당근-사용자에게-ai-에이전트-제공하기-1부",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "AI에이전트",
+      "멀티에이전트",
+      "자동화"
+    ],
+    "date": "2026-05-20",
+    "createdAt": "2026-05-20T04:04:00.000Z",
+    "excerpt": "#AI에이전트 #멀티에이전트 #업무자동화 고객 문의를 살펴보면 적절한 가이드만 제공하면 사용자가 스스로 해소할 수 있는 문의가 전체 문의의 약 40%입니다. 그렇다면 어떻게 사용자...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F36a6389f-cfb2-439e-a06b-792ca8223105%2Fimage.png?table=block&id=366d67b9-9e80-8033-9d37-df15aeef8583&cache=v2",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-12-모든-당근-사용자에게-ai-에이전트-제공하기-1부.md",
+    "lastEdited": "2026-05-20T04:06:00.000Z"
+  },
+  {
+    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
+    "title": "부스트캠프 후기",
+    "slug": "부스트캠프-후기",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "네이버부스트캠프"
+    ],
+    "date": "2026-02-19",
+    "createdAt": "2026-02-19T01:26:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
+    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
+    "groupId": "",
+    "path": "일상/부스트캠프-후기.md",
+    "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
     "id": "365d67b9-9e80-8020-b774-d11b7d8a13d4",
     "title": "[요즘 당근 AI 개발] 11. VoC 플레이그라운드로 고객 목소리에 반응하는 당근 만들기",
     "slug": "요즘-당근-ai-개발-11-voc-플레이그라운드로-고객-목소리에-반응하는-당근-만들기",
@@ -320,9 +375,7 @@
       "LLM"
     ],
     "date": "2026-05-19",
-    "createdAt": "2026-05-19T03:51:00.000Z",
     "excerpt": "#VoC #Data #LLM #사용자의견분석 #업무효율화 VoC는 Voice of Customer의 줄임말로 고객의 목소리 또는 사용자 의견을 말합니다. 사용자가 제품이나 서비스를...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7f05163b-3643-4160-9506-0596e539d535%2Fimage.png?table=block&id=365d67b9-9e80-80f1-a374-dacc951c5c83&cache=v2",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-11-voc-플레이그라운드로-고객-목소리에-반응하는-당근-만들기.md",
     "lastEdited": "2026-05-19T03:52:00.000Z"
@@ -341,9 +394,7 @@
       "벡터DB"
     ],
     "date": "2026-05-19",
-    "createdAt": "2026-05-19T02:55:00.000Z",
     "excerpt": "#LLM비용절감 #시맨틱캐싱 #AI메시지추천 #벡터DB #DBSCAN 연간 LLM 호출 비용을 약 25% 절감한 프로젝트를 소개합니다. AI를 잘 활용하면서도 비용을 효율적으로 관...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdb5f1d46-32a3-42db-9ba0-8d3d9b4b5f36%2Fimage.png?table=block&id=365d67b9-9e80-8076-8c2b-e2a8a88c423e&cache=v2",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-10-연간-llm-호출-비용-25-절감-인턴이-도전한-시맨틱-캐싱-도입-기록.md",
     "lastEdited": "2026-05-19T03:51:00.000Z"
@@ -361,9 +412,7 @@
       "AI추천"
     ],
     "date": "2026-05-18",
-    "createdAt": "2026-05-18T03:11:00.000Z",
     "excerpt": "#당근AI #AI물품추천 #LLM #프롬프트엔지니어링 #중고거래 #탐색 귀여운 조카에게 장난감 선물을 위해 ‘3살 장난감’과 같이 키워드를 검색해보지만 마음에 드는 것을 찾기란 쉽...",
-    "thumbnail": "",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-09-3살-아기가-좋아할-만한-장난감-llm으로-추천하기.md",
     "lastEdited": "2026-05-18T03:12:00.000Z"
@@ -380,29 +429,10 @@
       "프롬프트엔지니어링"
     ],
     "date": "2026-05-18",
-    "createdAt": "2026-05-18T03:10:00.000Z",
     "excerpt": "#LLM #중고거래 #프롬프트엔지니어링 #벡터DB #데이터검색 LLM을 활용하여 중고거래 게시글에서 스마트폰 정보를 추출하고 이를 통해 시세를 산출한 방법을 소개하고자 합니다. L...",
-    "thumbnail": "",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-08-llm을-활용한-스마트폰-시세-조회.md",
     "lastEdited": "2026-05-18T03:11:00.000Z"
-  },
-  {
-    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
-    "title": "부스트캠프 후기",
-    "slug": "부스트캠프-후기",
-    "category": "일상",
-    "categorySlug": "일상",
-    "tags": [
-      "네이버부스트캠프"
-    ],
-    "date": "2026-02-19",
-    "createdAt": "2026-02-19T01:26:00.000Z",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
-    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
-    "groupId": "",
-    "path": "일상/부스트캠프-후기.md",
-    "lastEdited": "2026-02-28T16:53:00.000Z"
   },
   {
     "id": "362d67b9-9e80-801d-948c-d827c4924aa5",
