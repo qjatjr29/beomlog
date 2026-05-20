@@ -50,8 +50,10 @@ export const parseHeader = (
       <h4
         key={`h4-${index}`}
         id={`${slugify(line.substring(5))}-${index}`}
-        style={{ scrollMarginTop: 80 }}
-        className="text-base font-semibold mt-4 mb-2"
+        style={{
+          scrollMarginTop: 80,
+        }}
+        className="text-base font-bold mt-4 mb-2"
       >
         {parseInlineMarkdown(line.substring(5))}
       </h4>

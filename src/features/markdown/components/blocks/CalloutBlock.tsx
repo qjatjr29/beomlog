@@ -4,14 +4,98 @@ interface CalloutBlockProps {
   lines: string[];
 }
 
+type CalloutVariant = "info" | "tip" | "warning" | "default";
+
+const normalizeEmoji = (value: string) =>
+  value
+    .replace(/\uFE0F/g, "")
+    .replace(/\u200D/g, "")
+    .trim();
+
+const detectCalloutVariant = (firstLine: string): CalloutVariant => {
+  const normalized = normalizeEmoji(firstLine);
+  const firstToken = normalized.split(/\s+/)[0] || "";
+
+  if (/^(ℹ|ⓘ|i)$/i.test(firstToken)) return "info";
+  if (/^💡$/u.test(firstToken)) return "tip";
+  if (/^(⚠|❗|‼|🚨)$/u.test(firstToken)) return "warning";
+
+  return "default";
+};
+
+const getCalloutHeader = (variant: CalloutVariant) => {
+  switch (variant) {
+    case "info":
+      return { icon: "ℹ", label: "Info" };
+    case "tip":
+      return { icon: "💡", label: "Tip" };
+    case "warning":
+      return { icon: "⚠", label: "Warning" };
+    default:
+      return { icon: "ℹ", label: "Info" };
+  }
+};
+
 export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
+  const variant = detectCalloutVariant(lines[0] ?? "");
+  const header = getCalloutHeader(variant);
+
+  // icon이 있는 경우 첫 줄은 헤더 정보, icon이 없는 경우 첫 줄도 본문으로 간주
+  const bodyLines = variant === "default" ? lines : lines.slice(1);
+
+  const styles: Record<
+    CalloutVariant,
+    {
+      border: string;
+      headerBg: string;
+      headerBorder: string;
+      iconBg: string;
+      iconText: string;
+      titleText: string;
+    }
+  > = {
+    info: {
+      border: "border-blue-300",
+      headerBg: "bg-blue-50",
+      headerBorder: "border-blue-100",
+      iconBg: "bg-blue-100",
+      iconText: "text-blue-600",
+      titleText: "text-blue-700",
+    },
+    tip: {
+      border: "border-amber-300",
+      headerBg: "bg-amber-50",
+      headerBorder: "border-amber-100",
+      iconBg: "bg-amber-100",
+      iconText: "text-amber-600",
+      titleText: "text-amber-700",
+    },
+    warning: {
+      border: "border-rose-300",
+      headerBg: "bg-rose-50",
+      headerBorder: "border-rose-100",
+      iconBg: "bg-rose-100",
+      iconText: "text-rose-600",
+      titleText: "text-rose-700",
+    },
+    default: {
+      border: "border-blue-300",
+      headerBg: "bg-blue-50",
+      headerBorder: "border-blue-100",
+      iconBg: "bg-blue-100",
+      iconText: "text-blue-600",
+      titleText: "text-blue-700",
+    },
+  };
+
+  const s = styles[variant];
+
   const renderLine = (line: string, i: number) => {
-    // 번호 리스트 (1. 2. 3.)
     const orderedMatch = line.match(/^(\d+)\. (.*)/);
     if (orderedMatch) {
       return (
         <div key={i} className="flex gap-2">
-          <span className="shrink-0 text-gray-500 min-w-[1.2rem] text-right">
+          <span className="shrink-0 min-w-[1.2rem] text-right text-gray-500">
             {orderedMatch[1]}.
           </span>
           <span className="leading-relaxed">
@@ -21,7 +105,6 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
       );
     }
 
-    // 불릿 리스트 (- )
     const bulletMatch = line.match(/^- (.*)/);
     if (bulletMatch) {
       return (
@@ -34,7 +117,6 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
       );
     }
 
-    // callout 내부 중첩 인용 (> prefix — callout 안의 리스트가 > 로 저장된 경우)
     if (line.startsWith("> ")) {
       return (
         <div
@@ -46,21 +128,10 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
       );
     }
 
-    // 빈 줄 — 문단 사이 약간의 여백만
     if (line.trim() === "") {
       return <div key={i} className="h-2" />;
     }
 
-    // 첫 줄 = 아이콘 + 제목
-    if (i === 0) {
-      return (
-        <div key={i} className="font-medium leading-relaxed">
-          {parseInlineMarkdown(line)}
-        </div>
-      );
-    }
-
-    // 일반 텍스트
     return (
       <div key={i} className="leading-relaxed text-gray-600 dark:text-gray-400">
         {parseInlineMarkdown(line)}
@@ -68,24 +139,23 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
     );
   };
 
-  // 연속된 리스트 아이템들을 하나의 그룹으로 묶기
   const groupedLines: {
     type: "list" | "single";
     lines: string[];
     startIndex: number;
   }[] = [];
   let i = 0;
-  while (i < lines.length) {
-    const line = lines[i];
+  while (i < bodyLines.length) {
+    const line = bodyLines[i];
     const isListItem = /^(\d+)\. /.test(line) || /^- /.test(line);
     if (isListItem) {
       const group: string[] = [line];
       let j = i + 1;
       while (
-        j < lines.length &&
-        (/^(\d+)\. /.test(lines[j]) || /^- /.test(lines[j]))
+        j < bodyLines.length &&
+        (/^(\d+)\. /.test(bodyLines[j]) || /^- /.test(bodyLines[j]))
       ) {
-        group.push(lines[j]);
+        group.push(bodyLines[j]);
         j++;
       }
       groupedLines.push({ type: "list", lines: group, startIndex: i });
@@ -97,20 +167,35 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
   }
 
   return (
-    <div className="my-4 rounded-md border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-900 px-4 py-3">
-      <div className="text-sm text-gray-700 dark:text-gray-300">
+    <div
+      className={`my-6 overflow-hidden rounded-md border ${s.border} bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900`}
+    >
+      <div
+        className={`${s.headerBg} border-b ${s.headerBorder} px-5 py-3 flex items-center gap-3`}
+      >
+        <div
+          className={`w-8 h-8 rounded-full flex items-center justify-center ${s.iconBg} ${s.iconText}`}
+        >
+          {header.icon}
+        </div>
+        {header.label ? (
+          <div className={`text-sm font-semibold ${s.titleText}`}>
+            {header.label}
+          </div>
+        ) : null}
+      </div>
+      <div className="px-5 py-4 text-sm text-gray-700 dark:text-gray-300">
         {groupedLines.map((group, gi) => {
           if (group.type === "list") {
-            // 리스트 그룹 — 내부 간격 좁게
             return (
-              <div key={gi} className={`space-y-0.5 ${gi > 0 ? "mt-1" : ""}`}>
+              <div key={gi} className={`space-y-1 ${gi > 0 ? "mt-2" : ""}`}>
                 {group.lines.map((line, li) =>
                   renderLine(line, group.startIndex + li),
                 )}
               </div>
             );
           }
-          // 단일 줄
+
           return (
             <div
               key={gi}

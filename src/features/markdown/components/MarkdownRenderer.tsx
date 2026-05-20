@@ -416,6 +416,18 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       );
     }
 
+    if (state.inCallout && state.calloutLines.length > 0) {
+      result.push(
+        <CalloutBlock key="callout-end" lines={state.calloutLines} />,
+      );
+    }
+
+    if (state.inBlockquote && state.blockquoteLines.length > 0) {
+      result.push(
+        <BlockquoteBlock key="quote-end" lines={state.blockquoteLines} />,
+      );
+    }
+
     // inline-link 그룹핑 후처리
     return groupInlineLinks(result);
   };
