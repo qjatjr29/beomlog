@@ -24,4 +24,3 @@ export const parseEmptyLine = (
   if (line.trim() !== "") return null;
   return <div key={`empty-${index}`} className="h-4"></div>;
 };
-

@@ -2,7 +2,7 @@ import { TableBlockProps } from "../../types";
 import { parseInlineMarkdown } from "../../utils/parser";
 
 export const TableBlock = ({ headers, rows }: TableBlockProps) => (
-  <table className="w-full my-6 border-collapse">
+  <table className="w-full my-3 border-collapse">
     <thead className="bg-gray-50 dark:bg-gray-700">
       <tr>
         {headers.map((header, i) => (
