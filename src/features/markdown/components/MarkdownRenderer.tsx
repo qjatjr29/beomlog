@@ -123,6 +123,12 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
     const lines = text.split("\n");
     const result: JSX.Element[] = [];
 
+    type OrderedListItem = {
+      key: string;
+      content: JSX.Element;
+      nestedBullets: JSX.Element[];
+    };
+
     const state = {
       inCodeBlock: false,
       codeBlockContent: [] as string[],
@@ -142,10 +148,11 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       inUnorderedList: false,
       unorderedListItems: [] as JSX.Element[],
       inOrderedList: false,
-      orderedListItems: [] as JSX.Element[],
+      orderedListItems: [] as OrderedListItem[],
       inFigure: false,
       figureLines: [] as string[],
     };
+    
 
     const closeLists = (currentIndex: number) => {
       if (state.inUnorderedList) {
@@ -162,11 +169,22 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       }
       if (state.inOrderedList) {
         result.push(
-          <ol
-            key={`ol-wrapper-${currentIndex}-${result.length}`}
-            className="my-4"
-          >
-            {state.orderedListItems}
+          <ol key={`ol-wrapper-${currentIndex}-${result.length}`} className="my-4">
+            {state.orderedListItems.map((item) => {
+              const li = item.content as any;
+              const children = li.props?.children ?? null;
+              const className = li.props?.className ?? "my-1.5 list-decimal";
+              return (
+                <li key={item.key} className={className}>
+                  {children}
+                  {item.nestedBullets.length > 0 && (
+                    <ul className="pl-4 ml-0 my-1.5 list-disc">
+                      {item.nestedBullets}
+                    </ul>
+                  )}
+                </li>
+              );
+            })}
           </ol>,
         );
         state.orderedListItems = [];
@@ -345,14 +363,28 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       // 9. Lists
       const ulItem = parseUnorderedList(line, index);
       if (ulItem) {
-        if (state.inOrderedList && /^\s+- /.test(line)) {
-          state.orderedListItems.push(ulItem);
+        if (state.inOrderedList && /^\s+- /.test(line) && state.orderedListItems.length > 0) {
+          state.orderedListItems[state.orderedListItems.length - 1].nestedBullets.push(ulItem);
           return;
         }
         if (state.inOrderedList) {
           result.push(
             <ol key={`ol-close-${index}-${result.length}`} className="my-4">
-              {state.orderedListItems}
+              {state.orderedListItems.map((item) => {
+                const li = (item.content as any) || {};
+                const children = li.props?.children ?? null;
+                const className = li.props?.className ?? "my-1.5 list-decimal";
+                return (
+                  <li key={item.key} className={className}>
+                    {children}
+                    {item.nestedBullets.length > 0 && (
+                      <ul className="pl-4 ml-0 my-1.5 list-disc">
+                        {item.nestedBullets}
+                      </ul>
+                    )}
+                  </li>
+                );
+              })}
             </ol>,
           );
           state.orderedListItems = [];
@@ -375,7 +407,11 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
           state.inUnorderedList = false;
         }
         state.inOrderedList = true;
-        state.orderedListItems.push(olItem);
+        state.orderedListItems.push({
+          key: `ol-item-${index}`,
+          content: olItem,
+          nestedBullets: [],
+        });
         return;
       }
 
@@ -411,7 +447,21 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
     if (state.inOrderedList && state.orderedListItems.length > 0) {
       result.push(
         <ol key="ol-end" className="my-4">
-          {state.orderedListItems}
+          {state.orderedListItems.map((item) => {
+            const li = item.content as any;
+            const children = li.props?.children ?? null;
+            const className = li.props?.className ?? "my-1.5 list-decimal";
+            return (
+              <li key={item.key} className={className}>
+                {children}
+                {item.nestedBullets.length > 0 && (
+                  <ul className="pl-4 ml-0 my-1.5 list-disc">
+                    {item.nestedBullets}
+                  </ul>
+                )}
+              </li>
+            );
+          })}
         </ol>,
       );
     }
