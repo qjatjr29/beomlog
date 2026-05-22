@@ -152,7 +152,6 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       inFigure: false,
       figureLines: [] as string[],
     };
-    
 
     const closeLists = (currentIndex: number) => {
       if (state.inUnorderedList) {
@@ -169,7 +168,10 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       }
       if (state.inOrderedList) {
         result.push(
-          <ol key={`ol-wrapper-${currentIndex}-${result.length}`} className="my-4">
+          <ol
+            key={`ol-wrapper-${currentIndex}-${result.length}`}
+            className="my-4"
+          >
             {state.orderedListItems.map((item) => {
               const li = item.content as any;
               const children = li.props?.children ?? null;
@@ -363,8 +365,14 @@ export const MarkdownRenderer = ({ content }: MarkdownRendererProps) => {
       // 9. Lists
       const ulItem = parseUnorderedList(line, index);
       if (ulItem) {
-        if (state.inOrderedList && /^\s+- /.test(line) && state.orderedListItems.length > 0) {
-          state.orderedListItems[state.orderedListItems.length - 1].nestedBullets.push(ulItem);
+        if (
+          state.inOrderedList &&
+          /^\s+- /.test(line) &&
+          state.orderedListItems.length > 0
+        ) {
+          state.orderedListItems[
+            state.orderedListItems.length - 1
+          ].nestedBullets.push(ulItem);
           return;
         }
         if (state.inOrderedList) {

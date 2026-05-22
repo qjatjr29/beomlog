@@ -8,7 +8,6 @@ export const parseUnorderedList = (
   // 들여쓰기된 불릿 (  - ) 처리
   const indentMatch = line.match(/^(\s+)- (.*)$/);
   if (indentMatch) {
-
     return (
       <li key={`ul-item-${index}`} className="ml-0 my-1.5 list-disc">
         {parseInlineMarkdown(indentMatch[2])}
