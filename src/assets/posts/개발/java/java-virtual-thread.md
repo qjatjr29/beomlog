@@ -10,7 +10,7 @@ excerpt: "⭐ Virtual Thread :::callout JDK 21에 추가된 경량 스레드 ::
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc559cd86-bc7e-4f02-b9f6-500e96ec468d%2Fimage.png?table=block&id=369d67b9-9e80-80bf-8e8c-e3d40f0d8bf6&cache=v2"
 groupId: "364d67b9-9e80-8029-8cab-f5b0a3f733f3"
 groupSlug: "java"
-lastEdited: "2026-05-23T05:24:00.000Z"
+lastEdited: "2026-05-23T05:49:00.000Z"
 ---
 
 ## ⭐ Virtual Thread
@@ -187,12 +187,11 @@ public Result accessLimitedResource(){
 ### 4️⃣ ThreadLocal 사용 시 메모리 폭발(OOM) 주의
 :::callout Platform Thread 환경(예: Tomcat 스레드 200개)에서는 데이터 공유나 컨텍스트(사용자 인증 정보, 트랜잭션 등) 유지를 위해 `ThreadLocal`을 사용하는 것이 흔한 패턴이었습니다.
 **Virtual Thread**는 OS가 아닌 **JVM의 Heap 메모리 영역**에 객체 형태로 할당됩니다.
-:::callout ⚠️
-:::callout **메모리 이슈 발생**
+:::callout ⚠️ **메모리 이슈 발생**
 :::callout **수만~수백만 개의 Virtual Thread**가 생성되는 환경에서 내부에 무거운 객체를 `ThreadLocal`로 계속 할당한다면 Heap 메모리를 순식간에 점유하여 심각한 <span class="text-red">**메모리 부족 현상(OutOfMemoryError)**</span>을 유발할 수 있습니다.
 따라서 가급적 가벼운 데이터를 다루거나 다른 컨텍스트 전파 방식을 고려해야 합니다.
 - <span class="text-blue">**Scoped Values**</span>
-:::callout **Scoped Values**
+:::callout ℹ️ **Scoped Values**
 :::callout - `ThreadLocal`과 달리 불변(Immutable)이며 지정된 블록(Scope) 안에서만 유효하고 블록이 끝나면 GC를 기다릴 필요 없이 즉시 메모리에서 해제
 :::callout - 수백만 개의 Virtual Thread가 동일한 Scoped Value를 안전하고 아주 가볍게 공유할 수 있습니다.
 ### 3️⃣ Carrier Thread Pinning (고정 현상) 주의
@@ -202,8 +201,8 @@ Virtual Thread의 핵심은 I/O 대기 시 자신이 업혀 있던 실제 OS 스
 - JNI (Java Native Interface)를 통한 Native 메서드를 호출할 때
 이런 상황에서는 Carrier Thread 자체가 블로킹되어 전체 애플리케이션의 성능이 급격히 저하됩니다. 
 따라서 사용하고 있는 서드파티 라이브러리 내부에 `synchronized`가 사용되고 있을 수 있으므로 확인을 해주어야 합니다.
-:::callout 💡 
-:::callout **디버깅 팁:** JVM 실행 옵션에 `-Djdk.tracePinnedThreads=full`을 추가하면 피닝이 발생하는 지점을 로그로 추적할 수 있습니다.
+:::callout 💡 **디버깅 팁** 
+:::callout JVM 실행 옵션에 `-Djdk.tracePinnedThreads=full`을 추가하면 피닝이 발생하는 지점을 로그로 추적할 수 있습니다.
 #### ✅ `synchronized`를 사용하는 라이브러리들
 
 | 클래스 | **대안 (Non-blocking)** |

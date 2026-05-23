@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-23T05:25:26.004Z",
+  "lastSyncTime": "2026-05-23T05:49:53.756Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -869,7 +869,7 @@
       "createdAt": "2026-05-23T05:15:00.000Z",
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc559cd86-bc7e-4f02-b9f6-500e96ec468d%2Fimage.png?table=block&id=369d67b9-9e80-80bf-8e8c-e3d40f0d8bf6&cache=v2",
       "excerpt": "⭐ Virtual Thread :::callout JDK 21에 추가된 경량 스레드 :::callout - OS 스레드를 그대로 사용하지 않고 JVM 내부 스케줄링을 통해 수십수백...",
-      "lastEdited": "2026-05-23T05:24:00.000Z"
+      "lastEdited": "2026-05-23T05:49:00.000Z"
     }
   }
 }
