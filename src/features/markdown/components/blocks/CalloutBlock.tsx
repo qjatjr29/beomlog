@@ -6,6 +6,12 @@ interface CalloutBlockProps {
 
 type CalloutVariant = "info" | "tip" | "warning" | "default";
 
+type CalloutHeader = {
+  icon: string;
+  fallbackLabel: string;
+  title: string | null;
+};
+
 const normalizeEmoji = (value: string) =>
   value
     .replace(/\uFE0F/g, "")
@@ -23,22 +29,29 @@ const detectCalloutVariant = (firstLine: string): CalloutVariant => {
   return "default";
 };
 
-const getCalloutHeader = (variant: CalloutVariant) => {
+const getCalloutHeader = (
+  variant: CalloutVariant,
+  firstLine: string,
+): CalloutHeader => {
+  const normalized = normalizeEmoji(firstLine);
+  const tokens = normalized.split(/\s+/).filter(Boolean);
+  const title = tokens.length > 1 ? tokens.slice(1).join(" ") : null;
+
   switch (variant) {
     case "info":
-      return { icon: "ℹ", label: "Info" };
+      return { icon: "ℹ", fallbackLabel: "Info", title };
     case "tip":
-      return { icon: "💡", label: "Tip" };
+      return { icon: "💡", fallbackLabel: "Tip", title };
     case "warning":
-      return { icon: "⚠", label: "Warning" };
+      return { icon: "⚠", fallbackLabel: "Warning", title };
     default:
-      return { icon: "ℹ", label: "Info" };
+      return { icon: "ℹ", fallbackLabel: "Info", title: null };
   }
 };
 
 export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
   const variant = detectCalloutVariant(lines[0] ?? "");
-  const header = getCalloutHeader(variant);
+  const header = getCalloutHeader(variant, lines[0] ?? "");
 
   // icon이 있는 경우 첫 줄은 헤더 정보, icon이 없는 경우 첫 줄도 본문으로 간주
   const bodyLines = variant === "default" ? lines : lines.slice(1);
@@ -171,18 +184,18 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
       className={`my-6 overflow-hidden rounded-md border ${s.border} bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900`}
     >
       <div
-        className={`${s.headerBg} border-b ${s.headerBorder} px-5 py-3 flex items-center gap-3`}
+        className={`${s.headerBg} border-b ${s.headerBorder} px-4 py-2.5 flex items-center gap-2`}
       >
         <div
-          className={`w-8 h-8 rounded-full flex items-center justify-center ${s.iconBg} ${s.iconText}`}
+          className={`w-6 h-6 rounded-full flex items-center justify-center text-[11px] ${s.iconBg} ${s.iconText}`}
         >
           {header.icon}
         </div>
-        {header.label ? (
-          <div className={`text-sm font-semibold ${s.titleText}`}>
-            {header.label}
-          </div>
-        ) : null}
+        <div className={`text-sm font-semibold leading-none ${s.titleText}`}>
+          {variant === "default"
+            ? header.fallbackLabel
+            : header.title || header.fallbackLabel}
+        </div>
       </div>
       <div className="px-5 py-4 text-sm text-gray-700 dark:text-gray-300">
         {groupedLines.map((group, gi) => {
