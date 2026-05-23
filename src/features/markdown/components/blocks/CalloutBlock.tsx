@@ -1,3 +1,4 @@
+import { isValidElement } from "react";
 import { parseInlineMarkdown } from "../../utils/parser";
 
 interface CalloutBlockProps {
@@ -10,6 +11,22 @@ type CalloutHeader = {
   icon: string;
   fallbackLabel: string;
   title: string | null;
+};
+
+const inlineNodesToText = (value: unknown): string => {
+  if (typeof value === "string" || typeof value === "number") {
+    return String(value);
+  }
+
+  if (Array.isArray(value)) {
+    return value.map(inlineNodesToText).join("");
+  }
+
+  if (isValidElement(value)) {
+    return inlineNodesToText((value as any).props?.children);
+  }
+
+  return "";
 };
 
 const normalizeEmoji = (value: string) =>
@@ -35,7 +52,10 @@ const getCalloutHeader = (
 ): CalloutHeader => {
   const normalized = normalizeEmoji(firstLine);
   const tokens = normalized.split(/\s+/).filter(Boolean);
-  const title = tokens.length > 1 ? tokens.slice(1).join(" ") : null;
+  const rawTitle = tokens.length > 1 ? tokens.slice(1).join(" ") : null;
+  const title = rawTitle
+    ? inlineNodesToText(parseInlineMarkdown(rawTitle)).trim() || null
+    : null;
 
   switch (variant) {
     case "info":
