@@ -1,5 +1,23 @@
 [
   {
+    "id": "369d67b9-9e80-800e-8432-c72d0dfb2a78",
+    "title": "⭐️ Java Virtual Thread",
+    "slug": "java-virtual-thread",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "java",
+    "tags": [
+      "Virtual Thread"
+    ],
+    "date": "2026-05-23",
+    "createdAt": "2026-05-23T05:15:00.000Z",
+    "excerpt": "⭐ Virtual Thread :::callout JDK 21에 추가된 경량 스레드 :::callout - OS 스레드를 그대로 사용하지 않고 JVM 내부 스케줄링을 통해 수십수백...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc559cd86-bc7e-4f02-b9f6-500e96ec468d%2Fimage.png?table=block&id=369d67b9-9e80-80bf-8e8c-e3d40f0d8bf6&cache=v2",
+    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
+    "path": "개발/java/java-virtual-thread.md",
+    "lastEdited": "2026-05-23T05:24:00.000Z"
+  },
+  {
     "id": "365d67b9-9e80-8096-a9f3-d2580b037b92",
     "title": "Java Record",
     "slug": "java-record",
@@ -307,6 +325,23 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
+    "title": "부스트캠프 후기",
+    "slug": "부스트캠프-후기",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "네이버부스트캠프"
+    ],
+    "date": "2026-02-19",
+    "createdAt": "2026-02-19T01:26:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
+    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
+    "groupId": "",
+    "path": "일상/부스트캠프-후기.md",
+    "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
     "id": "366d67b9-9e80-80e8-a0c6-ea111fef0ba3",
     "title": "[요즘 당근 AI 개발] 13. 모든 당근 사용자에게 AI 에이전트 제공하기 - 2부",
     "slug": "요즘-당근-ai-개발-13-모든-당근-사용자에게-ai-에이전트-제공하기-2부",
@@ -319,9 +354,7 @@
       "자동화"
     ],
     "date": "2026-05-20",
-    "createdAt": "2026-05-20T04:05:00.000Z",
     "excerpt": "#AI에이전트 #멀티에이전트 #업무자동화 🔍 KAMP에 당근 특화 기능 넣기 실제 사용자에게 제공하는 당근 AI 에이전트를 기획하고 만들다보니 기본 에이전트 구조에는 없는 당근의...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F14a6a574-b64f-4026-b5f6-932b031436bb%2Fimage.png?table=block&id=366d67b9-9e80-80d3-9812-c2af52d18497&cache=v2",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-13-모든-당근-사용자에게-ai-에이전트-제공하기-2부.md",
     "lastEdited": "2026-05-20T04:06:00.000Z"
@@ -339,29 +372,10 @@
       "자동화"
     ],
     "date": "2026-05-20",
-    "createdAt": "2026-05-20T04:04:00.000Z",
     "excerpt": "#AI에이전트 #멀티에이전트 #업무자동화 고객 문의를 살펴보면 적절한 가이드만 제공하면 사용자가 스스로 해소할 수 있는 문의가 전체 문의의 약 40%입니다. 그렇다면 어떻게 사용자...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F36a6389f-cfb2-439e-a06b-792ca8223105%2Fimage.png?table=block&id=366d67b9-9e80-8033-9d37-df15aeef8583&cache=v2",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-12-모든-당근-사용자에게-ai-에이전트-제공하기-1부.md",
     "lastEdited": "2026-05-20T04:06:00.000Z"
-  },
-  {
-    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
-    "title": "부스트캠프 후기",
-    "slug": "부스트캠프-후기",
-    "category": "일상",
-    "categorySlug": "일상",
-    "tags": [
-      "네이버부스트캠프"
-    ],
-    "date": "2026-02-19",
-    "createdAt": "2026-02-19T01:26:00.000Z",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
-    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
-    "groupId": "",
-    "path": "일상/부스트캠프-후기.md",
-    "lastEdited": "2026-02-28T16:53:00.000Z"
   },
   {
     "id": "365d67b9-9e80-8020-b774-d11b7d8a13d4",
