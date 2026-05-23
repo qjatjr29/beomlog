@@ -7,8 +7,18 @@ export const TableOfContents = ({ content }: { content: string }) => {
   if (!content) return null;
   const lines = content.split(/\r?\n/);
   const items: TocItem[] = [];
+  let inCodeFence = false;
 
   lines.forEach((line, idx) => {
+    const trimmed = line.trim();
+
+    if (/^(```|~~~)/.test(trimmed)) {
+      inCodeFence = !inCodeFence;
+      return;
+    }
+
+    if (inCodeFence) return;
+
     const m = line.match(/^(#{1,6})\s+(.*)$/);
     if (m) {
       const level = m[1].length;
