@@ -27,6 +27,7 @@ export const parsePostContent = (
       case "slug":
       case "excerpt":
       case "date":
+      case "dateEnd":
       case "createdAt":
       case "category":
       case "lastEdited":

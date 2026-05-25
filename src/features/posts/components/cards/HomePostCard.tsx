@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Calendar, Eye, MessageSquare } from "lucide-react";
 import { Post } from "@/features/posts/types";
+import { formatDateRange } from "@/shared/utils";
 
 interface HomePostCardProps {
   post: Post;
@@ -35,7 +36,7 @@ export const HomePostCard = ({
     <div className="flex items-center gap-2 shrink-0 text-[10px] text-gray-400 dark:text-gray-500">
       <span className="hidden sm:inline items-center gap-0.5">
         <Calendar className="w-2.5 h-2.5 inline mr-0.5" />
-        {post.date}
+        {formatDateRange(post.date, post.dateEnd)}
       </span>
       <span className="flex items-center gap-0.5">
         <Eye className="w-2.5 h-2.5" />

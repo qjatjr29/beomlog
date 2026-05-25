@@ -1,6 +1,7 @@
 import { Link } from "react-router";
 import { Eye, MessageCircle, Image } from "lucide-react";
 import { Post } from "@/features/posts/types";
+import { formatDateRange } from "@/shared/utils";
 
 const DEFAULT_THUMBNAIL = "/default-thumbnail.png";
 
@@ -41,7 +42,7 @@ export const PostGridCard = ({
 
       <div className="p-3 flex flex-col flex-1">
         <div className="text-[10px] text-gray-400 dark:text-gray-500 mb-1.5">
-          {post.date}
+          {formatDateRange(post.date, post.dateEnd)}
         </div>
         <h3 className="text-xs font-bold text-gray-800 dark:text-gray-100 line-clamp-2 flex-1 group-hover:text-blog-primary transition-colors leading-relaxed">
           {post.title}

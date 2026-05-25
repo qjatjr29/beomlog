@@ -6,6 +6,7 @@ export interface Post {
   categorySlug: string;
   tags: string[];
   date: string; // 표시용
+  dateEnd?: string;
   createdAt: string; // 정렬용
   excerpt: string;
   content: string;
@@ -40,6 +41,7 @@ export interface PostFrontMatter {
   title: string;
   slug: string;
   date: string;
+  dateEnd?: string;
   createdAt?: string;
   tags: string[];
   excerpt?: string;

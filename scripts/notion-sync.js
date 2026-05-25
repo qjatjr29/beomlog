@@ -1030,6 +1030,7 @@ async function processGroupPost(page, category, groupId, groupSlug) {
   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
 
   const date = props.Date?.date?.start || page.created_time.split("T")[0];
+  const dateEnd = props.Date?.date?.end || "";
   const createdAt = page.created_time;
 
   const categorySlug = slugify(category);
@@ -1049,6 +1050,7 @@ slug: "${slug}"
 category: "${category}"
 tags: ${JSON.stringify(tags)}
 date: "${date}"
+dateEnd: "${dateEnd}"
 createdAt: "${createdAt}"
 excerpt: "${escapeYaml(excerpt)}"
 thumbnail: "${thumbnail}"
@@ -1070,6 +1072,7 @@ ${content}`;
     groupSlug,
     tags,
     date,
+    dateEnd,
     createdAt,
     excerpt,
     thumbnail,
@@ -1092,6 +1095,7 @@ async function processPost(page, category) {
 
   // ✅ date: 표시용 (Date 속성 우선, 없으면 created_time 날짜)
   const date = props.Date?.date?.start || page.created_time.split("T")[0];
+  const dateEnd = props.Date?.date?.end || "";
 
   // ✅ createdAt: 정렬용 (노션 페이지 생성 시각 전체)
   const createdAt = page.created_time; // "2026-02-28T10:30:00.000Z"
@@ -1115,6 +1119,7 @@ slug: "${slug}"
 category: "${category}"
 tags: ${JSON.stringify(tags)}
 date: "${date}"
+dateEnd: "${dateEnd}"
 createdAt: "${createdAt}"
 excerpt: "${escapeYaml(excerpt)}"
 thumbnail: "${thumbnail}"
@@ -1134,6 +1139,7 @@ ${content}`;
     categorySlug,
     tags,
     date,
+    dateEnd,
     createdAt,
     excerpt,
     thumbnail,

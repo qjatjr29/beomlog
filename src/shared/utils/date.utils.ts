@@ -6,6 +6,18 @@ export const formatDate = (dateString: string): string => {
   return `${year}.${month}.${day}`;
 };
 
+export const formatDateRange = (
+  startDate: string,
+  endDate?: string,
+): string => {
+  if (!startDate) return "";
+
+  const start = formatDate(startDate);
+  if (!endDate || endDate === startDate) return start;
+
+  return `${start} ~ ${formatDate(endDate)}`;
+};
+
 export const formatDateTime = (dateString: string): string => {
   const date = new Date(dateString);
   const year = date.getFullYear();

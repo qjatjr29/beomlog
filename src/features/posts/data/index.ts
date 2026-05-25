@@ -30,6 +30,7 @@ export const loadAllPosts = (): Post[] => {
         categorySlug,
         tags: frontMatter.tags,
         date: frontMatter.date,
+        dateEnd: frontMatter.dateEnd,
         createdAt: frontMatter.createdAt ?? frontMatter.date,
         slug: frontMatter.slug ?? frontMatter.id,
         groupId: frontMatter.groupId ?? "",
