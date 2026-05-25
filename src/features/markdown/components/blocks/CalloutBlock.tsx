@@ -201,7 +201,7 @@ export const CalloutBlock = ({ lines }: CalloutBlockProps) => {
 
   return (
     <div
-      className={`my-6 overflow-hidden rounded-md border ${s.border} bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900`}
+      className={`my-3 overflow-hidden rounded-md border ${s.border} bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900`}
     >
       <div
         className={`${s.headerBg} border-b ${s.headerBorder} px-4 py-2.5 flex items-center gap-2`}

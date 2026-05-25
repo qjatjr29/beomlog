@@ -44,7 +44,7 @@ export const BlockquoteBlock = ({ lines }: BlockquoteBlockProps) => {
   }
 
   return (
-    <blockquote className="my-6 overflow-hidden rounded-md border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
+    <blockquote className="my-3 overflow-hidden rounded-md border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-900">
       <div className="border-b border-gray-100 bg-gray-50 px-4 py-1.5 dark:border-gray-700 dark:bg-gray-800/80">
         <span className="text-xs font-medium text-gray-500 dark:text-gray-400">
           Comment
