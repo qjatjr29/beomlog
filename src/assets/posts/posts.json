@@ -10,9 +10,7 @@
       "Virtual Thread"
     ],
     "date": "2026-05-23",
-    "createdAt": "2026-05-23T05:15:00.000Z",
     "excerpt": "⭐ Virtual Thread :::callout JDK 21에 추가된 경량 스레드 :::callout - OS 스레드를 그대로 사용하지 않고 JVM 내부 스케줄링을 통해 수십수백...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc559cd86-bc7e-4f02-b9f6-500e96ec468d%2Fimage.png?table=block&id=369d67b9-9e80-80bf-8e8c-e3d40f0d8bf6&cache=v2",
     "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
     "path": "개발/java/java-virtual-thread.md",
     "lastEdited": "2026-05-23T05:49:00.000Z"
@@ -568,6 +566,24 @@
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-01-비개발자를-위한-바이브-코딩-도전기.md",
     "lastEdited": "2026-04-29T03:05:00.000Z"
+  },
+  {
+    "id": "36bd67b9-9e80-800c-a315-d4c7fca65dd8",
+    "title": "11장. 스트림 처리",
+    "slug": "11장-스트림-처리",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "stream"
+    ],
+    "date": "2026-05-25",
+    "createdAt": "2026-05-25T04:11:00.000Z",
+    "excerpt": "10장에서 살펴본 일괄처리는 입력을 유한한 크기로 한정한다는 중요한 가정이 있다. 그래서 일괄처리는 입력을 읽는 작업이 끝나는 시점을 알 수 있다. 실제로는 많은 데이터가 시간이 ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fedeedc37-7238-4d26-a668-b9c478382379%2Fimage.png?table=block&id=36bd67b9-9e80-80f9-aea9-c384f90aa7e0&cache=v2",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/11장-스트림-처리.md",
+    "lastEdited": "2026-05-25T04:13:00.000Z"
   },
   {
     "id": "362d67b9-9e80-8011-b9f5-cacd4b06fdf7",
