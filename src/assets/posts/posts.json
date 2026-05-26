@@ -323,6 +323,26 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "367d67b9-9e80-8081-a621-da75451037de",
+    "title": "딸깍톤 참여 후기(feat. 3등 수상! 🥉)",
+    "slug": "딸깍톤-참여-후기-feat-3등-수상",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "해커톤",
+      "AI",
+      "바이브코딩"
+    ],
+    "date": "2026-03-28",
+    "dateEnd": "",
+    "createdAt": "2026-05-21T14:03:00.000Z",
+    "excerpt": ":::callout 정말 뒤늦게 작성하는 딸깍톤 후기입니다! 딸깍톤에 참가하다! 올해 만우절을 기념하여 열린 바이브코딩 딸깍톤에 참여하게 되었습니다! 부스트캠프 그룹 스프린트 과정...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F43b3de78-23e1-49f6-9f45-5427e1923fe8%2Fimage.png?table=block&id=367d67b9-9e80-80a5-bd31-f2ea4b4183e9&cache=v2",
+    "groupId": "",
+    "path": "일상/딸깍톤-참여-후기-feat-3등-수상.md",
+    "lastEdited": "2026-05-26T00:33:00.000Z"
+  },
+  {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
     "title": "부스트캠프 후기",
     "slug": "부스트캠프-후기",
@@ -578,9 +598,7 @@
       "stream"
     ],
     "date": "2026-05-25",
-    "createdAt": "2026-05-25T04:11:00.000Z",
     "excerpt": "10장에서 살펴본 일괄처리는 입력을 유한한 크기로 한정한다는 중요한 가정이 있다. 그래서 일괄처리는 입력을 읽는 작업이 끝나는 시점을 알 수 있다. 실제로는 많은 데이터가 시간이 ...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fedeedc37-7238-4d26-a668-b9c478382379%2Fimage.png?table=block&id=36bd67b9-9e80-80f9-aea9-c384f90aa7e0&cache=v2",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/11장-스트림-처리.md",
     "lastEdited": "2026-05-25T04:17:00.000Z"
