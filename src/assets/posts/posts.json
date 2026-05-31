@@ -1,5 +1,25 @@
 [
   {
+    "id": "36fd67b9-9e80-80eb-9a71-fcdd85289ca5",
+    "title": "Spring Boot 등장과 Auto-configuration",
+    "slug": "spring-boot-등장과-auto-configuration",
+    "category": "개발",
+    "categorySlug": "개발",
+    "groupSlug": "spring-boot",
+    "tags": [
+      "SpringBoot",
+      "Auto-Configuration"
+    ],
+    "date": "2026-05-28",
+    "dateEnd": "",
+    "createdAt": "2026-05-29T03:55:00.000Z",
+    "excerpt": "🌱 Spring Boot 등장 ⚠️ 기존 Spring의 문제점 (Spring Boot 이전) Spring 애플리케이션을 시작하려면 해야하는 설정이 너무 많아지고 복잡해졌습니다. ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F07f14736-dde0-4626-a298-5745221f7162%2Fimage.png?table=block&id=36fd67b9-9e80-8073-aedc-d034f40cd651&cache=v2",
+    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
+    "path": "개발/spring-boot/spring-boot-등장과-auto-configuration.md",
+    "lastEdited": "2026-05-29T03:56:00.000Z"
+  },
+  {
     "id": "369d67b9-9e80-800e-8432-c72d0dfb2a78",
     "title": "⭐️ Java Virtual Thread",
     "slug": "java-virtual-thread",
@@ -323,6 +343,47 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "371d67b9-9e80-80c5-8c66-c201f7c7c202",
+    "title": "AWS Summit Seoul 2026 후기 (DAY 2 AI Day 🔥)",
+    "slug": "aws-summit-seoul-2026-후기-day-2-ai-day",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "AWS",
+      "컨퍼런스",
+      "AI",
+      "AWS Summit Seoul 2026"
+    ],
+    "date": "2026-05-20",
+    "dateEnd": "2026-05-21",
+    "createdAt": "2026-05-31T11:48:00.000Z",
+    "excerpt": "이번 클라우드 행사인 AWS SUMMIT SEOUL 2026에 다녀왔습니다!@ 이번 행사는 서울 코엑스에서 DAY 1, DAY 2로 나뉘어 진행되었는데요. 저는 첫날 개인 일정이 ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc075f324-4c41-45d3-9b51-6d41e891e5bd%2Fimage.png?table=block&id=371d67b9-9e80-80a4-b7a9-f77d126bb107&cache=v2",
+    "groupId": "",
+    "path": "일상/aws-summit-seoul-2026-후기-day-2-ai-day.md",
+    "lastEdited": "2026-05-31T15:51:00.000Z"
+  },
+  {
+    "id": "36cd67b9-9e80-807d-a063-dd577b585eb8",
+    "title": "T1 Home Ground 2026 후기",
+    "slug": "t1-home-ground-2026-후기",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "공연",
+      "e스포츠",
+      "페스티벌"
+    ],
+    "date": "2026-04-24",
+    "dateEnd": "2026-04-25",
+    "createdAt": "2026-05-26T00:30:00.000Z",
+    "excerpt": "지난 4월 2426일에 인천 인스파이어 아레나에서 2026 T1 홈그라운드가 진행되었습니다!@ 직접 게임 경기(LCK)를 현장에서 직관하러 가는 것도 처음이었고 경기를 보는 것 뿐...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbcb6d4a9-aae9-4a9d-80ed-d2488f8a9599%2Fimage.png?table=block&id=36cd67b9-9e80-8062-9920-f5f57aafe397&cache=v2",
+    "groupId": "",
+    "path": "일상/t1-home-ground-2026-후기.md",
+    "lastEdited": "2026-05-31T15:50:00.000Z"
+  },
+  {
     "id": "367d67b9-9e80-8081-a621-da75451037de",
     "title": "딸깍톤 참여 후기(feat. 3등 수상! 🥉)",
     "slug": "딸깍톤-참여-후기-feat-3등-수상",
@@ -340,7 +401,7 @@
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F43b3de78-23e1-49f6-9f45-5427e1923fe8%2Fimage.png?table=block&id=367d67b9-9e80-80a5-bd31-f2ea4b4183e9&cache=v2",
     "groupId": "",
     "path": "일상/딸깍톤-참여-후기-feat-3등-수상.md",
-    "lastEdited": "2026-05-26T00:33:00.000Z"
+    "lastEdited": "2026-05-31T15:50:00.000Z"
   },
   {
     "id": "30cd67b9-9e80-80cd-998e-c7da43171144",

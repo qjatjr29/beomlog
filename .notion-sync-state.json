@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-26T06:54:00.593Z",
+  "lastSyncTime": "2026-05-31T15:54:06.358Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -898,7 +898,53 @@
       "createdAt": "2026-05-21T14:03:00.000Z",
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F43b3de78-23e1-49f6-9f45-5427e1923fe8%2Fimage.png?table=block&id=367d67b9-9e80-80a5-bd31-f2ea4b4183e9&cache=v2",
       "excerpt": ":::callout 정말 뒤늦게 작성하는 딸깍톤 후기입니다! 딸깍톤에 참가하다! 올해 만우절을 기념하여 열린 바이브코딩 딸깍톤에 참여하게 되었습니다! 부스트캠프 그룹 스프린트 과정...",
-      "lastEdited": "2026-05-26T00:33:00.000Z"
+      "lastEdited": "2026-05-31T15:50:00.000Z"
+    },
+    "36fd67b9-9e80-80eb-9a71-fcdd85289ca5": {
+      "slug": "spring-boot-등장과-auto-configuration",
+      "categorySlug": "개발",
+      "groupSlug": "spring-boot",
+      "title": "Spring Boot 등장과 Auto-configuration",
+      "tags": [
+        "SpringBoot",
+        "Auto-Configuration"
+      ],
+      "date": "2026-05-28",
+      "createdAt": "2026-05-29T03:55:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F07f14736-dde0-4626-a298-5745221f7162%2Fimage.png?table=block&id=36fd67b9-9e80-8073-aedc-d034f40cd651&cache=v2",
+      "excerpt": "🌱 Spring Boot 등장 ⚠️ 기존 Spring의 문제점 (Spring Boot 이전) Spring 애플리케이션을 시작하려면 해야하는 설정이 너무 많아지고 복잡해졌습니다. ...",
+      "lastEdited": "2026-05-29T03:56:00.000Z"
+    },
+    "371d67b9-9e80-80c5-8c66-c201f7c7c202": {
+      "slug": "aws-summit-seoul-2026-후기-day-2-ai-day",
+      "categorySlug": "일상",
+      "title": "AWS Summit Seoul 2026 후기 (DAY 2 AI Day 🔥)",
+      "tags": [
+        "AWS",
+        "컨퍼런스",
+        "AI",
+        "AWS Summit Seoul 2026"
+      ],
+      "date": "2026-05-20",
+      "createdAt": "2026-05-31T11:48:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc075f324-4c41-45d3-9b51-6d41e891e5bd%2Fimage.png?table=block&id=371d67b9-9e80-80a4-b7a9-f77d126bb107&cache=v2",
+      "excerpt": "이번 클라우드 행사인 AWS SUMMIT SEOUL 2026에 다녀왔습니다!@ 이번 행사는 서울 코엑스에서 DAY 1, DAY 2로 나뉘어 진행되었는데요. 저는 첫날 개인 일정이 ...",
+      "lastEdited": "2026-05-31T15:51:00.000Z"
+    },
+    "36cd67b9-9e80-807d-a063-dd577b585eb8": {
+      "slug": "t1-home-ground-2026-후기",
+      "categorySlug": "일상",
+      "title": "T1 Home Ground 2026 후기",
+      "tags": [
+        "공연",
+        "e스포츠",
+        "페스티벌"
+      ],
+      "date": "2026-04-24",
+      "createdAt": "2026-05-26T00:30:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbcb6d4a9-aae9-4a9d-80ed-d2488f8a9599%2Fimage.png?table=block&id=36cd67b9-9e80-8062-9920-f5f57aafe397&cache=v2",
+      "excerpt": "지난 4월 2426일에 인천 인스파이어 아레나에서 2026 T1 홈그라운드가 진행되었습니다!@ 직접 게임 경기(LCK)를 현장에서 직관하러 가는 것도 처음이었고 경기를 보는 것 뿐...",
+      "lastEdited": "2026-05-31T15:50:00.000Z"
     }
   }
 }

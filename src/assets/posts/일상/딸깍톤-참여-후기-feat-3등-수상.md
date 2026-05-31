@@ -10,7 +10,7 @@ createdAt: "2026-05-21T14:03:00.000Z"
 excerpt: ":::callout 정말 뒤늦게 작성하는 딸깍톤 후기입니다! 딸깍톤에 참가하다! 올해 만우절을 기념하여 열린 바이브코딩 딸깍톤에 참여하게 되었습니다! 부스트캠프 그룹 스프린트 과정..."
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F43b3de78-23e1-49f6-9f45-5427e1923fe8%2Fimage.png?table=block&id=367d67b9-9e80-80a5-bd31-f2ea4b4183e9&cache=v2"
 groupId: ""
-lastEdited: "2026-05-26T00:33:00.000Z"
+lastEdited: "2026-05-31T15:50:00.000Z"
 ---
 
 <img src="https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F43b3de78-23e1-49f6-9f45-5427e1923fe8%2Fimage.png?table=block&id=367d67b9-9e80-80a5-bd31-f2ea4b4183e9&cache=v2" alt="image" width="1268" height="1008" loading="lazy" />

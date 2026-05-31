@@ -1,5 +1,19 @@
 [
   {
+    "id": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
+    "title": "Spring Boot",
+    "category": "개발",
+    "categorySlug": "개발",
+    "coverImage": "",
+    "description": "Spring Boot Framework을 다시 처음부터 학습해보자.",
+    "tags": [
+      "backend",
+      "SpringBoot"
+    ],
+    "postCount": 1,
+    "lastEdited": "2026-05-29T03:55:00.000Z"
+  },
+  {
     "id": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
     "title": "Java",
     "category": "개발",
