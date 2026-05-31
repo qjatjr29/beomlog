@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-31T15:54:06.358Z",
+  "lastSyncTime": "2026-05-31T15:59:56.733Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -945,6 +945,50 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbcb6d4a9-aae9-4a9d-80ed-d2488f8a9599%2Fimage.png?table=block&id=36cd67b9-9e80-8062-9920-f5f57aafe397&cache=v2",
       "excerpt": "지난 4월 2426일에 인천 인스파이어 아레나에서 2026 T1 홈그라운드가 진행되었습니다!@ 직접 게임 경기(LCK)를 현장에서 직관하러 가는 것도 처음이었고 경기를 보는 것 뿐...",
       "lastEdited": "2026-05-31T15:50:00.000Z"
+    },
+    "371d67b9-9e80-80ca-9f10-d109e48beee6": {
+      "slug": "spring-aop",
+      "categorySlug": "개발",
+      "groupSlug": "spring-boot",
+      "title": "Spring AOP",
+      "tags": [
+        "AOP"
+      ],
+      "date": "2026-05-31",
+      "createdAt": "2026-05-31T15:59:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7bfa69f7-77ba-4fe2-a7a5-1ae5da1d38c0%2Fimage.png?table=block&id=371d67b9-9e80-800a-8318-f35472a3a222&cache=v2",
+      "excerpt": "⭐ AOP(Aspect-Oriented Programming, 관점 지향 프로그래밍) :::callout ℹ️ AOP :::callout 핵심 비즈니스 로직과 공통(횡단) 관심사를...",
+      "lastEdited": "2026-05-31T15:59:00.000Z"
+    },
+    "371d67b9-9e80-8031-ac9b-d20b6d2d02d3": {
+      "slug": "ioc와-di-spring-boot-컨테이너",
+      "categorySlug": "개발",
+      "groupSlug": "spring-boot",
+      "title": "IoC와 DI, Spring Boot 컨테이너",
+      "tags": [
+        "IoC",
+        "DI",
+        "Spring 컨테이너"
+      ],
+      "date": "2026-05-30",
+      "createdAt": "2026-05-31T15:58:00.000Z",
+      "thumbnail": "",
+      "excerpt": "↗️ 제어의 역전 (IoC, Inversion of Control) 프로그램의 제어 흐름을 개발자가 직접 제어하는 것이 아닌 외부에서 관리하는 것을 의미합니다. 할리우드 원칙이라고...",
+      "lastEdited": "2026-05-31T15:59:00.000Z"
+    },
+    "371d67b9-9e80-805b-9cfa-e6a603f9e026": {
+      "slug": "spring-bean",
+      "categorySlug": "개발",
+      "groupSlug": "spring-boot",
+      "title": "Spring Bean",
+      "tags": [
+        "Spring Bean"
+      ],
+      "date": "2026-05-28",
+      "createdAt": "2026-05-31T15:57:00.000Z",
+      "thumbnail": "",
+      "excerpt": "Spring Bean이란? A bean is an object that is instantiated, assembled, and managed by a Spring IoC cont...",
+      "lastEdited": "2026-05-31T15:58:00.000Z"
     }
   }
 }
