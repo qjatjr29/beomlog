@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-05-31T15:59:56.733Z",
+  "lastSyncTime": "2026-06-11T05:36:17.809Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -989,6 +989,18 @@
       "thumbnail": "",
       "excerpt": "Spring Bean이란? A bean is an object that is instantiated, assembled, and managed by a Spring IoC cont...",
       "lastEdited": "2026-05-31T15:58:00.000Z"
+    },
+    "37cd67b9-9e80-8082-91ef-e778f2c8cbf9": {
+      "slug": "12장-데이터-시스템의-미래",
+      "categorySlug": "책",
+      "groupSlug": "데이터-중심-애플리케이션-설계",
+      "title": "12장. 데이터 시스템의 미래",
+      "tags": [],
+      "date": "2026-06-10",
+      "createdAt": "2026-06-11T05:34:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F169e8c11-8739-475a-a641-bc9df632c6f5%2Fimage.png?table=block&id=37cd67b9-9e80-80f4-98d3-f73071a25751&cache=v2",
+      "excerpt": "이 책의 목적은 애플리케이션과 시스템을 신뢰할 수 있고 확장 가능하며 유지보수하기 쉽게 만드는 방법을 탐구하는 것이다. 이번 장에서의 목적은 현재보다 나은, 즉 견고하고 정확하며 ...",
+      "lastEdited": "2026-06-11T05:35:00.000Z"
     }
   }
 }

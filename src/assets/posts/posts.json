@@ -10,10 +10,7 @@
       "AOP"
     ],
     "date": "2026-05-31",
-    "dateEnd": "",
-    "createdAt": "2026-05-31T15:59:00.000Z",
     "excerpt": "⭐ AOP(Aspect-Oriented Programming, 관점 지향 프로그래밍) :::callout ℹ️ AOP :::callout 핵심 비즈니스 로직과 공통(횡단) 관심사를...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7bfa69f7-77ba-4fe2-a7a5-1ae5da1d38c0%2Fimage.png?table=block&id=371d67b9-9e80-800a-8318-f35472a3a222&cache=v2",
     "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
     "path": "개발/spring-boot/spring-aop.md",
     "lastEdited": "2026-05-31T15:59:00.000Z"
@@ -31,10 +28,7 @@
       "Spring 컨테이너"
     ],
     "date": "2026-05-30",
-    "dateEnd": "",
-    "createdAt": "2026-05-31T15:58:00.000Z",
     "excerpt": "↗️ 제어의 역전 (IoC, Inversion of Control) 프로그램의 제어 흐름을 개발자가 직접 제어하는 것이 아닌 외부에서 관리하는 것을 의미합니다. 할리우드 원칙이라고...",
-    "thumbnail": "",
     "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
     "path": "개발/spring-boot/ioc와-di-spring-boot-컨테이너.md",
     "lastEdited": "2026-05-31T15:59:00.000Z"
@@ -50,10 +44,7 @@
       "Spring Bean"
     ],
     "date": "2026-05-28",
-    "dateEnd": "",
-    "createdAt": "2026-05-31T15:57:00.000Z",
     "excerpt": "Spring Bean이란? A bean is an object that is instantiated, assembled, and managed by a Spring IoC cont...",
-    "thumbnail": "",
     "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
     "path": "개발/spring-boot/spring-bean.md",
     "lastEdited": "2026-05-31T15:58:00.000Z"
@@ -700,6 +691,23 @@
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-01-비개발자를-위한-바이브-코딩-도전기.md",
     "lastEdited": "2026-04-29T03:05:00.000Z"
+  },
+  {
+    "id": "37cd67b9-9e80-8082-91ef-e778f2c8cbf9",
+    "title": "12장. 데이터 시스템의 미래",
+    "slug": "12장-데이터-시스템의-미래",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [],
+    "date": "2026-06-10",
+    "dateEnd": "",
+    "createdAt": "2026-06-11T05:34:00.000Z",
+    "excerpt": "이 책의 목적은 애플리케이션과 시스템을 신뢰할 수 있고 확장 가능하며 유지보수하기 쉽게 만드는 방법을 탐구하는 것이다. 이번 장에서의 목적은 현재보다 나은, 즉 견고하고 정확하며 ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F169e8c11-8739-475a-a641-bc9df632c6f5%2Fimage.png?table=block&id=37cd67b9-9e80-80f4-98d3-f73071a25751&cache=v2",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/12장-데이터-시스템의-미래.md",
+    "lastEdited": "2026-06-11T05:35:00.000Z"
   },
   {
     "id": "36bd67b9-9e80-800c-a315-d4c7fca65dd8",
