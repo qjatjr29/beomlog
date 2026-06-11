@@ -390,6 +390,29 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
+    "id": "37cd67b9-9e80-8086-a288-e1bcca4dd810",
+    "title": "한눈에 살펴보는 자바 동시성 변천사",
+    "slug": "한눈에-살펴보는-자바-동시성-변천사",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "플랫폼스레드",
+      "Executor",
+      "가상스레드",
+      "CompletableFuture",
+      "Fork/Join"
+    ],
+    "date": "2026-06-11",
+    "dateEnd": "",
+    "createdAt": "2026-06-11T08:00:00.000Z",
+    "excerpt": "자바에서의 동시성 진화를 살펴보는 것으로 시작한다. 플랫폼 스레드에서 출발해 Executor 프레임워크, Fork/Join, CompletableFuture로 이어지는 흐름을 추적...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb8cc60e8-528f-44cb-868d-0afe81c9ba4a%2Fimage.png?table=block&id=37cd67b9-9e80-803a-8857-cfd0453020a1&cache=v2",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/한눈에-살펴보는-자바-동시성-변천사.md",
+    "lastEdited": "2026-06-11T08:04:00.000Z"
+  },
+  {
     "id": "371d67b9-9e80-80c5-8c66-c201f7c7c202",
     "title": "AWS Summit Seoul 2026 후기 (DAY 2 AI Day 🔥)",
     "slug": "aws-summit-seoul-2026-후기-day-2-ai-day",
@@ -701,10 +724,7 @@
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-06-10",
-    "dateEnd": "",
-    "createdAt": "2026-06-11T05:34:00.000Z",
     "excerpt": "이 책의 목적은 애플리케이션과 시스템을 신뢰할 수 있고 확장 가능하며 유지보수하기 쉽게 만드는 방법을 탐구하는 것이다. 이번 장에서의 목적은 현재보다 나은, 즉 견고하고 정확하며 ...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F169e8c11-8739-475a-a641-bc9df632c6f5%2Fimage.png?table=block&id=37cd67b9-9e80-80f4-98d3-f73071a25751&cache=v2",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/12장-데이터-시스템의-미래.md",
     "lastEdited": "2026-06-11T05:35:00.000Z"

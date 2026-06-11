@@ -56,6 +56,22 @@
     "lastEdited": "2026-05-31T16:05:00.000Z"
   },
   {
+    "id": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "title": "모던 자바 동시성 프로그래밍",
+    "category": "책",
+    "categorySlug": "책",
+    "coverImage": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fe3502848-8d4c-4f9e-959f-08a31af4bb22%2F9791124309025.jpg?table=block&id=37cd67b9-9e80-80a0-a6dd-f18dd6a44395&cache=v2",
+    "description": "편리함, 견고함, 고성능, 어느 것도 양보하지 않는 새로운 자바의 표준",
+    "tags": [
+      "개발",
+      "Java",
+      "동시성",
+      "가상스레드"
+    ],
+    "postCount": 1,
+    "lastEdited": "2026-06-11T08:03:00.000Z"
+  },
+  {
     "id": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "title": "요즘 당근 AI 개발",
     "category": "책",
