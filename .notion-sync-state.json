@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-06-11T08:05:39.738Z",
+  "lastSyncTime": "2026-06-15T13:14:51.324Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -1019,6 +1019,20 @@
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb8cc60e8-528f-44cb-868d-0afe81c9ba4a%2Fimage.png?table=block&id=37cd67b9-9e80-803a-8857-cfd0453020a1&cache=v2",
       "excerpt": "자바에서의 동시성 진화를 살펴보는 것으로 시작한다. 플랫폼 스레드에서 출발해 Executor 프레임워크, Fork/Join, CompletableFuture로 이어지는 흐름을 추적...",
       "lastEdited": "2026-06-11T08:04:00.000Z"
+    },
+    "380d67b9-9e80-80ef-9d6f-da25a077e6e5": {
+      "slug": "쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드",
+      "categorySlug": "책",
+      "groupSlug": "모던-자바-동시성-프로그래밍",
+      "title": "쉼 없이 CPU를 활용하는 가볍고 부지런한 가상 스레드",
+      "tags": [
+        "가상스레드"
+      ],
+      "date": "2026-06-15",
+      "createdAt": "2026-06-15T13:13:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F10056fd0-5ac7-4be9-ba05-4c3da7e08e4d%2Fimage.png?table=block&id=380d67b9-9e80-8084-9292-fad18725c685&cache=v2",
+      "excerpt": ":::callout 🎯 챕터 목표 :::callout - 가상 스레드를 실습 중심으로 소개한다. :::callout - 가상 스레드가 무엇이며 플랫폼 스레드와 어떻게 다른지 그리...",
+      "lastEdited": "2026-06-15T13:14:00.000Z"
     }
   }
 }
