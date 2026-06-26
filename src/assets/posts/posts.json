@@ -390,23 +390,24 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "380d67b9-9e80-80ef-9d6f-da25a077e6e5",
-    "title": "쉼 없이 CPU를 활용하는 가볍고 부지런한 가상 스레드",
-    "slug": "쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드",
+    "id": "38bd67b9-9e80-80b5-84e7-ef75acbb9b3d",
+    "title": "직접 만들어보고 이해하는 최신 동시성 메커니즘",
+    "slug": "직접-만들어보고-이해하는-최신-동시성-메커니즘",
     "category": "책",
     "categorySlug": "책",
     "groupSlug": "모던-자바-동시성-프로그래밍",
     "tags": [
-      "가상스레드"
+      "Continuation",
+      "Fork/Join"
     ],
-    "date": "2026-06-15",
+    "date": "2026-06-25",
     "dateEnd": "",
-    "createdAt": "2026-06-15T13:13:00.000Z",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 가상 스레드를 실습 중심으로 소개한다. :::callout - 가상 스레드가 무엇이며 플랫폼 스레드와 어떻게 다른지 그리...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F10056fd0-5ac7-4be9-ba05-4c3da7e08e4d%2Fimage.png?table=block&id=380d67b9-9e80-8084-9292-fad18725c685&cache=v2",
+    "createdAt": "2026-06-26T02:41:00.000Z",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 동시성의 내부 동작을 깊이 있게 다룬다. :::callout - 스레드 풀, Executor 프레임워크, 가상 스레드를 ...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fd0f1b291-9755-438e-ab6b-337bef26fd9b%2Fimage.png?table=block&id=38bd67b9-9e80-8099-a09c-ce61f4c40a3b&cache=v2",
     "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드.md",
-    "lastEdited": "2026-06-15T13:14:00.000Z"
+    "path": "책/모던-자바-동시성-프로그래밍/직접-만들어보고-이해하는-최신-동시성-메커니즘.md",
+    "lastEdited": "2026-06-26T02:42:00.000Z"
   },
   {
     "id": "371d67b9-9e80-80c5-8c66-c201f7c7c202",
@@ -482,6 +483,22 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "380d67b9-9e80-80ef-9d6f-da25a077e6e5",
+    "title": "쉼 없이 CPU를 활용하는 가볍고 부지런한 가상 스레드",
+    "slug": "쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "가상스레드"
+    ],
+    "date": "2026-06-15",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 가상 스레드를 실습 중심으로 소개한다. :::callout - 가상 스레드가 무엇이며 플랫폼 스레드와 어떻게 다른지 그리...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드.md",
+    "lastEdited": "2026-06-15T13:14:00.000Z"
   },
   {
     "id": "37cd67b9-9e80-8086-a288-e1bcca4dd810",
