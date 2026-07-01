@@ -390,24 +390,23 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "38cd67b9-9e80-80e2-8514-e445e37c6338",
-    "title": "빈틈없이 견고하고 편리한 구조적 동시성",
-    "slug": "빈틈없이-견고하고-편리한-구조적-동시성",
+    "id": "390d67b9-9e80-800e-82fe-c5afdf9cb82c",
+    "title": "동시성 모델의 화룡점정, 스코프드 밸류",
+    "slug": "동시성-모델의-화룡점정-스코프드-밸류",
     "category": "책",
     "categorySlug": "책",
     "groupSlug": "모던-자바-동시성-프로그래밍",
     "tags": [
-      "구조적 동시성",
-      "StructuredTaskScope"
+      "ScopedValue"
     ],
-    "date": "2026-06-27",
+    "date": "2026-07-01",
     "dateEnd": "",
-    "createdAt": "2026-06-27T06:12:00.000Z",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 프로젝트 룸(Project Loom)의 가장 중요한 혁신 중 하나인 StructuredTaskScope를 다룬다. :::...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F13733ec6-3d92-4fdd-8580-f663fc8dbd9b%2Fimage.png?table=block&id=38cd67b9-9e80-801a-a76d-f352290863c8&cache=v2",
+    "createdAt": "2026-07-01T06:29:00.000Z",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout 고도의 동시성을 가진 애플리케이션에서 컨텍스트 전파는 항상 어려운 문제였다. :::callout 이 장에서는 스코프드 밸류가...",
+    "thumbnail": "",
     "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/빈틈없이-견고하고-편리한-구조적-동시성.md",
-    "lastEdited": "2026-06-27T06:12:00.000Z"
+    "path": "책/모던-자바-동시성-프로그래밍/동시성-모델의-화룡점정-스코프드-밸류.md",
+    "lastEdited": "2026-07-01T06:30:00.000Z"
   },
   {
     "id": "371d67b9-9e80-80c5-8c66-c201f7c7c202",
@@ -483,6 +482,23 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "38cd67b9-9e80-80e2-8514-e445e37c6338",
+    "title": "빈틈없이 견고하고 편리한 구조적 동시성",
+    "slug": "빈틈없이-견고하고-편리한-구조적-동시성",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "구조적 동시성",
+      "StructuredTaskScope"
+    ],
+    "date": "2026-06-27",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 프로젝트 룸(Project Loom)의 가장 중요한 혁신 중 하나인 StructuredTaskScope를 다룬다. :::...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/빈틈없이-견고하고-편리한-구조적-동시성.md",
+    "lastEdited": "2026-06-27T06:12:00.000Z"
   },
   {
     "id": "38bd67b9-9e80-80b5-84e7-ef75acbb9b3d",
