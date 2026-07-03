@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-07-01T06:30:39.403Z",
+  "lastSyncTime": "2026-07-03T05:54:12.500Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -1077,6 +1077,21 @@
       "thumbnail": "",
       "excerpt": ":::callout 🎯 챕터 목표 :::callout 고도의 동시성을 가진 애플리케이션에서 컨텍스트 전파는 항상 어려운 문제였다. :::callout 이 장에서는 스코프드 밸류가...",
       "lastEdited": "2026-07-01T06:30:00.000Z"
+    },
+    "392d67b9-9e80-807a-a37d-c9b4ff334aff": {
+      "slug": "가상-스레드-시대에서-리액티브-자바의-의미",
+      "categorySlug": "책",
+      "groupSlug": "모던-자바-동시성-프로그래밍",
+      "title": "가상 스레드 시대에서 리액티브 자바의 의미",
+      "tags": [
+        "리액티브 자바",
+        "리액티브 프로그래밍"
+      ],
+      "date": "2026-07-03",
+      "createdAt": "2026-07-03T05:53:00.000Z",
+      "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb327958a-d276-4fc6-ba5f-bb397b6781d0%2Fimage.png?table=block&id=392d67b9-9e80-808b-bec2-d0da4e8293a3&cache=v2",
+      "excerpt": ":::callout 🎯 챕터 목표 :::callout 가상 스레드와 리액티브 프로그래밍이 동시성 문제 해결에 접근하는 방식의 차이를 이해하는 것을 목표로 한다. :::callou...",
+      "lastEdited": "2026-07-03T05:53:00.000Z"
     }
   }
 }
