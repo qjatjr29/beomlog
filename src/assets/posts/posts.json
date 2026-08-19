@@ -390,24 +390,61 @@
     "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
-    "id": "392d67b9-9e80-807a-a37d-c9b4ff334aff",
-    "title": "가상 스레드 시대에서 리액티브 자바의 의미",
-    "slug": "가상-스레드-시대에서-리액티브-자바의-의미",
-    "category": "책",
-    "categorySlug": "책",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "id": "3bfd67b9-9e80-8079-9f71-ed83ac8ecb55",
+    "title": "경주 여행",
+    "slug": "경주-여행",
+    "category": "일상",
+    "categorySlug": "일상",
     "tags": [
-      "리액티브 자바",
-      "리액티브 프로그래밍"
+      "여행"
     ],
-    "date": "2026-07-03",
+    "date": "2026-06-29",
+    "dateEnd": "2026-06-30",
+    "createdAt": "2026-08-17T05:47:00.000Z",
+    "excerpt": "학창 시절 수련회나 수학여행으로 가는 경주! 하지만 저는 경주 수학여행을 단 한 번도 가보지 못했습니다... 드디어 이번에 제 인생 첫 경주 여행을 다녀오게 되었습니다! 고향 밀면...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc12acb29-fe6b-4d20-8f09-65ac29241ff6%2Fimage.png?table=block&id=3bfd67b9-9e80-80ef-8de2-c6fbf37adc7f&cache=v2",
+    "groupId": "",
+    "path": "일상/경주-여행.md",
+    "lastEdited": "2026-08-19T12:56:00.000Z"
+  },
+  {
+    "id": "3bfd67b9-9e80-803b-a19e-f6d274357e42",
+    "title": "대전 여행과 원정 야구 직관",
+    "slug": "대전-여행과-원정-야구-직관",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "야구",
+      "여행",
+      "성심당"
+    ],
+    "date": "2026-06-23",
     "dateEnd": "",
-    "createdAt": "2026-07-03T05:53:00.000Z",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout 가상 스레드와 리액티브 프로그래밍이 동시성 문제 해결에 접근하는 방식의 차이를 이해하는 것을 목표로 한다. :::callou...",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb327958a-d276-4fc6-ba5f-bb397b6781d0%2Fimage.png?table=block&id=392d67b9-9e80-808b-bec2-d0da4e8293a3&cache=v2",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/가상-스레드-시대에서-리액티브-자바의-의미.md",
-    "lastEdited": "2026-07-03T05:53:00.000Z"
+    "createdAt": "2026-08-17T03:44:00.000Z",
+    "excerpt": "아침 일찍 대전으로 출발! (영등포 ➡️ 대전) 대전행 기차를 타기 위해 아침 일찍부터 부지런히 움직여 영등포역으로 향했습니다.. 기차를 타면 항상 설레는 것 같아요. 대전역 도착...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fcaa0f329-b460-41c6-b3aa-e5065c513462%2Fimage.png?table=block&id=3bfd67b9-9e80-80bd-a064-c2d9c4cdedce&cache=v2",
+    "groupId": "",
+    "path": "일상/대전-여행과-원정-야구-직관.md",
+    "lastEdited": "2026-08-19T12:56:00.000Z"
+  },
+  {
+    "id": "371d67b9-9e80-800e-ac85-e29790261595",
+    "title": "2026 야구 첫 직관(잠실 야구장)",
+    "slug": "2026-야구-첫-직관-잠실-야구장",
+    "category": "일상",
+    "categorySlug": "일상",
+    "tags": [
+      "야구",
+      "두산베어스"
+    ],
+    "date": "2026-05-27",
+    "dateEnd": "",
+    "createdAt": "2026-05-31T16:10:00.000Z",
+    "excerpt": "저는 초등학생, 중학생 학창 시절에 🐻 두산 베어스의 완전 팬으로 맨날 경기 챙겨보기도 하고 잠실 야구장에 가서 응원가 부르던 시절이 있었는데 고등학교, 대학교에 가고나서 어쩌다...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F36a28b2e-5f36-468b-bb83-3647814c98ea%2Fimage.png?table=block&id=393d67b9-9e80-806e-9a3d-e2c6f252cfe1&cache=v2",
+    "groupId": "",
+    "path": "일상/2026-야구-첫-직관-잠실-야구장.md",
+    "lastEdited": "2026-08-19T12:56:00.000Z"
   },
   {
     "id": "371d67b9-9e80-80c5-8c66-c201f7c7c202",
@@ -483,6 +520,23 @@
     "groupId": "",
     "path": "일상/부스트캠프-후기.md",
     "lastEdited": "2026-02-28T16:53:00.000Z"
+  },
+  {
+    "id": "392d67b9-9e80-807a-a37d-c9b4ff334aff",
+    "title": "가상 스레드 시대에서 리액티브 자바의 의미",
+    "slug": "가상-스레드-시대에서-리액티브-자바의-의미",
+    "category": "책",
+    "categorySlug": "책",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "리액티브 자바",
+      "리액티브 프로그래밍"
+    ],
+    "date": "2026-07-03",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout 가상 스레드와 리액티브 프로그래밍이 동시성 문제 해결에 접근하는 방식의 차이를 이해하는 것을 목표로 한다. :::callou...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/가상-스레드-시대에서-리액티브-자바의-의미.md",
+    "lastEdited": "2026-07-03T05:53:00.000Z"
   },
   {
     "id": "390d67b9-9e80-800e-82fe-c5afdf9cb82c",
