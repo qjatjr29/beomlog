@@ -1057,8 +1057,10 @@ async function processGroupPost(page, category, groupId, groupSlug) {
   const categorySlug = slugify(category);
   const content = await getPageContent(id);
   const excerpt = extractExcerptFromContent(content);
+  const coverImage = extractCoverImage(page);
   const thumbnail =
     extractCoverImageFromProps(props, id) ||
+    coverImage ||
     extractFirstImageFromContent(content);
 
   const groupDir = path.join(OUTPUT_DIR, categorySlug, groupSlug);
@@ -1075,6 +1077,7 @@ date: "${date}"
 dateEnd: "${dateEnd}"
 createdAt: "${createdAt}"
 excerpt: "${escapeYaml(excerpt)}"
+coverImage: "${coverImage}"
 thumbnail: "${thumbnail}"
 groupId: "${groupId}"
 groupSlug: "${groupSlug}"
@@ -1092,6 +1095,7 @@ ${content}`;
     category,
     categorySlug,
     bookCategory,
+    coverImage,
     groupSlug,
     tags,
     date,
@@ -1128,8 +1132,10 @@ async function processPost(page, category) {
   const content = await getPageContent(id);
   const rawExcerpt = getPlainText(props.Excerpt?.rich_text);
   const excerpt = rawExcerpt || extractExcerptFromContent(content);
+  const coverImage = extractCoverImage(page);
   const thumbnail =
     extractCoverImageFromProps(props, id) ||
+    coverImage ||
     extractFirstImageFromContent(content);
 
   const categoryDir = path.join(OUTPUT_DIR, categorySlug);
@@ -1147,6 +1153,7 @@ date: "${date}"
 dateEnd: "${dateEnd}"
 createdAt: "${createdAt}"
 excerpt: "${escapeYaml(excerpt)}"
+coverImage: "${coverImage}"
 thumbnail: "${thumbnail}"
 groupId: ""
 lastEdited: "${page.last_edited_time}"
@@ -1163,6 +1170,7 @@ ${content}`;
     category,
     categorySlug,
     bookCategory,
+    coverImage,
     tags,
     date,
     dateEnd,

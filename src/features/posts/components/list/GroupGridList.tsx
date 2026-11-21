@@ -7,7 +7,7 @@ import { POSTS_PER_PAGE } from "@/shared/constants";
 import { PostListHeader } from "../shared/PostListHeader";
 import { TagFilter } from "../shared/TagFilter";
 import { PostListCard } from "../cards/PostListCard";
-import { PostGridCard } from "../cards/PostGridCard";
+import { BookPostGridCard } from "../cards/BookPostGridCard";
 import { GroupGridCard } from "../cards/GroupGridCard";
 import { Pagination } from "@/shared/components/Pagination";
 import { EmptyState } from "../shared/EmptyState";
@@ -123,6 +123,17 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
         )
       : filteredGroups;
 
+  const bookGridItems = useMemo(
+    () => [
+      ...filteredGroupsByBookCategory.map((group) => ({
+        type: "group" as const,
+        group,
+      })),
+      ...standalonePosts.map((post) => ({ type: "post" as const, post })),
+    ],
+    [filteredGroupsByBookCategory, standalonePosts],
+  );
+
   const { currentPage, totalPages, currentItems, handlePageChange, resetPage } =
     usePagination(searchedPostsByBookCategory, POSTS_PER_PAGE);
 
@@ -222,60 +233,31 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
                 onClear={() => setSelectedGroupTag(null)}
               />
             )}
-            {filteredGroupsByBookCategory.length === 0 &&
-            standalonePosts.length === 0 ? (
+            {bookGridItems.length === 0 ? (
               <EmptyState
                 type="gallery"
                 message="해당 태그의 항목이 없습니다."
               />
             ) : (
-              <>
-                {filteredGroupsByBookCategory.length > 0 && (
-                  <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
-                    {filteredGroupsByBookCategory.map((group, i) => (
-                      <motion.div
-                        key={group.id}
-                        initial={{ opacity: 0, y: 16 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{
-                          delay: i * 0.08,
-                          duration: 0.35,
-                          ease: "easeOut",
-                        }}>
-                        <GroupGridCard group={group} />
-                      </motion.div>
-                    ))}
-                  </div>
-                )}
-                {standalonePosts.length > 0 && (
-                  <div className="mt-6">
-                    {filteredGroupsByBookCategory.length > 0 && (
-                      <p className="text-xs text-gray-500 dark:text-gray-400 mb-3">
-                        단일 감상글
-                      </p>
+              <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 mt-4">
+                {bookGridItems.map((item, i) => (
+                  <motion.div
+                    key={item.type === "group" ? item.group.id : item.post.id}
+                    initial={{ opacity: 0, y: 16 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{
+                      delay: i * 0.08,
+                      duration: 0.35,
+                      ease: "easeOut",
+                    }}>
+                    {item.type === "group" ? (
+                      <GroupGridCard group={item.group} />
+                    ) : (
+                      <BookPostGridCard post={item.post} />
                     )}
-                    <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
-                      {standalonePosts.map((post, i) => (
-                        <motion.div
-                          key={post.id}
-                          initial={{ opacity: 0, y: 16 }}
-                          animate={{ opacity: 1, y: 0 }}
-                          transition={{
-                            delay: i * 0.08,
-                            duration: 0.35,
-                            ease: "easeOut",
-                          }}>
-                          <PostGridCard
-                            post={post}
-                            viewCount={viewCounts[post.id] ?? 0}
-                            commentCount={commentCounts[post.id] ?? 0}
-                          />
-                        </motion.div>
-                      ))}
-                    </div>
-                  </div>
-                )}
-              </>
+                  </motion.div>
+                ))}
+              </div>
             )}
           </>
         ) : (
