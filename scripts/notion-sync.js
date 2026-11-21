@@ -781,6 +781,7 @@ async function syncNotionPosts() {
                   // ✅ 그룹 슬러그 포함한 경로
                   groupSlug,
                   tags: cachedPage.tags ?? [],
+                  description: cachedPage.description ?? "",
                   date: cachedPage.date ?? page.last_edited_time.split("T")[0],
                   createdAt: cachedPage.createdAt ?? page.created_time,
                   thumbnail: fallbackThumbnail,
@@ -800,6 +801,7 @@ async function syncNotionPosts() {
                       getPlainText(page.properties.Title?.title),
                     bookCategory: cachedPage.bookCategory ?? "",
                     tags: cachedPage.tags ?? [],
+                    description: cachedPage.description ?? "",
                     date:
                       cachedPage.date ?? page.last_edited_time.split("T")[0],
                     createdAt: cachedPage.createdAt ?? page.created_time,
@@ -854,6 +856,7 @@ async function syncNotionPosts() {
                 title: postData.title,
                 bookCategory: postData.bookCategory,
                 tags: postData.tags,
+                description: postData.description,
                 date: postData.date,
                 createdAt: postData.createdAt,
                 coverImage: postData.coverImage,
@@ -1028,6 +1031,7 @@ async function processNormalPage(
         bookCategory: cachedPage.bookCategory ?? "",
         coverImage: fallbackCoverImage,
         tags: cachedPage.tags ?? [],
+        description: cachedPage.description ?? "",
         date: cachedPage.date ?? page.last_edited_time.split("T")[0],
         createdAt: cachedPage.createdAt ?? page.created_time,
         thumbnail: fallbackThumbnail,
@@ -1044,6 +1048,7 @@ async function processNormalPage(
           title: cachedPage.title ?? getPlainText(props.Title?.title),
           bookCategory: cachedPage.bookCategory ?? "",
           tags: cachedPage.tags ?? [],
+          description: cachedPage.description ?? "",
           date: cachedPage.date ?? page.last_edited_time.split("T")[0],
           createdAt: cachedPage.createdAt ?? page.created_time,
           coverImage: fallbackCoverImage,
@@ -1082,6 +1087,7 @@ async function processNormalPage(
       title: postData.title,
       bookCategory: postData.bookCategory,
       tags: postData.tags,
+      description: postData.description,
       date: postData.date,
       createdAt: postData.createdAt,
       coverImage: postData.coverImage,
@@ -1109,6 +1115,7 @@ async function processGroupPost(page, category, groupId, groupSlug) {
   const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
   const bookCategory = getBookCategoryFromProps(props, category);
   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
+  const description = getPlainText(props.Description?.rich_text) || "";
 
   const date = props.Date?.date?.start || page.created_time.split("T")[0];
   const dateEnd = props.Date?.date?.end || "";
@@ -1132,6 +1139,7 @@ title: "${escapeYaml(title)}"
 slug: "${slug}"
 category: "${category}"
 ${bookCategory ? `bookCategory: "${escapeYaml(bookCategory)}"` : ""}
+description: "${escapeYaml(description)}"
 tags: ${JSON.stringify(tags)}
 date: "${date}"
 dateEnd: "${dateEnd}"
@@ -1155,6 +1163,7 @@ ${content}`;
     category,
     categorySlug,
     bookCategory,
+    description,
     coverImage,
     groupSlug,
     tags,
@@ -1180,6 +1189,7 @@ async function processPost(page, category) {
   const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
   const bookCategory = getBookCategoryFromProps(props, category);
   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
+  const description = getPlainText(props.Description?.rich_text) || "";
 
   // ✅ date: 표시용 (Date 속성 우선, 없으면 created_time 날짜)
   const date = props.Date?.date?.start || page.created_time.split("T")[0];
@@ -1208,6 +1218,7 @@ title: "${escapeYaml(title)}"
 slug: "${slug}"
 category: "${category}"
 ${bookCategory ? `bookCategory: "${escapeYaml(bookCategory)}"` : ""}
+description: "${escapeYaml(description)}"
 tags: ${JSON.stringify(tags)}
 date: "${date}"
 dateEnd: "${dateEnd}"
@@ -1230,6 +1241,7 @@ ${content}`;
     category,
     categorySlug,
     bookCategory,
+    description,
     coverImage,
     tags,
     date,

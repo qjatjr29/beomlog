@@ -18,7 +18,7 @@ const extractFirstImageFromContent = (content: string): string => {
 };
 
 export const BookPostGridCard = ({ post }: BookPostGridCardProps) => {
-  const preview = sanitizeExcerptPreview(post.excerpt);
+  const preview = sanitizeExcerptPreview(post.description || post.excerpt);
   const coverImage =
     post.thumbnail ||
     post.coverImage ||

@@ -9,6 +9,7 @@ export interface Post {
   date: string; // 표시용
   dateEnd?: string;
   createdAt: string; // 정렬용
+  description?: string;
   excerpt: string;
   content: string;
   filename: string;
@@ -46,6 +47,7 @@ export interface PostFrontMatter {
   dateEnd?: string;
   createdAt?: string;
   tags: string[];
+  description?: string;
   excerpt?: string;
   category: string;
   bookCategory?: string;
