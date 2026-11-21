@@ -1,416 +1,83 @@
 [
   {
-    "id": "371d67b9-9e80-80ca-9f10-d109e48beee6",
-    "title": "Spring AOP",
-    "slug": "spring-aop",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "spring-boot",
+    "id": "41fd67b9-9e80-80ea-bc42-d2b682e2f505",
+    "title": "이방인",
+    "slug": "이방인",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "소설",
+    "coverImage": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc614a040-870b-4d6d-bb7f-3baa41e6d926%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.31.png?table=block&id=41fd67b9-9e80-80ea-bc42-d2b682e2f505&cache=v2",
     "tags": [
-      "AOP"
+      "알베르 카뮈"
     ],
-    "date": "2026-05-31",
-    "excerpt": "⭐ AOP(Aspect-Oriented Programming, 관점 지향 프로그래밍) :::callout ℹ️ AOP :::callout 핵심 비즈니스 로직과 공통(횡단) 관심사를...",
-    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
-    "path": "개발/spring-boot/spring-aop.md",
-    "lastEdited": "2026-05-31T15:59:00.000Z"
+    "date": "2026-11-21",
+    "dateEnd": "",
+    "createdAt": "2026-11-21T04:56:00.000Z",
+    "excerpt": "알베르 카뮈, 《이방인》 세상은 아무런 대답도 해주지 않았다 \"오늘 엄마가 죽었다. 아니 어쩌면 어제였는지도 모른다.\" 이 책의 첫 문장은 지금까지 읽었던 책들 중에서의 가장 인상...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc614a040-870b-4d6d-bb7f-3baa41e6d926%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.31.png?table=block&id=41fd67b9-9e80-80ea-bc42-d2b682e2f505&cache=v2",
+    "groupId": "",
+    "path": "책/이방인.md",
+    "lastEdited": "2026-11-21T05:11:00.000Z"
   },
   {
-    "id": "371d67b9-9e80-8031-ac9b-d20b6d2d02d3",
-    "title": "IoC와 DI, Spring Boot 컨테이너",
-    "slug": "ioc와-di-spring-boot-컨테이너",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "spring-boot",
+    "id": "41fd67b9-9e80-800f-8652-c7f4386281ff",
+    "title": "데미안",
+    "slug": "데미안",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "소설",
+    "coverImage": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F92e54cce-56da-4715-8887-f58bf22884b2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.44.png?table=block&id=41fd67b9-9e80-800f-8652-c7f4386281ff&cache=v2",
     "tags": [
-      "IoC",
-      "DI",
-      "Spring 컨테이너"
+      "헤르만 헤세"
     ],
-    "date": "2026-05-30",
-    "excerpt": "↗️ 제어의 역전 (IoC, Inversion of Control) 프로그램의 제어 흐름을 개발자가 직접 제어하는 것이 아닌 외부에서 관리하는 것을 의미합니다. 할리우드 원칙이라고...",
-    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
-    "path": "개발/spring-boot/ioc와-di-spring-boot-컨테이너.md",
-    "lastEdited": "2026-05-31T15:59:00.000Z"
+    "date": "2026-11-21",
+    "dateEnd": "",
+    "createdAt": "2026-11-21T03:55:00.000Z",
+    "excerpt": "헤르만 헤세, 《데미안》 우리 자신으로 살아가기 어떤 책을 읽을 때는 읽는 동안보다 읽고나서 더 많은 생각을 하게된다. 이 책을 읽을 때는 쉽게 이해되지 않은 문장들이 많았는데 책...",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F92e54cce-56da-4715-8887-f58bf22884b2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.44.png?table=block&id=41fd67b9-9e80-800f-8652-c7f4386281ff&cache=v2",
+    "groupId": "",
+    "path": "책/데미안.md",
+    "lastEdited": "2026-11-21T05:11:00.000Z"
   },
   {
-    "id": "371d67b9-9e80-805b-9cfa-e6a603f9e026",
-    "title": "Spring Bean",
-    "slug": "spring-bean",
-    "category": "개발",
-    "categorySlug": "개발",
+    "id": "3c4d67b9-9e80-8022-b0b8-c4375699e9ac",
+    "title": "자바 동시성 프로그래밍의 미래",
+    "slug": "자바-동시성-프로그래밍의-미래",
+    "category": "책",
+    "categorySlug": "책",
     "bookCategory": "",
-    "groupSlug": "spring-boot",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
     "tags": [
-      "Spring Bean"
+      "가상스레드"
     ],
-    "date": "2026-05-28",
-    "excerpt": "Spring Bean이란? A bean is an object that is instantiated, assembled, and managed by a Spring IoC cont...",
-    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
-    "path": "개발/spring-boot/spring-bean.md",
-    "lastEdited": "2026-05-31T15:58:00.000Z"
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T13:44:00.000Z",
+    "thumbnail": "",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout 자바 동시성 프로그래밍의 미래를 내다보며 핵심 인사이트를 정리한다. 높은 자원 오버헤드와 운영체제가 부과하는 제약 때문에 많...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/자바-동시성-프로그래밍의-미래.md",
+    "lastEdited": "2026-08-22T13:44:00.000Z"
   },
   {
-    "id": "36fd67b9-9e80-80eb-9a71-fcdd85289ca5",
-    "title": "Spring Boot 등장과 Auto-configuration",
-    "slug": "spring-boot-등장과-auto-configuration",
-    "category": "개발",
-    "categorySlug": "개발",
+    "id": "3c4d67b9-9e80-8048-b14d-e5336e66222b",
+    "title": "프레임워크를 통해 알아보는 최신 동시성 프로그래밍",
+    "slug": "프레임워크를-통해-알아보는-최신-동시성-프로그래밍",
+    "category": "책",
+    "categorySlug": "책",
     "bookCategory": "",
-    "groupSlug": "spring-boot",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
     "tags": [
-      "SpringBoot",
-      "Auto-Configuration"
+      "가상스레드"
     ],
-    "date": "2026-05-28",
-    "excerpt": "🌱 Spring Boot 등장 ⚠️ 기존 Spring의 문제점 (Spring Boot 이전) Spring 애플리케이션을 시작하려면 해야하는 설정이 너무 많아지고 복잡해졌습니다. ...",
-    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
-    "path": "개발/spring-boot/spring-boot-등장과-auto-configuration.md",
-    "lastEdited": "2026-05-29T03:56:00.000Z"
-  },
-  {
-    "id": "369d67b9-9e80-800e-8432-c72d0dfb2a78",
-    "title": "⭐️ Java Virtual Thread",
-    "slug": "java-virtual-thread",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "java",
-    "tags": [
-      "Virtual Thread"
-    ],
-    "date": "2026-05-23",
-    "excerpt": "⭐ Virtual Thread :::callout JDK 21에 추가된 경량 스레드 :::callout - OS 스레드를 그대로 사용하지 않고 JVM 내부 스케줄링을 통해 수십수백...",
-    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
-    "path": "개발/java/java-virtual-thread.md",
-    "lastEdited": "2026-05-23T05:49:00.000Z"
-  },
-  {
-    "id": "365d67b9-9e80-8096-a9f3-d2580b037b92",
-    "title": "Java Record",
-    "slug": "java-record",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "java",
-    "tags": [
-      "Record"
-    ],
-    "date": "2026-05-19",
-    "excerpt": "Java Record란 무엇인가? Java 14에서 등장하여 Java 16에서 정식 스펙이 된 Record는 \"불변(Immutable) 데이터 전달 객체(DTO)\"를 간결하게 간결...",
-    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
-    "path": "개발/java/java-record.md",
-    "lastEdited": "2026-05-19T06:12:00.000Z"
-  },
-  {
-    "id": "365d67b9-9e80-80f7-a19d-d8b8762c684f",
-    "title": "인터페이스와 추상클래스",
-    "slug": "인터페이스와-추상클래스",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "java",
-    "tags": [
-      "Interface",
-      "Abstract Class"
-    ],
-    "date": "2026-05-19",
-    "excerpt": "💡핵심 개념 요약 추상 클래스(Abstract Class)는 클래스간 IS-A관계를 바탕으로 공통된 상태(필드)와 행위(메소드)을 추상화하여 재사용성과 확장성을 제공해줍니다. 인...",
-    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
-    "path": "개발/java/인터페이스와-추상클래스.md",
-    "lastEdited": "2026-05-19T05:54:00.000Z"
-  },
-  {
-    "id": "364d67b9-9e80-803a-b3fa-feb0db747f1d",
-    "title": "JVM & Runtime Data Area ",
-    "slug": "jvm-runtime-data-area",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "java",
-    "tags": [
-      "JVM",
-      "Runtime Data Area"
-    ],
-    "date": "2026-05-18",
-    "excerpt": "JVM Architecture & Runtime Data Area 핵심 개념 요약 JVM(Java Virtual Machine)은 자바 바이트코드를 운영체제에 맞게 해석하고 실행하...",
-    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
-    "path": "개발/java/jvm-runtime-data-area.md",
-    "lastEdited": "2026-05-18T06:43:00.000Z"
-  },
-  {
-    "id": "35bd67b9-9e80-801d-bf80-e450dd4be0e6",
-    "title": "락",
-    "slug": "락",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "데이터베이스",
-    "tags": [
-      "MySQL",
-      "Lock"
-    ],
-    "date": "2026-05-08",
-    "excerpt": "락 락(Lock)은 여러 트랜잭션이 동시에 같은 데이터에 접근할 때 일관성을 보장하기 위한 메커니즘입니다. 공유락과 배타락 공유락 (Shared Lock, S-Lock) 데이터를 ...",
-    "groupId": "31ad67b9-9e80-80e0-848d-d6da8d071164",
-    "path": "개발/데이터베이스/락.md",
-    "lastEdited": "2026-05-09T03:40:00.000Z"
-  },
-  {
-    "id": "311d67b9-9e80-8024-811e-da2503ec108a",
-    "title": "LIKE + B+Tree 인덱스와 FTS(Full-Text Search)",
-    "slug": "like-b-tree-인덱스와-fts-full-text-search",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "데이터베이스",
-    "tags": [
-      "MySQL",
-      "Full-Text-Search",
-      "B+Tree"
-    ],
-    "date": "2026-02-26",
-    "excerpt": "🌲 B+ Tree 자료구조 대부분의 RDBMS(MySQL, PostgreSQL 등)는 기본 인덱스 구조로 B+Tree를 사용합니다. | Leaf Node | 실제 데이터의 키 값...",
-    "groupId": "31ad67b9-9e80-80e0-848d-d6da8d071164",
-    "path": "개발/데이터베이스/like-b-tree-인덱스와-fts-full-text-search.md",
-    "lastEdited": "2026-03-05T06:55:00.000Z"
-  },
-  {
-    "id": "341d67b9-9e80-808e-ab5e-c4cd5a3c94fc",
-    "title": "동기/비동기 & 블로킹/논블로킹",
-    "slug": "동기-비동기-블로킹-논블로킹",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "동기",
-      "비동기",
-      "블로킹",
-      "논블로킹"
-    ],
-    "date": "2026-04-14",
-    "excerpt": "블로킹(Blocking) vs 논블로킹(Non-blocking) 제어권의 관점입니다. 호출된 함수가 바로 리턴을 하는가? 블로킹 호출된 함수가 자신의 일을 끝낼 때까지 제어권을 계...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/동기-비동기-블로킹-논블로킹.md",
-    "lastEdited": "2026-04-13T23:59:00.000Z"
-  },
-  {
-    "id": "341d67b9-9e80-801b-b0c3-f96f644d4c8e",
-    "title": "Disk Management & Scheduling",
-    "slug": "disk-management-scheduling",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "디스크"
-    ],
-    "date": "2026-04-13",
-    "excerpt": "🔨 Disk 구조 단위 물리적 단위(Sector): 디스크 내부에서 데이터를 관리하는 최소 단위 논리적 단위(Logical Block): 디스크 외부(운영체제)에서 디스크에 접근...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/disk-management-scheduling.md",
-    "lastEdited": "2026-04-13T02:47:00.000Z"
-  },
-  {
-    "id": "33bd67b9-9e80-806a-8bb3-fdac6c8c72a2",
-    "title": "파일 시스템",
-    "slug": "파일-시스템",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "파일시스템"
-    ],
-    "date": "2026-04-07",
-    "excerpt": "📒 파일과 파일시스템 File A named collection of related information 관련 정보를 이름을 통해서 저장하는 것. 일반적으로 하드디스크 같은 비휘...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/파일-시스템.md",
-    "lastEdited": "2026-04-07T06:17:00.000Z"
-  },
-  {
-    "id": "325d67b9-9e80-804d-9e41-d71e3f0108a6",
-    "title": "가상 메모리(Virtual Memory) - Demand Paging, 페이징 교체",
-    "slug": "가상-메모리-virtual-memory-demand-paging-페이징-교체",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "메모리관리",
-      "페이징"
-    ],
-    "date": "2026-03-16",
-    "excerpt": "✅ Demand Paging 프로그램 실행 시 모든 페이지를 메모리에 올리지 않고 실제 접근이 발생한 시점에만 해당 페이지를 메모리에 올리는 것 I/O 양 감소 Memory 사용량...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/가상-메모리-virtual-memory-demand-paging-페이징-교체.md",
-    "lastEdited": "2026-03-16T05:23:00.000Z"
-  },
-  {
-    "id": "323d67b9-9e80-8063-99d6-d2dc71083111",
-    "title": "Memory Management",
-    "slug": "memory-management",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "메모리관리",
-      "페이징",
-      "세그먼테이션",
-      "TLB"
-    ],
-    "date": "2026-03-13",
-    "excerpt": "제가 개발한 프로그램이 어떻게 물리적인 RAM에 올라가고 8GB밖에 안 되는 RAM으로 어떻게 10GB짜리 게임을 돌릴 수 있는지등을 확인하기 위해서 OS의 메모리 관리에 대해서 ...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/memory-management.md",
-    "lastEdited": "2026-03-14T07:48:00.000Z"
-  },
-  {
-    "id": "321d67b9-9e80-808f-bf2d-ddc2599f968b",
-    "title": "데드락 (Deadlock, 교착상태)",
-    "slug": "데드락-deadlock-교착상태",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "데드락"
-    ],
-    "date": "2026-03-12",
-    "excerpt": "☠️ 데드락(Deadlock, 교착 상태)이란? 데드락은 2개 이상의 프로세스나 스레드가 서로 다른 프로세스가 점유하고 있는 자원을 얻기 위해 영원히 무한 대기하는 상태를 말합니다...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/데드락-deadlock-교착상태.md",
-    "lastEdited": "2026-03-12T07:09:00.000Z"
-  },
-  {
-    "id": "321d67b9-9e80-80ad-a4c2-cc05d959f6c9",
-    "title": "프로세스 Synchronization",
-    "slug": "프로세스-synchronization",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "동기화",
-      "프로세스",
-      "스레드",
-      "race condition"
-    ],
-    "date": "2026-03-10",
-    "excerpt": "실무에서 대규모 트래픽을 다룰 때 발생하는 데이터 정합성 이슈(예: 수강신청, 선착순 쿠폰 발급, 재고 차감 등)는 모두 프로세스 동기화(Process Synchronization...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/프로세스-synchronization.md",
-    "lastEdited": "2026-03-12T06:42:00.000Z"
-  },
-  {
-    "id": "31cd67b9-9e80-808a-bae3-e49fbefeef7b",
-    "title": "CPU Scheduling",
-    "slug": "cpu-scheduling",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "CPU"
-    ],
-    "date": "2026-03-09",
-    "excerpt": "⭐ CPU Scheduler Ready 상태의 프로세스 중(ready queue)에서 실행할 프로세스를 선택해 CPU를 할당 CPU는 하나인데 실행할 프로세스는 많을 때 다음엔 누...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/cpu-scheduling.md",
-    "lastEdited": "2026-03-10T02:21:00.000Z"
-  },
-  {
-    "id": "31cd67b9-9e80-8034-900c-c79b58f0d7c1",
-    "title": "CPU burst 와 I/O burst",
-    "slug": "cpu-burst-와-i-o-burst",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "CPU",
-      "I/O"
-    ],
-    "date": "2026-03-07",
-    "excerpt": "🖥️ 프로그램의 실행 프로그램이 실행된다는 것은 CPU를 사용하여 연산을 하는 단계(CPU Burst)와 파일 읽기/쓰기, 네트워크 통신과 같은 I/O 작업(I/O Burst)이...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/cpu-burst-와-i-o-burst.md",
-    "lastEdited": "2026-03-07T05:21:00.000Z"
-  },
-  {
-    "id": "31cd67b9-9e80-80b8-9b1b-f386ad678c0e",
-    "title": "IPC - 프로세스간 통신",
-    "slug": "ipc-프로세스간-통신",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "프로세스",
-      "IPC"
-    ],
-    "date": "2026-03-07",
-    "excerpt": "프로세스 운영체제로부터 자신만의 독립적인 메모리공간(주소 공간)을 가지고 있습니다. 따라서 서로 데이터를 주고 받기 위해서는 IPC(Inter Process Communicatio...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/ipc-프로세스간-통신.md",
-    "lastEdited": "2026-03-07T04:41:00.000Z"
-  },
-  {
-    "id": "31bd67b9-9e80-80e5-b417-ca895f7c3ba1",
-    "title": "프로세스와 스레드",
-    "slug": "프로세스와-스레드",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "프로세스",
-      "스레드"
-    ],
-    "date": "2026-03-07",
-    "excerpt": "프로세스 관리는 운영체제의 핵심 역할입니다. 프로그램이 실행되어 프로세스가 생성된 이후 작업을 마칠때 까지 어떤 상태를 거치고 각 상태에서 고려할 사항이 무엇인지, OS가 프로레스...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/프로세스와-스레드.md",
-    "lastEdited": "2026-03-06T15:30:00.000Z"
-  },
-  {
-    "id": "31ad67b9-9e80-80fa-85ae-e670e1c3fd73",
-    "title": "인터럽트 (Interrupt)",
-    "slug": "인터럽트-interrupt",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "인터럽트"
-    ],
-    "date": "2026-03-05",
-    "excerpt": "🤚 인터럽트 등장 배경 폴링 방식 초기 컴퓨터 시스템에는 주변 장치(ex: I/O 장치)가 많지 않아 CPU에서 직접 입출력 장치에 데이터를 가져오거나 내보냈다. CPU가 입출력...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/인터럽트-interrupt.md",
-    "lastEdited": "2026-03-05T07:10:00.000Z"
-  },
-  {
-    "id": "31ad67b9-9e80-8085-8f4d-eb514ad25af8",
-    "title": "운영체제란?",
-    "slug": "운영체제란",
-    "category": "개발",
-    "categorySlug": "개발",
-    "bookCategory": "",
-    "groupSlug": "운영체제",
-    "tags": [
-      "시스템콜",
-      "커널"
-    ],
-    "date": "2026-03-05",
-    "excerpt": "🔍 운영체제(Operating System, OS) 컴퓨터 하드웨어 바로 위에 설치되어 사용자 및 다른 모든 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층 컴퓨터 하드웨어(CP...",
-    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
-    "path": "개발/운영체제/운영체제란.md",
-    "lastEdited": "2026-03-05T06:54:00.000Z"
+    "date": "2026-08-22",
+    "createdAt": "2026-08-22T13:43:00.000Z",
+    "thumbnail": "",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout 주요 프레임워크들이 가상 스레드를 어떻게 수용하고 있는지 살펴본다. :::callout 스프링 부트, 쿼커스, 자카르타 EE...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/프레임워크를-통해-알아보는-최신-동시성-프로그래밍.md",
+    "lastEdited": "2026-08-22T13:44:00.000Z"
   },
   {
     "id": "3bfd67b9-9e80-80ca-9bea-cdb465131071",
@@ -419,15 +86,15 @@
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "야구",
       "두산베어스"
     ],
     "date": "2026-07-04",
-    "dateEnd": "",
     "createdAt": "2026-08-17T06:27:00.000Z",
-    "excerpt": "구일역 주민의 첫 고척돔 직관! 🏟️ 저는 고척 스카이돔이 있는 구일역에 살고 있습니다! 동네 주민으로서 주말에 카페 가거나 산책할 때마다 매번 지나가는 곳이 고척돔인데요. 고척...",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F871f8574-59a9-4fc7-b896-514b63379e05%2Fimage.png?table=block&id=3c4d67b9-9e80-80d6-bf55-fb6d96e19960&cache=v2",
+    "excerpt": "구일역 주민의 첫 고척돔 직관! 🏟️ 저는 고척 스카이돔이 있는 구일역에 살고 있습니다! 동네 주민으로서 주말에 카페 가거나 산책할 때마다 매번 지나가는 곳이 고척돔인데요. 고척...",
     "groupId": "",
     "path": "일상/고척돔-야구-원정-두산-vs-키움.md",
     "lastEdited": "2026-09-12T04:44:00.000Z"
@@ -439,6 +106,7 @@
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "여행"
     ],
@@ -457,6 +125,7 @@
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "야구",
       "여행",
@@ -471,12 +140,158 @@
     "lastEdited": "2026-08-19T13:00:00.000Z"
   },
   {
+    "id": "392d67b9-9e80-807a-a37d-c9b4ff334aff",
+    "title": "가상 스레드 시대에서 리액티브 자바의 의미",
+    "slug": "가상-스레드-시대에서-리액티브-자바의-의미",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "리액티브 자바",
+      "리액티브 프로그래밍"
+    ],
+    "date": "2026-07-03",
+    "createdAt": "2026-07-03T05:53:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb327958a-d276-4fc6-ba5f-bb397b6781d0%2Fimage.png?table=block&id=392d67b9-9e80-808b-bec2-d0da4e8293a3&cache=v2",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout 가상 스레드와 리액티브 프로그래밍이 동시성 문제 해결에 접근하는 방식의 차이를 이해하는 것을 목표로 한다. :::callou...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/가상-스레드-시대에서-리액티브-자바의-의미.md",
+    "lastEdited": "2026-07-03T05:53:00.000Z"
+  },
+  {
+    "id": "390d67b9-9e80-800e-82fe-c5afdf9cb82c",
+    "title": "동시성 모델의 화룡점정, 스코프드 밸류",
+    "slug": "동시성-모델의-화룡점정-스코프드-밸류",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "ScopedValue"
+    ],
+    "date": "2026-07-01",
+    "createdAt": "2026-07-01T06:29:00.000Z",
+    "thumbnail": "",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout 고도의 동시성을 가진 애플리케이션에서 컨텍스트 전파는 항상 어려운 문제였다. :::callout 이 장에서는 스코프드 밸류가...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/동시성-모델의-화룡점정-스코프드-밸류.md",
+    "lastEdited": "2026-07-01T06:30:00.000Z"
+  },
+  {
+    "id": "38cd67b9-9e80-80e2-8514-e445e37c6338",
+    "title": "빈틈없이 견고하고 편리한 구조적 동시성",
+    "slug": "빈틈없이-견고하고-편리한-구조적-동시성",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "구조적 동시성",
+      "StructuredTaskScope"
+    ],
+    "date": "2026-06-27",
+    "createdAt": "2026-06-27T06:12:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F13733ec6-3d92-4fdd-8580-f663fc8dbd9b%2Fimage.png?table=block&id=38cd67b9-9e80-801a-a76d-f352290863c8&cache=v2",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 프로젝트 룸(Project Loom)의 가장 중요한 혁신 중 하나인 StructuredTaskScope를 다룬다. :::...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/빈틈없이-견고하고-편리한-구조적-동시성.md",
+    "lastEdited": "2026-06-27T06:12:00.000Z"
+  },
+  {
+    "id": "38bd67b9-9e80-80b5-84e7-ef75acbb9b3d",
+    "title": "직접 만들어보고 이해하는 최신 동시성 메커니즘",
+    "slug": "직접-만들어보고-이해하는-최신-동시성-메커니즘",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "Continuation",
+      "Fork/Join"
+    ],
+    "date": "2026-06-25",
+    "createdAt": "2026-06-26T02:41:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fd0f1b291-9755-438e-ab6b-337bef26fd9b%2Fimage.png?table=block&id=38bd67b9-9e80-8099-a09c-ce61f4c40a3b&cache=v2",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 동시성의 내부 동작을 깊이 있게 다룬다. :::callout - 스레드 풀, Executor 프레임워크, 가상 스레드를 ...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/직접-만들어보고-이해하는-최신-동시성-메커니즘.md",
+    "lastEdited": "2026-06-26T02:42:00.000Z"
+  },
+  {
+    "id": "380d67b9-9e80-80ef-9d6f-da25a077e6e5",
+    "title": "쉼 없이 CPU를 활용하는 가볍고 부지런한 가상 스레드",
+    "slug": "쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "가상스레드"
+    ],
+    "date": "2026-06-15",
+    "createdAt": "2026-06-15T13:13:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F10056fd0-5ac7-4be9-ba05-4c3da7e08e4d%2Fimage.png?table=block&id=380d67b9-9e80-8084-9292-fad18725c685&cache=v2",
+    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 가상 스레드를 실습 중심으로 소개한다. :::callout - 가상 스레드가 무엇이며 플랫폼 스레드와 어떻게 다른지 그리...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드.md",
+    "lastEdited": "2026-06-15T13:14:00.000Z"
+  },
+  {
+    "id": "37cd67b9-9e80-8086-a288-e1bcca4dd810",
+    "title": "한눈에 살펴보는 자바 동시성 변천사",
+    "slug": "한눈에-살펴보는-자바-동시성-변천사",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "모던-자바-동시성-프로그래밍",
+    "tags": [
+      "플랫폼스레드",
+      "Executor",
+      "가상스레드",
+      "CompletableFuture",
+      "Fork/Join"
+    ],
+    "date": "2026-06-11",
+    "createdAt": "2026-06-11T08:00:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb8cc60e8-528f-44cb-868d-0afe81c9ba4a%2Fimage.png?table=block&id=37cd67b9-9e80-803a-8857-cfd0453020a1&cache=v2",
+    "excerpt": "자바에서의 동시성 진화를 살펴보는 것으로 시작한다. 플랫폼 스레드에서 출발해 Executor 프레임워크, Fork/Join, CompletableFuture로 이어지는 흐름을 추적...",
+    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
+    "path": "책/모던-자바-동시성-프로그래밍/한눈에-살펴보는-자바-동시성-변천사.md",
+    "lastEdited": "2026-06-11T08:04:00.000Z"
+  },
+  {
+    "id": "37cd67b9-9e80-8082-91ef-e778f2c8cbf9",
+    "title": "12장. 데이터 시스템의 미래",
+    "slug": "12장-데이터-시스템의-미래",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [],
+    "date": "2026-06-10",
+    "createdAt": "2026-06-11T05:34:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F169e8c11-8739-475a-a641-bc9df632c6f5%2Fimage.png?table=block&id=37cd67b9-9e80-80f4-98d3-f73071a25751&cache=v2",
+    "excerpt": "이 책의 목적은 애플리케이션과 시스템을 신뢰할 수 있고 확장 가능하며 유지보수하기 쉽게 만드는 방법을 탐구하는 것이다. 이번 장에서의 목적은 현재보다 나은, 즉 견고하고 정확하며 ...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/12장-데이터-시스템의-미래.md",
+    "lastEdited": "2026-06-11T05:35:00.000Z"
+  },
+  {
     "id": "371d67b9-9e80-800e-ac85-e29790261595",
     "title": "2026 야구 첫 직관(잠실 야구장)",
     "slug": "2026-야구-첫-직관-잠실-야구장",
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "야구",
       "두산베어스"
@@ -490,12 +305,75 @@
     "lastEdited": "2026-08-19T13:00:00.000Z"
   },
   {
+    "id": "371d67b9-9e80-80ca-9f10-d109e48beee6",
+    "title": "Spring AOP",
+    "slug": "spring-aop",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "spring-boot",
+    "tags": [
+      "AOP"
+    ],
+    "date": "2026-05-31",
+    "createdAt": "2026-05-31T15:59:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7bfa69f7-77ba-4fe2-a7a5-1ae5da1d38c0%2Fimage.png?table=block&id=371d67b9-9e80-800a-8318-f35472a3a222&cache=v2",
+    "excerpt": "⭐ AOP(Aspect-Oriented Programming, 관점 지향 프로그래밍) :::callout ℹ️ AOP :::callout 핵심 비즈니스 로직과 공통(횡단) 관심사를...",
+    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
+    "path": "개발/spring-boot/spring-aop.md",
+    "lastEdited": "2026-05-31T15:59:00.000Z"
+  },
+  {
+    "id": "371d67b9-9e80-8031-ac9b-d20b6d2d02d3",
+    "title": "IoC와 DI, Spring Boot 컨테이너",
+    "slug": "ioc와-di-spring-boot-컨테이너",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "spring-boot",
+    "tags": [
+      "IoC",
+      "DI",
+      "Spring 컨테이너"
+    ],
+    "date": "2026-05-30",
+    "createdAt": "2026-05-31T15:58:00.000Z",
+    "thumbnail": "",
+    "excerpt": "↗️ 제어의 역전 (IoC, Inversion of Control) 프로그램의 제어 흐름을 개발자가 직접 제어하는 것이 아닌 외부에서 관리하는 것을 의미합니다. 할리우드 원칙이라고...",
+    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
+    "path": "개발/spring-boot/ioc와-di-spring-boot-컨테이너.md",
+    "lastEdited": "2026-05-31T15:59:00.000Z"
+  },
+  {
+    "id": "371d67b9-9e80-805b-9cfa-e6a603f9e026",
+    "title": "Spring Bean",
+    "slug": "spring-bean",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "spring-boot",
+    "tags": [
+      "Spring Bean"
+    ],
+    "date": "2026-05-28",
+    "createdAt": "2026-05-31T15:57:00.000Z",
+    "thumbnail": "",
+    "excerpt": "Spring Bean이란? A bean is an object that is instantiated, assembled, and managed by a Spring IoC cont...",
+    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
+    "path": "개발/spring-boot/spring-bean.md",
+    "lastEdited": "2026-05-31T15:58:00.000Z"
+  },
+  {
     "id": "371d67b9-9e80-80c5-8c66-c201f7c7c202",
     "title": "AWS Summit Seoul 2026 후기 (DAY 2 AI Day 🔥)",
     "slug": "aws-summit-seoul-2026-후기-day-2-ai-day",
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "AWS",
       "컨퍼런스",
@@ -511,12 +389,34 @@
     "lastEdited": "2026-05-31T15:51:00.000Z"
   },
   {
+    "id": "36fd67b9-9e80-80eb-9a71-fcdd85289ca5",
+    "title": "Spring Boot 등장과 Auto-configuration",
+    "slug": "spring-boot-등장과-auto-configuration",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "spring-boot",
+    "tags": [
+      "SpringBoot",
+      "Auto-Configuration"
+    ],
+    "date": "2026-05-28",
+    "createdAt": "2026-05-29T03:55:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F07f14736-dde0-4626-a298-5745221f7162%2Fimage.png?table=block&id=36fd67b9-9e80-8073-aedc-d034f40cd651&cache=v2",
+    "excerpt": "🌱 Spring Boot 등장 ⚠️ 기존 Spring의 문제점 (Spring Boot 이전) Spring 애플리케이션을 시작하려면 해야하는 설정이 너무 많아지고 복잡해졌습니다. ...",
+    "groupId": "36fd67b9-9e80-80ae-a9ff-d6264af85293",
+    "path": "개발/spring-boot/spring-boot-등장과-auto-configuration.md",
+    "lastEdited": "2026-05-29T03:56:00.000Z"
+  },
+  {
     "id": "36cd67b9-9e80-807d-a063-dd577b585eb8",
     "title": "T1 Home Ground 2026 후기",
     "slug": "t1-home-ground-2026-후기",
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "공연",
       "e스포츠",
@@ -531,12 +431,53 @@
     "lastEdited": "2026-05-31T15:50:00.000Z"
   },
   {
+    "id": "36bd67b9-9e80-800c-a315-d4c7fca65dd8",
+    "title": "11장. 스트림 처리",
+    "slug": "11장-스트림-처리",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "데이터-중심-애플리케이션-설계",
+    "tags": [
+      "stream"
+    ],
+    "date": "2026-05-25",
+    "createdAt": "2026-05-25T04:11:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fedeedc37-7238-4d26-a668-b9c478382379%2Fimage.png?table=block&id=36bd67b9-9e80-80f9-aea9-c384f90aa7e0&cache=v2",
+    "excerpt": "10장에서 살펴본 일괄처리는 입력을 유한한 크기로 한정한다는 중요한 가정이 있다. 그래서 일괄처리는 입력을 읽는 작업이 끝나는 시점을 알 수 있다. 실제로는 많은 데이터가 시간이 ...",
+    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
+    "path": "책/데이터-중심-애플리케이션-설계/11장-스트림-처리.md",
+    "lastEdited": "2026-05-25T04:17:00.000Z"
+  },
+  {
+    "id": "369d67b9-9e80-800e-8432-c72d0dfb2a78",
+    "title": "⭐️ Java Virtual Thread",
+    "slug": "java-virtual-thread",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "java",
+    "tags": [
+      "Virtual Thread"
+    ],
+    "date": "2026-05-23",
+    "createdAt": "2026-05-23T05:15:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc559cd86-bc7e-4f02-b9f6-500e96ec468d%2Fimage.png?table=block&id=369d67b9-9e80-80bf-8e8c-e3d40f0d8bf6&cache=v2",
+    "excerpt": "⭐ Virtual Thread :::callout JDK 21에 추가된 경량 스레드 :::callout - OS 스레드를 그대로 사용하지 않고 JVM 내부 스케줄링을 통해 수십수백...",
+    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
+    "path": "개발/java/java-virtual-thread.md",
+    "lastEdited": "2026-05-23T05:49:00.000Z"
+  },
+  {
     "id": "367d67b9-9e80-8081-a621-da75451037de",
     "title": "딸깍톤 참여 후기(feat. 3등 수상! 🥉)",
     "slug": "딸깍톤-참여-후기-feat-3등-수상",
     "category": "일상",
     "categorySlug": "일상",
     "bookCategory": "",
+    "coverImage": "",
     "tags": [
       "해커톤",
       "AI",
@@ -551,173 +492,13 @@
     "lastEdited": "2026-05-31T15:50:00.000Z"
   },
   {
-    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
-    "title": "부스트캠프 후기",
-    "slug": "부스트캠프-후기",
-    "category": "일상",
-    "categorySlug": "일상",
-    "bookCategory": "",
-    "tags": [
-      "네이버부스트캠프"
-    ],
-    "date": "2026-02-19",
-    "createdAt": "2026-02-19T01:26:00.000Z",
-    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
-    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
-    "groupId": "",
-    "path": "일상/부스트캠프-후기.md",
-    "lastEdited": "2026-02-28T16:53:00.000Z"
-  },
-  {
-    "id": "3c4d67b9-9e80-8022-b0b8-c4375699e9ac",
-    "title": "자바 동시성 프로그래밍의 미래",
-    "slug": "자바-동시성-프로그래밍의-미래",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "가상스레드"
-    ],
-    "date": "2026-08-22",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout 자바 동시성 프로그래밍의 미래를 내다보며 핵심 인사이트를 정리한다. 높은 자원 오버헤드와 운영체제가 부과하는 제약 때문에 많...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/자바-동시성-프로그래밍의-미래.md",
-    "lastEdited": "2026-08-22T13:44:00.000Z"
-  },
-  {
-    "id": "3c4d67b9-9e80-8048-b14d-e5336e66222b",
-    "title": "프레임워크를 통해 알아보는 최신 동시성 프로그래밍",
-    "slug": "프레임워크를-통해-알아보는-최신-동시성-프로그래밍",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "가상스레드"
-    ],
-    "date": "2026-08-22",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout 주요 프레임워크들이 가상 스레드를 어떻게 수용하고 있는지 살펴본다. :::callout 스프링 부트, 쿼커스, 자카르타 EE...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/프레임워크를-통해-알아보는-최신-동시성-프로그래밍.md",
-    "lastEdited": "2026-08-22T13:44:00.000Z"
-  },
-  {
-    "id": "392d67b9-9e80-807a-a37d-c9b4ff334aff",
-    "title": "가상 스레드 시대에서 리액티브 자바의 의미",
-    "slug": "가상-스레드-시대에서-리액티브-자바의-의미",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "리액티브 자바",
-      "리액티브 프로그래밍"
-    ],
-    "date": "2026-07-03",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout 가상 스레드와 리액티브 프로그래밍이 동시성 문제 해결에 접근하는 방식의 차이를 이해하는 것을 목표로 한다. :::callou...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/가상-스레드-시대에서-리액티브-자바의-의미.md",
-    "lastEdited": "2026-07-03T05:53:00.000Z"
-  },
-  {
-    "id": "390d67b9-9e80-800e-82fe-c5afdf9cb82c",
-    "title": "동시성 모델의 화룡점정, 스코프드 밸류",
-    "slug": "동시성-모델의-화룡점정-스코프드-밸류",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "ScopedValue"
-    ],
-    "date": "2026-07-01",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout 고도의 동시성을 가진 애플리케이션에서 컨텍스트 전파는 항상 어려운 문제였다. :::callout 이 장에서는 스코프드 밸류가...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/동시성-모델의-화룡점정-스코프드-밸류.md",
-    "lastEdited": "2026-07-01T06:30:00.000Z"
-  },
-  {
-    "id": "38cd67b9-9e80-80e2-8514-e445e37c6338",
-    "title": "빈틈없이 견고하고 편리한 구조적 동시성",
-    "slug": "빈틈없이-견고하고-편리한-구조적-동시성",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "구조적 동시성",
-      "StructuredTaskScope"
-    ],
-    "date": "2026-06-27",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 프로젝트 룸(Project Loom)의 가장 중요한 혁신 중 하나인 StructuredTaskScope를 다룬다. :::...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/빈틈없이-견고하고-편리한-구조적-동시성.md",
-    "lastEdited": "2026-06-27T06:12:00.000Z"
-  },
-  {
-    "id": "38bd67b9-9e80-80b5-84e7-ef75acbb9b3d",
-    "title": "직접 만들어보고 이해하는 최신 동시성 메커니즘",
-    "slug": "직접-만들어보고-이해하는-최신-동시성-메커니즘",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "Continuation",
-      "Fork/Join"
-    ],
-    "date": "2026-06-25",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 동시성의 내부 동작을 깊이 있게 다룬다. :::callout - 스레드 풀, Executor 프레임워크, 가상 스레드를 ...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/직접-만들어보고-이해하는-최신-동시성-메커니즘.md",
-    "lastEdited": "2026-06-26T02:42:00.000Z"
-  },
-  {
-    "id": "380d67b9-9e80-80ef-9d6f-da25a077e6e5",
-    "title": "쉼 없이 CPU를 활용하는 가볍고 부지런한 가상 스레드",
-    "slug": "쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "가상스레드"
-    ],
-    "date": "2026-06-15",
-    "excerpt": ":::callout 🎯 챕터 목표 :::callout - 가상 스레드를 실습 중심으로 소개한다. :::callout - 가상 스레드가 무엇이며 플랫폼 스레드와 어떻게 다른지 그리...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/쉼-없이-cpu를-활용하는-가볍고-부지런한-가상-스레드.md",
-    "lastEdited": "2026-06-15T13:14:00.000Z"
-  },
-  {
-    "id": "37cd67b9-9e80-8086-a288-e1bcca4dd810",
-    "title": "한눈에 살펴보는 자바 동시성 변천사",
-    "slug": "한눈에-살펴보는-자바-동시성-변천사",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "모던-자바-동시성-프로그래밍",
-    "tags": [
-      "플랫폼스레드",
-      "Executor",
-      "가상스레드",
-      "CompletableFuture",
-      "Fork/Join"
-    ],
-    "date": "2026-06-11",
-    "excerpt": "자바에서의 동시성 진화를 살펴보는 것으로 시작한다. 플랫폼 스레드에서 출발해 Executor 프레임워크, Fork/Join, CompletableFuture로 이어지는 흐름을 추적...",
-    "groupId": "37cd67b9-9e80-80a0-a6dd-f18dd6a44395",
-    "path": "책/모던-자바-동시성-프로그래밍/한눈에-살펴보는-자바-동시성-변천사.md",
-    "lastEdited": "2026-06-11T08:04:00.000Z"
-  },
-  {
     "id": "366d67b9-9e80-80e8-a0c6-ea111fef0ba3",
     "title": "[요즘 당근 AI 개발] 13. 모든 당근 사용자에게 AI 에이전트 제공하기 - 2부",
     "slug": "요즘-당근-ai-개발-13-모든-당근-사용자에게-ai-에이전트-제공하기-2부",
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "AI에이전트",
@@ -725,6 +506,8 @@
       "자동화"
     ],
     "date": "2026-05-20",
+    "createdAt": "2026-05-20T04:05:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F14a6a574-b64f-4026-b5f6-932b031436bb%2Fimage.png?table=block&id=366d67b9-9e80-80d3-9812-c2af52d18497&cache=v2",
     "excerpt": "#AI에이전트 #멀티에이전트 #업무자동화 🔍 KAMP에 당근 특화 기능 넣기 실제 사용자에게 제공하는 당근 AI 에이전트를 기획하고 만들다보니 기본 에이전트 구조에는 없는 당근의...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-13-모든-당근-사용자에게-ai-에이전트-제공하기-2부.md",
@@ -737,6 +520,7 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "AI에이전트",
@@ -744,10 +528,53 @@
       "자동화"
     ],
     "date": "2026-05-20",
+    "createdAt": "2026-05-20T04:04:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F36a6389f-cfb2-439e-a06b-792ca8223105%2Fimage.png?table=block&id=366d67b9-9e80-8033-9d37-df15aeef8583&cache=v2",
     "excerpt": "#AI에이전트 #멀티에이전트 #업무자동화 고객 문의를 살펴보면 적절한 가이드만 제공하면 사용자가 스스로 해소할 수 있는 문의가 전체 문의의 약 40%입니다. 그렇다면 어떻게 사용자...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-12-모든-당근-사용자에게-ai-에이전트-제공하기-1부.md",
     "lastEdited": "2026-05-20T04:06:00.000Z"
+  },
+  {
+    "id": "365d67b9-9e80-8096-a9f3-d2580b037b92",
+    "title": "Java Record",
+    "slug": "java-record",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "java",
+    "tags": [
+      "Record"
+    ],
+    "date": "2026-05-19",
+    "createdAt": "2026-05-19T06:01:00.000Z",
+    "thumbnail": "",
+    "excerpt": "Java Record란 무엇인가? Java 14에서 등장하여 Java 16에서 정식 스펙이 된 Record는 \"불변(Immutable) 데이터 전달 객체(DTO)\"를 간결하게 간결...",
+    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
+    "path": "개발/java/java-record.md",
+    "lastEdited": "2026-05-19T06:12:00.000Z"
+  },
+  {
+    "id": "365d67b9-9e80-80f7-a19d-d8b8762c684f",
+    "title": "인터페이스와 추상클래스",
+    "slug": "인터페이스와-추상클래스",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "java",
+    "tags": [
+      "Interface",
+      "Abstract Class"
+    ],
+    "date": "2026-05-19",
+    "createdAt": "2026-05-19T05:53:00.000Z",
+    "thumbnail": "",
+    "excerpt": "💡핵심 개념 요약 추상 클래스(Abstract Class)는 클래스간 IS-A관계를 바탕으로 공통된 상태(필드)와 행위(메소드)을 추상화하여 재사용성과 확장성을 제공해줍니다. 인...",
+    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
+    "path": "개발/java/인터페이스와-추상클래스.md",
+    "lastEdited": "2026-05-19T05:54:00.000Z"
   },
   {
     "id": "365d67b9-9e80-8020-b774-d11b7d8a13d4",
@@ -756,12 +583,15 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "VoC",
       "LLM"
     ],
     "date": "2026-05-19",
+    "createdAt": "2026-05-19T03:51:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7f05163b-3643-4160-9506-0596e539d535%2Fimage.png?table=block&id=365d67b9-9e80-80f1-a374-dacc951c5c83&cache=v2",
     "excerpt": "#VoC #Data #LLM #사용자의견분석 #업무효율화 VoC는 Voice of Customer의 줄임말로 고객의 목소리 또는 사용자 의견을 말합니다. 사용자가 제품이나 서비스를...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-11-voc-플레이그라운드로-고객-목소리에-반응하는-당근-만들기.md",
@@ -774,6 +604,7 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "LLM",
@@ -782,10 +613,33 @@
       "벡터DB"
     ],
     "date": "2026-05-19",
+    "createdAt": "2026-05-19T02:55:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdb5f1d46-32a3-42db-9ba0-8d3d9b4b5f36%2Fimage.png?table=block&id=365d67b9-9e80-8076-8c2b-e2a8a88c423e&cache=v2",
     "excerpt": "#LLM비용절감 #시맨틱캐싱 #AI메시지추천 #벡터DB #DBSCAN 연간 LLM 호출 비용을 약 25% 절감한 프로젝트를 소개합니다. AI를 잘 활용하면서도 비용을 효율적으로 관...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-10-연간-llm-호출-비용-25-절감-인턴이-도전한-시맨틱-캐싱-도입-기록.md",
     "lastEdited": "2026-05-19T03:51:00.000Z"
+  },
+  {
+    "id": "364d67b9-9e80-803a-b3fa-feb0db747f1d",
+    "title": "JVM & Runtime Data Area ",
+    "slug": "jvm-runtime-data-area",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "java",
+    "tags": [
+      "JVM",
+      "Runtime Data Area"
+    ],
+    "date": "2026-05-18",
+    "createdAt": "2026-05-18T06:29:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F44e01968-9f37-4b81-aa91-a7f8edddd403%2Fimage.png?table=block&id=364d67b9-9e80-80d1-a57f-ce3bd6761757&cache=v2",
+    "excerpt": "JVM Architecture & Runtime Data Area 핵심 개념 요약 JVM(Java Virtual Machine)은 자바 바이트코드를 운영체제에 맞게 해석하고 실행하...",
+    "groupId": "364d67b9-9e80-8029-8cab-f5b0a3f733f3",
+    "path": "개발/java/jvm-runtime-data-area.md",
+    "lastEdited": "2026-05-18T06:43:00.000Z"
   },
   {
     "id": "364d67b9-9e80-80f5-b8d6-caccdb02d0e8",
@@ -794,6 +648,7 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "LLM",
@@ -801,6 +656,8 @@
       "AI추천"
     ],
     "date": "2026-05-18",
+    "createdAt": "2026-05-18T03:11:00.000Z",
+    "thumbnail": "",
     "excerpt": "#당근AI #AI물품추천 #LLM #프롬프트엔지니어링 #중고거래 #탐색 귀여운 조카에게 장난감 선물을 위해 ‘3살 장난감’과 같이 키워드를 검색해보지만 마음에 드는 것을 찾기란 쉽...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-09-3살-아기가-좋아할-만한-장난감-llm으로-추천하기.md",
@@ -813,12 +670,15 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "LLM",
       "프롬프트엔지니어링"
     ],
     "date": "2026-05-18",
+    "createdAt": "2026-05-18T03:10:00.000Z",
+    "thumbnail": "",
     "excerpt": "#LLM #중고거래 #프롬프트엔지니어링 #벡터DB #데이터검색 LLM을 활용하여 중고거래 게시글에서 스마트폰 정보를 추출하고 이를 통해 시세를 산출한 방법을 소개하고자 합니다. L...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-08-llm을-활용한-스마트폰-시세-조회.md",
@@ -831,6 +691,7 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "LLM",
@@ -838,6 +699,8 @@
       "구조화"
     ],
     "date": "2026-05-17",
+    "createdAt": "2026-05-16T17:01:00.000Z",
+    "thumbnail": "",
     "excerpt": "#LLM #프롬프트엔지니어링 #게시글구조화 #데이터구조화 비대면 소비가 확산되면서 모바일 교환권, 쿠폰 같은 거래가 당근에서도 활발히 이루어지게 되었습니다. 이런 게시글들에서 반복...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-07-llm으로-복잡한-게시글을-구조화하기까지.md",
@@ -850,6 +713,7 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "요즘-당근-ai-개발",
     "tags": [
       "LLM",
@@ -858,131 +722,12 @@
       "자동화"
     ],
     "date": "2026-05-16",
+    "createdAt": "2026-05-16T05:54:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fa5f8de4f-003f-4a66-bf1d-31c01a3fd242%2Fimage.png?table=block&id=362d67b9-9e80-8010-b05d-fa381262922c&cache=v2",
     "excerpt": "#LLM #업무자동화 #n8n #MCP #온콜자동화 🔍 끝없는 온콜의 늪, 작은 팀의 절규 PM 1명과 백엔드 개발자 4명으로 구성된 작은 팀으로 사용자의 가입부터 탈퇴까지 과정...",
     "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
     "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-06-작은-팀-llm으로-큰-업무효율-내기.md",
     "lastEdited": "2026-05-16T05:55:00.000Z"
-  },
-  {
-    "id": "358d67b9-9e80-8081-a2d8-fd3087613347",
-    "title": "[요즘 당근 AI 개발] 05. LLM을 활용한 당근 중고거래 운영 자동화 전환기",
-    "slug": "요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "자동화",
-      "프롬프트엔지니어링"
-    ],
-    "date": "2026-05-07",
-    "excerpt": "#LLM #운영자동화 #프롬프트엔지니어링 중고거래 플랫폼에서는 실시간으로 올라오는 수천 개의 게시글, 그 속에 생기는 개인, 단체간 이해관계, 사기 등 모든 것을 실시간으로 감지하...",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기.md",
-    "lastEdited": "2026-05-06T17:05:00.000Z"
-  },
-  {
-    "id": "351d67b9-9e80-8066-acdb-e3bb926defd5",
-    "title": "[요즘 당근 AI 개발] 04. GPT를 사용한 리뷰 자동화 시스템 구축기",
-    "slug": "요즘-당근-ai-개발-04-gpt를-사용한-리뷰-자동화-시스템-구축기",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "GPT",
-      "자동화"
-    ],
-    "date": "2026-04-29",
-    "excerpt": "#VOC #업무자동화 #GPT #운영효율화 #데이터분석 앱 리뷰는 사용자의 목소리를 가장 생생하게 들을 수 있는 중요한 소통 창구입니다. 하지만 매일 많은 리뷰를 사람이 직접 확인...",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-04-gpt를-사용한-리뷰-자동화-시스템-구축기.md",
-    "lastEdited": "2026-04-29T04:22:00.000Z"
-  },
-  {
-    "id": "351d67b9-9e80-8098-8df0-db3aaf0cf43f",
-    "title": "[요즘 당근 AI 개발] 03. PM이 이끄는 AI 글쓰기 서비스 개발기",
-    "slug": "요즘-당근-ai-개발-03-pm이-이끄는-ai-글쓰기-서비스-개발기",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "LLM",
-      "프롬프트엔지니어링"
-    ],
-    "date": "2026-04-28",
-    "excerpt": "#AI글쓰기 #LLM #프롬프트엔지니어링 팔아야 할 물건은 쌓여가는데 막상 판매 글을 쓰려니 제목은 뭐로 할까? 언제 얼마에 샀었지? 등 사소한 질문들에 나중에 하자고 미루게 되는...",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-03-pm이-이끄는-ai-글쓰기-서비스-개발기.md",
-    "lastEdited": "2026-04-29T02:34:00.000Z"
-  },
-  {
-    "id": "34cd67b9-9e80-8068-abd8-c770979341fa",
-    "title": "[요즘 당근 AI 개발] 02. 당신과 함께 해서 행복했던 인형 올림",
-    "slug": "요즘-당근-ai-개발-02-당신과-함께-해서-행복했던-인형-올림",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "LLM"
-    ],
-    "date": "2026-04-24",
-    "excerpt": "#LLM #거래후기 #중고거래 #프롬프트엔지니어링 당근에서는 판매한 물건이 편지를 보내기 시작했습니다. 어떻게 물품이 직접 편지를 보내게 되었는지, 그 과정에서 LLM은 어떻게 활...",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-02-당신과-함께-해서-행복했던-인형-올림.md",
-    "lastEdited": "2026-04-29T02:33:00.000Z"
-  },
-  {
-    "id": "34bd67b9-9e80-8034-9cd5-c1d86feee8b3",
-    "title": "[요즘 당근 AI 개발] 01. 비개발자를 위한 바이브 코딩 도전기",
-    "slug": "요즘-당근-ai-개발-01-비개발자를-위한-바이브-코딩-도전기",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "요즘-당근-ai-개발",
-    "tags": [
-      "CursorAI",
-      "바이브코딩"
-    ],
-    "date": "2026-04-23",
-    "excerpt": "#바이브코딩 #CursorAI #프롬프트엔지니어링 #비개발자코딩 검색 품질을 높이기 위해서는 사용자의 행동 데이터와 피드백을 분석, 문서 적합성을 점검하는 등 다양한 운영 업무가 ...",
-    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
-    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-01-비개발자를-위한-바이브-코딩-도전기.md",
-    "lastEdited": "2026-04-29T03:05:00.000Z"
-  },
-  {
-    "id": "37cd67b9-9e80-8082-91ef-e778f2c8cbf9",
-    "title": "12장. 데이터 시스템의 미래",
-    "slug": "12장-데이터-시스템의-미래",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [],
-    "date": "2026-06-10",
-    "excerpt": "이 책의 목적은 애플리케이션과 시스템을 신뢰할 수 있고 확장 가능하며 유지보수하기 쉽게 만드는 방법을 탐구하는 것이다. 이번 장에서의 목적은 현재보다 나은, 즉 견고하고 정확하며 ...",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/12장-데이터-시스템의-미래.md",
-    "lastEdited": "2026-06-11T05:35:00.000Z"
-  },
-  {
-    "id": "36bd67b9-9e80-800c-a315-d4c7fca65dd8",
-    "title": "11장. 스트림 처리",
-    "slug": "11장-스트림-처리",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "데이터-중심-애플리케이션-설계",
-    "tags": [
-      "stream"
-    ],
-    "date": "2026-05-25",
-    "excerpt": "10장에서 살펴본 일괄처리는 입력을 유한한 크기로 한정한다는 중요한 가정이 있다. 그래서 일괄처리는 입력을 읽는 작업이 끝나는 시점을 알 수 있다. 실제로는 많은 데이터가 시간이 ...",
-    "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
-    "path": "책/데이터-중심-애플리케이션-설계/11장-스트림-처리.md",
-    "lastEdited": "2026-05-25T04:17:00.000Z"
   },
   {
     "id": "362d67b9-9e80-8011-b9f5-cacd4b06fdf7",
@@ -991,9 +736,12 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-05-16",
+    "createdAt": "2026-05-16T04:53:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F90c68722-ddb0-440f-aa95-173ab6a1c96a%2Fimage.png?table=block&id=362d67b9-9e80-8071-a8cf-dad3d8f6be77&cache=v2",
     "excerpt": "현대 데이터 시스템에서 데이터 처리 방식은 시스템에 요청한 후 시스템으로부터 결과를 반환받는 방식이다. 이런 시스템에서는 응답 시간 단축에 노력을 많이 기울인다. 이 요청-응답 방...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/10장-일괄-처리.md",
@@ -1006,13 +754,100 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-05-11",
+    "createdAt": "2026-05-15T05:36:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc198f43b-f092-4633-98dd-022ebee2652b%2Fimage.png?table=block&id=361d67b9-9e80-803f-abc1-c64da6defcdf&cache=v2",
     "excerpt": "이번 장에서는 내결함성을 지닌 분산 시스템을 구축하는데 쓰이는 알고리즘과 프로토콜 이야기를 한다. 내결함성을 지닌 시스템을 구축하는 가장 좋은 방법은 유용한 보장을 해주는 범용 추...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/9장-일관성과-합의.md",
     "lastEdited": "2026-05-15T05:36:00.000Z"
+  },
+  {
+    "id": "35bd67b9-9e80-801d-bf80-e450dd4be0e6",
+    "title": "락",
+    "slug": "락",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "데이터베이스",
+    "tags": [
+      "MySQL",
+      "Lock"
+    ],
+    "date": "2026-05-08",
+    "createdAt": "2026-05-09T03:39:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F45ecc474-2830-49f2-8ce1-8536284da480%2Fimage.png?table=block&id=35bd67b9-9e80-801d-8b73-d9ffe2ae52fb&cache=v2",
+    "excerpt": "락 락(Lock)은 여러 트랜잭션이 동시에 같은 데이터에 접근할 때 일관성을 보장하기 위한 메커니즘입니다. 공유락과 배타락 공유락 (Shared Lock, S-Lock) 데이터를 ...",
+    "groupId": "31ad67b9-9e80-80e0-848d-d6da8d071164",
+    "path": "개발/데이터베이스/락.md",
+    "lastEdited": "2026-05-09T03:40:00.000Z"
+  },
+  {
+    "id": "358d67b9-9e80-8081-a2d8-fd3087613347",
+    "title": "[요즘 당근 AI 개발] 05. LLM을 활용한 당근 중고거래 운영 자동화 전환기",
+    "slug": "요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "자동화",
+      "프롬프트엔지니어링"
+    ],
+    "date": "2026-05-07",
+    "createdAt": "2026-05-06T16:52:00.000Z",
+    "thumbnail": "",
+    "excerpt": "#LLM #운영자동화 #프롬프트엔지니어링 중고거래 플랫폼에서는 실시간으로 올라오는 수천 개의 게시글, 그 속에 생기는 개인, 단체간 이해관계, 사기 등 모든 것을 실시간으로 감지하...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-05-llm을-활용한-당근-중고거래-운영-자동화-전환기.md",
+    "lastEdited": "2026-05-06T17:05:00.000Z"
+  },
+  {
+    "id": "351d67b9-9e80-8066-acdb-e3bb926defd5",
+    "title": "[요즘 당근 AI 개발] 04. GPT를 사용한 리뷰 자동화 시스템 구축기",
+    "slug": "요즘-당근-ai-개발-04-gpt를-사용한-리뷰-자동화-시스템-구축기",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "GPT",
+      "자동화"
+    ],
+    "date": "2026-04-29",
+    "createdAt": "2026-04-29T04:19:00.000Z",
+    "thumbnail": "",
+    "excerpt": "#VOC #업무자동화 #GPT #운영효율화 #데이터분석 앱 리뷰는 사용자의 목소리를 가장 생생하게 들을 수 있는 중요한 소통 창구입니다. 하지만 매일 많은 리뷰를 사람이 직접 확인...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-04-gpt를-사용한-리뷰-자동화-시스템-구축기.md",
+    "lastEdited": "2026-04-29T04:22:00.000Z"
+  },
+  {
+    "id": "351d67b9-9e80-8098-8df0-db3aaf0cf43f",
+    "title": "[요즘 당근 AI 개발] 03. PM이 이끄는 AI 글쓰기 서비스 개발기",
+    "slug": "요즘-당근-ai-개발-03-pm이-이끄는-ai-글쓰기-서비스-개발기",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "LLM",
+      "프롬프트엔지니어링"
+    ],
+    "date": "2026-04-28",
+    "createdAt": "2026-04-29T02:33:00.000Z",
+    "thumbnail": "",
+    "excerpt": "#AI글쓰기 #LLM #프롬프트엔지니어링 팔아야 할 물건은 쌓여가는데 막상 판매 글을 쓰려니 제목은 뭐로 할까? 언제 얼마에 샀었지? 등 사소한 질문들에 나중에 하자고 미루게 되는...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-03-pm이-이끄는-ai-글쓰기-서비스-개발기.md",
+    "lastEdited": "2026-04-29T02:34:00.000Z"
   },
   {
     "id": "34fd67b9-9e80-805f-b593-cfb19d2aab97",
@@ -1021,13 +856,57 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-04-27",
+    "createdAt": "2026-04-27T05:40:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7463e755-63c5-4a96-af9d-ed41cdc7cce3%2Fimage.png?table=block&id=34fd67b9-9e80-800e-9d57-fb4592465df2&cache=v2",
     "excerpt": "분산 시스템을 다루는 것은 한 컴퓨터에서 실행되는 소프트웨어를 작성하는 일과는 근본적으로 다르다. 이 장은 분산 시스템의 상태에 대해 생각하는 방법과 무슨 일이 일어났는지 추론하는...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/8장-분산-시스템의-골칫거리.md",
     "lastEdited": "2026-04-27T05:42:00.000Z"
+  },
+  {
+    "id": "34cd67b9-9e80-8068-abd8-c770979341fa",
+    "title": "[요즘 당근 AI 개발] 02. 당신과 함께 해서 행복했던 인형 올림",
+    "slug": "요즘-당근-ai-개발-02-당신과-함께-해서-행복했던-인형-올림",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "LLM"
+    ],
+    "date": "2026-04-24",
+    "createdAt": "2026-04-24T04:45:00.000Z",
+    "thumbnail": "",
+    "excerpt": "#LLM #거래후기 #중고거래 #프롬프트엔지니어링 당근에서는 판매한 물건이 편지를 보내기 시작했습니다. 어떻게 물품이 직접 편지를 보내게 되었는지, 그 과정에서 LLM은 어떻게 활...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-02-당신과-함께-해서-행복했던-인형-올림.md",
+    "lastEdited": "2026-04-29T02:33:00.000Z"
+  },
+  {
+    "id": "34bd67b9-9e80-8034-9cd5-c1d86feee8b3",
+    "title": "[요즘 당근 AI 개발] 01. 비개발자를 위한 바이브 코딩 도전기",
+    "slug": "요즘-당근-ai-개발-01-비개발자를-위한-바이브-코딩-도전기",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "요즘-당근-ai-개발",
+    "tags": [
+      "CursorAI",
+      "바이브코딩"
+    ],
+    "date": "2026-04-23",
+    "createdAt": "2026-04-23T16:13:00.000Z",
+    "thumbnail": "",
+    "excerpt": "#바이브코딩 #CursorAI #프롬프트엔지니어링 #비개발자코딩 검색 품질을 높이기 위해서는 사용자의 행동 데이터와 피드백을 분석, 문서 적합성을 점검하는 등 다양한 운영 업무가 ...",
+    "groupId": "31bd67b9-9e80-8084-9895-f02a0bc503ae",
+    "path": "책/요즘-당근-ai-개발/요즘-당근-ai-개발-01-비개발자를-위한-바이브-코딩-도전기.md",
+    "lastEdited": "2026-04-29T03:05:00.000Z"
   },
   {
     "id": "348d67b9-9e80-8067-b870-de3254984f9f",
@@ -1036,15 +915,61 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [
       "Transaction"
     ],
     "date": "2026-04-20",
+    "createdAt": "2026-04-20T04:24:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F0bdd530c-740b-4af7-bbf9-06c01449c414%2Fimage.png?table=block&id=348d67b9-9e80-80cf-bd9b-eff2bec84773&cache=v2",
     "excerpt": "시스템이 신뢰성을 가지기 위해서는 여러 결함을 처리하여 전체 시스템의 치명적인 장애로 이어지는 것을 막아야 한다(내결함성을 갖춘 시스템) 구현하기 위해서는 할 일이 많다 수십년 동...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/7장-트랜잭션.md",
     "lastEdited": "2026-04-27T05:40:00.000Z"
+  },
+  {
+    "id": "341d67b9-9e80-808e-ab5e-c4cd5a3c94fc",
+    "title": "동기/비동기 & 블로킹/논블로킹",
+    "slug": "동기-비동기-블로킹-논블로킹",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "동기",
+      "비동기",
+      "블로킹",
+      "논블로킹"
+    ],
+    "date": "2026-04-14",
+    "createdAt": "2026-04-13T23:59:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2dcdbf3a-316b-44e9-9e03-b5d1456d97da%2Fimage.png?table=block&id=341d67b9-9e80-8078-8626-f67a14324186&cache=v2",
+    "excerpt": "블로킹(Blocking) vs 논블로킹(Non-blocking) 제어권의 관점입니다. 호출된 함수가 바로 리턴을 하는가? 블로킹 호출된 함수가 자신의 일을 끝낼 때까지 제어권을 계...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/동기-비동기-블로킹-논블로킹.md",
+    "lastEdited": "2026-04-13T23:59:00.000Z"
+  },
+  {
+    "id": "341d67b9-9e80-801b-b0c3-f96f644d4c8e",
+    "title": "Disk Management & Scheduling",
+    "slug": "disk-management-scheduling",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "디스크"
+    ],
+    "date": "2026-04-13",
+    "createdAt": "2026-04-13T02:47:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb3401320-b6a7-4c05-8b78-885cd81a8ab8%2Fimage.png?table=block&id=341d67b9-9e80-8080-986e-e91431e3d909&cache=v2",
+    "excerpt": "🔨 Disk 구조 단위 물리적 단위(Sector): 디스크 내부에서 데이터를 관리하는 최소 단위 논리적 단위(Logical Block): 디스크 외부(운영체제)에서 디스크에 접근...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/disk-management-scheduling.md",
+    "lastEdited": "2026-04-13T02:47:00.000Z"
   },
   {
     "id": "340d67b9-9e80-80fd-b85f-e5de9d728612",
@@ -1053,11 +978,14 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [
       "partitioning"
     ],
     "date": "2026-04-12",
+    "createdAt": "2026-04-12T05:13:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc4beebdb-7d63-4a93-9181-72b276fcbe7a%2Fimage.png?table=block&id=340d67b9-9e80-806a-9e61-c75916f8d4dc&cache=v2",
     "excerpt": "5장에서는 동일한 데이터의 복사본 여러 개를 다른 노드에 저장하는 복제 개념을 다뤘다. 데이터 셋이 매우 크거나 질의 처리량이 매우 높다면 복제만으로는 부족하고 데이터를 파티션으로...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/6장-파티셔닝.md",
@@ -1070,11 +998,14 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [
       "replication"
     ],
     "date": "2026-04-07",
+    "createdAt": "2026-04-11T11:30:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F8b0f7c5b-1ec0-43ec-9973-3780ce3f71b9%2Fimage.png?table=block&id=33fd67b9-9e80-8046-b16a-fa668767c824&cache=v2",
     "excerpt": "복제란 네트워크로 연결된 여러 장비에 동일한 데이터의 복사본을 유지한다는 의미. 데이터 복제가 필요한 이유 1️⃣ 지연 시간 감소 사용자와 지리적으로 가까운 노드에서 데이터를 제공...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/5장-복제.md",
@@ -1087,13 +1018,36 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-03-31",
+    "createdAt": "2026-04-11T11:30:00.000Z",
+    "thumbnail": "",
     "excerpt": "애플리케이션은 필연적으로 시간이 지남에 따라 변한다. 새로운 제품을 출시하거나 사용자 요구사항을 이해하게 되거나 비즈니스 환경이 변함에 따라 애플리케이션 기능은 추가되거나 변경된다...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/4장-부호화와-발전.md",
     "lastEdited": "2026-04-11T11:30:00.000Z"
+  },
+  {
+    "id": "33bd67b9-9e80-806a-8bb3-fdac6c8c72a2",
+    "title": "파일 시스템",
+    "slug": "파일-시스템",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "파일시스템"
+    ],
+    "date": "2026-04-07",
+    "createdAt": "2026-04-07T06:16:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F68303538-b2bd-4af8-bc3a-7a28b851581e%2Fimage.png?table=block&id=33bd67b9-9e80-8007-a3ff-eac054127534&cache=v2",
+    "excerpt": "📒 파일과 파일시스템 File A named collection of related information 관련 정보를 이름을 통해서 저장하는 것. 일반적으로 하드디스크 같은 비휘...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/파일-시스템.md",
+    "lastEdited": "2026-04-07T06:17:00.000Z"
   },
   {
     "id": "327d67b9-9e80-80b2-ac74-c04934f13bfe",
@@ -1102,16 +1056,106 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [
       "LSM Tree",
       "B Tree"
     ],
     "date": "2026-03-18",
+    "createdAt": "2026-03-18T08:10:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F5aef48d5-ac2a-4b5d-b4e6-4075882e1c2d%2Fimage.png?table=block&id=327d67b9-9e80-807a-81a9-d49271351d65&cache=v2",
     "excerpt": "이 장에서는 데이터베이스가 데이터를 저장하는 방법과 데이터를 요청했을 때 찾을 수 있는 방법을 설명합니다 🔍 색인 색인의 일반적인 개념은 어떤 부가적인 메타데이터를 유지하는 것으...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/3장-저장소와-검색.md",
     "lastEdited": "2026-03-18T08:11:00.000Z"
+  },
+  {
+    "id": "325d67b9-9e80-804d-9e41-d71e3f0108a6",
+    "title": "가상 메모리(Virtual Memory) - Demand Paging, 페이징 교체",
+    "slug": "가상-메모리-virtual-memory-demand-paging-페이징-교체",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "메모리관리",
+      "페이징"
+    ],
+    "date": "2026-03-16",
+    "createdAt": "2026-03-16T05:22:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F638a6fb2-d4c8-4979-bf2b-ef4f5c9f7b48%2Fimage.png?table=block&id=325d67b9-9e80-8072-aa53-c9e3d5f9dfd3&cache=v2",
+    "excerpt": "✅ Demand Paging 프로그램 실행 시 모든 페이지를 메모리에 올리지 않고 실제 접근이 발생한 시점에만 해당 페이지를 메모리에 올리는 것 I/O 양 감소 Memory 사용량...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/가상-메모리-virtual-memory-demand-paging-페이징-교체.md",
+    "lastEdited": "2026-03-16T05:23:00.000Z"
+  },
+  {
+    "id": "323d67b9-9e80-8063-99d6-d2dc71083111",
+    "title": "Memory Management",
+    "slug": "memory-management",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "메모리관리",
+      "페이징",
+      "세그먼테이션",
+      "TLB"
+    ],
+    "date": "2026-03-13",
+    "createdAt": "2026-03-14T07:47:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fce6516f3-505d-446e-ad31-28bd990e333c%2Fimage.png?table=block&id=323d67b9-9e80-80c3-aa73-d6c97d4e0d7d&cache=v2",
+    "excerpt": "제가 개발한 프로그램이 어떻게 물리적인 RAM에 올라가고 8GB밖에 안 되는 RAM으로 어떻게 10GB짜리 게임을 돌릴 수 있는지등을 확인하기 위해서 OS의 메모리 관리에 대해서 ...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/memory-management.md",
+    "lastEdited": "2026-03-14T07:48:00.000Z"
+  },
+  {
+    "id": "321d67b9-9e80-808f-bf2d-ddc2599f968b",
+    "title": "데드락 (Deadlock, 교착상태)",
+    "slug": "데드락-deadlock-교착상태",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "데드락"
+    ],
+    "date": "2026-03-12",
+    "createdAt": "2026-03-12T06:42:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2f2fa15d-cdd0-4abf-a2b3-c20236ab910d%2Fimage.png?table=block&id=321d67b9-9e80-800f-a6d0-cb092d96a084&cache=v2",
+    "excerpt": "☠️ 데드락(Deadlock, 교착 상태)이란? 데드락은 2개 이상의 프로세스나 스레드가 서로 다른 프로세스가 점유하고 있는 자원을 얻기 위해 영원히 무한 대기하는 상태를 말합니다...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/데드락-deadlock-교착상태.md",
+    "lastEdited": "2026-03-12T07:09:00.000Z"
+  },
+  {
+    "id": "321d67b9-9e80-80ad-a4c2-cc05d959f6c9",
+    "title": "프로세스 Synchronization",
+    "slug": "프로세스-synchronization",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "동기화",
+      "프로세스",
+      "스레드",
+      "race condition"
+    ],
+    "date": "2026-03-10",
+    "createdAt": "2026-03-12T02:31:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9c09b75b-9e05-4c3c-9a37-61a26a314c29%2Fimage.png?table=block&id=321d67b9-9e80-80da-a712-f9e77ddc7bbb&cache=v2",
+    "excerpt": "실무에서 대규모 트래픽을 다룰 때 발생하는 데이터 정합성 이슈(예: 수강신청, 선착순 쿠폰 발급, 재고 차감 등)는 모두 프로세스 동기화(Process Synchronization...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/프로세스-synchronization.md",
+    "lastEdited": "2026-03-12T06:42:00.000Z"
   },
   {
     "id": "31fd67b9-9e80-8000-bf80-c4b5268decca",
@@ -1120,16 +1164,143 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [
       "SQL",
       "NoSQL"
     ],
     "date": "2026-03-10",
+    "createdAt": "2026-03-10T05:25:00.000Z",
+    "thumbnail": "",
     "excerpt": "데이터 모델은 소프트웨어 개발에서 제일 중요한 부분일 것이다. 소프트웨어가 어떻게 작성됐는지 뿐만 아니라 해결하려는 문제를 어떻게 생각해야 하는지에 대해서도 영향을 미치기 때문 추...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/2장-데이터-모델과-질의-언어.md",
     "lastEdited": "2026-03-10T05:39:00.000Z"
+  },
+  {
+    "id": "31cd67b9-9e80-808a-bae3-e49fbefeef7b",
+    "title": "CPU Scheduling",
+    "slug": "cpu-scheduling",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "CPU"
+    ],
+    "date": "2026-03-09",
+    "createdAt": "2026-03-07T05:21:00.000Z",
+    "thumbnail": "",
+    "excerpt": "⭐ CPU Scheduler Ready 상태의 프로세스 중(ready queue)에서 실행할 프로세스를 선택해 CPU를 할당 CPU는 하나인데 실행할 프로세스는 많을 때 다음엔 누...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/cpu-scheduling.md",
+    "lastEdited": "2026-03-10T02:21:00.000Z"
+  },
+  {
+    "id": "31cd67b9-9e80-8034-900c-c79b58f0d7c1",
+    "title": "CPU burst 와 I/O burst",
+    "slug": "cpu-burst-와-i-o-burst",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "CPU",
+      "I/O"
+    ],
+    "date": "2026-03-07",
+    "createdAt": "2026-03-07T05:20:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9d8339cc-1b97-4447-935c-85f70403211a%2Fimage.png?table=block&id=31cd67b9-9e80-80cf-b09b-db97657a615b&cache=v2",
+    "excerpt": "🖥️ 프로그램의 실행 프로그램이 실행된다는 것은 CPU를 사용하여 연산을 하는 단계(CPU Burst)와 파일 읽기/쓰기, 네트워크 통신과 같은 I/O 작업(I/O Burst)이...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/cpu-burst-와-i-o-burst.md",
+    "lastEdited": "2026-03-07T05:21:00.000Z"
+  },
+  {
+    "id": "31cd67b9-9e80-80b8-9b1b-f386ad678c0e",
+    "title": "IPC - 프로세스간 통신",
+    "slug": "ipc-프로세스간-통신",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "프로세스",
+      "IPC"
+    ],
+    "date": "2026-03-07",
+    "createdAt": "2026-03-07T04:40:00.000Z",
+    "thumbnail": "",
+    "excerpt": "프로세스 운영체제로부터 자신만의 독립적인 메모리공간(주소 공간)을 가지고 있습니다. 따라서 서로 데이터를 주고 받기 위해서는 IPC(Inter Process Communicatio...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/ipc-프로세스간-통신.md",
+    "lastEdited": "2026-03-07T04:41:00.000Z"
+  },
+  {
+    "id": "31bd67b9-9e80-80e5-b417-ca895f7c3ba1",
+    "title": "프로세스와 스레드",
+    "slug": "프로세스와-스레드",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "프로세스",
+      "스레드"
+    ],
+    "date": "2026-03-07",
+    "createdAt": "2026-03-06T06:57:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F72b7e6e3-5dfe-4427-94cd-d982cd66c73a%2Fimage.png?table=block&id=31bd67b9-9e80-80c7-8c38-edab950fe6ed&cache=v2",
+    "excerpt": "프로세스 관리는 운영체제의 핵심 역할입니다. 프로그램이 실행되어 프로세스가 생성된 이후 작업을 마칠때 까지 어떤 상태를 거치고 각 상태에서 고려할 사항이 무엇인지, OS가 프로레스...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/프로세스와-스레드.md",
+    "lastEdited": "2026-03-06T15:30:00.000Z"
+  },
+  {
+    "id": "31ad67b9-9e80-80fa-85ae-e670e1c3fd73",
+    "title": "인터럽트 (Interrupt)",
+    "slug": "인터럽트-interrupt",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "인터럽트"
+    ],
+    "date": "2026-03-05",
+    "createdAt": "2026-03-05T03:47:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdaeb04b9-5cdc-4f8d-9d3d-fd32e827ea34%2Fimage.png?table=block&id=31ad67b9-9e80-80d3-b6ec-c800f525b63b&cache=v2",
+    "excerpt": "🤚 인터럽트 등장 배경 폴링 방식 초기 컴퓨터 시스템에는 주변 장치(ex: I/O 장치)가 많지 않아 CPU에서 직접 입출력 장치에 데이터를 가져오거나 내보냈다. CPU가 입출력...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/인터럽트-interrupt.md",
+    "lastEdited": "2026-03-05T07:10:00.000Z"
+  },
+  {
+    "id": "31ad67b9-9e80-8085-8f4d-eb514ad25af8",
+    "title": "운영체제란?",
+    "slug": "운영체제란",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "운영체제",
+    "tags": [
+      "시스템콜",
+      "커널"
+    ],
+    "date": "2026-03-05",
+    "createdAt": "2026-03-05T03:06:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F509ac83f-ff68-4e4a-8380-8529995c3eb6%2Fimage.png?table=block&id=31ad67b9-9e80-8087-8f53-c60a567d6d74&cache=v2",
+    "excerpt": "🔍 운영체제(Operating System, OS) 컴퓨터 하드웨어 바로 위에 설치되어 사용자 및 다른 모든 소프트웨어와 하드웨어를 연결하는 소프트웨어 계층 컴퓨터 하드웨어(CP...",
+    "groupId": "31ad67b9-9e80-80cd-9caa-e044bb4fba6f",
+    "path": "개발/운영체제/운영체제란.md",
+    "lastEdited": "2026-03-05T06:54:00.000Z"
   },
   {
     "id": "319d67b9-9e80-8091-890a-c1bcceb768c2",
@@ -1138,237 +1309,16 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
     "date": "2026-03-04",
+    "createdAt": "2026-03-04T08:16:00.000Z",
+    "thumbnail": "",
     "excerpt": "책 전반에 걸쳐 사용하는 전문 용어와 접근 방식 소개 신뢰성(reliability) 확장성(scalability) 유지보수성(maitainability) 이와 같은 단어의 실제 의...",
     "groupId": "319d67b9-9e80-8052-ad0c-dc98fc6c4a34",
     "path": "책/데이터-중심-애플리케이션-설계/1장-신뢰할-수-있고-확장-가능하며-유지보수하기-쉬운-애플리케이션.md",
     "lastEdited": "2026-03-04T08:44:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-8044-b344-f2c4a3cbfb13",
-    "title": "6장 - 키:값 저장소 설계",
-    "slug": "6장-키-값-저장소-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [
-      "key-value"
-    ],
-    "date": "2026-02-27",
-    "excerpt": "키-값 저장소는 키-값 데이터베이스라고도 불리는 비 관계형 데이터베이스 저장되는 값은 고유 식별자를 키로 가지고 각 값은 키를 통해서만 접근이 가능하다. 키는 일반 텍스트일 수도 ...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/6장-키-값-저장소-설계.md",
-    "lastEdited": "2026-03-01T06:05:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-8059-9b85-fc548ffd19d1",
-    "title": "4장 - 처리율 제한 장치의 설계",
-    "slug": "4장-처리율-제한-장치의-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [
-      "rate limit"
-    ],
-    "date": "2026-02-27",
-    "excerpt": "네트워크 시스템에서 처리율 제한 장치(rate limiter)는 클라이언트 또는 서비스가 보내는 트래픽의 처리율을 제어하기 위한 장치 ex) 특정 기간 내에 전송되는 클라이언트 H...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/4장-처리율-제한-장치의-설계.md",
-    "lastEdited": "2026-02-28T16:12:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-80af-9cd0-e0d2a80c3ca0",
-    "title": "10장 - 알림 시스템 설계",
-    "slug": "10장-알림-시스템-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "⏰ 알림 시스템 알림 시스템은 고객에게 중요할 만한 정보를 비동기적으로 제공한다. 단순히 모바일 푸시 알림(mobile push notification)에 한정하지 않고 SMS 메...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/10장-알림-시스템-설계.md",
-    "lastEdited": "2026-03-01T06:12:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-803b-acba-e3d7590c0bbf",
-    "title": "9장 - 웹 크롤러 설계",
-    "slug": "9장-웹-크롤러-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "웹 크롤러는 로봇 또는 스파이더라고도 부른다. 검색 엔진에서 널리 쓰이는 기술로 웹에 새로 올라오거나 갱신된 콘텐츠를 찾아내는 것이 주된 목적이다. 🎯 크롤러 활용 예시 웹 크롤...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/9장-웹-크롤러-설계.md",
-    "lastEdited": "2026-03-01T06:12:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-8086-bdfb-f2121a37b4c5",
-    "title": "12장. 채팅 시스템 설계",
-    "slug": "12장-채팅-시스템-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "✅ 문제 이해 및 설계 범위 확정 어떤 채팅앱을 설계하는지 확실히 해두는 것이 중요하다. 1:1 채팅에 집중하는 앱 그룹 채팅에 중점을 둔 업무용 앱 대규모 그룹의 소통과 응답지연...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/12장-채팅-시스템-설계.md",
-    "lastEdited": "2026-03-01T06:12:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-8016-97e8-caefdfc84e46",
-    "title": "8장 - URL 단축기 설계",
-    "slug": "8장-url-단축기-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "🤔 단축 URL을 사용하는 이유? 이 글을 읽기 전에 왜 URL 단축기를 사용하여 단축된 URL을 사용하는지 궁금해져 한 번 정리를 해보려고 한다. 1️⃣ 문제 이해 및 설계 범...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/8장-url-단축기-설계.md",
-    "lastEdited": "2026-03-01T06:10:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-8065-ab99-df941c98915c",
-    "title": "5장 - 안정 해시 설계",
-    "slug": "5장-안정-해시-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "수평적 규모 확장성을 달성하기 위해서는 요청, 데이터를 서버에 균등하게 나누는 것이 중요 ☑️ 안정 해시는 이런 목표를 달성하기 위해 보편적으로 사용하는 기술이다. ⚠️ 해시 키 ...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/5장-안정-해시-설계.md",
-    "lastEdited": "2026-03-01T06:05:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-80b0-8995-d19d2ed268c4",
-    "title": "11장 - 뉴스 피드 시스템 설계",
-    "slug": "11장-뉴스-피드-시스템-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "뉴스 피드 홈 페이지 중앙에 지속적으로 업데이트되는 스토리들 사용자의 상태 정보 업데이트, 사진, 비디오, 링크 등 페이스북 도움말 페이지 🎯 문제 이해 및 설계 범위 확정 모바...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/11장-뉴스-피드-시스템-설계.md",
-    "lastEdited": "2026-03-01T06:12:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-80c2-bc7a-e0398392c183",
-    "title": "7장 - 분산 시스템을 위한 유일 ID 생성기 설계",
-    "slug": "7장-분산-시스템을-위한-유일-id-생성기-설계",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [
-      "id"
-    ],
-    "date": "2026-02-27",
-    "excerpt": "1️⃣ 문제 이해 및 설계 범위 확정 질문을 통해서 요구사항을 이해하고 모호함을 해소하자. ID는 유일해야 한다. ID는 숫자로만 구성되어야 한다. ID는 64비트로 표현될 수 있...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/7장-분산-시스템을-위한-유일-id-생성기-설계.md",
-    "lastEdited": "2026-03-01T06:10:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-80ae-bec9-f929b71ca5ca",
-    "title": "3장 - 시스템 설계 면접 공략법",
-    "slug": "3장-시스템-설계-면접-공략법",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "🔍 시스템 설계 면접이 있는 이유?? 모호한 문제를 풀기 위해서 해결책을 찾아내는 과정에 대한 시뮬레이션 정해진 결말도 정답도 없다! 설계 기술을 시연하는 자리이고 설계 과정에서...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/3장-시스템-설계-면접-공략법.md",
-    "lastEdited": "2026-02-28T16:12:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-80a7-a98a-e53574531c20",
-    "title": "2장 - 개략적인 규모 추정 ",
-    "slug": "2장-개략적인-규모-추정",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "시스템 설계 면접에서 시스템 용량, 성능 요구사항을 개략적으로 추정하라는 요구를 받게됨. 개략적인 규모 추정(back-of-the-envelope estimation) 보편적으로 ...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/2장-개략적인-규모-추정.md",
-    "lastEdited": "2026-02-28T03:30:00.000Z"
-  },
-  {
-    "id": "314d67b9-9e80-80f3-982f-c1a06fa8baa2",
-    "title": "1장 - 사용자 수에 따른 규모 확장성",
-    "slug": "1장-사용자-수에-따른-규모-확장성",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "",
-    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
-    "tags": [],
-    "date": "2026-02-27",
-    "excerpt": "한 명의 사용자를 지원하는 시스템에서 몇백만 사용자를 지원하는 시스템을 설계하는 과정에서 규모 확장성과 관계된 설계 문제를 푸는데 필요한 지식들을 학습 📌 단일 서버 웹, 앱, ...",
-    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
-    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/1장-사용자-수에-따른-규모-확장성.md",
-    "lastEdited": "2026-02-28T03:35:00.000Z"
-  },
-  {
-    "id": "41fd67b9-9e80-80ea-bc42-d2b682e2f505",
-    "title": "이방인",
-    "slug": "이방인",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "소설",
-    "tags": [
-      "알베르 카뮈"
-    ],
-    "date": "2026-11-21",
-    "dateEnd": "",
-    "createdAt": "2026-11-21T04:56:00.000Z",
-    "excerpt": "알베르 카뮈, 《이방인》 세상은 아무런 대답도 해주지 않았다 \"오늘 엄마가 죽었다. 아니 어쩌면 어제였는지도 모른다.\" 이 책의 첫 문장은 지금까지 읽었던 책들 중에서의 가장 인상...",
-    "thumbnail": "",
-    "groupId": "",
-    "path": "책/이방인.md",
-    "lastEdited": "2026-11-21T04:58:00.000Z"
-  },
-  {
-    "id": "41fd67b9-9e80-800f-8652-c7f4386281ff",
-    "title": "데미안",
-    "slug": "데미안",
-    "category": "책",
-    "categorySlug": "책",
-    "bookCategory": "소설",
-    "tags": [
-      "헤르만 헤세"
-    ],
-    "date": "2026-11-21",
-    "dateEnd": "",
-    "createdAt": "2026-11-21T03:55:00.000Z",
-    "excerpt": "헤르만 헤세, 《데미안》 우리 자신으로 살아가기 어떤 책을 읽을 때는 읽는 동안보다 읽고나서 더 많은 생각을 하게된다. 이 책을 읽을 때는 쉽게 이해되지 않은 문장들이 많았는데 책...",
-    "thumbnail": "",
-    "groupId": "",
-    "path": "책/데미안.md",
-    "lastEdited": "2026-11-21T04:58:00.000Z"
   },
   {
     "id": "318d67b9-9e80-80b2-b494-ddf6f1a51244",
@@ -1377,12 +1327,15 @@
     "category": "프로젝트",
     "categorySlug": "프로젝트",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "beomlog",
     "tags": [
       "Supabase",
       "PostgreSQL"
     ],
     "date": "2026-03-03",
+    "createdAt": "2026-03-03T04:31:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F027e4a4b-689e-45ce-86cc-5535d7747225%2Fimage.png?table=block&id=319d67b9-9e80-8094-94e4-f34e4a9e841f&cache=v2",
     "excerpt": "블로그의 동적 데이터(댓글, 방문자 통계, 조회수, 미니룸, BGM 등)등을 처리하기 위해서 DB가 필요하다고 생각했고 이렇게 실시간으로 변하는 데이터를 Supabase를 이용해서...",
     "groupId": "318d67b9-9e80-8094-b1b0-fbfe2cef285d",
     "path": "프로젝트/beomlog/supabase-설계-및-연동.md",
@@ -1395,11 +1348,14 @@
     "category": "프로젝트",
     "categorySlug": "프로젝트",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "beomlog",
     "tags": [
       "n8n"
     ],
     "date": "2026-03-03",
+    "createdAt": "2026-03-03T02:02:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbd64f6d2-a3f5-4111-be51-a5470e4cb7c8%2Fimage.png?table=block&id=318d67b9-9e80-80d5-90b4-de4cf8e0f584&cache=v2",
     "excerpt": "정적 사이트의 특성상 노션 동기화 후 반드시 재빌드 및 재배포가 필요해요. 새로운 블로그 글이 생기거나 업데이트, 삭제가 발생했을 수 있기 때문 이렇게 제 프로젝트 구조에서는 노션...",
     "groupId": "318d67b9-9e80-8094-b1b0-fbfe2cef285d",
     "path": "프로젝트/beomlog/n8n을-이용한-자동화-워크플로우.md",
@@ -1412,11 +1368,14 @@
     "category": "프로젝트",
     "categorySlug": "프로젝트",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "beomlog",
     "tags": [
       "Notion"
     ],
     "date": "2026-03-03",
+    "createdAt": "2026-03-03T02:01:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F48d646c7-ccc5-4596-8ac8-48719f8a51ea%2Fimage.png?table=block&id=318d67b9-9e80-80f4-9843-ddb5ed2af20b&cache=v2",
     "excerpt": "이번에 개인 블로그를 만들면서 노션을 Content Source로 사용하고 이를 API를 통해서 가져와 사용하는 방법을 정리해보고자 해요. 🎯 왜 노션을 이용?!? 기존에는 노션...",
     "groupId": "318d67b9-9e80-8094-b1b0-fbfe2cef285d",
     "path": "프로젝트/beomlog/notion을-content-source로-이용하기.md",
@@ -1429,6 +1388,7 @@
     "category": "프로젝트",
     "categorySlug": "프로젝트",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "locus",
     "tags": [
       "RabbitMQ",
@@ -1437,6 +1397,8 @@
       "OutboxPattern"
     ],
     "date": "2026-03-02",
+    "createdAt": "2026-03-02T06:26:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2",
     "excerpt": "⚠️ 동기화의 근본적인 문제 단순한 방식의 한계 처음에는 단순히 API 요청 처리 과정에서 직접 Elasticsearch를 호출하는 방식도 고려했습니다. 1️⃣ 트랜잭션 경계가 불...",
     "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
     "path": "프로젝트/locus/검색-데이터-동기화-구조-outbox-rabbitmq.md",
@@ -1449,11 +1411,14 @@
     "category": "프로젝트",
     "categorySlug": "프로젝트",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "locus",
     "tags": [
       "Elasticsearch"
     ],
     "date": "2026-03-02",
+    "createdAt": "2026-03-02T06:17:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc6e8d029-f534-4ee0-88a0-186662de8c84%2Fimage.png?table=block&id=317d67b9-9e80-8087-a480-f7b32be7fdff&cache=v2",
     "excerpt": "이전 글에서는 Elasticsearch를 도입한 배경과 PostgreSQL과의 역할 분리 그리고 비동기 동기화 전략을 선택한 이유를 다뤘는데요!! 이번에는 실제로 Elasticse...",
     "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
     "path": "프로젝트/locus/검색-인덱스-설계-및-키워드-검색-구조.md",
@@ -1466,14 +1431,280 @@
     "category": "프로젝트",
     "categorySlug": "프로젝트",
     "bookCategory": "",
+    "coverImage": "",
     "groupSlug": "locus",
     "tags": [
       "Elasticsearch"
     ],
     "date": "2026-03-02",
+    "createdAt": "2026-03-02T01:29:00.000Z",
+    "thumbnail": "",
     "excerpt": "이번 locus 서비스를 개발하면서 사용자들이 작성한 기록들을 효과적으로 찾을 수 있는 검색 기능이 필요하다고 생각했습니다. 처음에는 PostgreSQL의 기본 쿼리만으로도 충분하...",
     "groupId": "314d67b9-9e80-80af-9f95-cd3e58daf439",
     "path": "프로젝트/locus/elasticsearch-도입-배경과-설계.md",
     "lastEdited": "2026-04-29T04:33:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-8044-b344-f2c4a3cbfb13",
+    "title": "6장 - 키:값 저장소 설계",
+    "slug": "6장-키-값-저장소-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [
+      "key-value"
+    ],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fda253d34-2978-42cd-add3-fb7a2bbf0a8a%2Fimage.png?table=block&id=314d67b9-9e80-81c5-a7e7-d322c9a6a856&cache=v2",
+    "excerpt": "키-값 저장소는 키-값 데이터베이스라고도 불리는 비 관계형 데이터베이스 저장되는 값은 고유 식별자를 키로 가지고 각 값은 키를 통해서만 접근이 가능하다. 키는 일반 텍스트일 수도 ...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/6장-키-값-저장소-설계.md",
+    "lastEdited": "2026-03-01T06:05:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-8059-9b85-fc548ffd19d1",
+    "title": "4장 - 처리율 제한 장치의 설계",
+    "slug": "4장-처리율-제한-장치의-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [
+      "rate limit"
+    ],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb2b5fa24-2581-4688-898c-a36d10cb7d01%2Fimage.png?table=block&id=314d67b9-9e80-81a4-b7b7-d9d461706fef&cache=v2",
+    "excerpt": "네트워크 시스템에서 처리율 제한 장치(rate limiter)는 클라이언트 또는 서비스가 보내는 트래픽의 처리율을 제어하기 위한 장치 ex) 특정 기간 내에 전송되는 클라이언트 H...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/4장-처리율-제한-장치의-설계.md",
+    "lastEdited": "2026-02-28T16:12:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-80af-9cd0-e0d2a80c3ca0",
+    "title": "10장 - 알림 시스템 설계",
+    "slug": "10장-알림-시스템-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fca1583f5-df2d-450d-85df-4ea31d1a513b%2Fimage.png?table=block&id=314d67b9-9e80-8129-92f8-f1993edcafa2&cache=v2",
+    "excerpt": "⏰ 알림 시스템 알림 시스템은 고객에게 중요할 만한 정보를 비동기적으로 제공한다. 단순히 모바일 푸시 알림(mobile push notification)에 한정하지 않고 SMS 메...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/10장-알림-시스템-설계.md",
+    "lastEdited": "2026-03-01T06:12:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-803b-acba-e3d7590c0bbf",
+    "title": "9장 - 웹 크롤러 설계",
+    "slug": "9장-웹-크롤러-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F601b142f-fdef-48df-b7de-4877bbc50451%2Fimage.png?table=block&id=314d67b9-9e80-8162-8125-d4a1f3a64f02&cache=v2",
+    "excerpt": "웹 크롤러는 로봇 또는 스파이더라고도 부른다. 검색 엔진에서 널리 쓰이는 기술로 웹에 새로 올라오거나 갱신된 콘텐츠를 찾아내는 것이 주된 목적이다. 🎯 크롤러 활용 예시 웹 크롤...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/9장-웹-크롤러-설계.md",
+    "lastEdited": "2026-03-01T06:12:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-8086-bdfb-f2121a37b4c5",
+    "title": "12장. 채팅 시스템 설계",
+    "slug": "12장-채팅-시스템-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F21da0e15-cf1e-402c-839c-d6beb97f63b3%2Fimage.png?table=block&id=314d67b9-9e80-8187-a112-cfb6c080c9ff&cache=v2",
+    "excerpt": "✅ 문제 이해 및 설계 범위 확정 어떤 채팅앱을 설계하는지 확실히 해두는 것이 중요하다. 1:1 채팅에 집중하는 앱 그룹 채팅에 중점을 둔 업무용 앱 대규모 그룹의 소통과 응답지연...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/12장-채팅-시스템-설계.md",
+    "lastEdited": "2026-03-01T06:12:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-8016-97e8-caefdfc84e46",
+    "title": "8장 - URL 단축기 설계",
+    "slug": "8장-url-단축기-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F6c338d0a-a847-4546-8572-677a58b297b9%2Fimage.png?table=block&id=314d67b9-9e80-818f-9938-f3b5a597979b&cache=v2",
+    "excerpt": "🤔 단축 URL을 사용하는 이유? 이 글을 읽기 전에 왜 URL 단축기를 사용하여 단축된 URL을 사용하는지 궁금해져 한 번 정리를 해보려고 한다. 1️⃣ 문제 이해 및 설계 범...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/8장-url-단축기-설계.md",
+    "lastEdited": "2026-03-01T06:10:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-8065-ab99-df941c98915c",
+    "title": "5장 - 안정 해시 설계",
+    "slug": "5장-안정-해시-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Ffbcdf55c-be0e-40ba-8a0a-5c4b11b64ace%2Fimage.png?table=block&id=314d67b9-9e80-8103-a72e-c053ba0b2941&cache=v2",
+    "excerpt": "수평적 규모 확장성을 달성하기 위해서는 요청, 데이터를 서버에 균등하게 나누는 것이 중요 ☑️ 안정 해시는 이런 목표를 달성하기 위해 보편적으로 사용하는 기술이다. ⚠️ 해시 키 ...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/5장-안정-해시-설계.md",
+    "lastEdited": "2026-03-01T06:05:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-80b0-8995-d19d2ed268c4",
+    "title": "11장 - 뉴스 피드 시스템 설계",
+    "slug": "11장-뉴스-피드-시스템-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7d04c1d1-768b-4a47-bcc7-1410ebac116d%2Fimage.png?table=block&id=314d67b9-9e80-8117-975f-f65e66a0e1a7&cache=v2",
+    "excerpt": "뉴스 피드 홈 페이지 중앙에 지속적으로 업데이트되는 스토리들 사용자의 상태 정보 업데이트, 사진, 비디오, 링크 등 페이스북 도움말 페이지 🎯 문제 이해 및 설계 범위 확정 모바...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/11장-뉴스-피드-시스템-설계.md",
+    "lastEdited": "2026-03-01T06:12:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-80c2-bc7a-e0398392c183",
+    "title": "7장 - 분산 시스템을 위한 유일 ID 생성기 설계",
+    "slug": "7장-분산-시스템을-위한-유일-id-생성기-설계",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [
+      "id"
+    ],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F77d81796-06bd-4f1a-8bc3-3ecf858b7d60%2Fimage.png?table=block&id=314d67b9-9e80-815e-873a-c24c960e4d25&cache=v2",
+    "excerpt": "1️⃣ 문제 이해 및 설계 범위 확정 질문을 통해서 요구사항을 이해하고 모호함을 해소하자. ID는 유일해야 한다. ID는 숫자로만 구성되어야 한다. ID는 64비트로 표현될 수 있...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/7장-분산-시스템을-위한-유일-id-생성기-설계.md",
+    "lastEdited": "2026-03-01T06:10:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-80ae-bec9-f929b71ca5ca",
+    "title": "3장 - 시스템 설계 면접 공략법",
+    "slug": "3장-시스템-설계-면접-공략법",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "",
+    "excerpt": "🔍 시스템 설계 면접이 있는 이유?? 모호한 문제를 풀기 위해서 해결책을 찾아내는 과정에 대한 시뮬레이션 정해진 결말도 정답도 없다! 설계 기술을 시연하는 자리이고 설계 과정에서...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/3장-시스템-설계-면접-공략법.md",
+    "lastEdited": "2026-02-28T16:12:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-80a7-a98a-e53574531c20",
+    "title": "2장 - 개략적인 규모 추정 ",
+    "slug": "2장-개략적인-규모-추정",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T06:56:00.000Z",
+    "thumbnail": "",
+    "excerpt": "시스템 설계 면접에서 시스템 용량, 성능 요구사항을 개략적으로 추정하라는 요구를 받게됨. 개략적인 규모 추정(back-of-the-envelope estimation) 보편적으로 ...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/2장-개략적인-규모-추정.md",
+    "lastEdited": "2026-02-28T03:30:00.000Z"
+  },
+  {
+    "id": "314d67b9-9e80-80f3-982f-c1a06fa8baa2",
+    "title": "1장 - 사용자 수에 따른 규모 확장성",
+    "slug": "1장-사용자-수에-따른-규모-확장성",
+    "category": "책",
+    "categorySlug": "책",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
+    "tags": [],
+    "date": "2026-02-27",
+    "createdAt": "2026-02-27T04:53:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F166ad69e-2a77-427b-87f9-7c745583eae7%2Fimage.png?table=block&id=314d67b9-9e80-8070-b24e-decbe288c192&cache=v2",
+    "excerpt": "한 명의 사용자를 지원하는 시스템에서 몇백만 사용자를 지원하는 시스템을 설계하는 과정에서 규모 확장성과 관계된 설계 문제를 푸는데 필요한 지식들을 학습 📌 단일 서버 웹, 앱, ...",
+    "groupId": "314d67b9-9e80-8046-9fb4-da579c494117",
+    "path": "책/가상-면접-사례로-배우는-대규모-시스템-설계-기초/1장-사용자-수에-따른-규모-확장성.md",
+    "lastEdited": "2026-02-28T03:35:00.000Z"
+  },
+  {
+    "id": "311d67b9-9e80-8024-811e-da2503ec108a",
+    "title": "LIKE + B+Tree 인덱스와 FTS(Full-Text Search)",
+    "slug": "like-b-tree-인덱스와-fts-full-text-search",
+    "category": "개발",
+    "categorySlug": "개발",
+    "bookCategory": "",
+    "coverImage": "",
+    "groupSlug": "데이터베이스",
+    "tags": [
+      "MySQL",
+      "Full-Text-Search",
+      "B+Tree"
+    ],
+    "date": "2026-02-26",
+    "createdAt": "2026-02-24T09:36:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fa3ee440b-8de8-488c-9c53-d4b1314d6670%2Fimage.png?table=block&id=311d67b9-9e80-80f9-8aaf-c2d952c3ad5f&cache=v2",
+    "excerpt": "🌲 B+ Tree 자료구조 대부분의 RDBMS(MySQL, PostgreSQL 등)는 기본 인덱스 구조로 B+Tree를 사용합니다. | Leaf Node | 실제 데이터의 키 값...",
+    "groupId": "31ad67b9-9e80-80e0-848d-d6da8d071164",
+    "path": "개발/데이터베이스/like-b-tree-인덱스와-fts-full-text-search.md",
+    "lastEdited": "2026-03-05T06:55:00.000Z"
+  },
+  {
+    "id": "30cd67b9-9e80-80cd-998e-c7da43171144",
+    "title": "부스트캠프 후기",
+    "slug": "부스트캠프-후기",
+    "category": "일상",
+    "categorySlug": "일상",
+    "bookCategory": "",
+    "coverImage": "",
+    "tags": [
+      "네이버부스트캠프"
+    ],
+    "date": "2026-02-19",
+    "createdAt": "2026-02-19T01:26:00.000Z",
+    "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
+    "excerpt": "부스트캠프에 참여한 지 벌써 7개월이 지났습니다. 지난 여름에 시작했던 과정이 어느새 추운 겨울에 마무리되었네요!! 정말 시간이 훅 지나간 것처럼 느껴질 만큼 빠르게 지나간 시간이...",
+    "groupId": "",
+    "path": "일상/부스트캠프-후기.md",
+    "lastEdited": "2026-02-28T16:53:00.000Z"
   }
 ]
