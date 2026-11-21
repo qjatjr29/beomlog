@@ -6,6 +6,7 @@
     "category": "책",
     "categorySlug": "책",
     "bookCategory": "소설",
+    "description": "오늘 엄마가 죽었다. 아니 어쩌면 어제였는지도 모른다.",
     "coverImage": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc614a040-870b-4d6d-bb7f-3baa41e6d926%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.31.png?table=block&id=41fd67b9-9e80-80ea-bc42-d2b682e2f505&cache=v2",
     "tags": [
       "알베르 카뮈"
@@ -17,7 +18,7 @@
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc614a040-870b-4d6d-bb7f-3baa41e6d926%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.31.png?table=block&id=41fd67b9-9e80-80ea-bc42-d2b682e2f505&cache=v2",
     "groupId": "",
     "path": "책/이방인.md",
-    "lastEdited": "2026-11-21T05:15:00.000Z"
+    "lastEdited": "2026-11-21T05:18:00.000Z"
   },
   {
     "id": "41fd67b9-9e80-800f-8652-c7f4386281ff",
@@ -30,11 +31,11 @@
     "tags": [
       "헤르만 헤세"
     ],
+    "description": "",
     "date": "2026-11-21",
-    "dateEnd": "",
     "createdAt": "2026-11-21T03:55:00.000Z",
-    "excerpt": "헤르만 헤세, 《데미안》 우리 자신으로 살아가기 어떤 책을 읽을 때는 읽는 동안보다 읽고나서 더 많은 생각을 하게된다. 이 책을 읽을 때는 쉽게 이해되지 않은 문장들이 많았는데 책...",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F92e54cce-56da-4715-8887-f58bf22884b2%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-11-21_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_1.57.44.png?table=block&id=41fd67b9-9e80-800f-8652-c7f4386281ff&cache=v2",
+    "excerpt": "헤르만 헤세, 《데미안》 우리 자신으로 살아가기 어떤 책을 읽을 때는 읽는 동안보다 읽고나서 더 많은 생각을 하게된다. 이 책을 읽을 때는 쉽게 이해되지 않은 문장들이 많았는데 책...",
     "groupId": "",
     "path": "책/데미안.md",
     "lastEdited": "2026-11-21T05:15:00.000Z"
@@ -51,6 +52,7 @@
     "tags": [
       "가상스레드"
     ],
+    "description": "",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T13:44:00.000Z",
     "thumbnail": "",
@@ -71,6 +73,7 @@
     "tags": [
       "가상스레드"
     ],
+    "description": "",
     "date": "2026-08-22",
     "createdAt": "2026-08-22T13:43:00.000Z",
     "thumbnail": "",
@@ -91,6 +94,7 @@
       "야구",
       "두산베어스"
     ],
+    "description": "",
     "date": "2026-07-04",
     "createdAt": "2026-08-17T06:27:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F871f8574-59a9-4fc7-b896-514b63379e05%2Fimage.png?table=block&id=3c4d67b9-9e80-80d6-bf55-fb6d96e19960&cache=v2",
@@ -110,6 +114,7 @@
     "tags": [
       "여행"
     ],
+    "description": "",
     "date": "2026-06-29",
     "createdAt": "2026-08-17T05:47:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2c284d61-f2ef-4fcf-ac91-1e2d04ed4ee0%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-08-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.54.31.png?table=block&id=3c1d67b9-9e80-8098-9ad5-ff460f24a9ad&cache=v2",
@@ -131,6 +136,7 @@
       "여행",
       "성심당"
     ],
+    "description": "",
     "date": "2026-06-23",
     "createdAt": "2026-08-17T03:44:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F05b089ca-524c-4f1b-8623-660d3888ca09%2F%25E1%2584%2589%25E1%2585%25B3%25E1%2584%258F%25E1%2585%25B3%25E1%2584%2585%25E1%2585%25B5%25E1%2586%25AB%25E1%2584%2589%25E1%2585%25A3%25E1%2586%25BA_2026-08-17_%25E1%2584%258B%25E1%2585%25A9%25E1%2584%2592%25E1%2585%25AE_2.45.30.png?table=block&id=3c1d67b9-9e80-8053-bbe8-cac860fa620f&cache=v2",
@@ -152,6 +158,7 @@
       "리액티브 자바",
       "리액티브 프로그래밍"
     ],
+    "description": "",
     "date": "2026-07-03",
     "createdAt": "2026-07-03T05:53:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb327958a-d276-4fc6-ba5f-bb397b6781d0%2Fimage.png?table=block&id=392d67b9-9e80-808b-bec2-d0da4e8293a3&cache=v2",
@@ -172,6 +179,7 @@
     "tags": [
       "ScopedValue"
     ],
+    "description": "",
     "date": "2026-07-01",
     "createdAt": "2026-07-01T06:29:00.000Z",
     "thumbnail": "",
@@ -193,6 +201,7 @@
       "구조적 동시성",
       "StructuredTaskScope"
     ],
+    "description": "",
     "date": "2026-06-27",
     "createdAt": "2026-06-27T06:12:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F13733ec6-3d92-4fdd-8580-f663fc8dbd9b%2Fimage.png?table=block&id=38cd67b9-9e80-801a-a76d-f352290863c8&cache=v2",
@@ -214,6 +223,7 @@
       "Continuation",
       "Fork/Join"
     ],
+    "description": "",
     "date": "2026-06-25",
     "createdAt": "2026-06-26T02:41:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fd0f1b291-9755-438e-ab6b-337bef26fd9b%2Fimage.png?table=block&id=38bd67b9-9e80-8099-a09c-ce61f4c40a3b&cache=v2",
@@ -234,6 +244,7 @@
     "tags": [
       "가상스레드"
     ],
+    "description": "",
     "date": "2026-06-15",
     "createdAt": "2026-06-15T13:13:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F10056fd0-5ac7-4be9-ba05-4c3da7e08e4d%2Fimage.png?table=block&id=380d67b9-9e80-8084-9292-fad18725c685&cache=v2",
@@ -258,6 +269,7 @@
       "CompletableFuture",
       "Fork/Join"
     ],
+    "description": "",
     "date": "2026-06-11",
     "createdAt": "2026-06-11T08:00:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb8cc60e8-528f-44cb-868d-0afe81c9ba4a%2Fimage.png?table=block&id=37cd67b9-9e80-803a-8857-cfd0453020a1&cache=v2",
@@ -276,6 +288,7 @@
     "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
+    "description": "",
     "date": "2026-06-10",
     "createdAt": "2026-06-11T05:34:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F169e8c11-8739-475a-a641-bc9df632c6f5%2Fimage.png?table=block&id=37cd67b9-9e80-80f4-98d3-f73071a25751&cache=v2",
@@ -296,6 +309,7 @@
       "야구",
       "두산베어스"
     ],
+    "description": "",
     "date": "2026-05-27",
     "createdAt": "2026-05-31T16:10:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fccc64a3f-369d-45b8-bea2-acefb5f1b2c3%2F%25E1%2584%2586%25E1%2585%25A1%25E1%2586%25BC%25E1%2584%2580%25E1%2585%25A9%25E1%2586%25B7.jpeg?table=block&id=3c1d67b9-9e80-807c-a420-da247b44f14c&cache=v2",
@@ -316,6 +330,7 @@
     "tags": [
       "AOP"
     ],
+    "description": "",
     "date": "2026-05-31",
     "createdAt": "2026-05-31T15:59:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7bfa69f7-77ba-4fe2-a7a5-1ae5da1d38c0%2Fimage.png?table=block&id=371d67b9-9e80-800a-8318-f35472a3a222&cache=v2",
@@ -338,6 +353,7 @@
       "DI",
       "Spring 컨테이너"
     ],
+    "description": "",
     "date": "2026-05-30",
     "createdAt": "2026-05-31T15:58:00.000Z",
     "thumbnail": "",
@@ -358,6 +374,7 @@
     "tags": [
       "Spring Bean"
     ],
+    "description": "",
     "date": "2026-05-28",
     "createdAt": "2026-05-31T15:57:00.000Z",
     "thumbnail": "",
@@ -380,6 +397,7 @@
       "AI",
       "AWS Summit Seoul 2026"
     ],
+    "description": "",
     "date": "2026-05-20",
     "createdAt": "2026-05-31T11:48:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc075f324-4c41-45d3-9b51-6d41e891e5bd%2Fimage.png?table=block&id=371d67b9-9e80-80a4-b7a9-f77d126bb107&cache=v2",
@@ -401,6 +419,7 @@
       "SpringBoot",
       "Auto-Configuration"
     ],
+    "description": "",
     "date": "2026-05-28",
     "createdAt": "2026-05-29T03:55:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F07f14736-dde0-4626-a298-5745221f7162%2Fimage.png?table=block&id=36fd67b9-9e80-8073-aedc-d034f40cd651&cache=v2",
@@ -422,6 +441,7 @@
       "e스포츠",
       "페스티벌"
     ],
+    "description": "",
     "date": "2026-04-24",
     "createdAt": "2026-05-26T00:30:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbcb6d4a9-aae9-4a9d-80ed-d2488f8a9599%2Fimage.png?table=block&id=36cd67b9-9e80-8062-9920-f5f57aafe397&cache=v2",
@@ -442,6 +462,7 @@
     "tags": [
       "stream"
     ],
+    "description": "",
     "date": "2026-05-25",
     "createdAt": "2026-05-25T04:11:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fedeedc37-7238-4d26-a668-b9c478382379%2Fimage.png?table=block&id=36bd67b9-9e80-80f9-aea9-c384f90aa7e0&cache=v2",
@@ -462,6 +483,7 @@
     "tags": [
       "Virtual Thread"
     ],
+    "description": "",
     "date": "2026-05-23",
     "createdAt": "2026-05-23T05:15:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc559cd86-bc7e-4f02-b9f6-500e96ec468d%2Fimage.png?table=block&id=369d67b9-9e80-80bf-8e8c-e3d40f0d8bf6&cache=v2",
@@ -483,6 +505,7 @@
       "AI",
       "바이브코딩"
     ],
+    "description": "",
     "date": "2026-03-28",
     "createdAt": "2026-05-21T14:03:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F43b3de78-23e1-49f6-9f45-5427e1923fe8%2Fimage.png?table=block&id=367d67b9-9e80-80a5-bd31-f2ea4b4183e9&cache=v2",
@@ -505,6 +528,7 @@
       "멀티에이전트",
       "자동화"
     ],
+    "description": "",
     "date": "2026-05-20",
     "createdAt": "2026-05-20T04:05:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F14a6a574-b64f-4026-b5f6-932b031436bb%2Fimage.png?table=block&id=366d67b9-9e80-80d3-9812-c2af52d18497&cache=v2",
@@ -527,6 +551,7 @@
       "멀티에이전트",
       "자동화"
     ],
+    "description": "",
     "date": "2026-05-20",
     "createdAt": "2026-05-20T04:04:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F36a6389f-cfb2-439e-a06b-792ca8223105%2Fimage.png?table=block&id=366d67b9-9e80-8033-9d37-df15aeef8583&cache=v2",
@@ -547,6 +572,7 @@
     "tags": [
       "Record"
     ],
+    "description": "",
     "date": "2026-05-19",
     "createdAt": "2026-05-19T06:01:00.000Z",
     "thumbnail": "",
@@ -568,6 +594,7 @@
       "Interface",
       "Abstract Class"
     ],
+    "description": "",
     "date": "2026-05-19",
     "createdAt": "2026-05-19T05:53:00.000Z",
     "thumbnail": "",
@@ -589,6 +616,7 @@
       "VoC",
       "LLM"
     ],
+    "description": "",
     "date": "2026-05-19",
     "createdAt": "2026-05-19T03:51:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7f05163b-3643-4160-9506-0596e539d535%2Fimage.png?table=block&id=365d67b9-9e80-80f1-a374-dacc951c5c83&cache=v2",
@@ -612,6 +640,7 @@
       "시맨틱캐싱",
       "벡터DB"
     ],
+    "description": "",
     "date": "2026-05-19",
     "createdAt": "2026-05-19T02:55:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdb5f1d46-32a3-42db-9ba0-8d3d9b4b5f36%2Fimage.png?table=block&id=365d67b9-9e80-8076-8c2b-e2a8a88c423e&cache=v2",
@@ -633,6 +662,7 @@
       "JVM",
       "Runtime Data Area"
     ],
+    "description": "",
     "date": "2026-05-18",
     "createdAt": "2026-05-18T06:29:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F44e01968-9f37-4b81-aa91-a7f8edddd403%2Fimage.png?table=block&id=364d67b9-9e80-80d1-a57f-ce3bd6761757&cache=v2",
@@ -655,6 +685,7 @@
       "프롬프트엔지니어링",
       "AI추천"
     ],
+    "description": "",
     "date": "2026-05-18",
     "createdAt": "2026-05-18T03:11:00.000Z",
     "thumbnail": "",
@@ -676,6 +707,7 @@
       "LLM",
       "프롬프트엔지니어링"
     ],
+    "description": "",
     "date": "2026-05-18",
     "createdAt": "2026-05-18T03:10:00.000Z",
     "thumbnail": "",
@@ -698,6 +730,7 @@
       "프롬프트엔지니어링",
       "구조화"
     ],
+    "description": "",
     "date": "2026-05-17",
     "createdAt": "2026-05-16T17:01:00.000Z",
     "thumbnail": "",
@@ -721,6 +754,7 @@
       "MCP",
       "자동화"
     ],
+    "description": "",
     "date": "2026-05-16",
     "createdAt": "2026-05-16T05:54:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fa5f8de4f-003f-4a66-bf1d-31c01a3fd242%2Fimage.png?table=block&id=362d67b9-9e80-8010-b05d-fa381262922c&cache=v2",
@@ -739,6 +773,7 @@
     "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
+    "description": "",
     "date": "2026-05-16",
     "createdAt": "2026-05-16T04:53:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F90c68722-ddb0-440f-aa95-173ab6a1c96a%2Fimage.png?table=block&id=362d67b9-9e80-8071-a8cf-dad3d8f6be77&cache=v2",
@@ -757,6 +792,7 @@
     "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
+    "description": "",
     "date": "2026-05-11",
     "createdAt": "2026-05-15T05:36:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc198f43b-f092-4633-98dd-022ebee2652b%2Fimage.png?table=block&id=361d67b9-9e80-803f-abc1-c64da6defcdf&cache=v2",
@@ -778,6 +814,7 @@
       "MySQL",
       "Lock"
     ],
+    "description": "",
     "date": "2026-05-08",
     "createdAt": "2026-05-09T03:39:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F45ecc474-2830-49f2-8ce1-8536284da480%2Fimage.png?table=block&id=35bd67b9-9e80-801d-8b73-d9ffe2ae52fb&cache=v2",
@@ -799,6 +836,7 @@
       "자동화",
       "프롬프트엔지니어링"
     ],
+    "description": "",
     "date": "2026-05-07",
     "createdAt": "2026-05-06T16:52:00.000Z",
     "thumbnail": "",
@@ -820,6 +858,7 @@
       "GPT",
       "자동화"
     ],
+    "description": "",
     "date": "2026-04-29",
     "createdAt": "2026-04-29T04:19:00.000Z",
     "thumbnail": "",
@@ -841,6 +880,7 @@
       "LLM",
       "프롬프트엔지니어링"
     ],
+    "description": "",
     "date": "2026-04-28",
     "createdAt": "2026-04-29T02:33:00.000Z",
     "thumbnail": "",
@@ -859,6 +899,7 @@
     "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
+    "description": "",
     "date": "2026-04-27",
     "createdAt": "2026-04-27T05:40:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7463e755-63c5-4a96-af9d-ed41cdc7cce3%2Fimage.png?table=block&id=34fd67b9-9e80-800e-9d57-fb4592465df2&cache=v2",
@@ -879,6 +920,7 @@
     "tags": [
       "LLM"
     ],
+    "description": "",
     "date": "2026-04-24",
     "createdAt": "2026-04-24T04:45:00.000Z",
     "thumbnail": "",
@@ -900,6 +942,7 @@
       "CursorAI",
       "바이브코딩"
     ],
+    "description": "",
     "date": "2026-04-23",
     "createdAt": "2026-04-23T16:13:00.000Z",
     "thumbnail": "",
@@ -920,6 +963,7 @@
     "tags": [
       "Transaction"
     ],
+    "description": "",
     "date": "2026-04-20",
     "createdAt": "2026-04-20T04:24:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F0bdd530c-740b-4af7-bbf9-06c01449c414%2Fimage.png?table=block&id=348d67b9-9e80-80cf-bd9b-eff2bec84773&cache=v2",
@@ -943,6 +987,7 @@
       "블로킹",
       "논블로킹"
     ],
+    "description": "",
     "date": "2026-04-14",
     "createdAt": "2026-04-13T23:59:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2dcdbf3a-316b-44e9-9e03-b5d1456d97da%2Fimage.png?table=block&id=341d67b9-9e80-8078-8626-f67a14324186&cache=v2",
@@ -963,6 +1008,7 @@
     "tags": [
       "디스크"
     ],
+    "description": "",
     "date": "2026-04-13",
     "createdAt": "2026-04-13T02:47:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb3401320-b6a7-4c05-8b78-885cd81a8ab8%2Fimage.png?table=block&id=341d67b9-9e80-8080-986e-e91431e3d909&cache=v2",
@@ -983,6 +1029,7 @@
     "tags": [
       "partitioning"
     ],
+    "description": "",
     "date": "2026-04-12",
     "createdAt": "2026-04-12T05:13:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc4beebdb-7d63-4a93-9181-72b276fcbe7a%2Fimage.png?table=block&id=340d67b9-9e80-806a-9e61-c75916f8d4dc&cache=v2",
@@ -1003,6 +1050,7 @@
     "tags": [
       "replication"
     ],
+    "description": "",
     "date": "2026-04-07",
     "createdAt": "2026-04-11T11:30:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F8b0f7c5b-1ec0-43ec-9973-3780ce3f71b9%2Fimage.png?table=block&id=33fd67b9-9e80-8046-b16a-fa668767c824&cache=v2",
@@ -1021,6 +1069,7 @@
     "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
+    "description": "",
     "date": "2026-03-31",
     "createdAt": "2026-04-11T11:30:00.000Z",
     "thumbnail": "",
@@ -1041,6 +1090,7 @@
     "tags": [
       "파일시스템"
     ],
+    "description": "",
     "date": "2026-04-07",
     "createdAt": "2026-04-07T06:16:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F68303538-b2bd-4af8-bc3a-7a28b851581e%2Fimage.png?table=block&id=33bd67b9-9e80-8007-a3ff-eac054127534&cache=v2",
@@ -1062,6 +1112,7 @@
       "LSM Tree",
       "B Tree"
     ],
+    "description": "",
     "date": "2026-03-18",
     "createdAt": "2026-03-18T08:10:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F5aef48d5-ac2a-4b5d-b4e6-4075882e1c2d%2Fimage.png?table=block&id=327d67b9-9e80-807a-81a9-d49271351d65&cache=v2",
@@ -1083,6 +1134,7 @@
       "메모리관리",
       "페이징"
     ],
+    "description": "",
     "date": "2026-03-16",
     "createdAt": "2026-03-16T05:22:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F638a6fb2-d4c8-4979-bf2b-ef4f5c9f7b48%2Fimage.png?table=block&id=325d67b9-9e80-8072-aa53-c9e3d5f9dfd3&cache=v2",
@@ -1106,6 +1158,7 @@
       "세그먼테이션",
       "TLB"
     ],
+    "description": "",
     "date": "2026-03-13",
     "createdAt": "2026-03-14T07:47:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fce6516f3-505d-446e-ad31-28bd990e333c%2Fimage.png?table=block&id=323d67b9-9e80-80c3-aa73-d6c97d4e0d7d&cache=v2",
@@ -1126,6 +1179,7 @@
     "tags": [
       "데드락"
     ],
+    "description": "",
     "date": "2026-03-12",
     "createdAt": "2026-03-12T06:42:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F2f2fa15d-cdd0-4abf-a2b3-c20236ab910d%2Fimage.png?table=block&id=321d67b9-9e80-800f-a6d0-cb092d96a084&cache=v2",
@@ -1149,6 +1203,7 @@
       "스레드",
       "race condition"
     ],
+    "description": "",
     "date": "2026-03-10",
     "createdAt": "2026-03-12T02:31:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9c09b75b-9e05-4c3c-9a37-61a26a314c29%2Fimage.png?table=block&id=321d67b9-9e80-80da-a712-f9e77ddc7bbb&cache=v2",
@@ -1170,6 +1225,7 @@
       "SQL",
       "NoSQL"
     ],
+    "description": "",
     "date": "2026-03-10",
     "createdAt": "2026-03-10T05:25:00.000Z",
     "thumbnail": "",
@@ -1190,6 +1246,7 @@
     "tags": [
       "CPU"
     ],
+    "description": "",
     "date": "2026-03-09",
     "createdAt": "2026-03-07T05:21:00.000Z",
     "thumbnail": "",
@@ -1211,6 +1268,7 @@
       "CPU",
       "I/O"
     ],
+    "description": "",
     "date": "2026-03-07",
     "createdAt": "2026-03-07T05:20:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F9d8339cc-1b97-4447-935c-85f70403211a%2Fimage.png?table=block&id=31cd67b9-9e80-80cf-b09b-db97657a615b&cache=v2",
@@ -1232,6 +1290,7 @@
       "프로세스",
       "IPC"
     ],
+    "description": "",
     "date": "2026-03-07",
     "createdAt": "2026-03-07T04:40:00.000Z",
     "thumbnail": "",
@@ -1253,6 +1312,7 @@
       "프로세스",
       "스레드"
     ],
+    "description": "",
     "date": "2026-03-07",
     "createdAt": "2026-03-06T06:57:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F72b7e6e3-5dfe-4427-94cd-d982cd66c73a%2Fimage.png?table=block&id=31bd67b9-9e80-80c7-8c38-edab950fe6ed&cache=v2",
@@ -1273,6 +1333,7 @@
     "tags": [
       "인터럽트"
     ],
+    "description": "",
     "date": "2026-03-05",
     "createdAt": "2026-03-05T03:47:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fdaeb04b9-5cdc-4f8d-9d3d-fd32e827ea34%2Fimage.png?table=block&id=31ad67b9-9e80-80d3-b6ec-c800f525b63b&cache=v2",
@@ -1294,6 +1355,7 @@
       "시스템콜",
       "커널"
     ],
+    "description": "",
     "date": "2026-03-05",
     "createdAt": "2026-03-05T03:06:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F509ac83f-ff68-4e4a-8380-8529995c3eb6%2Fimage.png?table=block&id=31ad67b9-9e80-8087-8f53-c60a567d6d74&cache=v2",
@@ -1312,6 +1374,7 @@
     "coverImage": "",
     "groupSlug": "데이터-중심-애플리케이션-설계",
     "tags": [],
+    "description": "",
     "date": "2026-03-04",
     "createdAt": "2026-03-04T08:16:00.000Z",
     "thumbnail": "",
@@ -1333,6 +1396,7 @@
       "Supabase",
       "PostgreSQL"
     ],
+    "description": "",
     "date": "2026-03-03",
     "createdAt": "2026-03-03T04:31:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F027e4a4b-689e-45ce-86cc-5535d7747225%2Fimage.png?table=block&id=319d67b9-9e80-8094-94e4-f34e4a9e841f&cache=v2",
@@ -1353,6 +1417,7 @@
     "tags": [
       "n8n"
     ],
+    "description": "",
     "date": "2026-03-03",
     "createdAt": "2026-03-03T02:02:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fbd64f6d2-a3f5-4111-be51-a5470e4cb7c8%2Fimage.png?table=block&id=318d67b9-9e80-80d5-90b4-de4cf8e0f584&cache=v2",
@@ -1373,6 +1438,7 @@
     "tags": [
       "Notion"
     ],
+    "description": "",
     "date": "2026-03-03",
     "createdAt": "2026-03-03T02:01:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F48d646c7-ccc5-4596-8ac8-48719f8a51ea%2Fimage.png?table=block&id=318d67b9-9e80-80f4-9843-ddb5ed2af20b&cache=v2",
@@ -1396,6 +1462,7 @@
       "MessageQueue",
       "OutboxPattern"
     ],
+    "description": "",
     "date": "2026-03-02",
     "createdAt": "2026-03-02T06:26:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fac945b5a-e363-432d-9b0e-88ec4797350b%2Fimage.png?table=block&id=317d67b9-9e80-8051-a3d9-eb358328a0d1&cache=v2",
@@ -1416,6 +1483,7 @@
     "tags": [
       "Elasticsearch"
     ],
+    "description": "",
     "date": "2026-03-02",
     "createdAt": "2026-03-02T06:17:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fc6e8d029-f534-4ee0-88a0-186662de8c84%2Fimage.png?table=block&id=317d67b9-9e80-8087-a480-f7b32be7fdff&cache=v2",
@@ -1436,6 +1504,7 @@
     "tags": [
       "Elasticsearch"
     ],
+    "description": "",
     "date": "2026-03-02",
     "createdAt": "2026-03-02T01:29:00.000Z",
     "thumbnail": "",
@@ -1456,6 +1525,7 @@
     "tags": [
       "key-value"
     ],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fda253d34-2978-42cd-add3-fb7a2bbf0a8a%2Fimage.png?table=block&id=314d67b9-9e80-81c5-a7e7-d322c9a6a856&cache=v2",
@@ -1476,6 +1546,7 @@
     "tags": [
       "rate limit"
     ],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fb2b5fa24-2581-4688-898c-a36d10cb7d01%2Fimage.png?table=block&id=314d67b9-9e80-81a4-b7b7-d9d461706fef&cache=v2",
@@ -1494,6 +1565,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fca1583f5-df2d-450d-85df-4ea31d1a513b%2Fimage.png?table=block&id=314d67b9-9e80-8129-92f8-f1993edcafa2&cache=v2",
@@ -1512,6 +1584,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F601b142f-fdef-48df-b7de-4877bbc50451%2Fimage.png?table=block&id=314d67b9-9e80-8162-8125-d4a1f3a64f02&cache=v2",
@@ -1530,6 +1603,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F21da0e15-cf1e-402c-839c-d6beb97f63b3%2Fimage.png?table=block&id=314d67b9-9e80-8187-a112-cfb6c080c9ff&cache=v2",
@@ -1548,6 +1622,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F6c338d0a-a847-4546-8572-677a58b297b9%2Fimage.png?table=block&id=314d67b9-9e80-818f-9938-f3b5a597979b&cache=v2",
@@ -1566,6 +1641,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Ffbcdf55c-be0e-40ba-8a0a-5c4b11b64ace%2Fimage.png?table=block&id=314d67b9-9e80-8103-a72e-c053ba0b2941&cache=v2",
@@ -1584,6 +1660,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F7d04c1d1-768b-4a47-bcc7-1410ebac116d%2Fimage.png?table=block&id=314d67b9-9e80-8117-975f-f65e66a0e1a7&cache=v2",
@@ -1604,6 +1681,7 @@
     "tags": [
       "id"
     ],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F77d81796-06bd-4f1a-8bc3-3ecf858b7d60%2Fimage.png?table=block&id=314d67b9-9e80-815e-873a-c24c960e4d25&cache=v2",
@@ -1622,6 +1700,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "",
@@ -1640,6 +1719,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T06:56:00.000Z",
     "thumbnail": "",
@@ -1658,6 +1738,7 @@
     "coverImage": "",
     "groupSlug": "가상-면접-사례로-배우는-대규모-시스템-설계-기초",
     "tags": [],
+    "description": "",
     "date": "2026-02-27",
     "createdAt": "2026-02-27T04:53:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F166ad69e-2a77-427b-87f9-7c745583eae7%2Fimage.png?table=block&id=314d67b9-9e80-8070-b24e-decbe288c192&cache=v2",
@@ -1680,6 +1761,7 @@
       "Full-Text-Search",
       "B+Tree"
     ],
+    "description": "",
     "date": "2026-02-26",
     "createdAt": "2026-02-24T09:36:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2Fa3ee440b-8de8-488c-9c53-d4b1314d6670%2Fimage.png?table=block&id=311d67b9-9e80-80f9-8aaf-c2d952c3ad5f&cache=v2",
@@ -1699,6 +1781,7 @@
     "tags": [
       "네이버부스트캠프"
     ],
+    "description": "",
     "date": "2026-02-19",
     "createdAt": "2026-02-19T01:26:00.000Z",
     "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F436cdbf7-20c3-4cbc-bb78-b62e3da219bb%2Fimage.png?table=block&id=30cd67b9-9e80-8040-99c0-c99855b2e506&cache=v2",
