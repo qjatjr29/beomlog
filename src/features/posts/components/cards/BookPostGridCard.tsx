@@ -20,13 +20,14 @@ const extractFirstImageFromContent = (content: string): string => {
 export const BookPostGridCard = ({ post }: BookPostGridCardProps) => {
   const preview = sanitizeExcerptPreview(post.excerpt);
   const coverImage =
-    post.thumbnail || post.coverImage || extractFirstImageFromContent(post.content);
+    post.thumbnail ||
+    post.coverImage ||
+    extractFirstImageFromContent(post.content);
 
   return (
     <Link
       to={`/post/${post.id}`}
-      className="block rounded-lg overflow-hidden border border-blog-border dark:border-gray-700 hover:shadow-lg transition-all group h-full"
-    >
+      className="block rounded-lg overflow-hidden border border-blog-border dark:border-gray-700 hover:shadow-lg transition-all group h-full">
       <div className="aspect-4/3 bg-blog-lighter dark:bg-gray-800 overflow-hidden relative">
         {coverImage ? (
           <img
