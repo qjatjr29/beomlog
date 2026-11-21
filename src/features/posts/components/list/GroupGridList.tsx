@@ -73,7 +73,10 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
 
   const toBookCategory = (value?: string) => value ?? "미분류";
 
-  const resolvePostBookCategory = (post: { bookCategory?: string; groupId?: string }) => {
+  const resolvePostBookCategory = (post: {
+    bookCategory?: string;
+    groupId?: string;
+  }) => {
     if (post.bookCategory) return post.bookCategory;
     if (post.groupId && groupBookCategoryMap[post.groupId]) {
       return groupBookCategoryMap[post.groupId];
@@ -121,10 +124,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
       : filteredGroups;
 
   const { currentPage, totalPages, currentItems, handlePageChange, resetPage } =
-    usePagination(
-      searchedPostsByBookCategory,
-      POSTS_PER_PAGE,
-    );
+    usePagination(searchedPostsByBookCategory, POSTS_PER_PAGE);
 
   useEffect(() => {
     setSelectedTag(null);
@@ -159,15 +159,13 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
           <button
             onClick={() => setView("gallery")}
             className={`p-1.5 rounded transition-colors ${isGalleryView ? "bg-blog-primary text-white" : "text-gray-400 hover:text-blog-primary"}`}
-            title="갤러리 뷰"
-          >
+            title="갤러리 뷰">
             <LayoutGrid className="w-4 h-4" />
           </button>
           <button
             onClick={() => setView("list")}
             className={`p-1.5 rounded transition-colors ${!isGalleryView ? "bg-blog-primary text-white" : "text-gray-400 hover:text-blog-primary"}`}
-            title="리스트 뷰"
-          >
+            title="리스트 뷰">
             <List className="w-4 h-4" />
           </button>
         </div>
@@ -175,8 +173,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
 
       {category === "책" && bookCategoryOptions.length > 1 && (
         <div
-          className={`mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400 ${isGalleryView ? "" : "mb-5"}`}
-        >
+          className={`mt-4 flex flex-wrap gap-x-4 gap-y-1 text-sm text-gray-500 dark:text-gray-400 ${isGalleryView ? "" : "mb-5"}`}>
           {bookCategoryOptions.map((bookCategory) => {
             const isActive = selectedBookCategory === bookCategory;
             return (
@@ -190,8 +187,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
                   isActive
                     ? "font-bold text-gray-900 dark:text-gray-100"
                     : "hover:text-blog-primary"
-                }`}
-              >
+                }`}>
                 {bookCategory}
               </button>
             );
@@ -245,8 +241,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
                           delay: i * 0.08,
                           duration: 0.35,
                           ease: "easeOut",
-                        }}
-                      >
+                        }}>
                         <GroupGridCard group={group} />
                       </motion.div>
                     ))}
@@ -269,8 +264,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
                             delay: i * 0.08,
                             duration: 0.35,
                             ease: "easeOut",
-                          }}
-                        >
+                          }}>
                           <PostGridCard
                             post={post}
                             viewCount={viewCounts[post.id] ?? 0}
@@ -317,8 +311,7 @@ export const GroupGridList = ({ category }: GroupPostListProps) => {
                     key={post.id}
                     initial={{ opacity: 0, x: -10 }}
                     animate={{ opacity: 1, x: 0 }}
-                    transition={{ delay: i * 0.06 }}
-                  >
+                    transition={{ delay: i * 0.06 }}>
                     <PostListCard
                       post={post}
                       viewCount={viewCounts[post.id] ?? 0}

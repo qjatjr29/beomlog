@@ -22,8 +22,7 @@ export const PostListCard = ({
   return (
     <Link
       to={`/post/${post.id}`}
-      className="block rounded overflow-hidden border border-blog-border dark:border-gray-700 hover:shadow-md transition-all group"
-    >
+      className="block rounded overflow-hidden border border-blog-border dark:border-gray-700 hover:shadow-md transition-all group">
       {/* 제목 바 */}
       <div className="bg-linear-to-r from-blog-primary to-blog-primary-hover px-3 py-1.5 flex items-center justify-between">
         <h3 className="text-white text-xs font-bold truncate group-hover:text-white/80 transition-colors">
@@ -56,8 +55,7 @@ export const PostListCard = ({
                   selectedTag === tag
                     ? "bg-blog-primary text-white"
                     : "bg-blog-lighter dark:bg-gray-700 text-gray-500 dark:text-gray-400"
-                }`}
-              >
+                }`}>
                 #{tag}
               </span>
             ))}
