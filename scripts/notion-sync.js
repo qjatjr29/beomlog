@@ -133,6 +133,17 @@ function getPlainText(richText) {
   return richText.map((text) => text.plain_text).join("");
 }
 
+function getBookCategoryFromProps(props, category) {
+  if (category !== "책") return "";
+
+  return (
+    props.BookCategory?.select?.name ||
+    props.BookCategory?.multi_select?.[0]?.name ||
+    getPlainText(props.BookCategory?.rich_text) ||
+    ""
+  );
+}
+
 function slugify(text) {
   return text
     .toLowerCase()
@@ -198,6 +209,9 @@ function extractExcerptFromContent(content, maxLength = 100) {
 
     // 12. 강조/인용 마크 제거 (** * ~~ ` >)
     .replace(/[*_~`>]/g, "")
+
+    // 12-1. 커스텀 callout 마커 제거
+    .replace(/:::\s*callout\s*/gi, "")
 
     // 13. 인라인 코드 제거 (`code`)  - 이미 ` 제거로 처리되나 명시적으로
     .replace(/`[^`]+`/g, "")
@@ -705,6 +719,7 @@ async function syncNotionPosts() {
           const groupSlug = slugify(groupTitle);
           const coverImage = extractCoverImage(groupPage);
           const description = getPlainText(props.Description?.rich_text) || "";
+          const bookCategory = getBookCategoryFromProps(props, category);
 
           console.log(`\n  📁 그룹: ${groupTitle}`);
 
@@ -713,6 +728,7 @@ async function syncNotionPosts() {
             title: groupTitle,
             category,
             categorySlug: slugify(category),
+            ...(bookCategory ? { bookCategory } : {}),
             coverImage,
             description,
             tags: props.Tags?.multi_select?.map((t) => t.name) || [],
@@ -752,6 +768,7 @@ async function syncNotionPosts() {
                   slug: cachedPage.slug,
                   category,
                   categorySlug: slugify(category),
+                  bookCategory: cachedPage.bookCategory ?? "",
                   // ✅ 그룹 슬러그 포함한 경로
                   groupSlug,
                   tags: cachedPage.tags ?? [],
@@ -802,6 +819,7 @@ async function syncNotionPosts() {
                 categorySlug: postData.categorySlug,
                 groupSlug,
                 title: postData.title,
+                bookCategory: postData.bookCategory,
                 tags: postData.tags,
                 date: postData.date,
                 createdAt: postData.createdAt,
@@ -965,6 +983,7 @@ async function processNormalPage(
         slug: cachedPage.slug,
         category,
         categorySlug: slugify(category),
+        bookCategory: cachedPage.bookCategory ?? "",
         tags: cachedPage.tags ?? [],
         date: cachedPage.date ?? page.last_edited_time.split("T")[0],
         createdAt: cachedPage.createdAt ?? page.created_time,
@@ -1002,6 +1021,7 @@ async function processNormalPage(
       slug: postData.slug,
       categorySlug: postData.categorySlug,
       title: postData.title,
+      bookCategory: postData.bookCategory,
       tags: postData.tags,
       date: postData.date,
       createdAt: postData.createdAt,
@@ -1027,6 +1047,7 @@ async function processGroupPost(page, category, groupId, groupSlug) {
   const id = page.id;
   const title = getPlainText(props.Title?.title) || "Untitled";
   const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
+  const bookCategory = getBookCategoryFromProps(props, category);
   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
 
   const date = props.Date?.date?.start || page.created_time.split("T")[0];
@@ -1048,6 +1069,7 @@ id: "${id}"
 title: "${escapeYaml(title)}"
 slug: "${slug}"
 category: "${category}"
+${bookCategory ? `bookCategory: "${escapeYaml(bookCategory)}"` : ""}
 tags: ${JSON.stringify(tags)}
 date: "${date}"
 dateEnd: "${dateEnd}"
@@ -1069,6 +1091,7 @@ ${content}`;
     slug,
     category,
     categorySlug,
+    bookCategory,
     groupSlug,
     tags,
     date,
@@ -1091,6 +1114,7 @@ async function processPost(page, category) {
   const id = page.id;
   const title = getPlainText(props.Title?.title) || "Untitled";
   const slug = getPlainText(props.Slug?.rich_text) || slugify(title);
+  const bookCategory = getBookCategoryFromProps(props, category);
   const tags = props.Tags?.multi_select?.map((t) => t.name) || [];
 
   // ✅ date: 표시용 (Date 속성 우선, 없으면 created_time 날짜)
@@ -1117,6 +1141,7 @@ id: "${id}"
 title: "${escapeYaml(title)}"
 slug: "${slug}"
 category: "${category}"
+${bookCategory ? `bookCategory: "${escapeYaml(bookCategory)}"` : ""}
 tags: ${JSON.stringify(tags)}
 date: "${date}"
 dateEnd: "${dateEnd}"
@@ -1137,6 +1162,7 @@ ${content}`;
     slug,
     category,
     categorySlug,
+    bookCategory,
     tags,
     date,
     dateEnd,

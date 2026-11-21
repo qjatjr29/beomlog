@@ -4,6 +4,7 @@ export interface Post {
   slug: string;
   category: string;
   categorySlug: string;
+  bookCategory?: string;
   tags: string[];
   date: string; // 표시용
   dateEnd?: string;
@@ -28,6 +29,7 @@ export interface GroupMeta {
   title: string;
   category: string;
   categorySlug: string;
+  bookCategory?: string;
   coverImage: string;
   description: string;
   tags: string[];
@@ -46,6 +48,7 @@ export interface PostFrontMatter {
   tags: string[];
   excerpt?: string;
   category: string;
+  bookCategory?: string;
   lastEdited?: string;
   groupId?: string;
   groupSlug?: string;

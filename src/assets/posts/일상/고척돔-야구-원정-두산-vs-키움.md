@@ -3,6 +3,7 @@ id: "3bfd67b9-9e80-80ca-9bea-cdb465131071"
 title: "고척돔 야구 원정 (두산 vs 키움)"
 slug: "고척돔-야구-원정-두산-vs-키움"
 category: "일상"
+
 tags: ["야구","두산베어스"]
 date: "2026-07-04"
 dateEnd: ""
@@ -10,7 +11,7 @@ createdAt: "2026-08-17T06:27:00.000Z"
 excerpt: "구일역 주민의 첫 고척돔 직관! 🏟️ 저는 고척 스카이돔이 있는 구일역에 살고 있습니다! 동네 주민으로서 주말에 카페 가거나 산책할 때마다 매번 지나가는 곳이 고척돔인데요. 고척..."
 thumbnail: "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F871f8574-59a9-4fc7-b896-514b63379e05%2Fimage.png?table=block&id=3c4d67b9-9e80-80d6-bf55-fb6d96e19960&cache=v2"
 groupId: ""
-lastEdited: "2026-08-22T04:48:00.000Z"
+lastEdited: "2026-09-12T04:44:00.000Z"
 ---
 
 ## 구일역 주민의 첫 고척돔 직관! 🏟️

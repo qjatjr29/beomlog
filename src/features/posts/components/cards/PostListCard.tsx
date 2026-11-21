@@ -2,6 +2,7 @@ import { Link } from "react-router";
 import { Calendar, Eye, MessageSquare } from "lucide-react";
 import { Post } from "@/features/posts/types";
 import { formatDateRange } from "@/shared/utils";
+import { sanitizeExcerptPreview } from "@/shared/utils/post.utils";
 
 interface PostListCardProps {
   post: Post;
@@ -16,6 +17,8 @@ export const PostListCard = ({
   commentCount,
   selectedTag,
 }: PostListCardProps) => {
+  const excerpt = sanitizeExcerptPreview(post.excerpt);
+
   return (
     <Link
       to={`/post/${post.id}`}
@@ -39,9 +42,9 @@ export const PostListCard = ({
 
       {/* 본문 */}
       <div className="p-3 bg-white dark:bg-gray-800">
-        {post.excerpt && (
+        {excerpt && (
           <p className="text-xs text-gray-600 dark:text-gray-300 leading-relaxed mb-3 line-clamp-2">
-            {post.excerpt}
+            {excerpt}
           </p>
         )}
         {post.tags.length > 0 && (

@@ -30,6 +30,7 @@ export const parsePostContent = (
       case "dateEnd":
       case "createdAt":
       case "category":
+      case "bookCategory":
       case "lastEdited":
       case "groupId":
       case "coverImage":

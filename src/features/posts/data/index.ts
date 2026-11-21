@@ -28,6 +28,7 @@ export const loadAllPosts = (): Post[] => {
         content,
         category,
         categorySlug,
+        bookCategory: frontMatter.bookCategory,
         tags: frontMatter.tags,
         date: frontMatter.date,
         dateEnd: frontMatter.dateEnd,

@@ -1,5 +1,5 @@
 {
-  "lastSyncTime": "2026-08-22T13:45:10.114Z",
+  "lastSyncTime": "2026-11-21T05:00:14.298Z",
   "processedPages": {
     "311d67b9-9e80-8024-811e-da2503ec108a": {
       "slug": "like-b-tree-인덱스와-fts-full-text-search",
@@ -1139,6 +1139,7 @@
       "slug": "고척돔-야구-원정-두산-vs-키움",
       "categorySlug": "일상",
       "title": "고척돔 야구 원정 (두산 vs 키움)",
+      "bookCategory": "",
       "tags": [
         "야구",
         "두산베어스"
@@ -1147,7 +1148,7 @@
       "createdAt": "2026-08-17T06:27:00.000Z",
       "thumbnail": "https://www.notion.so/image/https%3A%2F%2Fprod-files-secure.s3.us-west-2.amazonaws.com%2Fce63075d-cee3-44a7-8d31-efcf5784b0e7%2F871f8574-59a9-4fc7-b896-514b63379e05%2Fimage.png?table=block&id=3c4d67b9-9e80-80d6-bf55-fb6d96e19960&cache=v2",
       "excerpt": "구일역 주민의 첫 고척돔 직관! 🏟️ 저는 고척 스카이돔이 있는 구일역에 살고 있습니다! 동네 주민으로서 주말에 카페 가거나 산책할 때마다 매번 지나가는 곳이 고척돔인데요. 고척...",
-      "lastEdited": "2026-08-22T04:48:00.000Z"
+      "lastEdited": "2026-09-12T04:44:00.000Z"
     },
     "3c4d67b9-9e80-8022-b0b8-c4375699e9ac": {
       "slug": "자바-동시성-프로그래밍의-미래",
@@ -1176,6 +1177,34 @@
       "thumbnail": "",
       "excerpt": ":::callout 🎯 챕터 목표 :::callout 주요 프레임워크들이 가상 스레드를 어떻게 수용하고 있는지 살펴본다. :::callout 스프링 부트, 쿼커스, 자카르타 EE...",
       "lastEdited": "2026-08-22T13:44:00.000Z"
+    },
+    "41fd67b9-9e80-80ea-bc42-d2b682e2f505": {
+      "slug": "이방인",
+      "categorySlug": "책",
+      "title": "이방인",
+      "bookCategory": "소설",
+      "tags": [
+        "알베르 카뮈"
+      ],
+      "date": "2026-11-21",
+      "createdAt": "2026-11-21T04:56:00.000Z",
+      "thumbnail": "",
+      "excerpt": "알베르 카뮈, 《이방인》 세상은 아무런 대답도 해주지 않았다 \"오늘 엄마가 죽었다. 아니 어쩌면 어제였는지도 모른다.\" 이 책의 첫 문장은 지금까지 읽었던 책들 중에서의 가장 인상...",
+      "lastEdited": "2026-11-21T04:58:00.000Z"
+    },
+    "41fd67b9-9e80-800f-8652-c7f4386281ff": {
+      "slug": "데미안",
+      "categorySlug": "책",
+      "title": "데미안",
+      "bookCategory": "소설",
+      "tags": [
+        "헤르만 헤세"
+      ],
+      "date": "2026-11-21",
+      "createdAt": "2026-11-21T03:55:00.000Z",
+      "thumbnail": "",
+      "excerpt": "헤르만 헤세, 《데미안》 우리 자신으로 살아가기 어떤 책을 읽을 때는 읽는 동안보다 읽고나서 더 많은 생각을 하게된다. 이 책을 읽을 때는 쉽게 이해되지 않은 문장들이 많았는데 책...",
+      "lastEdited": "2026-11-21T04:58:00.000Z"
     }
   }
 }
