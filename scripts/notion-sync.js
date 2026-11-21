@@ -760,6 +760,14 @@ async function syncNotionPosts() {
             if (!isNew && !isUpdated) {
               skippedCount++;
               if (cachedPage) {
+                const fallbackCoverImage =
+                  cachedPage.coverImage ?? extractCoverImage(page);
+                const fallbackThumbnail =
+                  cachedPage.thumbnail ||
+                  extractCoverImageFromProps(page.properties, page.id) ||
+                  fallbackCoverImage ||
+                  "";
+
                 postsMetadata.push({
                   id: page.id,
                   title:
@@ -769,15 +777,40 @@ async function syncNotionPosts() {
                   category,
                   categorySlug: slugify(category),
                   bookCategory: cachedPage.bookCategory ?? "",
+                  coverImage: fallbackCoverImage,
                   // ✅ 그룹 슬러그 포함한 경로
                   groupSlug,
                   tags: cachedPage.tags ?? [],
                   date: cachedPage.date ?? page.last_edited_time.split("T")[0],
+                  createdAt: cachedPage.createdAt ?? page.created_time,
+                  thumbnail: fallbackThumbnail,
                   excerpt: cachedPage.excerpt ?? "",
                   groupId: groupPage.id,
                   path: `${slugify(category)}/${groupSlug}/${cachedPage.slug}.md`,
                   lastEdited: page.last_edited_time,
                 });
+
+                if (!cachedPage.thumbnail || !cachedPage.coverImage) {
+                  updatedPages[page.id] = {
+                    slug: cachedPage.slug,
+                    categorySlug: slugify(category),
+                    groupSlug,
+                    title:
+                      cachedPage.title ??
+                      getPlainText(page.properties.Title?.title),
+                    bookCategory: cachedPage.bookCategory ?? "",
+                    tags: cachedPage.tags ?? [],
+                    date:
+                      cachedPage.date ?? page.last_edited_time.split("T")[0],
+                    createdAt: cachedPage.createdAt ?? page.created_time,
+                    coverImage: fallbackCoverImage,
+                    thumbnail: fallbackThumbnail,
+                    excerpt: cachedPage.excerpt ?? "",
+                    lastEdited: page.last_edited_time,
+                  };
+                  updatedCount++;
+                }
+
                 groupMeta.postCount++;
               }
               continue;
@@ -823,6 +856,7 @@ async function syncNotionPosts() {
                 tags: postData.tags,
                 date: postData.date,
                 createdAt: postData.createdAt,
+                coverImage: postData.coverImage,
                 thumbnail: postData.thumbnail,
                 excerpt: postData.excerpt,
                 lastEdited: page.last_edited_time,
@@ -977,6 +1011,14 @@ async function processNormalPage(
     onSkip();
     if (cachedPage) {
       const props = page.properties;
+      const fallbackCoverImage =
+        cachedPage.coverImage ?? extractCoverImage(page);
+      const fallbackThumbnail =
+        cachedPage.thumbnail ||
+        extractCoverImageFromProps(props, page.id) ||
+        fallbackCoverImage ||
+        "";
+
       postsMetadata.push({
         id: page.id,
         title: cachedPage.title ?? getPlainText(props.Title?.title),
@@ -984,15 +1026,32 @@ async function processNormalPage(
         category,
         categorySlug: slugify(category),
         bookCategory: cachedPage.bookCategory ?? "",
+        coverImage: fallbackCoverImage,
         tags: cachedPage.tags ?? [],
         date: cachedPage.date ?? page.last_edited_time.split("T")[0],
         createdAt: cachedPage.createdAt ?? page.created_time,
-        thumbnail: cachedPage.thumbnail,
+        thumbnail: fallbackThumbnail,
         excerpt: cachedPage.excerpt ?? "",
         groupId: "",
         path: `${slugify(category)}/${cachedPage.slug}.md`,
         lastEdited: page.last_edited_time,
       });
+
+      if (!cachedPage.thumbnail || !cachedPage.coverImage) {
+        updatedPages[page.id] = {
+          slug: cachedPage.slug,
+          categorySlug: slugify(category),
+          title: cachedPage.title ?? getPlainText(props.Title?.title),
+          bookCategory: cachedPage.bookCategory ?? "",
+          tags: cachedPage.tags ?? [],
+          date: cachedPage.date ?? page.last_edited_time.split("T")[0],
+          createdAt: cachedPage.createdAt ?? page.created_time,
+          coverImage: fallbackCoverImage,
+          thumbnail: fallbackThumbnail,
+          excerpt: cachedPage.excerpt ?? "",
+          lastEdited: page.last_edited_time,
+        };
+      }
     }
     return;
   }
@@ -1025,6 +1084,7 @@ async function processNormalPage(
       tags: postData.tags,
       date: postData.date,
       createdAt: postData.createdAt,
+      coverImage: postData.coverImage,
       thumbnail: postData.thumbnail,
       excerpt: postData.excerpt,
       lastEdited: page.last_edited_time,
